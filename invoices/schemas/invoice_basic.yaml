@@ -11,7 +11,11 @@ fields:
   merchant_name:
     type: string
     required: true
-    description: Name of the business issuing the invoice or receipt
+    description: |
+      Name of the business issuing the invoice or receipt. Typically appears
+      prominently at the top of the document, often the first bolded text
+      or the largest text in the header. Do not use the bill-to / customer
+      name — we want the seller, not the buyer.
     hints:
       look_in: [header]
       patterns: ["(?:from|vendor|seller|merchant|bill\\s*from)[:\\s]"]
@@ -53,14 +57,17 @@ fields:
 
   currency:
     type: string
-    description: Currency code (USD, EUR, GBP, etc.)
+    description: |
+      ISO currency code (USD, EUR, GBP, JPY, CAD, AUD, etc.).
+      Infer from currency symbols when no explicit code is present:
+      $ → USD, € → EUR, £ → GBP, ¥ → JPY (or CNY for Chinese context).
     hints:
       look_in: [header, totals]
       patterns: ["\\$|€|£|¥", "(?:USD|EUR|GBP|JPY|CAD|AUD)"]
 
   items:
     type: array
-    description: Line items with name, quantity, and price
+    description: Line items with name, quantity, unit price, and total amount
     items:
       type: object
       properties:
