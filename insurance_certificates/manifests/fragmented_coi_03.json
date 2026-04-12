@@ -1,0 +1,16 @@
+{
+  "filename": "fragmented_coi_03.md",
+  "source_name": "Synthetic generator",
+  "source_url": null,
+  "license": "Apache-2.0",
+  "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+  "attribution": "Koji corpus contributors",
+  "original_format": "markdown",
+  "r2_url": null,
+  "pages": 1,
+  "synthetic": true,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "notes": "FRAGMENTATION TEST (hardest): 4 policies from 3 different carriers. Abbreviated date format (MM/DD/YY) in the grid vs full format in detail sections. Additional Insureds are expressed as PROSE paragraphs in the Remarks section rather than as a structured list — extraction must parse sentences like 'Keystone Aerospace Components Inc. is an Additional Insured on policy GL-104822 and policy UMB-557801' and map the endorsement to each referenced policy. The umbrella policy references its underlying policies by number but the expected JSON does not currently capture that relationship (future enhancement). All data fictitious."
+}
