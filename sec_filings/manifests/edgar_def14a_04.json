@@ -1,0 +1,15 @@
+{
+  "filename": "edgar_def14a_04.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=DEF+14A",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "notes": "Alphabet definitive proxy statement header. Tests extraction with checkbox-style form elements and less common form type (DEF 14A)."
+}

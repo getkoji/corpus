@@ -1,0 +1,15 @@
+{
+  "filename": "edgar_8k_03.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605&type=8-K",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "notes": "Tesla 8-K current report. Tests extraction when fiscal period and filing date are the same (common for 8-K). Mix of table-based and prose metadata."
+}

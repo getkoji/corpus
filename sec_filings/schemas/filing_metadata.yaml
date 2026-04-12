@@ -1,0 +1,75 @@
+name: filing_metadata
+description: SEC EDGAR filing metadata — filer, CIK, form type, dates
+
+categories:
+  keywords:
+    header: ["form", "filer", "filing date", "period of report", "cik", "accession"]
+
+fields:
+  filer_name:
+    type: string
+    required: true
+    description: Name of the company or individual filing the document
+    hints:
+      look_in: [header]
+      patterns: ["filer[:\\s]", "(?:company|issuer)\\s*name", "registrant"]
+      signals: [has_name_references]
+
+  cik:
+    type: string
+    required: true
+    description: Central Index Key (SEC's unique identifier for the filer)
+    hints:
+      look_in: [header]
+      patterns: ["CIK[:\\s]*\\d+", "central\\s*index\\s*key"]
+
+  form_type:
+    type: enum
+    required: true
+    description: SEC form type (e.g., 10-K, 10-Q, 8-K)
+    options:
+      - 10-K
+      - 10-K/A
+      - 10-Q
+      - 10-Q/A
+      - 8-K
+      - 8-K/A
+      - S-1
+      - S-1/A
+      - DEF 14A
+      - 20-F
+      - 6-K
+      - 3
+      - 4
+      - 5
+      - 13F-HR
+      - SC 13G
+      - SC 13D
+      - Other
+    hints:
+      look_in: [header]
+      patterns: ["form\\s*(?:type)?[:\\s]*(?:10-?[KQ]|8-?K|S-?1|DEF\\s*14A)"]
+
+  filing_date:
+    type: date
+    required: true
+    description: Date the document was filed with SEC
+    hints:
+      look_in: [header]
+      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)"]
+      signals: [has_dates]
+
+  period_of_report:
+    type: date
+    description: Fiscal period the filing covers
+    hints:
+      look_in: [header]
+      patterns: ["period\\s*of\\s*report", "(?:reporting|fiscal)\\s*period", "for\\s*the\\s*(?:quarter|year)"]
+      signals: [has_dates]
+
+  accession_number:
+    type: string
+    description: Unique EDGAR accession number for the filing
+    hints:
+      look_in: [header]
+      patterns: ["accession\\s*(?:number|no)", "\\d{10}-\\d{2}-\\d{6}"]

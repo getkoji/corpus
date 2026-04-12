@@ -1,0 +1,15 @@
+{
+  "filename": "edgar_10k_01.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "notes": "Apple Inc. 10-K header. Real CIK and fiscal period. Full 10-K is hundreds of pages; this sample covers the cover-page metadata only."
+}

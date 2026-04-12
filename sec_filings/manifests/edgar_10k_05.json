@@ -1,0 +1,15 @@
+{
+  "filename": "edgar_10k_05.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "notes": "NVIDIA 10-K header. Period of report (Jan 28, 2024) differs from the stated fiscal year (Dec 31, 2023) due to NVIDIA's non-calendar fiscal year. Tests extraction when multiple date candidates are present."
+}

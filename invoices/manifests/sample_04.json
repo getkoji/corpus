@@ -1,0 +1,15 @@
+{
+  "filename": "sample_04.md",
+  "source_name": "Hand-crafted bootstrap sample",
+  "source_url": null,
+  "license": "Apache-2.0",
+  "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+  "attribution": "Koji corpus contributors",
+  "original_format": "markdown",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "invoices/schemas/invoice_basic.yaml",
+  "notes": "Industrial parts supplier invoice, plain-text format without markdown tables. Tests extraction from unstructured layout with dashed separators."
+}
