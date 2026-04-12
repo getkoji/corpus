@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate corpus structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Check required directories
+        run: |
+          for category in invoices sec_filings irs_forms contracts; do
+            for subdir in documents schemas expected manifests; do
+              if [ ! -d "$category/$subdir" ]; then
+                echo "Missing: $category/$subdir"
+                exit 1
+              fi
+            done
+          done
+          echo "Directory structure valid."
+
+      - name: Validate manifest JSON files
+        run: |
+          for manifest in $(find . -name "*.json" -path "*/manifests/*"); do
+            python -c "import json; json.loads(open('$manifest').read())" || {
+              echo "Invalid JSON: $manifest"
+              exit 1
+            }
+          done
+          echo "All manifests valid."
+
+      - name: Validate expected output JSON files
+        run: |
+          for expected in $(find . -name "*.expected.json"); do
+            python -c "import json; json.loads(open('$expected').read())" || {
+              echo "Invalid JSON: $expected"
+              exit 1
+            }
+          done
+          echo "All expected outputs valid."
+
+      - name: Check documents have manifests
+        run: |
+          # Every document in a documents/ dir should have a corresponding manifest
+          missing=0
+          for doc in $(find . -path "*/documents/*" -type f \( -name "*.md" -o -name "*.txt" \)); do
+            category=$(echo "$doc" | cut -d/ -f2)
+            doc_name=$(basename "$doc" | sed 's/\.[^.]*$//')
+            manifest="./$category/manifests/${doc_name}.json"
+            if [ ! -f "$manifest" ]; then
+              echo "Missing manifest for $doc (expected $manifest)"
+              missing=$((missing + 1))
+            fi
+          done
+          if [ $missing -gt 0 ]; then
+            echo "$missing documents missing manifests"
+            exit 1
+          fi
+          echo "All documents have manifests."

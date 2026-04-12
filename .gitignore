@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local extraction output (temporary, used for scoring)
+actual/
+*.actual.json
+output/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
