@@ -1,0 +1,134 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-adversarial-anomaly-corpus-blank-pages-x/corpus",
+  "started_at": "2026-04-13T22:48:50Z",
+  "elapsed_ms": 34934,
+  "total_documents": 11,
+  "total_fields": 11,
+  "passed_fields": 11,
+  "accuracy": 1.0,
+  "error_count": 0,
+  "categories": [
+    {
+      "category": "adversarial",
+      "documents": 11,
+      "fields_checked": 11,
+      "passed": 11,
+      "accuracy": 1.0,
+      "errors": 0,
+      "mean_elapsed_ms": 3167.6363636363635,
+      "documents_detail": [
+        {
+          "document": "anomaly_blank.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 2255,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_header_only.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 2073,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_misleading_form.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2093,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_multi_union.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 4169,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_ocr_typos.md",
+          "schema": "filing_metadata",
+          "passed": 2,
+          "total": 2,
+          "accuracy": 1.0,
+          "elapsed_ms": 5212,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_out_of_scope.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 2054,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_stapled.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 2890,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_three_doc_packet.md",
+          "schema": "certificate_of_liability",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 6743,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_truncated.md",
+          "schema": "filing_metadata",
+          "passed": 1,
+          "total": 1,
+          "accuracy": 1.0,
+          "elapsed_ms": 2689,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_wrong_schema.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 2128,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "anomaly_xbrl_only.md",
+          "schema": "filing_metadata",
+          "passed": 0,
+          "total": 0,
+          "accuracy": 0.0,
+          "elapsed_ms": 2538,
+          "error": null,
+          "failures": []
+        }
+      ]
+    }
+  ]
+}
