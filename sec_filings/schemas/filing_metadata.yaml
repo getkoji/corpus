@@ -128,27 +128,105 @@ fields:
       patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)", "date[:\\s]"]
       signals: [has_dates]
 
-  period_of_report:
+  # The old single `period_of_report` field tried to mean different things
+  # per form type (fiscal year end for 10-K, quarter end for 10-Q, event
+  # date for 8-K, meeting date for DEF 14A). Each form populates only the
+  # relevant one of the four fields below; the others should be null.
+  # See accuracy-6 PR for the rationale — cleaner semantics, zero engine
+  # work, better per-form prompting.
+
+  period_fiscal_year_end:
     type: date
-    description: Fiscal period (or event date) the filing covers.
+    description: Fiscal year-end date for 10-K / 10-K/A filings.
     extraction_hint: |
-      What "period of report" means depends on the form type:
-        - 10-K / 10-K/A: the fiscal year-end date (look near "fiscal year
-          ended" or "year ended" near the top of the cover page; the
-          words may be line-broken — the date is what matters)
-        - 10-Q / 10-Q/A: the quarter-end date (look near "quarterly
-          period ended" or "quarter ended"; again, line breaks OK)
-        - 8-K: the "Date of Report (Date of earliest event reported)"
-          shown near the top of the cover page
-        - DEF 14A: the date of the annual meeting of stockholders the
-          proxy is soliciting votes for (usually "to be held on" near
-          the top of the proxy statement) — NOT the fiscal year end of
-          the annual report attached to the proxy
-      All of these appear near the top of the cover page. The labels may
-      be split across several lines in the parsed markdown; treat any
-      date adjacent to a period-label phrase as the answer, even if the
-      phrase is broken up.
+      For 10-K and 10-K/A filings only. Extract the fiscal year-end date
+      referenced near "For the fiscal year ended" on the cover page.
+      The label may be line-broken in parsed markdown (e.g. "For the\n\n
+      fiscal year ended\n\nDecember 31, 2025") — return the date no
+      matter how the label is broken up.
+
+      For amendments (10-K/A), the period_fiscal_year_end is the SAME
+      period the original 10-K covered — it typically appears both on
+      the cover header AND inside the EXPLANATORY NOTE ("amends our
+      Annual Report on Form 10-K for the fiscal year ended December
+      31, 2025"). Use either reference.
+
+      Return null for any non-10-K form type.
     hints:
       look_in: [header]
-      patterns: ["period\\s*of\\s*report", "(?:reporting|fiscal)\\s*period", "for\\s*the\\s*(?:quarter|year)", "date\\s*of\\s*report"]
+      patterns: ["fiscal\\s*year\\s*ended", "year\\s*ended", "for\\s*the\\s*fiscal\\s*year"]
+      signals: [has_dates]
+
+  period_quarter_end:
+    type: date
+    description: Quarter-end date for 10-Q / 10-Q/A filings.
+    extraction_hint: |
+      For 10-Q and 10-Q/A filings only. Extract the quarter-end date
+      referenced near "For the quarterly period ended" on the cover page.
+      The label is often line-broken in parsed markdown ("For the\n\n
+      quarterly\n\nperiod ended\n\nDecember 31, 2025") — treat the date
+      adjacent to the broken-up label as the answer.
+
+      If the cover page shows multiple quarter-end dates (e.g. comparison
+      periods in financial-statement headers), pick the MOST RECENT one
+      — that is the period the filing reports on. Comparison periods
+      like "three months ended September 30, 2025" from the prior year
+      are not the answer.
+
+      Return null for any non-10-Q form type.
+    hints:
+      look_in: [header]
+      patterns: ["quarterly\\s*period\\s*ended", "quarter\\s*ended", "for\\s*the\\s*(?:quarter|three\\s*months)"]
+      signals: [has_dates]
+
+  period_date_of_report:
+    type: date
+    description: Date of Report for 8-K / 8-K/A filings.
+    extraction_hint: |
+      For 8-K and 8-K/A filings only. Extract the date labeled "Date of
+      Report (Date of earliest event reported)" on the cover page. This
+      is the date of the triggering event the 8-K is disclosing, not the
+      date the 8-K was filed with the SEC.
+
+      Return null for any non-8-K form type.
+    hints:
+      look_in: [header]
+      patterns: ["date\\s*of\\s*report", "date\\s*of\\s*earliest\\s*event"]
+      signals: [has_dates]
+
+  period_meeting_date:
+    type: date
+    description: Annual meeting date for DEF 14A proxy statements.
+    extraction_hint: |
+      For DEF 14A filings only. Extract the date of the annual meeting
+      of stockholders the proxy statement is soliciting votes for. This
+      date typically appears in a "NOTICE OF ANNUAL MEETING OF
+      SHAREHOLDERS" section near the top of the proxy statement, often
+      as a standalone line (e.g. "Wednesday, May 20, 2026") immediately
+      after the notice heading, or inside a sentence like "the Annual
+      Meeting... on Wednesday, May 20, 2026 at 10:00 a.m."
+
+      Do NOT use:
+        - The fiscal year end of the accompanying annual report
+          ("for the year ended December 31, 2025")
+        - The record date for stockholder voting ("record date of
+          March 25, 2026")
+        - Any filing / signature / mailing date
+        - Any future-year annual meeting date (e.g. references to the
+          2027 or 2028 annual meeting — only THIS proxy's meeting date)
+      Only the date of the meeting itself is the answer.
+
+      Return null for any non-DEF 14A form type.
+    hints:
+      # No look_in filter — the meeting-date chunk on a proxy statement
+      # is typically titled "NOTICE OF ANNUAL MEETING" or similar and
+      # does not match the cover-page header keyword list. prefer_contains
+      # boosts the notice chunk above body chunks regardless of category.
+      prefer_contains:
+        - "notice of"
+        - "annual meeting of shareholders"
+        - "annual meeting of stockholders"
+        - "to be held"
+        - "meeting.*at"
+      patterns: ["annual\\s*meeting", "notice\\s*of.*meeting", "to\\s*be\\s*held"]
       signals: [has_dates]

@@ -9,7 +9,7 @@ Washington, D.C. 20549
 **CIK:** 0000320193
 **Form Type:** 10-K
 **Filing Date:** November 1, 2024
-**Period of Report:** September 28, 2024
+**For the fiscal year ended:** September 28, 2024
 **Accession Number:** 0000320193-24-000123
 
 **State of Incorporation:** California
