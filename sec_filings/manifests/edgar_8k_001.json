@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_8k_001.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1669779/000110465926041752/tm2611557d1_8k.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001104659-26-041752",
+  "cik": "0001669779",
+  "notes": "8-K filing for Camping World Holdings, Inc. (accession 0001104659-26-041752). Document text converted from EDGAR primary HTML; expected JSON is sourced directly from the EDGAR submission index (authoritative)."
+}

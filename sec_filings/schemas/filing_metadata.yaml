@@ -1,32 +1,76 @@
 name: filing_metadata
-description: SEC EDGAR filing metadata — filer, CIK, form type, dates
+description: Metadata extractable from the body of an SEC filing — filer, form type, dates
+
+# Schema scope: only fields a general-purpose extractor could reasonably find
+# in the document text itself. EDGAR-internal identifiers (CIK, accession
+# number) live in EDGAR's index, not in the filing body, so they are out of
+# scope here. Anyone who needs them should pull them from the EDGAR index
+# directly and feed the document to koji separately. See accuracy-1 PR for
+# the full reasoning.
 
 categories:
   keywords:
-    header: ["form", "filer", "filing date", "period of report", "cik", "accession"]
+    # ORDER MATTERS: the classifier iterates categories and returns on the
+    # first match. Signatures must come before header because the header
+    # keyword list is broad ("securities", "exchange") and those words also
+    # appear in signature blocks — if header is checked first, signature
+    # chunks get misclassified as header.
+    #
+    # Narrow signatures-block category for routing the filing_date field
+    # specifically. Real SEC filings put the filing date next to officer
+    # signatures on the signature page; these phrases are boilerplate
+    # that appears in nearly every signature block.
+    signatures:
+      - "duly authorized"
+      - "by the undersigned"
+      - "pursuant to the requirements of section 13"
+    # Mix of metadata-label keywords (for synthetic / hand-crafted samples) and
+    # cover-page boilerplate keywords (for real EDGAR filings parsed via docling).
+    # Real SEC cover pages reliably contain "exchange commission", "exchange act",
+    # "registrant", "commission file", "incorporation", "employer identification";
+    # the first set covers the synthetic stub format.
+    header: [
+      "form",
+      "filer",
+      "filing date",
+      "period of report",
+      "registrant",
+      "exchange commission",
+      "exchange act",
+      "commission file",
+      "securities",
+      "incorporation",
+      "employer identification",
+    ]
 
 fields:
   filer_name:
     type: string
     required: true
     description: Name of the company or individual filing the document
+    extraction_hint: |
+      Return the FULL registrant name as shown on the cover page,
+      immediately above "(Exact name of registrant as specified in its
+      charter)". The name is sometimes split across multiple consecutive
+      bold lines in the parsed markdown (e.g. "**America**" on one line
+      and "**Great Health**" on the next) — in that case combine the
+      lines into the single full name ("America Great Health"). Do not
+      return only the last bold fragment.
     hints:
       look_in: [header]
       patterns: ["filer[:\\s]", "(?:company|issuer)\\s*name", "registrant"]
       signals: [has_name_references]
 
-  cik:
-    type: string
-    required: true
-    description: Central Index Key (SEC's unique identifier for the filer)
-    hints:
-      look_in: [header]
-      patterns: ["CIK[:\\s]*\\d+", "central\\s*index\\s*key"]
-
   form_type:
     type: enum
     required: true
     description: SEC form type (e.g., 10-K, 10-Q, 8-K)
+    extraction_hint: |
+      Use the full form identifier as printed on the cover page, including
+      any amendment suffix. If the cover page shows "FORM 10-K/A", return
+      "10-K/A", not "10-K" — the "/A" suffix is significant and must not
+      be dropped. Amendment indicators ("Amendment No. 1", "Amendment No.
+      3") near the form header confirm the /A suffix is correct.
     options:
       - 10-K
       - 10-K/A
@@ -53,23 +97,58 @@ fields:
   filing_date:
     type: date
     required: true
-    description: Date the document was filed with SEC
+    description: Date this document was filed with the SEC (signature page).
+    extraction_hint: |
+      Use the date next to the officer signatures in the signature block
+      ("Dated: Month DD, YYYY" next to "/s/ Officer Name", or "on the Xth
+      day of Month YYYY" in the preamble to the signature block).
+
+      Do NOT use:
+        - "As of Month DD, YYYY" share-count or record-holder dates
+        - "filed on Month DD, YYYY" references in the EXPLANATORY NOTE of
+          an amendment — that is the ORIGINAL filing's date, not this
+          amendment's. For 10-K/A and 10-Q/A filings, the filing date is
+          the date the amendment was signed, which appears in the
+          signature block near the bottom of the document.
+        - Auditor signing dates in the financial statements
+          ("/s/ [Accounting Firm]  Month DD, YYYY")
+        - "Date of Report" on 8-K cover pages (that is the event date,
+          see period_of_report instead)
     hints:
-      look_in: [header]
-      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)"]
+      look_in: [signatures, header]
+      # Phrases that identify the officer signature block. Scores +12 when
+      # matched, which is enough to beat body chunks that only trigger
+      # pattern matches (+8). See koji router.py scoring pipeline.
+      prefer_contains:
+        - "/s/"
+        - "Dated:"
+        - "duly authorized"
+        - "by the undersigned"
+        - "SIGNATURES"
+      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)", "date[:\\s]"]
       signals: [has_dates]
 
   period_of_report:
     type: date
-    description: Fiscal period the filing covers
+    description: Fiscal period (or event date) the filing covers.
+    extraction_hint: |
+      What "period of report" means depends on the form type:
+        - 10-K / 10-K/A: the fiscal year-end date (look near "fiscal year
+          ended" or "year ended" near the top of the cover page; the
+          words may be line-broken — the date is what matters)
+        - 10-Q / 10-Q/A: the quarter-end date (look near "quarterly
+          period ended" or "quarter ended"; again, line breaks OK)
+        - 8-K: the "Date of Report (Date of earliest event reported)"
+          shown near the top of the cover page
+        - DEF 14A: the date of the annual meeting of stockholders the
+          proxy is soliciting votes for (usually "to be held on" near
+          the top of the proxy statement) — NOT the fiscal year end of
+          the annual report attached to the proxy
+      All of these appear near the top of the cover page. The labels may
+      be split across several lines in the parsed markdown; treat any
+      date adjacent to a period-label phrase as the answer, even if the
+      phrase is broken up.
     hints:
       look_in: [header]
-      patterns: ["period\\s*of\\s*report", "(?:reporting|fiscal)\\s*period", "for\\s*the\\s*(?:quarter|year)"]
+      patterns: ["period\\s*of\\s*report", "(?:reporting|fiscal)\\s*period", "for\\s*the\\s*(?:quarter|year)", "date\\s*of\\s*report"]
       signals: [has_dates]
-
-  accession_number:
-    type: string
-    description: Unique EDGAR accession number for the filing
-    hints:
-      look_in: [header]
-      patterns: ["accession\\s*(?:number|no)", "\\d{10}-\\d{2}-\\d{6}"]
