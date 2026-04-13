@@ -1,8 +1,8 @@
 {
   "model": "openai/gpt-4o-mini",
   "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-expand-sec-filings-corpus-and-re-baselin/corpus",
-  "started_at": "2026-04-13T03:14:06Z",
-  "elapsed_ms": 49254,
+  "started_at": "2026-04-13T03:24:42Z",
+  "elapsed_ms": 52149,
   "total_documents": 25,
   "total_fields": 100,
   "passed_fields": 94,
@@ -16,7 +16,7 @@
       "passed": 94,
       "accuracy": 0.94,
       "errors": 0,
-      "mean_elapsed_ms": 1961.8,
+      "mean_elapsed_ms": 2078.2,
       "documents_detail": [
         {
           "document": "edgar_10k_001.md",
@@ -24,7 +24,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2946,
+          "elapsed_ms": 1654,
           "error": null,
           "failures": []
         },
@@ -34,7 +34,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1529,
+          "elapsed_ms": 1367,
           "error": null,
           "failures": []
         },
@@ -44,7 +44,7 @@
           "passed": 3,
           "total": 4,
           "accuracy": 0.75,
-          "elapsed_ms": 2244,
+          "elapsed_ms": 2941,
           "error": null,
           "failures": [
             {
@@ -61,26 +61,19 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2593,
+          "elapsed_ms": 1895,
           "error": null,
           "failures": []
         },
         {
           "document": "edgar_10k_005.md",
           "schema": "filing_metadata",
-          "passed": 3,
+          "passed": 4,
           "total": 4,
-          "accuracy": 0.75,
-          "elapsed_ms": 1489,
+          "accuracy": 1.0,
+          "elapsed_ms": 2845,
           "error": null,
-          "failures": [
-            {
-              "field": "filing_date",
-              "expected": "2026-04-10",
-              "actual": "2026-04-03",
-              "detail": "expected 2026-04-10, got 2026-04-03"
-            }
-          ]
+          "failures": []
         },
         {
           "document": "edgar_10k_01.md",
@@ -88,7 +81,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1222,
+          "elapsed_ms": 964,
           "error": null,
           "failures": []
         },
@@ -98,7 +91,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1127,
+          "elapsed_ms": 1384,
           "error": null,
           "failures": []
         },
@@ -108,7 +101,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1126,
+          "elapsed_ms": 2142,
           "error": null,
           "failures": []
         },
@@ -118,7 +111,7 @@
           "passed": 3,
           "total": 4,
           "accuracy": 0.75,
-          "elapsed_ms": 1816,
+          "elapsed_ms": 2143,
           "error": null,
           "failures": [
             {
@@ -135,7 +128,7 @@
           "passed": 3,
           "total": 4,
           "accuracy": 0.75,
-          "elapsed_ms": 1322,
+          "elapsed_ms": 900,
           "error": null,
           "failures": [
             {
@@ -152,19 +145,26 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1245,
+          "elapsed_ms": 1798,
           "error": null,
           "failures": []
         },
         {
           "document": "edgar_10q_003.md",
           "schema": "filing_metadata",
-          "passed": 4,
+          "passed": 3,
           "total": 4,
-          "accuracy": 1.0,
-          "elapsed_ms": 1230,
+          "accuracy": 0.75,
+          "elapsed_ms": 2296,
           "error": null,
-          "failures": []
+          "failures": [
+            {
+              "field": "filing_date",
+              "expected": "2026-04-10",
+              "actual": null,
+              "detail": "missing from actual"
+            }
+          ]
         },
         {
           "document": "edgar_10q_004.md",
@@ -172,7 +172,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1466,
+          "elapsed_ms": 1408,
           "error": null,
           "failures": []
         },
@@ -182,7 +182,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 8775,
+          "elapsed_ms": 8821,
           "error": null,
           "failures": []
         },
@@ -192,7 +192,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1574,
+          "elapsed_ms": 1305,
           "error": null,
           "failures": []
         },
@@ -202,7 +202,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1562,
+          "elapsed_ms": 1434,
           "error": null,
           "failures": []
         },
@@ -212,7 +212,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1486,
+          "elapsed_ms": 1220,
           "error": null,
           "failures": []
         },
@@ -222,7 +222,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1518,
+          "elapsed_ms": 1427,
           "error": null,
           "failures": []
         },
@@ -232,7 +232,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1545,
+          "elapsed_ms": 2427,
           "error": null,
           "failures": []
         },
@@ -242,7 +242,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1187,
+          "elapsed_ms": 1243,
           "error": null,
           "failures": []
         },
@@ -252,7 +252,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1372,
+          "elapsed_ms": 1647,
           "error": null,
           "failures": []
         },
@@ -262,7 +262,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2003,
+          "elapsed_ms": 1326,
           "error": null,
           "failures": []
         },
@@ -272,7 +272,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1552,
+          "elapsed_ms": 1617,
           "error": null,
           "failures": []
         },
@@ -282,7 +282,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1355,
+          "elapsed_ms": 1322,
           "error": null,
           "failures": []
         },
@@ -292,7 +292,7 @@
           "passed": 2,
           "total": 4,
           "accuracy": 0.5,
-          "elapsed_ms": 3761,
+          "elapsed_ms": 4429,
           "error": null,
           "failures": [
             {

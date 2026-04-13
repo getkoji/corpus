@@ -84,11 +84,21 @@ fields:
     type: date
     required: true
     description: |
-      Date the document was filed with SEC. On real SEC filings this appears
-      next to officer signatures on the signature page ("Date: Month DD, YYYY"
-      or in a signature-block table). For amendments (10-K/A, 10-Q/A) use the
-      signature-block date on the amendment itself — NOT any reference to the
-      original filing's date elsewhere in the document.
+      The date THIS document was filed with the SEC, as written next to the
+      officer signatures on the signature page. Look for "duly caused this
+      report to be signed on its behalf by the undersigned ... on the Xth
+      day of Month YYYY" or "Date: Month DD, YYYY" in a signature-block
+      table next to "/s/ [Officer Name]".
+
+      DO NOT use any of these alternatives even if they appear prominently:
+        * "As of Month DD, YYYY" share-count or record-holder dates
+        * "filed on Month DD, YYYY" references to prior filings in the
+          Explanatory Note of an amendment (that is the ORIGINAL filing's
+          date, not the amendment's)
+        * Auditor signing dates in the financial statements section
+          ("/s/ [Accounting Firm] Los Angeles, CA Month DD, YYYY")
+        * Date of Report fields on 8-K cover pages (that is the event
+          date, not the filing date — see period_of_report instead)
     hints:
       # Both signatures (real filings) and header (synthetic stubs) are
       # valid places to find the filing date. The router's look_in hard
