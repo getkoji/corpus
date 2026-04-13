@@ -1,0 +1,16 @@
+{
+  "filename": "anomaly_stapled.md",
+  "source_name": "Koji adversarial corpus (accuracy-9)",
+  "source_url": null,
+  "license": "CC0 \u2014 synthetic test fixture",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Koji accuracy lane",
+  "original_format": "Markdown (synthetic)",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-13",
+  "added_by": "accuracy-9",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "anomaly": true,
+  "notes": "Two SEC cover pages concatenated (fictional ACME 10-K + BETA 10-Q). Tests how the extractor handles ambiguous multi-doc input. Ideal behavior: consistent pick of one, not a hallucinated hybrid."
+}
