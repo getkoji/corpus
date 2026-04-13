@@ -1,22 +1,22 @@
 {
   "model": "openai/gpt-4o-mini",
-  "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-investigate-period-of-report-edge-cases/corpus",
-  "started_at": "2026-04-13T12:41:33Z",
-  "elapsed_ms": 143902,
-  "total_documents": 35,
-  "total_fields": 140,
-  "passed_fields": 140,
+  "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-finish-sec-filings-corpus-to-50-docs-add/corpus",
+  "started_at": "2026-04-13T15:23:42Z",
+  "elapsed_ms": 278782,
+  "total_documents": 51,
+  "total_fields": 203,
+  "passed_fields": 203,
   "accuracy": 1.0,
   "error_count": 0,
   "categories": [
     {
       "category": "sec_filings",
-      "documents": 35,
-      "fields_checked": 140,
-      "passed": 140,
+      "documents": 51,
+      "fields_checked": 203,
+      "passed": 203,
       "accuracy": 1.0,
       "errors": 0,
-      "mean_elapsed_ms": 4097.971428571429,
+      "mean_elapsed_ms": 5453.529411764706,
       "documents_detail": [
         {
           "document": "edgar_10k_001.md",
@@ -24,7 +24,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 7288,
+          "elapsed_ms": 13765,
           "error": null,
           "failures": []
         },
@@ -34,7 +34,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2555,
+          "elapsed_ms": 3920,
           "error": null,
           "failures": []
         },
@@ -44,7 +44,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 4276,
+          "elapsed_ms": 4445,
           "error": null,
           "failures": []
         },
@@ -54,7 +54,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 5408,
+          "elapsed_ms": 5744,
           "error": null,
           "failures": []
         },
@@ -64,7 +64,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 9531,
+          "elapsed_ms": 13126,
           "error": null,
           "failures": []
         },
@@ -74,7 +74,37 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 4760,
+          "elapsed_ms": 7841,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10k_007.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 4688,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10k_008.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 6484,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10k_009.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2289,
           "error": null,
           "failures": []
         },
@@ -84,7 +114,17 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2304,
+          "elapsed_ms": 1490,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10k_010.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 11317,
           "error": null,
           "failures": []
         },
@@ -94,7 +134,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2901,
+          "elapsed_ms": 1326,
           "error": null,
           "failures": []
         },
@@ -104,7 +144,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 9187,
+          "elapsed_ms": 10918,
           "error": null,
           "failures": []
         },
@@ -114,7 +154,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 8377,
+          "elapsed_ms": 10461,
           "error": null,
           "failures": []
         },
@@ -124,7 +164,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 3661,
+          "elapsed_ms": 5662,
           "error": null,
           "failures": []
         },
@@ -134,7 +174,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 9726,
+          "elapsed_ms": 13941,
           "error": null,
           "failures": []
         },
@@ -144,7 +184,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2113,
+          "elapsed_ms": 3075,
           "error": null,
           "failures": []
         },
@@ -154,7 +194,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1586,
+          "elapsed_ms": 3449,
           "error": null,
           "failures": []
         },
@@ -164,7 +204,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1818,
+          "elapsed_ms": 2644,
           "error": null,
           "failures": []
         },
@@ -174,7 +214,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 8373,
+          "elapsed_ms": 3916,
           "error": null,
           "failures": []
         },
@@ -184,7 +224,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 3530,
+          "elapsed_ms": 17012,
           "error": null,
           "failures": []
         },
@@ -194,7 +234,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 3667,
+          "elapsed_ms": 4885,
           "error": null,
           "failures": []
         },
@@ -204,7 +244,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 4676,
+          "elapsed_ms": 8187,
           "error": null,
           "failures": []
         },
@@ -214,7 +254,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2456,
+          "elapsed_ms": 11815,
           "error": null,
           "failures": []
         },
@@ -224,7 +264,47 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 11470,
+          "elapsed_ms": 9898,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_010.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2589,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_011.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 4054,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_012.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2575,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_013.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 3196,
           "error": null,
           "failures": []
         },
@@ -234,7 +314,17 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2142,
+          "elapsed_ms": 1609,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_20f_001.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 5051,
           "error": null,
           "failures": []
         },
@@ -244,7 +334,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2018,
+          "elapsed_ms": 2003,
           "error": null,
           "failures": []
         },
@@ -254,7 +344,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2271,
+          "elapsed_ms": 1983,
           "error": null,
           "failures": []
         },
@@ -264,7 +354,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2146,
+          "elapsed_ms": 5623,
           "error": null,
           "failures": []
         },
@@ -274,7 +364,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2144,
+          "elapsed_ms": 1901,
           "error": null,
           "failures": []
         },
@@ -284,7 +374,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 4928,
+          "elapsed_ms": 1779,
           "error": null,
           "failures": []
         },
@@ -294,7 +384,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1796,
+          "elapsed_ms": 2644,
           "error": null,
           "failures": []
         },
@@ -304,7 +394,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2237,
+          "elapsed_ms": 2769,
           "error": null,
           "failures": []
         },
@@ -314,7 +404,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1604,
+          "elapsed_ms": 2045,
           "error": null,
           "failures": []
         },
@@ -324,7 +414,47 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1238,
+          "elapsed_ms": 6370,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_010.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 3118,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_011.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 8639,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_012.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1063,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_013.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1788,
           "error": null,
           "failures": []
         },
@@ -334,7 +464,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 3991,
+          "elapsed_ms": 2174,
           "error": null,
           "failures": []
         },
@@ -344,7 +474,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 3150,
+          "elapsed_ms": 1628,
           "error": null,
           "failures": []
         },
@@ -354,7 +484,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1884,
+          "elapsed_ms": 4020,
           "error": null,
           "failures": []
         },
@@ -364,7 +494,37 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2217,
+          "elapsed_ms": 6493,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_def_14a_003.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 5867,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_def_14a_004.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2815,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_s1_a_001.md",
+          "schema": "filing_metadata",
+          "passed": 3,
+          "total": 3,
+          "accuracy": 1.0,
+          "elapsed_ms": 12036,
           "error": null,
           "failures": []
         }
