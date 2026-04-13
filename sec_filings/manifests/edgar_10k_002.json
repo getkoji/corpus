@@ -1,0 +1,15 @@
+{
+  "filename": "edgar_10k_002.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1952670/000195267026000014/tvcn-20251231_10k.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "notes": "10-K filing for TV Channels Network Inc. (accession 0001952670-26-000014). Document text converted from EDGAR primary HTML; expected JSON is sourced directly from the EDGAR submission index (authoritative)."
+}

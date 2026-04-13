@@ -1,25 +1,46 @@
 #!/usr/bin/env python3
 """SEC EDGAR sourcing script for the Koji validation corpus.
 
-Fetches SEC filings via the EDGAR full-text search API and bulk archive
-endpoints, then writes filing metadata as corpus samples. Ground truth
-comes from EDGAR's own index, so the expected outputs are authoritative.
+Fetches real SEC filings end-to-end:
+  1. Searches EDGAR's full-text index for filings of a given form type
+  2. Looks up authoritative metadata via the company's submission index
+  3. Downloads the primary filing document (the actual 10-K/10-Q/8-K)
+  4. Sends the raw HTML to a running koji parse service (docling) and
+     saves the returned markdown as a corpus sample
+  5. Writes the expected JSON straight from the EDGAR index — that index
+     is the authoritative source for filer name, CIK, form type, dates,
+     and accession number, so the expected outputs need no extra review
 
-Why this approach:
-  - SEC filings are public domain (US government records)
-  - EDGAR's index provides filer name, CIK, form type, filing date, and
-    period of report — exactly the fields we want to extract
-  - Using the index as ground truth means zero manual annotation work
+Why parse via koji instead of html2text:
+  - The corpus has to test what koji's *production* extract step sees.
+    Extract is designed to consume parse-quality markdown (with real
+    structural headers from docling), not html2text output (which leaves
+    the original HTML's lack of <h1> tags as a flat blob).
+  - Going through parse means the corpus markdown matches exactly what
+    `koji process` would produce in prod for the same input.
+  - Drops html2text as a dep and removes a second markdown converter
+    from the codebase.
 
 Key constraints:
   - SEC requires a User-Agent header identifying the requester
-  - Rate limit is 10 requests/second; we use 8/sec with safety margin
+  - Rate limit is 10 requests/second; we explicitly pace at >=1s/filing
+    (and 0.125s between intra-filing API calls) to stay well under
   - EDGAR does not require authentication
+  - Requires a running koji cluster reachable at --koji-server-url
+    (default http://127.0.0.1:9401) for the parse step
+
+Dependencies:
+  - httpx
+
+Run via uv (no venv to maintain):
+  uv run --with httpx \\
+    python scripts/sources/edgar.py --form-type 10-K --limit 5
 
 Usage:
   python scripts/sources/edgar.py --form-type 10-K --limit 20
   python scripts/sources/edgar.py --form-type 8-K --limit 50 --start-date 2024-01-01
   python scripts/sources/edgar.py --form-type all --limit 100
+  python scripts/sources/edgar.py --form-type 10-K --limit 5 --metadata-only
 
 Form types supported:
   10-K, 10-Q, 8-K, DEF 14A, S-1, 20-F, 6-K, and variants.
@@ -27,6 +48,8 @@ Form types supported:
 References:
   - EDGAR full-text search: https://efts.sec.gov/LATEST/search-index?q=&forms=10-K
   - EDGAR submissions endpoint: https://data.sec.gov/submissions/CIK{cik}.json
+  - EDGAR Archives: https://www.sec.gov/Archives/edgar/data/{cik_int}/{accession_no_dashes}/{primary_doc}
+  - Koji parse API: POST /api/parse (multipart file upload, returns {markdown, pages})
 """
 
 from __future__ import annotations
@@ -44,6 +67,9 @@ FILINGS_DIR = CORPUS_ROOT / "sec_filings"
 
 USER_AGENT = "Koji Corpus bot@getkoji.dev"
 RATE_LIMIT_DELAY = 0.125  # 8 req/sec, safely under SEC's 10/sec limit
+PER_FILING_DELAY = 1.5  # explicit pacing between filings, well above the rate limit floor
+DEFAULT_KOJI_SERVER_URL = "http://127.0.0.1:9401"
+PARSE_TIMEOUT = 600.0  # docling can be slow on large filings
 
 SUPPORTED_FORMS = [
     "10-K", "10-K/A",
@@ -64,6 +90,14 @@ def _client() -> httpx.Client:
         timeout=60.0,
         follow_redirects=True,
     )
+
+
+def _parse_client() -> httpx.Client:
+    """Separate client for the local koji parse service.
+
+    Different timeout, no SEC user-agent (parse service doesn't care).
+    """
+    return httpx.Client(timeout=PARSE_TIMEOUT)
 
 
 def edgar_search(form_type: str, start_date: str | None, end_date: str | None, limit: int, client: httpx.Client) -> list[dict]:
@@ -133,7 +167,12 @@ def fetch_submission_index(cik: str, client: httpx.Client) -> dict | None:
 
 
 def build_sample_from_submission(cik: str, accession: str, submission: dict) -> dict | None:
-    """Extract metadata for a single filing from a company submission index."""
+    """Extract metadata for a single filing from a company submission index.
+
+    Returned dict includes the schema fields plus `primary_document` (the
+    HTML filename of the actual filing on EDGAR), which the fetcher uses to
+    pull the real document content.
+    """
     filer_name = submission.get("name")
     if not filer_name:
         return None
@@ -156,14 +195,85 @@ def build_sample_from_submission(cik: str, accession: str, submission: dict) -> 
         "filing_date": recent.get("filingDate", [None] * (idx + 1))[idx],
         "period_of_report": recent.get("reportDate", [None] * (idx + 1))[idx] or None,
         "accession_number": accession,
+        "primary_document": recent.get("primaryDocument", [None] * (idx + 1))[idx],
     }
+
+
+def fetch_primary_document(
+    cik: str,
+    accession: str,
+    primary_document: str,
+    client: httpx.Client,
+) -> tuple[str, str] | None:
+    """Fetch the primary filing document from EDGAR Archives.
+
+    Returns a tuple of (raw_html, source_url), or None if the fetch fails.
+    The accession number's dashes are stripped to form the directory name.
+    """
+    cik_int = str(int(cik))  # strip leading zeros for the Archives path
+    accession_no_dashes = accession.replace("-", "")
+    url = f"https://www.sec.gov/Archives/edgar/data/{cik_int}/{accession_no_dashes}/{primary_document}"
+
+    resp = client.get(url)
+    if resp.status_code != 200:
+        print(
+            f"[edgar] Primary document fetch failed ({resp.status_code}): {url}",
+            file=sys.stderr,
+        )
+        return None
+    return resp.text, url
+
+
+def parse_via_koji(
+    html: str,
+    filename: str,
+    server_url: str,
+    parse_client: httpx.Client,
+) -> tuple[str, int] | None:
+    """Send raw filing HTML to a running koji parse service and return markdown.
+
+    The corpus tests how koji's *production* extract step performs on
+    real documents. Extract is designed to consume parse-quality
+    markdown, so the corpus markdown must come from the same parser
+    (docling) the prod pipeline uses — not from a one-off HTML-to-text
+    converter that would skip docling's structure-detection logic.
+
+    Returns (markdown, page_count) on success, or None on parse failure.
+    """
+    files = {"file": (filename, html.encode("utf-8"), "text/html")}
+    try:
+        resp = parse_client.post(f"{server_url}/api/parse", files=files)
+    except httpx.RequestError as exc:
+        print(f"[edgar] Parse request failed: {exc}", file=sys.stderr)
+        return None
+
+    if resp.status_code != 200:
+        try:
+            err = resp.json().get("error", resp.text[:200])
+        except Exception:
+            err = resp.text[:200]
+        print(f"[edgar] Parse returned {resp.status_code}: {err}", file=sys.stderr)
+        return None
+
+    body = resp.json()
+    md = body.get("markdown") or ""
+    pages = int(body.get("pages") or 0) or 1
+    if not md.strip():
+        print(f"[edgar] Parse returned empty markdown for {filename}", file=sys.stderr)
+        return None
+    return md, pages
 
 
 # ── Sample writer ────────────────────────────────────────────────
 
 
-def build_markdown(metadata: dict) -> str:
-    """Render a filing's metadata as a short markdown document."""
+def build_metadata_stub_markdown(metadata: dict) -> str:
+    """Render a filing's metadata as a short markdown document.
+
+    Used as a fallback when --metadata-only is set or the primary document
+    fetch fails. The original 5 hand-crafted samples are also of this
+    flavor (varied surface forms over the same metadata).
+    """
     form_type = metadata.get("form_type", "Unknown")
     filer_name = metadata.get("filer_name", "Unknown")
     cik = metadata.get("cik", "")
@@ -194,32 +304,86 @@ def safe_filename(form_type: str, n: int) -> str:
     return f"edgar_{slug}_{n:03d}"
 
 
-def write_sample(metadata: dict, sample_id: str) -> None:
+def next_available_index(form_type: str) -> int:
+    """Find the lowest unused sample index for this form type.
+
+    Lets us add new samples without colliding with the existing 5
+    hand-crafted ones (or with previous batches).
+    """
+    docs_dir = FILINGS_DIR / "documents"
+    n = 1
+    while (docs_dir / f"{safe_filename(form_type, n)}.md").exists():
+        n += 1
+    return n
+
+
+def load_existing_accessions() -> set[str]:
+    """Read every expected JSON in the corpus and collect known accession numbers.
+
+    EDGAR full-text search will happily hand back the same most-recent
+    filing on every call, so we need to remember what we've already
+    saved across runs.
+    """
+    accessions: set[str] = set()
+    exp_dir = FILINGS_DIR / "expected"
+    if not exp_dir.is_dir():
+        return accessions
+    for path in exp_dir.glob("*.expected.json"):
+        try:
+            data = json.loads(path.read_text())
+        except (json.JSONDecodeError, OSError):
+            continue
+        acc = data.get("accession_number")
+        if acc:
+            accessions.add(acc)
+    return accessions
+
+
+def write_sample(
+    metadata: dict,
+    sample_id: str,
+    document_markdown: str,
+    source_url: str,
+    pages_estimate: int,
+) -> None:
     doc_path = FILINGS_DIR / "documents" / f"{sample_id}.md"
     exp_path = FILINGS_DIR / "expected" / f"{sample_id}.expected.json"
     man_path = FILINGS_DIR / "manifests" / f"{sample_id}.json"
 
-    doc_path.write_text(build_markdown(metadata))
-    exp_path.write_text(json.dumps(metadata, indent=2) + "\n")
+    doc_path.write_text(document_markdown)
+
+    # Expected JSON tracks the schema fields only; primary_document is plumbing.
+    expected = {k: v for k, v in metadata.items() if k != "primary_document"}
+    exp_path.write_text(json.dumps(expected, indent=2) + "\n")
 
     form_type = metadata.get("form_type", "")
     cik = metadata.get("cik", "")
     manifest = {
         "filename": doc_path.name,
         "source_name": "SEC EDGAR",
-        "source_url": f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type={form_type}",
+        "source_url": source_url,
         "license": "Public Domain (US Government Work)",
         "license_url": "https://www.sec.gov/privacy",
         "attribution": "US Securities and Exchange Commission",
         "original_format": "HTML",
         "r2_url": None,
-        "pages": 1,
+        "pages": pages_estimate,
         "added_date": "2026-04-12",
         "added_by": "corpus-bootstrap",
         "schema": "sec_filings/schemas/filing_metadata.yaml",
-        "notes": f"{form_type} filing metadata retrieved from EDGAR index. Ground truth is authoritative (source is the index itself).",
+        "notes": (
+            f"{form_type} filing for {metadata.get('filer_name')} "
+            f"(accession {metadata.get('accession_number')}). Document text "
+            f"converted from EDGAR primary HTML; expected JSON is sourced "
+            f"directly from the EDGAR submission index (authoritative)."
+        ),
     }
     man_path.write_text(json.dumps(manifest, indent=2) + "\n")
+
+
+def estimate_pages_from_markdown(markdown: str) -> int:
+    """Fallback page count when parse doesn't supply one (~3000 chars/page)."""
+    return max(1, len(markdown) // 3000)
 
 
 # ── Main ─────────────────────────────────────────────────────────
@@ -246,6 +410,23 @@ def main() -> int:
         "--end-date",
         help="Latest filing date (YYYY-MM-DD)",
     )
+    parser.add_argument(
+        "--metadata-only",
+        action="store_true",
+        help="Skip the primary document fetch and write a synthetic metadata stub instead. "
+             "Useful for offline / smoke-test runs.",
+    )
+    parser.add_argument(
+        "--per-filing-delay",
+        type=float,
+        default=PER_FILING_DELAY,
+        help=f"Seconds to sleep between filings (default: {PER_FILING_DELAY})",
+    )
+    parser.add_argument(
+        "--koji-server-url",
+        default=DEFAULT_KOJI_SERVER_URL,
+        help=f"Koji server URL for the parse step (default: {DEFAULT_KOJI_SERVER_URL})",
+    )
     args = parser.parse_args()
 
     form_types = SUPPORTED_FORMS if args.form_type == "all" else [args.form_type]
@@ -253,19 +434,42 @@ def main() -> int:
     for sub in ("documents", "expected", "manifests"):
         (FILINGS_DIR / sub).mkdir(parents=True, exist_ok=True)
 
+    seen_accessions = load_existing_accessions()
+    if seen_accessions:
+        print(f"[edgar] Skipping {len(seen_accessions)} accession(s) already in corpus", file=sys.stderr)
+
     processed = 0
     skipped = 0
     failed = 0
-    counters: dict[str, int] = {}
 
-    with _client() as client:
+    with _client() as client, _parse_client() as parse_client:
+        # Sanity check: parse service must be reachable up front, otherwise
+        # we'd download HTML and lose it.
+        try:
+            health = parse_client.get(f"{args.koji_server_url}/health", timeout=5)
+            if health.status_code != 200:
+                print(
+                    f"[edgar] Koji server health check failed at {args.koji_server_url}/health "
+                    f"(HTTP {health.status_code}). Start a koji cluster first.",
+                    file=sys.stderr,
+                )
+                return 1
+        except httpx.RequestError as exc:
+            print(
+                f"[edgar] Cannot reach koji server at {args.koji_server_url}: {exc}\n"
+                f"        Start a koji cluster first, or pass --koji-server-url.",
+                file=sys.stderr,
+            )
+            return 1
+
         for form_type in form_types:
             if processed >= args.limit:
                 break
 
-            per_form_limit = args.limit - processed
-            print(f"[edgar] Searching for {form_type} filings (up to {per_form_limit})", file=sys.stderr)
-            hits = edgar_search(form_type, args.start_date, args.end_date, per_form_limit, client)
+            # Over-fetch from EDGAR so we still hit `limit` after de-duping
+            search_limit = max(args.limit - processed, 1) * 4
+            print(f"[edgar] Searching for {form_type} filings (over-fetching {search_limit} for de-dup)", file=sys.stderr)
+            hits = edgar_search(form_type, args.start_date, args.end_date, search_limit, client)
             print(f"[edgar] Found {len(hits)} hits", file=sys.stderr)
 
             for hit in hits:
@@ -278,11 +482,16 @@ def main() -> int:
                     failed += 1
                     continue
 
+                if accession in seen_accessions:
+                    skipped += 1
+                    continue
+
                 try:
                     submission = fetch_submission_index(cik, client)
                     if not submission:
                         failed += 1
                         continue
+                    time.sleep(RATE_LIMIT_DELAY)
 
                     metadata = build_sample_from_submission(cik, accession, submission)
                     if not metadata:
@@ -290,23 +499,50 @@ def main() -> int:
                         continue
 
                     actual_form = metadata.get("form_type", form_type)
-                    n = counters.get(actual_form, 0) + 1
-                    counters[actual_form] = n
+                    n = next_available_index(actual_form)
                     sample_id = safe_filename(actual_form, n)
 
                     if (FILINGS_DIR / "documents" / f"{sample_id}.md").exists():
                         skipped += 1
                         continue
 
-                    write_sample(metadata, sample_id)
+                    primary_document = metadata.get("primary_document")
+                    if args.metadata_only or not primary_document:
+                        document_markdown = build_metadata_stub_markdown(metadata)
+                        source_url = (
+                            f"https://www.sec.gov/cgi-bin/browse-edgar?"
+                            f"action=getcompany&CIK={cik}&type={actual_form}"
+                        )
+                        pages = estimate_pages_from_markdown(document_markdown)
+                    else:
+                        fetched = fetch_primary_document(cik, accession, primary_document, client)
+                        if fetched is None:
+                            failed += 1
+                            continue
+                        raw_html, source_url = fetched
+
+                        parsed = parse_via_koji(
+                            raw_html,
+                            primary_document,
+                            args.koji_server_url,
+                            parse_client,
+                        )
+                        if parsed is None:
+                            failed += 1
+                            continue
+                        document_markdown, pages = parsed
+
+                    write_sample(metadata, sample_id, document_markdown, source_url, pages)
+                    seen_accessions.add(accession)
                     processed += 1
                     print(
                         f"[edgar] ({processed}/{args.limit}) {sample_id} "
-                        f"{metadata.get('filer_name')} {actual_form}",
+                        f"{metadata.get('filer_name')} {actual_form} "
+                        f"~{pages}p ({len(document_markdown)} chars)",
                         file=sys.stderr,
                     )
 
-                    time.sleep(RATE_LIMIT_DELAY)
+                    time.sleep(args.per_filing_delay)
 
                 except Exception as e:
                     print(f"[edgar] Error on {accession}: {e}", file=sys.stderr)

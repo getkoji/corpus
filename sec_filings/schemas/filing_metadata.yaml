@@ -1,9 +1,47 @@
 name: filing_metadata
-description: SEC EDGAR filing metadata — filer, CIK, form type, dates
+description: Metadata extractable from the body of an SEC filing — filer, form type, dates
+
+# Schema scope: only fields a general-purpose extractor could reasonably find
+# in the document text itself. EDGAR-internal identifiers (CIK, accession
+# number) live in EDGAR's index, not in the filing body, so they are out of
+# scope here. Anyone who needs them should pull them from the EDGAR index
+# directly and feed the document to koji separately. See accuracy-1 PR for
+# the full reasoning.
+
+# Why headings.infer is disabled for this category:
+# Docling's markdown output for SEC filings has dense stacks of standalone
+# **bold** lines on cover pages (e.g. **CXJ**\n\n**GROUP CO., Limited**\n\n
+# **(Exact name of registrant)**). The default heading inference promotes
+# every standalone bold line to a `##` heading, fragmenting a single
+# logical "filer name" line into 2-3 micro-chunks. The router then routes
+# `filer_name` to "Holdings Inc." (without "EvoAir") or "GROUP CO., Limited"
+# (without "CXJ"). For sec_filings the whole-doc-as-one-chunk approach
+# produces better extraction because gpt-4o-mini handles the full cover
+# page coherently. See accuracy-1 PR body for the regression analysis.
+headings:
+  infer: false
 
 categories:
   keywords:
-    header: ["form", "filer", "filing date", "period of report", "cik", "accession"]
+    # Mix of metadata-label keywords (for synthetic / hand-crafted samples) and
+    # cover-page boilerplate keywords (for real EDGAR filings parsed via docling).
+    # Real SEC cover pages reliably contain "exchange commission", "exchange act",
+    # "registrant", "commission file", "incorporation", "employer identification";
+    # the first set covers the synthetic stub format. With both sets present,
+    # every real cover page hits the classifier's >=2-match threshold easily.
+    header: [
+      "form",
+      "filer",
+      "filing date",
+      "period of report",
+      "registrant",
+      "exchange commission",
+      "exchange act",
+      "commission file",
+      "securities",
+      "incorporation",
+      "employer identification",
+    ]
 
 fields:
   filer_name:
@@ -14,14 +52,6 @@ fields:
       look_in: [header]
       patterns: ["filer[:\\s]", "(?:company|issuer)\\s*name", "registrant"]
       signals: [has_name_references]
-
-  cik:
-    type: string
-    required: true
-    description: Central Index Key (SEC's unique identifier for the filer)
-    hints:
-      look_in: [header]
-      patterns: ["CIK[:\\s]*\\d+", "central\\s*index\\s*key"]
 
   form_type:
     type: enum
@@ -53,23 +83,18 @@ fields:
   filing_date:
     type: date
     required: true
-    description: Date the document was filed with SEC
+    description: Date the document was filed with SEC (often appears on the signature page)
     hints:
       look_in: [header]
-      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)"]
+      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)", "date[:\\s]"]
       signals: [has_dates]
 
   period_of_report:
     type: date
-    description: Fiscal period the filing covers
+    description: |
+      Fiscal period the filing covers. For 10-K/10-Q this is "for the year/quarter ended ...";
+      for 8-K it is the "Date of Report (Date of earliest event reported)".
     hints:
       look_in: [header]
-      patterns: ["period\\s*of\\s*report", "(?:reporting|fiscal)\\s*period", "for\\s*the\\s*(?:quarter|year)"]
+      patterns: ["period\\s*of\\s*report", "(?:reporting|fiscal)\\s*period", "for\\s*the\\s*(?:quarter|year)", "date\\s*of\\s*report"]
       signals: [has_dates]
-
-  accession_number:
-    type: string
-    description: Unique EDGAR accession number for the filing
-    hints:
-      look_in: [header]
-      patterns: ["accession\\s*(?:number|no)", "\\d{10}-\\d{2}-\\d{6}"]

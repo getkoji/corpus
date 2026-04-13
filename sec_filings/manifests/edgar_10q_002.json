@@ -1,0 +1,15 @@
+{
+  "filename": "edgar_10q_002.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1493712/000149371226000008/stme-20260228_10q.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "notes": "10-Q filing for Stimcell Energetics Inc. (accession 0001493712-26-000008). Document text converted from EDGAR primary HTML; expected JSON is sourced directly from the EDGAR submission index (authoritative)."
+}
