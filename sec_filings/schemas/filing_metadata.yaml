@@ -69,8 +69,17 @@ fields:
       Use the full form identifier as printed on the cover page, including
       any amendment suffix. If the cover page shows "FORM 10-K/A", return
       "10-K/A", not "10-K" — the "/A" suffix is significant and must not
-      be dropped. Amendment indicators ("Amendment No. 1", "Amendment No.
-      3") near the form header confirm the /A suffix is correct.
+      be dropped.
+
+      SEC amendments are often labeled in TWO separate places on the
+      cover page. The form header may say just "FORM S-1" or "FORM 10-K"
+      while "Amendment No. 1", "Amendment No. 3", or "AMENDMENT NO. 2"
+      appears on a nearby line (above, below, or adjacent to the form
+      label). When you see BOTH a base form identifier AND an "Amendment
+      No. N" label on the same cover page, append "/A" to the form type:
+        - "FORM S-1" + "Amendment No. 1" on cover    -> return "S-1/A"
+        - "FORM 10-K" + "AMENDMENT NO. 3" on cover   -> return "10-K/A"
+        - "FORM 10-K/A" already fully labeled        -> return "10-K/A"
     options:
       - 10-K
       - 10-K/A
@@ -92,6 +101,14 @@ fields:
       - Other
     hints:
       look_in: [header]
+      # Boost chunks that carry the "Amendment No." marker so when the
+      # form header and the amendment marker are on separate chunks
+      # (e.g. Pershing S-1/A where "Amendment No. 1" is in the chunk
+      # before "FORM S-1"), both chunks make it into the extraction
+      # context and the model can compose the /A suffix correctly.
+      prefer_contains:
+        - "Amendment No"
+        - "AMENDMENT NO"
       patterns: ["form\\s*(?:type)?[:\\s]*(?:10-?[KQ]|8-?K|S-?1|DEF\\s*14A)"]
 
   filing_date:
@@ -102,6 +119,14 @@ fields:
       Use the date next to the officer signatures in the signature block
       ("Dated: Month DD, YYYY" next to "/s/ Officer Name", or "on the Xth
       day of Month YYYY" in the preamble to the signature block).
+
+      For DEF 14A proxy statements there is usually no traditional
+      officer-signature block on the cover page. Use the mailing /
+      first-access date instead — the phrase "on or about Month DD,
+      YYYY" near the top of the proxy (e.g. "we sent the Notice on or
+      about April 10, 2026" or "proxy materials were first mailed on
+      or about April 10, 2026"). The annual meeting date itself is NOT
+      the filing date — that belongs in period_meeting_date.
 
       Do NOT use:
         - "As of Month DD, YYYY" share-count or record-holder dates
@@ -114,18 +139,28 @@ fields:
           ("/s/ [Accounting Firm]  Month DD, YYYY")
         - "Date of Report" on 8-K cover pages (that is the event date,
           see period_of_report instead)
+        - Annual-meeting dates on DEF 14A proxy statements (that is the
+          period_of_report for proxies, not the filing date)
     hints:
-      look_in: [signatures, header]
-      # Phrases that identify the officer signature block. Scores +12 when
-      # matched, which is enough to beat body chunks that only trigger
-      # pattern matches (+8). See koji router.py scoring pipeline.
+      # No look_in filter. On 10-K/10-Q/8-K the filing_date lives in the
+      # officer signature block and the prefer_contains phrases below
+      # (/s/, Dated:, duly authorized, by the undersigned) pick it up
+      # via their +12 score bonus. On DEF 14A proxies there is no
+      # officer-signature block — the mailing date lives in a body
+      # paragraph like "we sent the Notice on or about April 10, 2026",
+      # and those chunks are typically categorized 'other' so any
+      # look_in filter excludes them. Leaving look_in empty lets the
+      # router search the full chunk pool and the prefer_contains list
+      # below steers it to the right chunk for each form type.
       prefer_contains:
         - "/s/"
         - "Dated:"
         - "duly authorized"
         - "by the undersigned"
         - "SIGNATURES"
-      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)", "date[:\\s]"]
+        - "on or about"       # DEF 14A mailing date phrase
+        - "we sent the Notice"  # DEF 14A mailing date phrase
+      patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)", "date[:\\s]", "on\\s*or\\s*about"]
       signals: [has_dates]
 
   # The old single `period_of_report` field tried to mean different things

@@ -351,10 +351,42 @@ def load_existing_accessions() -> set[str]:
     return accessions
 
 
-# Fields that belong in expected.json — must match the filing_metadata schema.
-# Everything else from the EDGAR index (cik, accession_number, primary_document)
-# is corpus-side plumbing and goes into the manifest as sidecar metadata.
-SCHEMA_FIELDS = ("filer_name", "form_type", "filing_date", "period_of_report")
+# Map each form type to the period field that applies to it. Only the
+# relevant field is populated in expected.json; the other three are
+# dropped entirely (the bench ignores fields not present in expected).
+# Registration statements (S-1/A) have no period-of-report concept and
+# get no period field at all.
+_FORM_TO_PERIOD_FIELD: dict[str, str] = {
+    "10-K": "period_fiscal_year_end",
+    "10-K/A": "period_fiscal_year_end",
+    "10-Q": "period_quarter_end",
+    "10-Q/A": "period_quarter_end",
+    "8-K": "period_date_of_report",
+    "8-K/A": "period_date_of_report",
+    "DEF 14A": "period_meeting_date",
+    "20-F": "period_fiscal_year_end",
+    "6-K": "period_date_of_report",
+}
+
+
+def _build_expected(metadata: dict) -> dict:
+    """Project EDGAR-index metadata onto the filing_metadata schema's fields.
+
+    Only fields actually present in the schema and populated for the
+    given form type are returned. Everything else (CIK, accession
+    number, primary_document) is plumbing and lives in the manifest.
+    """
+    expected: dict = {
+        "filer_name": metadata.get("filer_name"),
+        "form_type": metadata.get("form_type"),
+        "filing_date": metadata.get("filing_date"),
+    }
+    period = metadata.get("period_of_report")
+    period_field = _FORM_TO_PERIOD_FIELD.get(metadata.get("form_type") or "")
+    if period_field and period:
+        expected[period_field] = period
+    # Drop keys that came back None so the bench doesn't count them
+    return {k: v for k, v in expected.items() if v is not None}
 
 
 def write_sample(
@@ -370,7 +402,7 @@ def write_sample(
 
     doc_path.write_text(document_markdown)
 
-    expected = {k: metadata[k] for k in SCHEMA_FIELDS if k in metadata}
+    expected = _build_expected(metadata)
     exp_path.write_text(json.dumps(expected, indent=2) + "\n")
 
     form_type = metadata.get("form_type", "")
