@@ -1,40 +1,40 @@
 {
   "model": "openai/gpt-4o-mini",
-  "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-adversarial-anomaly-corpus-blank-pages-x/corpus",
-  "started_at": "2026-04-13T22:48:50Z",
-  "elapsed_ms": 34934,
+  "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-migrate-adversarial-pure-null-expected-j/corpus",
+  "started_at": "2026-04-13T23:19:39Z",
+  "elapsed_ms": 32510,
   "total_documents": 11,
-  "total_fields": 11,
-  "passed_fields": 11,
-  "accuracy": 1.0,
+  "total_fields": 60,
+  "passed_fields": 56,
+  "accuracy": 0.9333333333333333,
   "error_count": 0,
   "categories": [
     {
       "category": "adversarial",
       "documents": 11,
-      "fields_checked": 11,
-      "passed": 11,
-      "accuracy": 1.0,
+      "fields_checked": 60,
+      "passed": 56,
+      "accuracy": 0.9333333333333333,
       "errors": 0,
-      "mean_elapsed_ms": 3167.6363636363635,
+      "mean_elapsed_ms": 2947.3636363636365,
       "documents_detail": [
         {
           "document": "anomaly_blank.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 2255,
+          "passed": 7,
+          "total": 7,
+          "accuracy": 1.0,
+          "elapsed_ms": 3725,
           "error": null,
           "failures": []
         },
         {
           "document": "anomaly_header_only.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 2073,
+          "passed": 7,
+          "total": 7,
+          "accuracy": 1.0,
+          "elapsed_ms": 2538,
           "error": null,
           "failures": []
         },
@@ -44,19 +44,26 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2093,
+          "elapsed_ms": 1624,
           "error": null,
           "failures": []
         },
         {
           "document": "anomaly_multi_union.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 4169,
+          "passed": 6,
+          "total": 7,
+          "accuracy": 0.8571428571428571,
+          "elapsed_ms": 2974,
           "error": null,
-          "failures": []
+          "failures": [
+            {
+              "field": "filer_name",
+              "expected": null,
+              "actual": "DELTA INDUSTRIES, INC.",
+              "detail": "hallucinated: expected null, got 'DELTA INDUSTRIES, INC.'"
+            }
+          ]
         },
         {
           "document": "anomaly_ocr_typos.md",
@@ -64,29 +71,36 @@
           "passed": 2,
           "total": 2,
           "accuracy": 1.0,
-          "elapsed_ms": 5212,
+          "elapsed_ms": 3296,
           "error": null,
           "failures": []
         },
         {
           "document": "anomaly_out_of_scope.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 2054,
+          "passed": 7,
+          "total": 7,
+          "accuracy": 1.0,
+          "elapsed_ms": 2235,
           "error": null,
           "failures": []
         },
         {
           "document": "anomaly_stapled.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 2890,
+          "passed": 6,
+          "total": 7,
+          "accuracy": 0.8571428571428571,
+          "elapsed_ms": 2480,
           "error": null,
-          "failures": []
+          "failures": [
+            {
+              "field": "filer_name",
+              "expected": null,
+              "actual": "BETA SERVICES INC.",
+              "detail": "hallucinated: expected null, got 'BETA SERVICES INC.'"
+            }
+          ]
         },
         {
           "document": "anomaly_three_doc_packet.md",
@@ -94,7 +108,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 6743,
+          "elapsed_ms": 5652,
           "error": null,
           "failures": []
         },
@@ -104,27 +118,40 @@
           "passed": 1,
           "total": 1,
           "accuracy": 1.0,
-          "elapsed_ms": 2689,
+          "elapsed_ms": 2990,
           "error": null,
           "failures": []
         },
         {
           "document": "anomaly_wrong_schema.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 2128,
+          "passed": 5,
+          "total": 7,
+          "accuracy": 0.7142857142857143,
+          "elapsed_ms": 1941,
           "error": null,
-          "failures": []
+          "failures": [
+            {
+              "field": "filer_name",
+              "expected": null,
+              "actual": "Zephyr Logistics LLC",
+              "detail": "hallucinated: expected null, got 'Zephyr Logistics LLC'"
+            },
+            {
+              "field": "filing_date",
+              "expected": null,
+              "actual": "2026-03-15",
+              "detail": "hallucinated: expected null, got '2026-03-15'"
+            }
+          ]
         },
         {
           "document": "anomaly_xbrl_only.md",
           "schema": "filing_metadata",
-          "passed": 0,
-          "total": 0,
-          "accuracy": 0.0,
-          "elapsed_ms": 2538,
+          "passed": 7,
+          "total": 7,
+          "accuracy": 1.0,
+          "elapsed_ms": 2966,
           "error": null,
           "failures": []
         }
