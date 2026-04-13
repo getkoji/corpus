@@ -11,5 +11,7 @@
   "added_date": "2026-04-12",
   "added_by": "corpus-bootstrap",
   "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001505155-26-000015",
+  "cik": "0001505155",
   "notes": "8-K filing for Upland Software, Inc. (accession 0001505155-26-000015). Document text converted from EDGAR primary HTML; expected JSON is sourced directly from the EDGAR submission index (authoritative)."
 }

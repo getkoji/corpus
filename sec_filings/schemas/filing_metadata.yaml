@@ -8,27 +8,27 @@ description: Metadata extractable from the body of an SEC filing — filer, form
 # directly and feed the document to koji separately. See accuracy-1 PR for
 # the full reasoning.
 
-# Why headings.infer is disabled for this category:
-# Docling's markdown output for SEC filings has dense stacks of standalone
-# **bold** lines on cover pages (e.g. **CXJ**\n\n**GROUP CO., Limited**\n\n
-# **(Exact name of registrant)**). The default heading inference promotes
-# every standalone bold line to a `##` heading, fragmenting a single
-# logical "filer name" line into 2-3 micro-chunks. The router then routes
-# `filer_name` to "Holdings Inc." (without "EvoAir") or "GROUP CO., Limited"
-# (without "CXJ"). For sec_filings the whole-doc-as-one-chunk approach
-# produces better extraction because gpt-4o-mini handles the full cover
-# page coherently. See accuracy-1 PR body for the regression analysis.
-headings:
-  infer: false
-
 categories:
   keywords:
+    # ORDER MATTERS: the classifier iterates categories and returns on the
+    # first match. Signatures must come before header because the header
+    # keyword list is broad ("securities", "exchange") and those words also
+    # appear in signature blocks — if header is checked first, signature
+    # chunks get misclassified as header.
+    #
+    # Narrow signatures-block category for routing the filing_date field
+    # specifically. Real SEC filings put the filing date next to officer
+    # signatures on the signature page; these phrases are boilerplate
+    # that appears in nearly every signature block.
+    signatures:
+      - "duly authorized"
+      - "by the undersigned"
+      - "pursuant to the requirements of section 13"
     # Mix of metadata-label keywords (for synthetic / hand-crafted samples) and
     # cover-page boilerplate keywords (for real EDGAR filings parsed via docling).
     # Real SEC cover pages reliably contain "exchange commission", "exchange act",
     # "registrant", "commission file", "incorporation", "employer identification";
-    # the first set covers the synthetic stub format. With both sets present,
-    # every real cover page hits the classifier's >=2-match threshold easily.
+    # the first set covers the synthetic stub format.
     header: [
       "form",
       "filer",
@@ -83,9 +83,18 @@ fields:
   filing_date:
     type: date
     required: true
-    description: Date the document was filed with SEC (often appears on the signature page)
+    description: |
+      Date the document was filed with SEC. On real SEC filings this appears
+      next to officer signatures on the signature page ("Date: Month DD, YYYY"
+      or in a signature-block table). For amendments (10-K/A, 10-Q/A) use the
+      signature-block date on the amendment itself — NOT any reference to the
+      original filing's date elsewhere in the document.
     hints:
-      look_in: [header]
+      # Both signatures (real filings) and header (synthetic stubs) are
+      # valid places to find the filing date. The router's look_in hard
+      # filter will restrict to chunks in these categories, and scoring
+      # then picks the best candidate.
+      look_in: [signatures, header]
       patterns: ["filing\\s*date", "filed\\s*(?:on|as\\s*of)", "date[:\\s]"]
       signals: [has_dates]
 

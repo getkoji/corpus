@@ -1,22 +1,22 @@
 {
   "model": "openai/gpt-4o-mini",
   "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-expand-sec-filings-corpus-and-re-baselin/corpus",
-  "started_at": "2026-04-13T01:10:59Z",
-  "elapsed_ms": 69447,
-  "total_documents": 15,
-  "total_fields": 60,
-  "passed_fields": 59,
-  "accuracy": 0.9833333333333333,
+  "started_at": "2026-04-13T03:14:06Z",
+  "elapsed_ms": 49254,
+  "total_documents": 25,
+  "total_fields": 100,
+  "passed_fields": 94,
+  "accuracy": 0.94,
   "error_count": 0,
   "categories": [
     {
       "category": "sec_filings",
-      "documents": 15,
-      "fields_checked": 60,
-      "passed": 59,
-      "accuracy": 0.9833333333333333,
+      "documents": 25,
+      "fields_checked": 100,
+      "passed": 94,
+      "accuracy": 0.94,
       "errors": 0,
-      "mean_elapsed_ms": 4623.2,
+      "mean_elapsed_ms": 1961.8,
       "documents_detail": [
         {
           "document": "edgar_10k_001.md",
@@ -24,7 +24,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 9850,
+          "elapsed_ms": 2946,
           "error": null,
           "failures": []
         },
@@ -34,9 +34,53 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 4296,
+          "elapsed_ms": 1529,
           "error": null,
           "failures": []
+        },
+        {
+          "document": "edgar_10k_003.md",
+          "schema": "filing_metadata",
+          "passed": 3,
+          "total": 4,
+          "accuracy": 0.75,
+          "elapsed_ms": 2244,
+          "error": null,
+          "failures": [
+            {
+              "field": "filer_name",
+              "expected": "Balance Labs, Inc.",
+              "actual": "LABS, INC.",
+              "detail": "expected 'Balance Labs, Inc.', got 'LABS, INC.'"
+            }
+          ]
+        },
+        {
+          "document": "edgar_10k_004.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2593,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10k_005.md",
+          "schema": "filing_metadata",
+          "passed": 3,
+          "total": 4,
+          "accuracy": 0.75,
+          "elapsed_ms": 1489,
+          "error": null,
+          "failures": [
+            {
+              "field": "filing_date",
+              "expected": "2026-04-10",
+              "actual": "2026-04-03",
+              "detail": "expected 2026-04-10, got 2026-04-03"
+            }
+          ]
         },
         {
           "document": "edgar_10k_01.md",
@@ -44,7 +88,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1048,
+          "elapsed_ms": 1222,
           "error": null,
           "failures": []
         },
@@ -54,46 +98,53 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1178,
+          "elapsed_ms": 1127,
           "error": null,
           "failures": []
         },
         {
           "document": "edgar_10k_a_001.md",
           "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1126,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10k_a_002.md",
+          "schema": "filing_metadata",
           "passed": 3,
           "total": 4,
           "accuracy": 0.75,
-          "elapsed_ms": 11274,
+          "elapsed_ms": 1816,
           "error": null,
           "failures": [
             {
               "field": "filing_date",
               "expected": "2026-04-10",
-              "actual": "2026-03-18",
-              "detail": "expected 2026-04-10, got 2026-03-18"
+              "actual": "2025-04-02",
+              "detail": "expected 2026-04-10, got 2025-04-02"
             }
           ]
         },
         {
-          "document": "edgar_10k_a_002.md",
-          "schema": "filing_metadata",
-          "passed": 4,
-          "total": 4,
-          "accuracy": 1.0,
-          "elapsed_ms": 10027,
-          "error": null,
-          "failures": []
-        },
-        {
           "document": "edgar_10q_001.md",
           "schema": "filing_metadata",
-          "passed": 4,
+          "passed": 3,
           "total": 4,
-          "accuracy": 1.0,
-          "elapsed_ms": 9216,
+          "accuracy": 0.75,
+          "elapsed_ms": 1322,
           "error": null,
-          "failures": []
+          "failures": [
+            {
+              "field": "filer_name",
+              "expected": "CXJ GROUP CO., Limited",
+              "actual": "CXJ Group Co., Ltd.",
+              "detail": "expected 'CXJ GROUP CO., Limited', got 'CXJ Group Co., Ltd.'"
+            }
+          ]
         },
         {
           "document": "edgar_10q_002.md",
@@ -101,7 +152,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 6421,
+          "elapsed_ms": 1245,
           "error": null,
           "failures": []
         },
@@ -111,7 +162,37 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 6059,
+          "elapsed_ms": 1230,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_004.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1466,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_005.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 8775,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_10q_006.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1574,
           "error": null,
           "failures": []
         },
@@ -121,7 +202,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1189,
+          "elapsed_ms": 1562,
           "error": null,
           "failures": []
         },
@@ -131,7 +212,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1853,
+          "elapsed_ms": 1486,
           "error": null,
           "failures": []
         },
@@ -141,7 +222,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1428,
+          "elapsed_ms": 1518,
           "error": null,
           "failures": []
         },
@@ -151,7 +232,37 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 2037,
+          "elapsed_ms": 1545,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_004.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1187,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_005.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 1372,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "edgar_8k_006.md",
+          "schema": "filing_metadata",
+          "passed": 4,
+          "total": 4,
+          "accuracy": 1.0,
+          "elapsed_ms": 2003,
           "error": null,
           "failures": []
         },
@@ -161,7 +272,7 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1641,
+          "elapsed_ms": 1552,
           "error": null,
           "failures": []
         },
@@ -171,9 +282,32 @@
           "passed": 4,
           "total": 4,
           "accuracy": 1.0,
-          "elapsed_ms": 1831,
+          "elapsed_ms": 1355,
           "error": null,
           "failures": []
+        },
+        {
+          "document": "edgar_def_14a_001.md",
+          "schema": "filing_metadata",
+          "passed": 2,
+          "total": 4,
+          "accuracy": 0.5,
+          "elapsed_ms": 3761,
+          "error": null,
+          "failures": [
+            {
+              "field": "filing_date",
+              "expected": "2026-04-10",
+              "actual": null,
+              "detail": "missing from actual"
+            },
+            {
+              "field": "period_of_report",
+              "expected": "2026-05-13",
+              "actual": null,
+              "detail": "missing from actual"
+            }
+          ]
         }
       ]
     }

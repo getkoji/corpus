@@ -318,25 +318,43 @@ def next_available_index(form_type: str) -> int:
 
 
 def load_existing_accessions() -> set[str]:
-    """Read every expected JSON in the corpus and collect known accession numbers.
+    """Read every manifest in the corpus and collect known accession numbers.
 
     EDGAR full-text search will happily hand back the same most-recent
     filing on every call, so we need to remember what we've already
-    saved across runs.
+    saved across runs. We source the accession from each manifest's
+    explicit `accession_number` field when present, falling back to
+    parsing it out of the `source_url` for older manifests that predate
+    the explicit field.
     """
     accessions: set[str] = set()
-    exp_dir = FILINGS_DIR / "expected"
-    if not exp_dir.is_dir():
+    man_dir = FILINGS_DIR / "manifests"
+    if not man_dir.is_dir():
         return accessions
-    for path in exp_dir.glob("*.expected.json"):
+    for path in man_dir.glob("*.json"):
         try:
             data = json.loads(path.read_text())
         except (json.JSONDecodeError, OSError):
             continue
         acc = data.get("accession_number")
+        if not acc:
+            # Backwards compat: derive from Archives URL
+            # (e.g. .../Archives/edgar/data/1080448/000168316826002795/...)
+            url = data.get("source_url") or ""
+            import re as _re
+            m = _re.search(r"/Archives/edgar/data/\d+/(\d{18})/", url)
+            if m:
+                raw = m.group(1)
+                acc = f"{raw[:10]}-{raw[10:12]}-{raw[12:]}"
         if acc:
             accessions.add(acc)
     return accessions
+
+
+# Fields that belong in expected.json — must match the filing_metadata schema.
+# Everything else from the EDGAR index (cik, accession_number, primary_document)
+# is corpus-side plumbing and goes into the manifest as sidecar metadata.
+SCHEMA_FIELDS = ("filer_name", "form_type", "filing_date", "period_of_report")
 
 
 def write_sample(
@@ -352,12 +370,13 @@ def write_sample(
 
     doc_path.write_text(document_markdown)
 
-    # Expected JSON tracks the schema fields only; primary_document is plumbing.
-    expected = {k: v for k, v in metadata.items() if k != "primary_document"}
+    expected = {k: metadata[k] for k in SCHEMA_FIELDS if k in metadata}
     exp_path.write_text(json.dumps(expected, indent=2) + "\n")
 
     form_type = metadata.get("form_type", "")
+    filer_name = metadata.get("filer_name", "")
     cik = metadata.get("cik", "")
+    accession = metadata.get("accession_number", "")
     manifest = {
         "filename": doc_path.name,
         "source_name": "SEC EDGAR",
@@ -371,11 +390,16 @@ def write_sample(
         "added_date": "2026-04-12",
         "added_by": "corpus-bootstrap",
         "schema": "sec_filings/schemas/filing_metadata.yaml",
+        # Sidecar metadata from the EDGAR index — not in the schema, but
+        # load_existing_accessions() reads from here to dedupe across runs
+        # and humans can trace any sample back to its EDGAR record.
+        "accession_number": accession,
+        "cik": cik,
         "notes": (
-            f"{form_type} filing for {metadata.get('filer_name')} "
-            f"(accession {metadata.get('accession_number')}). Document text "
-            f"converted from EDGAR primary HTML; expected JSON is sourced "
-            f"directly from the EDGAR submission index (authoritative)."
+            f"{form_type} filing for {filer_name} (accession {accession}). "
+            f"Document text produced by piping the EDGAR primary HTML through "
+            f"koji parse (docling); expected JSON is sourced from the EDGAR "
+            f"submission index (authoritative for filer, form type, dates)."
         ),
     }
     man_path.write_text(json.dumps(manifest, indent=2) + "\n")
@@ -466,8 +490,11 @@ def main() -> int:
             if processed >= args.limit:
                 break
 
-            # Over-fetch from EDGAR so we still hit `limit` after de-duping
-            search_limit = max(args.limit - processed, 1) * 4
+            # Over-fetch from EDGAR so we still hit `limit` after de-duping.
+            # Scale with the corpus size so we reliably find unseen filings
+            # even when the first several pages are already in the corpus.
+            wanted = max(args.limit - processed, 1)
+            search_limit = max(wanted * 4, wanted + len(seen_accessions) + 10)
             print(f"[edgar] Searching for {form_type} filings (over-fetching {search_limit} for de-dup)", file=sys.stderr)
             hits = edgar_search(form_type, args.start_date, args.end_date, search_limit, client)
             print(f"[edgar] Found {len(hits)} hits", file=sys.stderr)
