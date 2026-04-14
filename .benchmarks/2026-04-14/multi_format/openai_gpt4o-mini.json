@@ -1,0 +1,54 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "corpus_path": "/Users/trankly/dev/koji/slots/accuracy/workspaces/feat-accuracy-non-markdown-format-support-send-docx-xl/corpus",
+  "started_at": "2026-04-14T12:03:02Z",
+  "elapsed_ms": 21442,
+  "total_documents": 3,
+  "total_fields": 18,
+  "passed_fields": 18,
+  "accuracy": 1.0,
+  "error_count": 0,
+  "categories": [
+    {
+      "category": "multi_format",
+      "documents": 3,
+      "fields_checked": 18,
+      "passed": 18,
+      "accuracy": 1.0,
+      "errors": 0,
+      "mean_elapsed_ms": 7138.0,
+      "documents_detail": [
+        {
+          "document": "meridian_invoice_docx.md",
+          "schema": "invoice_basic",
+          "passed": 6,
+          "total": 6,
+          "accuracy": 1.0,
+          "elapsed_ms": 9161,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "meridian_invoice_pptx.md",
+          "schema": "invoice_basic",
+          "passed": 6,
+          "total": 6,
+          "accuracy": 1.0,
+          "elapsed_ms": 6471,
+          "error": null,
+          "failures": []
+        },
+        {
+          "document": "meridian_invoice_xlsx.md",
+          "schema": "invoice_basic",
+          "passed": 6,
+          "total": 6,
+          "accuracy": 1.0,
+          "elapsed_ms": 5782,
+          "error": null,
+          "failures": []
+        }
+      ]
+    }
+  ]
+}
