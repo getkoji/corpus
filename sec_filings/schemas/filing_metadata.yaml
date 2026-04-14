@@ -1,6 +1,15 @@
 name: filing_metadata
 description: Metadata extractable from the body of an SEC filing — filer, form type, dates
 
+# When oss-28's classify+split pipeline stage is active, this schema
+# only applies to chunks classified as `sec_filing`. Packets containing
+# a mix of document types (e.g. an invoice + a COI + a policy) will
+# have non-sec_filing sections skipped for this schema, so the extractor
+# can't hallucinate SEC metadata from unrelated content. When the
+# classify stage is disabled, this key is ignored and the schema still
+# applies to the whole document — backward-compatible.
+apply_to: [sec_filing]
+
 # Schema scope: only fields a general-purpose extractor could reasonably find
 # in the document text itself. EDGAR-internal identifiers (CIK, accession
 # number) live in EDGAR's index, not in the filing body, so they are out of
