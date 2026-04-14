@@ -28,52 +28,57 @@ supports over time.
 Expected JSON contains the fields the document legitimately has. Bench validates
 them the normal way.
 
-### Pure-null cases (expected = `{}`)
-Expected JSON is empty. Bench trivially passes them at 0/0 fields. **This does
-not verify the extractor returned nulls — it only verifies it didn't crash.**
-To actually validate null returns, run `scripts/probe_adversarial.py` against
-a live cluster; the script hits `/api/extract` for each pure-null doc and
-prints any non-null fields the extractor returned (i.e. hallucinations).
+### Pure-null cases (expected: explicit nulls)
+Each pure-null doc's expected JSON contains every schema field set to
+`null`. `compare_field` in `koji/cli/test_runner.py` (since **oss-25**,
+PR koji#21) handles these under a four-case matrix:
 
-The pure-null convention is a placeholder until **oss-23** (comparator null
-semantics) lands. Today, `compare_field` in `koji/cli/test_runner.py` treats
-`actual=null` as always-failing regardless of what `expected` is, so explicit
-`expected: null` assertions would fail every time the extractor does the
-right thing. Once oss-23 ships, we'll migrate the pure-null cases from `{}`
-to explicit nulls and the bench will catch hallucinations directly.
+  1. `expected=None, actual=None` → **pass**, detail `"correctly absent"`
+  2. `expected=None, actual=non-None` → **fail**, detail `"hallucinated"`
+  3. `expected=non-None, actual=None` → **fail**, detail `"missing"`
+  4. Both non-None → normal value comparison
 
-## Known findings (2026-04-13, gpt-4o-mini)
+This is how bench directly validates "the model returned null on input
+it shouldn't have extracted anything from". A clean pure-null case
+passes all 7 field assertions; any field the model hallucinated counts
+as a real failure on the bench score, not a probe-script finding.
 
-**Clean (4 of 7 pure-null cases):** the extractor correctly returns all
-null on blank, header-only, XBRL-only, and out-of-scope inputs. No
-SEC metadata fabricated from empty or unrelated content.
+The earlier `{}` placeholder convention is gone — it was only needed
+until oss-25 landed.
 
-**Hallucinations (3 of 7 pure-null cases):**
+## Known findings (2026-04-13, gpt-4o-mini, post oss-25 migration)
 
-- **`anomaly_wrong_schema`**: returns `filer_name: "Zephyr Logistics LLC"`
-  (the INSURED party) and `filing_date: "2026-03-15"` (the COI issue date).
-  Model maps "insured" to "filer" and grabs a top-of-doc date as the
-  filing date. Worst offender — cross-domain confusion.
-- **`anomaly_stapled`**: returns a filer_name from one of the two cover
-  pages, picked non-deterministically (the specific pick shifts with
-  engine version; current: "BETA SERVICES INC."). No form_type returned
-  but filer_name leaks.
-- **`anomaly_multi_union`**: similar non-deterministic pick across the
-  three concatenated filings (current: Delta + 10-Q).
+**Bench:** 56/60 fields = **93.3%** across 11 adversarial docs.
 
-All three are in scope of **oss-28** (configurable classify + split
-pipeline stage). None of them can be fixed with schema hints alone —
-the extractor needs upstream document classification so that the wrong
-schema never gets applied to a whole section, and multi-doc packets
-get split before extraction.
+**Clean (4 of 7 pure-null cases, 28/28 null assertions pass):** the
+extractor correctly returns all null on `anomaly_blank`,
+`anomaly_header_only`, `anomaly_xbrl_only`, and `anomaly_out_of_scope`.
+No SEC metadata fabricated from empty or unrelated content.
 
-### Blocked on oss-25
+**Hallucinations (3 of 7 pure-null cases, 4/21 null assertions fail):**
 
-Pure-null expected JSONs are currently empty `{}`, so the bench trivially
-passes them at 0/0 fields. Once **oss-25** (comparator null semantics)
-ships, those `{}` files migrate to explicit nulls (one null per schema
-field), and the bench will catch the hallucinations above as real test
-failures instead of relying on the probe script.
+- **`anomaly_wrong_schema` (5/7 — 2 hallucinations):**
+  - `filer_name: "Zephyr Logistics LLC"` — the INSURED party from the COI
+  - `filing_date: "2026-03-15"` — the COI's issue date
+  Model maps insurance concepts to SEC fields. Worst offender — genuine
+  cross-domain confusion.
+- **`anomaly_stapled` (6/7 — 1 hallucination):** `filer_name` leaks
+  from one of the two concatenated cover pages. Pick is non-deterministic
+  across engine versions.
+- **`anomaly_multi_union` (6/7 — 1 hallucination):** same pattern on
+  the three-form concatenation.
+
+All four hallucinations are in scope of **oss-28** (configurable classify
++ split pipeline stage). None can be fixed with schema hints alone —
+the extractor needs upstream document classification so the wrong schema
+never gets applied to a whole section, and multi-doc packets get split
+before extraction.
+
+Positive-assertion cases (4/4 all passing): `anomaly_truncated` (1/1),
+`anomaly_misleading_form` (4/4), `anomaly_ocr_typos` (2/2),
+`anomaly_three_doc_packet` (4/4). The three-doc packet passing cleanly
+is the notable result — applying the COI schema to an
+invoice+COI+policy packet still lands on the COI section correctly.
 
 ## Running the bench
 
@@ -83,8 +88,17 @@ koji bench --corpus . --category adversarial --model openai/gpt-4o-mini
 
 ## Running the hallucination probe
 
+`scripts/probe_adversarial.py` is kept around as a quick standalone
+diagnostic — same hallucination check without needing to run the full
+bench. Useful for iterating on a single anomaly doc during debugging.
+
 ```bash
 python scripts/probe_adversarial.py .
 ```
 
 (Requires a running koji cluster and `OPENAI_API_KEY` in the environment.)
+
+Since oss-25 landed the null-aware comparator, the probe's findings
+are now fully reproducible through `koji bench` — the probe is no
+longer a substitute for bench validation, just a faster single-doc
+troubleshooter.
