@@ -146,10 +146,27 @@ fields:
           signature block near the bottom of the document.
         - Auditor signing dates in the financial statements
           ("/s/ [Accounting Firm]  Month DD, YYYY")
+        - Dates from board-of-directors audit-approval blocks that
+          appear INSIDE the audit report. On some filings a director
+          signs an "Approved on behalf of the Board of Directors"
+          block next to the auditor's signature ("For [Accounting
+          Firm] / Chartered Accountants"). That date goes with the
+          audit report, NOT the filing. The filing date is exclusively
+          on the top-level SIGNATURES page near the bottom of the
+          document, marked by "duly authorized" / "by the undersigned"
+          language and followed by officer titles like "Chief
+          Executive Officer" / "President" / "Chief Financial Officer"
+          — not "Director" alone.
         - "Date of Report" on 8-K cover pages (that is the event date,
           see period_of_report instead)
         - Annual-meeting dates on DEF 14A proxy statements (that is the
           period_of_report for proxies, not the filing date)
+
+      When multiple "Dated:" / "Date:" markers appear in the document,
+      always pick the one closest to the final **SIGNATURES** heading
+      at the bottom — that's the officer who signed the filing itself.
+      Audit approval and auditor signature blocks always come earlier
+      in the document (inside Item 8, Financial Statements).
     hints:
       # No look_in filter. On 10-K/10-Q/8-K the filing_date lives in the
       # officer signature block and the prefer_contains phrases below
