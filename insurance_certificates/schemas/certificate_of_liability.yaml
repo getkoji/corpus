@@ -11,6 +11,8 @@ description: |
   unique policy_number with all fields collated from wherever they
   appeared in the document.
 
+apply_to: [coi]
+
 categories:
   keywords:
     header: ["certificate", "liability insurance", "proof of insurance", "coverage"]

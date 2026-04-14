@@ -12,5 +12,5 @@
   "added_by": "accuracy-9",
   "schema": "sec_filings/schemas/filing_metadata.yaml",
   "anomaly": true,
-  "notes": "Two SEC cover pages concatenated (fictional ACME 10-K + BETA 10-Q). Tests how the extractor handles ambiguous multi-doc input. Ideal behavior: consistent pick of one, not a hallucinated hybrid."
+  "notes": "Two SEC cover pages concatenated (fictional ACME 10-K + BETA 10-Q). Post-oss-28 (classify+split): the classifier should split into 2 sec_filing sections; the bench unions per-section extractions field-wise (first non-null wins). Expected encodes that union — ACME fields win for filer/form_type/period_fiscal_year_end (section [0]), BETA contributes period_quarter_end (section [1]). Tests that the classifier reliably splits AND each section extracts its own metadata without cross-contamination."
 }
