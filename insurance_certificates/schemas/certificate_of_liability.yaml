@@ -19,7 +19,28 @@ categories:
     producer: ["producer", "agency", "broker", "insurance agent", "contact"]
     insured: ["insured", "named insured", "policyholder"]
     coverage_summary: ["coverage summary", "coverage grid", "policies in force", "coverage overview"]
-    coverage_detail: ["coverage detail", "limit detail", "policy detail", "detailed limits"]
+    coverage_detail:
+      - "coverage detail"
+      - "limit detail"
+      - "policy detail"
+      - "detailed limits"
+      # Per-policy block headings (a fragmented COI puts each policy's
+      # limits under its own section like "Policy CGL7842910 — Commercial
+      # General Liability"). Without these the policy-block chunks fall
+      # outside coverage_detail and the policies-field router skips them,
+      # so limits and additional_insureds come back empty (oss-65 +
+      # accuracy-20).
+      - "general liability"
+      - "automobile liability"
+      - "auto liability"
+      - "umbrella liability"
+      - "excess liability"
+      - "workers compensation"
+      - "workers' compensation"
+      - "professional liability"
+      - "cyber liability"
+      - "technology e&o"
+      - "policy "  # trailing space avoids matching "policies"
     certificate_holder: ["certificate holder", "additional insured", "cancellation"]
     remarks: ["remarks", "additional information", "endorsements", "schedule"]
 
@@ -138,7 +159,30 @@ fields:
           items:
             type: string
     hints:
-      look_in: [coverage_summary, coverage_detail, remarks, header]
+      # No look_in filter. Per-policy detail chunks vary widely:
+      # some headings include the coverage type ("Policy CGL... —
+      # Commercial General Liability"), others are bare policy numbers
+      # ("GL-88104472"). A look_in filter pinned to coverage_summary /
+      # coverage_detail / remarks excludes the bare-policy-number
+      # variant entirely, so per-policy limit chunks never reach the
+      # router and `limits` comes back empty (accuracy-20 + oss-65).
+      # Signals + patterns + prefer_contains do the heavy lifting
+      # without an exclusionary look_in.
       signals: [has_policy_numbers, has_limit_amounts, has_dates]
-      patterns: ["general\\s*liability", "auto\\s*liability", "workers\\s*compensation", "umbrella", "excess\\s*liability"]
+      patterns:
+        - "general\\s*liability"
+        - "auto\\s*liability"
+        - "workers\\s*compensation"
+        - "umbrella"
+        - "excess\\s*liability"
+        - "each\\s*occurrence"
+        - "aggregate"
+        - "policy\\s*number"
+      prefer_contains:
+        - "Each Occurrence"
+        - "General Aggregate"
+        - "Combined Single Limit"
+        - "Bodily Injury"
+        - "Property Damage"
+        - "Policy Number"
       max_chunks: 12  # policy data is spread across many detail chunks
