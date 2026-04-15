@@ -264,6 +264,49 @@ def parse_via_koji(
     return md, pages
 
 
+def parse_via_local_docling(html: str, filename: str) -> tuple[str, int] | None:
+    """Run docling in-process to convert HTML → markdown without the koji cluster.
+
+    Used when --local-parse is set. Same parser as the koji parse
+    service (docling DocumentConverter), just invoked directly so
+    sourcing works in environments where the ghcr.io parse-base image
+    isn't pullable. Imports docling lazily so non-local-parse runs
+    don't pay the import cost.
+
+    Returns (markdown, page_count) on success, or None on failure.
+    """
+    try:
+        import io
+
+        from docling.datamodel.base_models import DocumentStream
+        from docling.document_converter import DocumentConverter
+    except ImportError as exc:
+        print(
+            f"[edgar] docling not available for --local-parse: {exc}\n"
+            f"        Install with: uv run --with docling python scripts/sources/edgar.py ...",
+            file=sys.stderr,
+        )
+        return None
+
+    try:
+        stream = DocumentStream(name=filename, stream=io.BytesIO(html.encode("utf-8")))
+        converter = DocumentConverter()
+        result = converter.convert(stream)
+        md = result.document.export_to_markdown()
+        pages = len(result.pages) if hasattr(result, "pages") and result.pages else 0
+    except Exception as exc:
+        print(f"[edgar] Local docling failed on {filename}: {exc}", file=sys.stderr)
+        return None
+
+    if not md.strip():
+        print(f"[edgar] Local docling returned empty markdown for {filename}", file=sys.stderr)
+        return None
+
+    if pages <= 0:
+        pages = max(1, len(md) // 3000)
+    return md, pages
+
+
 # ── Sample writer ────────────────────────────────────────────────
 
 
@@ -483,6 +526,15 @@ def main() -> int:
         default=DEFAULT_KOJI_SERVER_URL,
         help=f"Koji server URL for the parse step (default: {DEFAULT_KOJI_SERVER_URL})",
     )
+    parser.add_argument(
+        "--local-parse",
+        action="store_true",
+        help=(
+            "Run docling in-process instead of calling the koji parse service. "
+            "Use when the cluster isn't running (e.g., ghcr.io parse-base image "
+            "can't be pulled). Requires `uv run --with docling`."
+        ),
+    )
     args = parser.parse_args()
 
     form_types = SUPPORTED_FORMS if args.form_type == "all" else [args.form_type]
@@ -499,24 +551,38 @@ def main() -> int:
     failed = 0
 
     with _client() as client, _parse_client() as parse_client:
-        # Sanity check: parse service must be reachable up front, otherwise
-        # we'd download HTML and lose it.
-        try:
-            health = parse_client.get(f"{args.koji_server_url}/health", timeout=5)
-            if health.status_code != 200:
+        if args.local_parse:
+            # Lazy-import docling once up front so failures are loud and
+            # we don't download HTML we can't parse. An ImportError here
+            # kills the run before any SEC traffic.
+            try:
+                import docling.document_converter  # noqa: F401
+            except ImportError:
                 print(
-                    f"[edgar] Koji server health check failed at {args.koji_server_url}/health "
-                    f"(HTTP {health.status_code}). Start a koji cluster first.",
+                    "[edgar] --local-parse requires docling. Re-run with:\n"
+                    "        uv run --with docling python scripts/sources/edgar.py ...",
                     file=sys.stderr,
                 )
                 return 1
-        except httpx.RequestError as exc:
-            print(
-                f"[edgar] Cannot reach koji server at {args.koji_server_url}: {exc}\n"
-                f"        Start a koji cluster first, or pass --koji-server-url.",
-                file=sys.stderr,
-            )
-            return 1
+        else:
+            # Sanity check: parse service must be reachable up front, otherwise
+            # we'd download HTML and lose it.
+            try:
+                health = parse_client.get(f"{args.koji_server_url}/health", timeout=5)
+                if health.status_code != 200:
+                    print(
+                        f"[edgar] Koji server health check failed at {args.koji_server_url}/health "
+                        f"(HTTP {health.status_code}). Start a koji cluster first.",
+                        file=sys.stderr,
+                    )
+                    return 1
+            except httpx.RequestError as exc:
+                print(
+                    f"[edgar] Cannot reach koji server at {args.koji_server_url}: {exc}\n"
+                    f"        Start a koji cluster first, or pass --koji-server-url.",
+                    file=sys.stderr,
+                )
+                return 1
 
         for form_type in form_types:
             if processed >= args.limit:
@@ -580,12 +646,15 @@ def main() -> int:
                             continue
                         raw_html, source_url = fetched
 
-                        parsed = parse_via_koji(
-                            raw_html,
-                            primary_document,
-                            args.koji_server_url,
-                            parse_client,
-                        )
+                        if args.local_parse:
+                            parsed = parse_via_local_docling(raw_html, primary_document)
+                        else:
+                            parsed = parse_via_koji(
+                                raw_html,
+                                primary_document,
+                                args.koji_server_url,
+                                parse_client,
+                            )
                         if parsed is None:
                             failed += 1
                             continue

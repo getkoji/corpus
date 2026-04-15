@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_8k_a_003.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/793074/000079307426000090/wern-20260127.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 6,
+  "added_date": "2026-04-14",
+  "added_by": "accuracy-12",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0000793074-26-000090",
+  "cik": "0000793074",
+  "notes": "8-K/A filing for WERNER ENTERPRISES INC (accession 0000793074-26-000090). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}

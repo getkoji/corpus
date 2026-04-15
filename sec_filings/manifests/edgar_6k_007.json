@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_6k_007.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/917851/000129281426002245/vale20260413_6k.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-14",
+  "added_by": "accuracy-12",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001292814-26-002245",
+  "cik": "0000917851",
+  "notes": "6-K filing for Vale S.A. (accession 0001292814-26-002245). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}

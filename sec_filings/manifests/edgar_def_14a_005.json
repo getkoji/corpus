@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_def_14a_005.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1939433/000193943326000060/cnsreit-20260413.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 263,
+  "added_date": "2026-04-14",
+  "added_by": "accuracy-12",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001939433-26-000060",
+  "cik": "0001939433",
+  "notes": "DEF 14A filing for Cohen & Steers Income Opportunities REIT, Inc. (accession 0001939433-26-000060). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}
