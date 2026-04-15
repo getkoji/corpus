@@ -100,7 +100,9 @@ fields:
       - S-1/A
       - DEF 14A
       - 20-F
+      - 20-F/A
       - 6-K
+      - 6-K/A
       - 3
       - 4
       - 5
@@ -242,17 +244,37 @@ fields:
 
   period_date_of_report:
     type: date
-    description: Date of Report for 8-K / 8-K/A filings.
+    description: Date of Report for 8-K / 8-K/A / 6-K filings.
     extraction_hint: |
-      For 8-K and 8-K/A filings only. Extract the date labeled "Date of
-      Report (Date of earliest event reported)" on the cover page. This
-      is the date of the triggering event the 8-K is disclosing, not the
-      date the 8-K was filed with the SEC.
+      For **8-K** and **8-K/A** filings: extract the date labeled "Date
+      of Report (Date of earliest event reported)" on the cover page.
+      This is the date of the triggering event the 8-K is disclosing,
+      not the date the 8-K was filed with the SEC.
 
-      Return null for any non-8-K form type.
+      For **6-K** filings: extract the report date from the cover page.
+      A 6-K cover typically does NOT carry a "Date of Report:" label.
+      Instead the date appears as a bare standalone line (e.g. "14
+      April 2026" or "April 14, 2026") near the top of the cover,
+      usually immediately after the heading block "Pursuant to Rule
+      13a-16 or 15d-16(a) of the Securities Exchange Act of 1934" and
+      just above the registrant's name. It's the date the foreign
+      private issuer is furnishing the report for. Accept dates in
+      either US format ("April 14, 2026") or UK / international
+      format ("14 April 2026"). Normalize to YYYY-MM-DD.
+
+      Return null for any other form type (10-K, 10-Q, DEF 14A, S-1,
+      20-F, amendments of those — those have their own period fields).
     hints:
       look_in: [header]
-      patterns: ["date\\s*of\\s*report", "date\\s*of\\s*earliest\\s*event"]
+      patterns:
+        - "date\\s*of\\s*report"
+        - "date\\s*of\\s*earliest\\s*event"
+        - "pursuant\\s+to\\s+rule\\s+13a-16"
+      prefer_contains:
+        - "Date of Report"
+        - "Date of earliest event"
+        - "Pursuant to Rule 13a-16"
+        - "Report of Foreign Private Issuer"
       signals: [has_dates]
 
   period_meeting_date:
