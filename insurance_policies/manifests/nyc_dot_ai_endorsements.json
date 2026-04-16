@@ -1,0 +1,16 @@
+{
+  "filename": "nyc_dot_ai_endorsements.md",
+  "source_name": "NYC DOT \u2014 additional insured endorsement samples",
+  "source_url": "https://www.nyc.gov/html/dot/downloads/pdf/additonal-insured-endorsements-sample.pdf",
+  "license": "Public record \u2014 NYC government website",
+  "license_url": null,
+  "attribution": "NYC DOT \u2014 additional insured endorsement samples",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "endorsement",
+  "notes": "Real endorsement document sourced from NYC DOT \u2014 additional insured endorsement samples. Expected JSON needs manual ground-truth review."
+}

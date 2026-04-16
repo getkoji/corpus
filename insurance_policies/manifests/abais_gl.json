@@ -1,0 +1,16 @@
+{
+  "filename": "abais_gl.md",
+  "source_name": "ABAIS (GL dec + coverage forms + endorsements)",
+  "source_url": "https://www.abais.com/docs/default-source/banks/policy-specimen/general-liability-forms-w-dec-coverage-forms-mandatory-endorsements-exclusions.pdf",
+  "license": "Published specimen policy \u2014 insurer website",
+  "license_url": null,
+  "attribution": "ABAIS (GL dec + coverage forms + endorsements)",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 84,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from ABAIS (GL dec + coverage forms + endorsements). Expected JSON needs manual ground-truth review."
+}

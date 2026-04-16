@@ -1,0 +1,16 @@
+{
+  "filename": "houston_sample_endorsements.md",
+  "source_name": "City of Houston \u2014 sample insurance endorsements",
+  "source_url": "https://www.houstontx.gov/bizwithhou/forms/Sample_Insurance_Endorsements.pdf",
+  "license": "Public record \u2014 city government website",
+  "license_url": null,
+  "attribution": "City of Houston \u2014 sample insurance endorsements",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 6,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "endorsement",
+  "notes": "Real endorsement document sourced from City of Houston \u2014 sample insurance endorsements. Expected JSON needs manual ground-truth review."
+}

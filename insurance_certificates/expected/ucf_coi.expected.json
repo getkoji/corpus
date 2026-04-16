@@ -1,0 +1,26 @@
+{
+  "certificate_holder_name": "University of Central Florida Board of Trustees",
+  "insured_name": "University of Central Florida Board of Trustees",
+  "policies": [
+    {
+      "policy_number": "DEF9876543210-01",
+      "coverage_type": "Commercial General Liability",
+      "carrier_name": "DEF Insurance Company",
+      "effective_date": "2020-01-01",
+      "expiration_date": "2020-01-01",
+      "limits": [
+        {
+          "name": "Each Occurrence",
+          "amount": 1000000
+        },
+        {
+          "name": "General Aggregate",
+          "amount": 500000
+        }
+      ],
+      "additional_insureds": [
+        "University of Central Florida Board of Trustees"
+      ]
+    }
+  ]
+}

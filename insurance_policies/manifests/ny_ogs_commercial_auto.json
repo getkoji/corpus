@@ -1,0 +1,16 @@
+{
+  "filename": "ny_ogs_commercial_auto.md",
+  "source_name": "NY OGS \u2014 Commercial Auto CA 20 48",
+  "source_url": "https://ogs.ny.gov/system/files/documents/2021/09/ca-20-48-10-13.pdf",
+  "license": "Public record \u2014 state government website",
+  "license_url": null,
+  "attribution": "NY OGS \u2014 Commercial Auto CA 20 48",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from NY OGS \u2014 Commercial Auto CA 20 48. Expected JSON needs manual ground-truth review."
+}

@@ -1,0 +1,16 @@
+{
+  "filename": "fl_sample_dec.md",
+  "source_name": "Florida CFO \u2014 sample declarations page",
+  "source_url": "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/sample-declarations-page.pdf",
+  "license": "Public record \u2014 state government website",
+  "license_url": null,
+  "attribution": "Florida CFO \u2014 sample declarations page",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 4,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from Florida CFO \u2014 sample declarations page. Expected JSON needs manual ground-truth review."
+}

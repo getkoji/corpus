@@ -1,0 +1,16 @@
+{
+  "filename": "insurancebee_cgl.md",
+  "source_name": "InsuranceBee CGL policy form",
+  "source_url": "https://www.insurancebee.com/documents/wordings/general-liability-policy-form.pdf",
+  "license": "Published specimen \u2014 insurer website",
+  "license_url": null,
+  "attribution": "InsuranceBee CGL policy form",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 28,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from InsuranceBee CGL policy form. Expected JSON needs manual ground-truth review."
+}

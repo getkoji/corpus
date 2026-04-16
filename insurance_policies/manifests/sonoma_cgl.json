@@ -1,0 +1,16 @@
+{
+  "filename": "sonoma_cgl.md",
+  "source_name": "Sonoma County (ISO CG 00 01 CGL form)",
+  "source_url": "https://sonomacounty.gov/Main%20County%20Site/General/Sonoma/Sample%20Dept/Sample%20Dept/Divisions%20and%20Sections/Liability/Services/Help%20Request/Subpages/Help%20Request/_Documents/SampleISO-CGL.pdf",
+  "license": "Public record \u2014 county government website",
+  "license_url": null,
+  "attribution": "Sonoma County (ISO CG 00 01 CGL form)",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 21,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from Sonoma County (ISO CG 00 01 CGL form). Expected JSON needs manual ground-truth review."
+}

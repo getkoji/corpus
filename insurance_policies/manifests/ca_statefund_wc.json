@@ -1,0 +1,16 @@
+{
+  "filename": "ca_statefund_wc.md",
+  "source_name": "CA State Fund \u2014 Workers Comp policy sample",
+  "source_url": "https://www.statefundca.com/siteassets/publications/workers-compensation-policy-sample.pdf",
+  "license": "Public record \u2014 state fund website",
+  "license_url": null,
+  "attribution": "CA State Fund \u2014 Workers Comp policy sample",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 8,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from CA State Fund \u2014 Workers Comp policy sample. Expected JSON needs manual ground-truth review."
+}

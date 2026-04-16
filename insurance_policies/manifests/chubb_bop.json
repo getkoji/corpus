@@ -1,0 +1,16 @@
+{
+  "filename": "chubb_bop.md",
+  "source_name": "Chubb Businessowners Policy (BOP) sample",
+  "source_url": "https://studio.chubb.com/connect/files/NA_BOP_Sample.pdf",
+  "license": "Published specimen \u2014 insurer website",
+  "license_url": null,
+  "attribution": "Chubb Businessowners Policy (BOP) sample",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 171,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from Chubb Businessowners Policy (BOP) sample. Expected JSON needs manual ground-truth review."
+}
