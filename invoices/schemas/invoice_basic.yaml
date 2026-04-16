@@ -21,6 +21,7 @@ fields:
       name — we want the seller, not the buyer.
     hints:
       look_in: [header]
+      prefer_position: top
       patterns: ["(?:from|vendor|seller|merchant|bill\\s*from)[:\\s]"]
       signals: [has_name_references]
 
@@ -115,3 +116,9 @@ fields:
     hints:
       look_in: [line_items]
       signals: [has_tables, has_dollar_amounts]
+
+validation:
+  - field_sum:
+      field: total_amount
+      addends: [subtotal, tax]
+      tolerance: 0.02
