@@ -1,0 +1,16 @@
+{
+  "filename": "nj_eda_coi.md",
+  "source_name": "New Jersey EDA \u2014 Certificate of Liability Insurance",
+  "source_url": "https://www.njeda.gov/wp-content/uploads/2024/10/Certificate-of-Liability-Insurance-Sample-_-TLS-12-1.pdf",
+  "license": "Public record \u2014 state authority website",
+  "license_url": null,
+  "attribution": "New Jersey EDA \u2014 Certificate of Liability Insurance",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 2,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from New Jersey EDA \u2014 Certificate of Liability Insurance. Expected JSON needs manual ground-truth review."
+}

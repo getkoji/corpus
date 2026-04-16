@@ -1,0 +1,47 @@
+{
+  "certificate_date": "2020-12-24",
+  "certificate_holder_name": "Clifford Bradford Insurance Agency",
+  "policies": [
+    {
+      "policy_number": "AU72 91011",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "United Financial Casualty Co",
+      "effective_date": "2019-10-12",
+      "expiration_date": "2020-10-12",
+      "limits": [
+        {
+          "name": "Combined Single Limit",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": [
+        "City of Temecula",
+        "Temecula Community Services District",
+        "Redevelopment Agency of the City of Temecula"
+      ]
+    },
+    {
+      "policy_number": "C12131415",
+      "coverage_type": "Commercial General Liability",
+      "carrier_name": "Oak River Insurance Company",
+      "effective_date": "2020-01-01",
+      "expiration_date": "2021-01-01",
+      "limits": [
+        {
+          "name": "Each Occurrence",
+          "amount": 1000000
+        },
+        {
+          "name": "General Aggregate",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": [
+        "City of Temecula",
+        "Temecula Community Services District",
+        "Redevelopment Agency of the City of Temecula"
+      ]
+    }
+  ],
+  "producer_name": "Clifford Bradford Insurance Agency"
+}

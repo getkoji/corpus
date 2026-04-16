@@ -1,0 +1,16 @@
+{
+  "filename": "temecula_coi.md",
+  "source_name": "City of Temecula CA \u2014 sample insurance certificate",
+  "source_url": "https://temeculaca.gov/DocumentCenter/View/14593/Sample-Insurance-Certificate",
+  "license": "Public record \u2014 city government website",
+  "license_url": null,
+  "attribution": "City of Temecula CA \u2014 sample insurance certificate",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 2,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from City of Temecula CA \u2014 sample insurance certificate. Expected JSON needs manual ground-truth review."
+}

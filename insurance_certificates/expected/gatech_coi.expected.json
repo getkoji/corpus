@@ -1,5 +1,15 @@
 {
   "certificate_holder_name": "Board of Regents of the University System of Georgia",
-  "policies": [],
+  "policies": [
+    {
+      "policy_number": "SAMPLE",
+      "coverage_type": "Commercial General Liability",
+      "carrier_name": null,
+      "effective_date": null,
+      "expiration_date": null,
+      "limits": [],
+      "additional_insureds": []
+    }
+  ],
   "producer_name": "$JHQF\u0019 1DPH $GGUHVV &amp;LW\u0019 6WDWH  =LS &amp;RGH"
 }

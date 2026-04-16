@@ -125,12 +125,39 @@ fields:
       "Combined Single Limit (Each Accident)", "Bodily Injury by
       Accident"). Do not force limit names into fixed categories.
 
-      Additional insureds: if an Additional Insureds section, Remarks
-      section, or endorsement schedule references specific policy
-      numbers, collect the parties named as additional insured on
-      each referenced policy into that policy's additional_insureds
-      list. If a policy is not mentioned in any endorsement section,
-      its additional_insureds list is empty.
+      Additional insureds: the "Description of Operations / Locations /
+      Vehicles" box and any "Remarks" or "Additional Insured Schedule"
+      sections may name parties who are additional insureds. Parse
+      these carefully:
+
+      - When the text says "ABC Corp is additional insured on all
+        policies" or names no specific policy, add ABC Corp to EVERY
+        policy's additional_insureds list.
+      - When the text references specific policy numbers or coverage
+        types ("additional insured on CGL policy #CGL-123 and
+        umbrella policy #UMB-456 per CG 20 26"), add the party ONLY
+        to the referenced policies.
+      - When the text lists multiple parties ("ABC Corp, XYZ Inc, and
+        their respective officers, employees, and agents"), each
+        distinct organization is a separate entry. Do NOT concatenate
+        them into one string. Descriptors like "their officers,
+        employees" are part of the preceding org's entry only if
+        they're clearly a qualifier, not a separate named insured.
+      - The certificate holder is SOMETIMES also an additional insured,
+        but ONLY when the document explicitly says so. Look for
+        phrases like "certificate holder is included as additional
+        insured", "as required by written contract", "additional
+        insured per endorsement CG 20 26", or similar explicit
+        language in the Description of Operations or Remarks section.
+      - CRITICAL: Do NOT assume the certificate holder is an
+        additional insured just because they appear in the Certificate
+        Holder box. A certificate can be issued purely "for
+        informational purposes" with no additional insured status.
+        If the Description of Operations / Remarks section does not
+        mention "additional insured" at all, every policy's
+        additional_insureds list MUST be empty.
+      - If a policy is not mentioned in any endorsement or additional
+        insured section, its additional_insureds list is empty.
     items:
       type: object
       properties:

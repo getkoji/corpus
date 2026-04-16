@@ -1,12 +1,12 @@
 {
   "certificate_date": "2020-10-01",
   "certificate_holder_name": "CORNELL UNIVERSITY , It's Officers, employees, Fraternity & Sorority Affairs 538 Willard Straight Hall ITHACA, NY  1485 3",
-  "insured_name": "CORNELL UNIVERSITY , It's Officers, employees, Fraternity & Sorority Affairs",
+  "insured_name": "Cornell University",
   "policies": [
     {
       "policy_number": "CGL 123456",
-      "coverage_type": "COMMERCIAL GENERAL LIABILITY",
-      "carrier_name": "INSURANCE COMPANY NAME",
+      "coverage_type": "Commercial General Liability",
+      "carrier_name": "Insurance Company Name",
       "effective_date": "2020-10-01",
       "expiration_date": "2021-10-01",
       "limits": [
@@ -21,15 +21,15 @@
       ],
       "additional_insureds": [
         "Cornell University",
-        "its officers",
-        "employees",
+        "Its Officers",
+        "Employees",
         "Fraternity & Sorority Affairs"
       ]
     },
     {
       "policy_number": "CAL 987654",
-      "coverage_type": "WORKERS COMPENSATION AND EMPLOYERS' LIABILITY",
-      "carrier_name": "INSURANCE COMPANY NAME",
+      "coverage_type": "Workers Compensation and Employers' Liability",
+      "carrier_name": "Insurance Company Name",
       "effective_date": "2020-10-01",
       "expiration_date": "2021-10-01",
       "limits": [],
