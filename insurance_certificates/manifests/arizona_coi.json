@@ -1,0 +1,16 @@
+{
+  "filename": "arizona_coi.md",
+  "source_name": "Arizona Risk Management \u2014 COI sample form",
+  "source_url": "https://staterisk.az.gov/sites/default/files/2022-04/COI%20Sample%20Form%20with%20HoverOver%20Instructions_1_0.pdf",
+  "license": "Public record \u2014 state government website",
+  "license_url": null,
+  "attribution": "Arizona Risk Management \u2014 COI sample form",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 3,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from Arizona Risk Management \u2014 COI sample form. Expected JSON needs manual ground-truth review."
+}

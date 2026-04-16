@@ -17,6 +17,18 @@
         {
           "name": "Damage to Rented",
           "amount": 1000000
+        },
+        {
+          "name": "General Aggregate",
+          "amount": 1000000
+        },
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 1000000
+        },
+        {
+          "name": "Bodily Injury by Accident",
+          "amount": 1000000
         }
       ],
       "additional_insureds": []

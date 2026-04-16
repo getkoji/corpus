@@ -45,6 +45,10 @@
         {
           "name": "Aggregate Limit",
           "amount": 2000000
+        },
+        {
+          "name": "Retention Per Occ",
+          "amount": 25000
         }
       ],
       "additional_insureds": [
@@ -128,10 +132,6 @@
       "effective_date": "2019-01-01",
       "expiration_date": "2020-01-01",
       "limits": [
-        {
-          "name": "ER OTH- STATUTE PER",
-          "amount": null
-        },
         {
           "name": "E.L. Each Accident",
           "amount": 1000000

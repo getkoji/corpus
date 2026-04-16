@@ -1,0 +1,49 @@
+{
+  "certificate_holder_name": "STATE OF NEVADA ATTN: AGENCY NAME/CONTACT 123 WEST MAIN STREET CARSON CITY, NV  89701",
+  "policies": [
+    {
+      "policy_number": "XXXXXXXXXX",
+      "coverage_type": "General Liability",
+      "carrier_name": "Insurer A",
+      "effective_date": null,
+      "expiration_date": null,
+      "limits": [
+        {
+          "name": "General Aggregate",
+          "amount": 2000000
+        },
+        {
+          "name": "Products - Comp/Op Agg",
+          "amount": 1000000
+        },
+        {
+          "name": "Personal & Adv Injury",
+          "amount": 1000000
+        },
+        {
+          "name": "Each Occurrence",
+          "amount": 1000000
+        },
+        {
+          "name": "Fire Damage (any one fire)",
+          "amount": 50000
+        },
+        {
+          "name": "Med Exp (any one person)",
+          "amount": 5000
+        },
+        {
+          "name": "Combined Single Limit",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": [
+        "State of Nevada",
+        "its officers",
+        "employees",
+        "immune contractors"
+      ]
+    }
+  ],
+  "producer_name": "NAME AND ADDRESS OF INSURANCE AGENCY"
+}
