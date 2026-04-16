@@ -1,0 +1,114 @@
+name: claim_form
+description: |
+  Insurance claim form extraction — covers both NFIP proof-of-loss
+  forms and workers compensation first-report-of-injury forms.
+  These are structured government forms with labeled fields, not
+  free-text documents — the extraction challenge is form-fill
+  parsing (reading values from labeled boxes and tables) rather
+  than narrative comprehension.
+
+  Many of these forms are BLANK templates (no data filled in).
+  For blank forms, every field should be null — the schema validates
+  that the engine doesn't hallucinate data from form labels.
+
+compare:
+  fuzzy_threshold: 0.85
+
+categories:
+  keywords:
+    header: ["proof of loss", "first report of injury", "claim form", "employer's report"]
+    claimant: ["claimant", "injured worker", "employee", "insured"]
+    employer: ["employer", "policyholder", "insured employer"]
+    incident: ["date of loss", "date of injury", "description of loss", "cause of injury", "nature of injury"]
+    financial: ["amount claimed", "total amount", "building damage", "contents damage"]
+
+fields:
+  form_type:
+    type: string
+    description: |
+      Type of claim form. Extract from the form title or header.
+    options:
+      - Proof of Loss
+      - First Report of Injury
+      - Employer's First Report
+      - Other
+    hints:
+      look_in: [header]
+      prefer_position: top
+
+  claimant_name:
+    type: string
+    description: |
+      Name of the person or entity filing the claim. On a proof of
+      loss this is the insured/policyholder. On a workers comp FROI
+      this is the injured employee.
+    hints:
+      look_in: [claimant, header]
+      patterns: ["(?:claimant|insured|injured\\s*(?:worker|employee))\\s*(?:name)?[:\\s]"]
+
+  employer_name:
+    type: string
+    description: |
+      Employer name (workers comp FROI only). The company where
+      the injury occurred. Null for non-WC forms.
+    hints:
+      look_in: [employer]
+      patterns: ["employer\\s*(?:name)?[:\\s]"]
+
+  date_of_loss:
+    type: date
+    description: |
+      Date of the loss or injury. On a proof of loss this is the
+      date the damage occurred. On a FROI this is the date of
+      injury.
+    hints:
+      look_in: [incident, header]
+      patterns: ["date\\s*of\\s*(?:loss|injury|accident|occurrence)", "when\\s*did\\s*(?:injury|accident)"]
+      signals: [has_dates]
+
+  description_of_loss:
+    type: string
+    description: |
+      Narrative description of what happened. On a proof of loss
+      this describes the property damage. On a FROI this describes
+      the injury circumstances.
+    hints:
+      look_in: [incident]
+      patterns: ["description\\s*of\\s*(?:loss|injury|accident)", "how\\s*(?:did|injury)\\s*occur", "cause\\s*of\\s*injury"]
+
+  body_part:
+    type: string
+    description: |
+      Body part injured (workers comp FROI only). The specific
+      body part affected by the workplace injury. Null for
+      non-WC forms.
+    hints:
+      look_in: [incident]
+      patterns: ["body\\s*part", "part\\s*of\\s*body", "nature\\s*of\\s*injury"]
+
+  amount_claimed:
+    type: number
+    description: |
+      Total amount claimed in dollars. On a proof of loss this
+      is the total of building + contents + other amounts. On a
+      FROI this is typically not present (null).
+    hints:
+      look_in: [financial]
+      patterns: ["(?:total\\s*)?amount\\s*claimed", "total\\s*(?:loss|damage|claimed)"]
+      signals: [has_dollar_amounts]
+
+  policy_number:
+    type: string
+    description: Policy number referenced on the claim form.
+    hints:
+      look_in: [header]
+      patterns: ["policy\\s*(?:number|no|#)", "nfip\\s*policy"]
+
+  state:
+    type: string
+    description: |
+      State where the loss or injury occurred. Extract the state
+      name or abbreviation.
+    hints:
+      look_in: [header, employer, incident]
+      patterns: ["state\\s*(?:of)?[:\\s]", "jurisdiction"]
