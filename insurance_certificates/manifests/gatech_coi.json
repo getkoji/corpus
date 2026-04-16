@@ -1,0 +1,16 @@
+{
+  "filename": "gatech_coi.md",
+  "source_name": "Georgia Tech \u2014 consultant contract COI sample",
+  "source_url": "https://facilities.gatech.edu/sites/default/files/sample_coi_-general_consultant_contract_-_final.pdf",
+  "license": "Published sample \u2014 university website",
+  "license_url": null,
+  "attribution": "Georgia Tech \u2014 consultant contract COI sample",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 2,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from Georgia Tech \u2014 consultant contract COI sample. Expected JSON needs manual ground-truth review."
+}

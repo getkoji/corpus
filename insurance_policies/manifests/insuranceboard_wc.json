@@ -1,0 +1,16 @@
+{
+  "filename": "insuranceboard_wc.md",
+  "source_name": "Insurance Board \u2014 sample Workers Comp policy",
+  "source_url": "https://www.insuranceboard.org/wp-content/uploads/dlm_uploads/2019/11/10-sample-workers-compensation-policy.pdf",
+  "license": "Published specimen \u2014 insurer website",
+  "license_url": null,
+  "attribution": "Insurance Board \u2014 sample Workers Comp policy",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 26,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from Insurance Board \u2014 sample Workers Comp policy. Expected JSON needs manual ground-truth review."
+}

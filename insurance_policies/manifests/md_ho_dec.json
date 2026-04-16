@@ -1,0 +1,16 @@
+{
+  "filename": "md_ho_dec.md",
+  "source_name": "Maryland Insurance Admin \u2014 understanding HO declarations",
+  "source_url": "https://insurance.maryland.gov/Consumer/Documents/publications/understandinghodeclarationspage.pdf",
+  "license": "Public record \u2014 state government website",
+  "license_url": null,
+  "attribution": "Maryland Insurance Admin \u2014 understanding HO declarations",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from Maryland Insurance Admin \u2014 understanding HO declarations. Expected JSON needs manual ground-truth review."
+}

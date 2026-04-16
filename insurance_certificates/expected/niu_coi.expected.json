@@ -1,0 +1,26 @@
+{
+  "certificate_date": "2025-09-08",
+  "certificate_holder_name": "Board of Trustees of Northern Illinois University",
+  "insured_name": "Northern Illinois University Board of Trustees",
+  "policies": [
+    {
+      "policy_number": "N8441G",
+      "coverage_type": "COMMERCIAL GENERAL LIABILITY",
+      "carrier_name": "United Educators",
+      "effective_date": "2025-08-30",
+      "expiration_date": "2026-08-30",
+      "limits": [
+        {
+          "name": "Each Occurrence",
+          "amount": 1000000
+        },
+        {
+          "name": "Damage to Rented",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": []
+    }
+  ],
+  "producer_name": "MARSH USA LLC."
+}

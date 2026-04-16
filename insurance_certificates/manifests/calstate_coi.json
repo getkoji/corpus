@@ -1,0 +1,16 @@
+{
+  "filename": "calstate_coi.md",
+  "source_name": "Cal State \u2014 construction project COI",
+  "source_url": "https://www.calstate.edu/csu-system/doing-business-with-the-csu/capital-planning-design-construction/operations-center/Documents/meas/parc-insurance.pdf",
+  "license": "Public record \u2014 state university website",
+  "license_url": null,
+  "attribution": "Cal State \u2014 construction project COI",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 19,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from Cal State \u2014 construction project COI. Expected JSON needs manual ground-truth review."
+}

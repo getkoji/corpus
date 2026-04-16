@@ -1,0 +1,16 @@
+{
+  "filename": "ok_auto_dec.md",
+  "source_name": "Oklahoma DOI \u2014 auto policy declarations guide",
+  "source_url": "https://www.oid.ok.gov/wp-content/uploads/2024/04/UnderstandingYourAutoPolicyDeclarations.pdf",
+  "license": "Public record \u2014 state insurance department",
+  "license_url": null,
+  "attribution": "Oklahoma DOI \u2014 auto policy declarations guide",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_policies/schemas/policy_declarations.yaml",
+  "doc_type": "policy",
+  "notes": "Real policy document sourced from Oklahoma DOI \u2014 auto policy declarations guide. Expected JSON needs manual ground-truth review."
+}

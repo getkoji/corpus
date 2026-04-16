@@ -1,0 +1,16 @@
+{
+  "filename": "niu_coi.md",
+  "source_name": "Northern Illinois University \u2014 general insurance COI",
+  "source_url": "https://www.niu.edu/risk-management/_files/niu-general-insurance-certificate.pdf",
+  "license": "Published sample \u2014 university website",
+  "license_url": null,
+  "attribution": "Northern Illinois University \u2014 general insurance COI",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 4,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from Northern Illinois University \u2014 general insurance COI. Expected JSON needs manual ground-truth review."
+}

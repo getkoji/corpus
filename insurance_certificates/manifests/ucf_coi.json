@@ -1,0 +1,16 @@
+{
+  "filename": "ucf_coi.md",
+  "source_name": "UCF \u2014 sample certificate of liability insurance",
+  "source_url": "https://www.ucf.edu/downtown/wp-content/blogs.dir/21/files/2020/02/document-sample-certificate-of-liability-insurance.pdf",
+  "license": "Published sample \u2014 university website",
+  "license_url": null,
+  "attribution": "UCF \u2014 sample certificate of liability insurance",
+  "original_format": "PDF (parsed via docling)",
+  "r2_url": null,
+  "pages": 2,
+  "added_date": "2026-04-16",
+  "added_by": "accuracy-23",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "doc_type": "coi",
+  "notes": "Real coi document sourced from UCF \u2014 sample certificate of liability insurance. Expected JSON needs manual ground-truth review."
+}

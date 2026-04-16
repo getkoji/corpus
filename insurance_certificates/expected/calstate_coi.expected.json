@@ -1,0 +1,152 @@
+{
+  "certificate_date": "2019-04-04",
+  "certificate_holder_name": "PARC Specialty Contractors",
+  "insured_name": "PARC Specialty Contractors",
+  "policies": [
+    {
+      "policy_number": "GPL7989402-00",
+      "coverage_type": "Commercial General Liability",
+      "carrier_name": "Steadfast Insurance Company",
+      "effective_date": "2019-01-01",
+      "expiration_date": "2020-01-01",
+      "limits": [
+        {
+          "name": "Each Occurrence Damage to Rented",
+          "amount": 1000000
+        },
+        {
+          "name": "Premises (Ea occurrence)",
+          "amount": 300000
+        },
+        {
+          "name": "Med Exp (Any one person)",
+          "amount": 10000
+        },
+        {
+          "name": "Personal & Adv Injury",
+          "amount": 1000000
+        },
+        {
+          "name": "General Aggregate",
+          "amount": 2000000
+        },
+        {
+          "name": "Products - Comp/Op Agg",
+          "amount": 2000000
+        },
+        {
+          "name": "Deductible",
+          "amount": 25000
+        },
+        {
+          "name": "Contractors Pollution",
+          "amount": 1000000
+        },
+        {
+          "name": "Aggregate Limit",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": [
+        "CSU Office of the Chancellor",
+        "The State of California",
+        "the trustees of the California State University",
+        "the University",
+        "their officers",
+        "employees",
+        "representatives",
+        "volunteers",
+        "agents"
+      ]
+    },
+    {
+      "policy_number": "BAP8088033-00",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Zurich American Insurance Company",
+      "effective_date": "2019-01-01",
+      "expiration_date": "2020-01-01",
+      "limits": [
+        {
+          "name": "(Ea accident) Combined Single Limit",
+          "amount": 1000000
+        },
+        {
+          "name": "Bodily Injury (Per person)",
+          "amount": null
+        },
+        {
+          "name": "Bodily Injury (Per accident)",
+          "amount": null
+        },
+        {
+          "name": "(Per accident) Property Damage",
+          "amount": null
+        },
+        {
+          "name": "Comp&Coll. Ded",
+          "amount": 1000
+        }
+      ],
+      "additional_insureds": [
+        "CSU Office of the Chancellor",
+        "The State of California",
+        "the trustees of the California State University",
+        "the University",
+        "their officers",
+        "employees",
+        "representatives",
+        "volunteers",
+        "agents"
+      ]
+    },
+    {
+      "policy_number": "EX00A6019",
+      "coverage_type": "Umbrella Liability",
+      "carrier_name": "Steadfast Insurance Company",
+      "effective_date": "2019-01-01",
+      "expiration_date": "2020-01-01",
+      "limits": [
+        {
+          "name": "Each Occurrence",
+          "amount": 15000000
+        },
+        {
+          "name": "Aggregate",
+          "amount": 15000000
+        },
+        {
+          "name": "Deductible",
+          "amount": null
+        }
+      ],
+      "additional_insureds": []
+    },
+    {
+      "policy_number": "WC8080332-00",
+      "coverage_type": "Workers Compensation and Employers' Liability",
+      "carrier_name": "Steadfast Insurance Company",
+      "effective_date": "2019-01-01",
+      "expiration_date": "2020-01-01",
+      "limits": [
+        {
+          "name": "ER OTH- STATUTE PER",
+          "amount": null
+        },
+        {
+          "name": "E.L. Each Accident",
+          "amount": 1000000
+        },
+        {
+          "name": "E.L. Disease - EA Employee",
+          "amount": 1000000
+        },
+        {
+          "name": "E.L. Disease - Policy Limit",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": []
+    }
+  ],
+  "producer_name": "Willis Insurance Services of California, Inc."
+}
