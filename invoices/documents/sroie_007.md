@@ -1,0 +1,55 @@
+## tan chay yee
+
+## S.H.H. MOTOR ( SUNGAL RENGIT ) SON. BHD. ( 801580-T )
+
+No. 343, Jalan Kurau, Sungai Rengit, 81620 Pengerang, Johor.
+
+Tel: 07-8263254 Fax: 07-8266888
+
+## INVOICE
+
+ITEM/DESC.
+
+4132
+
+CROCS 300X17 TUBES
+
+QTY U. PRICE RM(TOTAL)
+
+1
+
+20.00
+
+20.00
+
+SUB TOTAL :
+
+ROUNDING ADJUSTMENT :
+
+GRAND TOTAL :
+
+CASH :
+
+CHANGE :
+
+23-01-2019 13:14:15 PM, PRINT BY: root
+
+TOKEN NO: 0, STATION ID: A1, PID: POS
+
+INVOICE NO: 22497
+
+Thanks Your Support
+
+20.00
+
+0.00
+
+20.00
+
+20.00
+
+0.00
+
+20-00
+
+<!-- image -->

@@ -1,0 +1,116 @@
+<!-- image -->
+
+## PERNIAGAAN ZHENG HUI
+
+JM0325955-V NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA
+
+TEL: 07-386 7524 FAX: 07-386 3796
+
+81760 JOHOR BAHRU
+
+GST NO: 000800589824
+
+## SIMPLIFIED TAX INVOICE
+
+GOGIANT ENGINEERING (M) SDN BHD
+
+Recelpt#: C800082562
+
+Salesperson:
+
+Cashier: USER
+
+Date: 12/02/2018
+
+TIme: 08:30.00
+
+(RM)
+
+(RM;
+
+Item.
+
+8239
+
+GIB
+
+RSP. Amoun!
+
+15.00*
+
+15.00
+
+SR: 11" PROWESS H/DUTY SILICONE GUN G-D2
+
+9555075109147
+
+36. 7EASEAL HIV ACETIC SILICONE 3A. 107
+
+21.00
+
+GB
+
+18.00
+
+18.00
+
+SR: CENTRAL PUNCH SET 3PCS - 1/4"'5/32". 1/4"
+
+12525
+
+GiB
+
+50.00
+
+50.0C
+
+SR. 24" MARKSMAN PIPE WRENCH
+
+2016
+
+3
+
+0.70
+
+SR: PVC WIRE TAPE 1PC X 7YO
+
+TOT QTY: •
+
+2.10
+
+106.1C
+
+(Excluded esT) Sub Total (RM;
+
+1D6.10
+
+Discount (RM):
+
+0.00
+
+Total GST (RM)
+
+6.37
+
+Rounding (RM) : -0.02
+
+Total (RM):
+
+112.46
+
+CASH:
+
+112.45
+
+Change (RM) :
+
+0.00
+
+## GST SUMMARY
+
+| Tax Gode   | _%     |       |   GST |
+|------------|--------|-------|-------|
+| SR         |        |       |  6.37 |
+|            | Total: | 106.1 |  8.37 |
+
+GOODS SOLD ARE NOT RETURNABLE. THANK YOU.

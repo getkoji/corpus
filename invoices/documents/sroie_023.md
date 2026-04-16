@@ -1,0 +1,91 @@
+## TEO HENG STATIONERY &amp; BOOKS
+
+(001451637-M)
+
+NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN TEL: 03-3271 9872 FAX: 03-3271 9481 GST No.: 000689913856
+
+## SIMPLIFIED TAX INVOICE
+
+## CASH
+
+Receipt No.: CS1801/26821 Date: 17/01/2018
+
+ITEM QTY UP DISC®
+
+AMOUNT
+
+(RNI)
+
+26.00 *
+
+9555017370017
+
+1 28.00
+
+7.14
+
+- LION FILE 220*307 LAMINATING FILM
+
+Total Qty.:
+
+1
+
+26.00
+
+SUB-TOTAL (EX)
+
+TOTAL TAX
+
+ROUNDING
+
+TOTAL
+
+CASH
+
+CHANGE
+
+26.00
+
+1.56
+
+-0.01
+
+27.55
+
+JAN 2018
+
+GST SUMMARY
+
+TAX CODE
+
+%
+
+AMOUNT
+
+(RM)
+
+TAX
+
+(RM)
+
+SR
+
+6.00
+
+26.00
+
+1.56
+
+TOTAL:
+
+26.00
+
+1.56
+
+<!-- image -->
+
+<!-- image -->
+
+Note: (*) Indicated The Item Sold Has Been Related To GST (Goods &amp; Services Tax).
+
+GOODS SOLD ARE NOT RETURNABLE, THANK YOU.

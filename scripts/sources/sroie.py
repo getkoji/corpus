@@ -129,25 +129,41 @@ def download_dataset(dest: Path) -> Path:
 def find_task3_pairs(dataset_root: Path) -> list[tuple[Path, Path]]:
     """Find all (image, annotation JSON) pairs in the SROIE dataset.
 
-    Task 3 annotations live in: 0325updated.task3train/0325updated.task3train(626p)/
-    with .jpg + .txt (key-value format) pairs, or as 'key' files.
+    The zzzDavid mirror stores images in `data/img/NNN.jpg` and Task 3
+    key-value annotations in `data/key/NNN.json`, matched by numeric
+    stem. Falls back to looking for `.txt` or `.json` files co-located
+    with images for other mirror layouts.
     """
     pairs: list[tuple[Path, Path]] = []
-    # Look for Task 3 directory (information extraction)
-    candidates = list(dataset_root.rglob("*.jpg")) + list(dataset_root.rglob("*.png"))
 
+    # Primary layout: data/key/*.json + data/img/*.jpg (zzzDavid mirror)
+    key_dirs = list(dataset_root.rglob("data/key"))
+    img_dirs = list(dataset_root.rglob("data/img"))
+    if key_dirs and img_dirs:
+        key_dir = key_dirs[0]
+        img_dir = img_dirs[0]
+        for ann in sorted(key_dir.glob("*.json")):
+            image = img_dir / f"{ann.stem}.jpg"
+            if not image.exists():
+                image = img_dir / f"{ann.stem}.png"
+            if image.exists():
+                pairs.append((image, ann))
+        if pairs:
+            return pairs
+
+    # Fallback: .txt or .json co-located with images
+    candidates = list(dataset_root.rglob("*.jpg")) + list(dataset_root.rglob("*.png"))
     for image in candidates:
-        # Look for matching annotation file (SROIE uses .txt with key:value pairs
-        # or JSON depending on mirror)
-        txt = image.with_suffix(".txt")
-        if txt.exists():
-            # Verify it's an annotation file, not an OCR transcript
-            try:
-                content = txt.read_text(encoding="utf-8", errors="replace")
-                if '"company"' in content or "company:" in content.lower():
-                    pairs.append((image, txt))
-            except Exception:
-                continue
+        for suffix in (".json", ".txt"):
+            ann = image.with_suffix(suffix)
+            if ann.exists():
+                try:
+                    content = ann.read_text(encoding="utf-8", errors="replace")
+                    if '"company"' in content or "company:" in content.lower():
+                        pairs.append((image, ann))
+                        break
+                except Exception:
+                    continue
 
     return pairs
 
@@ -191,6 +207,20 @@ def parse_image_to_markdown(image_path: Path, parse_url: str, client: httpx.Clie
     resp.raise_for_status()
     data = resp.json()
     return data.get("markdown", "")
+
+
+def parse_image_local(image_path: Path) -> str:
+    """Run docling in-process to convert a receipt image to markdown.
+
+    Same approach as edgar.py --local-parse: import docling lazily,
+    hand it the image, and export to markdown. Works for JPG/PNG
+    receipt images without a running koji cluster.
+    """
+    from docling.document_converter import DocumentConverter
+
+    converter = DocumentConverter()
+    result = converter.convert(str(image_path))
+    return result.document.export_to_markdown()
 
 
 def convert_to_koji_format(sroie_annotation: dict) -> dict:
@@ -263,6 +293,14 @@ def main() -> int:
         action="store_true",
         help="Skip download and use an already-extracted dataset at --dataset-path",
     )
+    parser.add_argument(
+        "--local-parse",
+        action="store_true",
+        help=(
+            "Run docling in-process instead of calling the koji parse service. "
+            "Use when the cluster isn't running. Requires `uv run --with docling`."
+        ),
+    )
     args = parser.parse_args()
 
     # Ensure target dirs exist
@@ -290,6 +328,17 @@ def main() -> int:
     skipped = 0
     failed = 0
 
+    if args.local_parse:
+        try:
+            import docling.document_converter  # noqa: F401
+        except ImportError:
+            print(
+                "[sroie] --local-parse requires docling. Re-run with:\n"
+                "        uv run --with docling python scripts/sources/sroie.py ...",
+                file=sys.stderr,
+            )
+            return 1
+
     with httpx.Client() as client:
         for i, (image, txt) in enumerate(pairs):
             if processed >= args.limit:
@@ -307,15 +356,24 @@ def main() -> int:
                     failed += 1
                     continue
 
-                markdown = parse_image_to_markdown(image, args.parse_url, client)
+                if args.local_parse:
+                    markdown = parse_image_local(image)
+                else:
+                    markdown = parse_image_to_markdown(image, args.parse_url, client)
+
+                if not markdown.strip():
+                    print(f"[sroie] Empty markdown for {receipt_id}", file=sys.stderr)
+                    failed += 1
+                    continue
+
                 expected = convert_to_koji_format(annotation)
                 write_sample(receipt_id, markdown, expected, image.name)
 
                 processed += 1
                 print(f"[sroie] ({processed}/{args.limit}) {receipt_id}", file=sys.stderr)
 
-                # Rate limit — don't hammer the parse service
-                time.sleep(0.5)
+                if not args.local_parse:
+                    time.sleep(0.5)
 
             except httpx.HTTPError as e:
                 print(f"[sroie] HTTP error on {receipt_id}: {e}", file=sys.stderr)
