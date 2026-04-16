@@ -1,0 +1,16 @@
+{
+  "filename": "sroie_004.md",
+  "source_name": "SROIE Dataset (ICDAR 2019)",
+  "source_url": "https://rrc.cvc.uab.es/?ch=13",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "ICDAR 2019 Robust Reading Challenge on SROIE",
+  "original_format": "JPEG image (parsed via Koji parse service)",
+  "original_image": "004.jpg",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "invoices/schemas/invoice_basic.yaml",
+  "notes": "Singaporean receipt from SROIE Task 3. Ground truth from dataset annotations (company, date, total). Subtotal, tax, and line items left null \u2014 SROIE doesn't annotate them."
+}
