@@ -122,10 +122,6 @@ fields:
         - "Description of Accident"
         - "Describe how injury"
         - "Description of Loss"
-      exclude_contains:
-        - "Nature of Injury"
-        - "Cause of Injury"
-        - "Type of Injury"
 
   body_part:
     type: string
