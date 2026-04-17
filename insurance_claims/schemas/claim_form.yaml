@@ -157,8 +157,11 @@ fields:
   state:
     type: string
     description: |
-      State where the loss or injury occurred. Extract the state
-      name or abbreviation.
+      US state where the loss or injury occurred, as a two-letter
+      abbreviation (e.g., NY, CA, TX).
+    derived_from:
+      field: description_of_loss
+      transform: state_from_address
     hints:
       look_in: [header, employer, incident]
       patterns: ["state\\s*(?:of)?[:\\s]", "jurisdiction"]
