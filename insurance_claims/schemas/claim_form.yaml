@@ -57,15 +57,18 @@ fields:
   claimant_name:
     type: string
     description: |
-      Name of the person or entity filing the claim. On a proof of
-      loss this is the insured/policyholder. On a workers comp FROI
-      this is the injured employee. On a demand letter this is the
-      damaged/injured party on whose behalf the demand is made.
+      This is a DOCUMENT-LEVEL field — the single claimant this
+      document is about.
 
-      For LOSS RUN reports: return null. Loss runs contain MULTIPLE
-      claimant names in a claims table — there is no single
-      claimant. Do not extract a name from a claims-history table
-      row.
+      On a proof of loss: the insured/policyholder.
+      On a workers comp FROI: the injured employee.
+      On a demand letter: the damaged/injured party on whose behalf
+      the demand is made.
+
+      If the document contains MULTIPLE claimants (e.g., a loss run
+      listing many claims in a table), return null. Only extract a
+      name if the document is about a single specific claimant.
+      Loss run reports always have multiple claimants — always null.
     hints:
       look_in: [claimant, header]
       patterns: ["(?:claimant|insured|injured\\s*(?:worker|employee))\\s*(?:name)?[:\\s]"]
@@ -159,3 +162,6 @@ fields:
     hints:
       look_in: [header, employer, incident]
       patterns: ["state\\s*(?:of)?[:\\s]", "jurisdiction"]
+
+validation:
+  - min_words: { field: description_of_loss, min: 5 }
