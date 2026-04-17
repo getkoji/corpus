@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Pacific Crest Casualty",
+  "named_insured": "Clearwater Environmental Solutions",
+  "policy_number": "BAP3481850-00",
+  "policy_type": "Commercial Auto",
+  "effective_date": "2025-08-09",
+  "expiration_date": "2026-08-09",
+  "total_premium": 44450,
+  "each_occurrence_limit": 500000,
+  "general_aggregate_limit": null
+}

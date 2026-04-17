@@ -1,0 +1,11 @@
+{
+  "form_type": "Demand Letter",
+  "claimant_name": "Matthew T. Ivanov",
+  "employer_name": null,
+  "date_of_loss": "2025-03-02",
+  "description_of_loss": "Motor vehicle accident in Lakeland, FL; insured's vehicle struck by John M. Castellano.",
+  "amount_claimed": 85000,
+  "policy_number": "CGL-299148",
+  "body_part": null,
+  "state": "FL"
+}

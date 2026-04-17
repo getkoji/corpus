@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Atlantic Coast Mutual",
+  "named_insured": "Harborview Consulting Engineers",
+  "policy_number": "FPP2326809",
+  "policy_type": "Commercial Property",
+  "effective_date": "2025-10-26",
+  "expiration_date": "2026-10-26",
+  "total_premium": 54850,
+  "each_occurrence_limit": 500000,
+  "general_aggregate_limit": 2000000
+}

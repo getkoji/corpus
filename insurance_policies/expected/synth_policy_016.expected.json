@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Beacon Hill Mutual",
+  "named_insured": "Apex Industrial Welding LLC",
+  "policy_number": "WCP5133961-02",
+  "policy_type": "Workers Compensation",
+  "effective_date": "2024-10-05",
+  "expiration_date": "2025-10-05",
+  "total_premium": 205400,
+  "each_occurrence_limit": 1000000,
+  "general_aggregate_limit": null
+}

@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Mountain West Casualty Co.",
+  "named_insured": "Cascade Plumbing & HVAC Inc.",
+  "policy_number": "FPP7005163",
+  "policy_type": "Commercial Property",
+  "effective_date": "2025-01-24",
+  "expiration_date": "2026-01-24",
+  "total_premium": 125200,
+  "each_occurrence_limit": 2000000,
+  "general_aggregate_limit": 2000000
+}

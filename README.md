@@ -1,110 +1,81 @@
 # Koji Validation Corpus
 
-A public, versioned corpus of real-world documents with ground-truth extraction outputs. Used to validate [Koji](https://github.com/getkoji/koji) extraction accuracy, benchmark model performance, and seed the community schema ecosystem.
+A public, versioned corpus of real-world and synthetic documents with ground-truth extraction outputs. Used to validate [Koji](https://github.com/getkoji/koji) extraction accuracy, benchmark model performance, and catch regressions in CI.
 
-**Goal:** 1000+ documents across invoices, SEC filings, contracts, insurance policies, government forms, academic papers, and more.
+## Current coverage
+
+| Category | Documents | Real | Synthetic | Accuracy | Notes |
+|----------|-----------|------|-----------|----------|-------|
+| **sec_filings** | 101 | 101 | 0 | **~100%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. 50-doc held-out validation set (99.4% cold). |
+| **invoices** | 107 | 52 | 55 | **90.4%** | 52 SROIE scanned receipts (real OCR) + 55 synthetic with full schema coverage. |
+| **insurance_certificates** | 61 | 21 | 40 | **94.8%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points (carrier letter-codes, per-policy AIs, complex limits, layout variations). |
+| **insurance_policies** | 97 | 30 | 67 | **95.3%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets, Cameron County TX. Synthetic: all 9 policy types. |
+| **insurance_claims** | 142 | 17 | 125 | **75.0%** | FEMA proof-of-loss, WC FROI from 11 states, Cameron County loss runs. Synthetic: filled-in claims, loss runs, demand letters. Active tuning. |
+| **adversarial** | 11 | 0 | 11 | **~93%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
+| **multi_format** | 3 | 3 | 0 | **100%** | xlsx, docx, pptx parsed through docling. |
+| **TOTAL** | **522** | **224** | **298** | | **4 domains, 7 categories** |
+
+Accuracy dashboard coming at `accuracy.getkoji.dev`.
 
 ## Why this exists
 
 Document extraction tools make accuracy claims that are impossible to verify. This corpus makes them verifiable:
 
-- **Benchmarking** — run any extraction pipeline against the corpus and get an honest accuracy score
-- **Regression testing** — every Koji release is automatically tested against 1000+ documents before shipping
-- **Model comparison** — see how gpt-4o-mini compares to llama3 compares to mistral across document types
-- **Schema validation** — schemas in [getkoji/schemas](https://github.com/getkoji/schemas) are tested against real documents, not theoretical ones
+- **Benchmarking** — `koji bench --corpus . --model openai/gpt-4o-mini` gives an honest per-category accuracy score
+- **Held-out validation** — SEC filings has a 50-doc cold set the schemas were never tuned against (99.4%)
+- **Pain-point testing** — insurance COIs have targeted synthetic docs for each known extraction failure mode
+- **Regression testing** — every engine change is benched against the full corpus before merging
 
 ## Structure
 
 ```
 corpus/
-├── invoices/
-│   ├── documents/          # The source documents (markdown-parsed or links to PDFs in R2)
-│   ├── schemas/            # Extraction schemas used for this category
-│   ├── expected/           # Ground-truth JSON outputs, one per document
-│   ├── manifests/          # Metadata: source, license, page count, etc.
-│   └── README.md
-├── sec_filings/
-├── irs_forms/
-├── contracts/
-├── scripts/
-│   ├── bench.py            # Run a benchmark against a category
-│   ├── score.py            # Compare actual vs expected, compute accuracy
-│   └── sources/            # Scrapers/importers for each source
-└── .github/workflows/
-    └── nightly-bench.yml   # Scheduled benchmark runs against main
+├── sec_filings/           # 101 real EDGAR filings
+├── invoices/              # 52 SROIE + 55 synthetic
+├── insurance_certificates/ # 21 real + 40 synthetic COIs
+├── insurance_policies/    # 30 real + 67 synthetic
+├── insurance_claims/      # 17 real + 125 synthetic
+├── adversarial/           # 11 synthetic edge cases
+├── multi_format/          # 3 real (xlsx/docx/pptx)
+└── scripts/sources/       # Sourcing + generation scripts
 ```
 
-Each category is self-contained. You can run `koji bench --corpus ./corpus/invoices` to benchmark just one category.
-
-## Document storage
-
-Small text-based documents (markdown, plain text) live directly in the repo under `documents/`. Large binary documents (PDFs over 1MB) live in Cloudflare R2 and are referenced by URL in the manifest files. This keeps the repo cloneable while preserving the originals for anyone who needs to reprocess them.
-
-## Ground truth format
-
-Each document has a corresponding `.expected.json` file in `expected/`. The JSON matches Koji's extraction output format — same field names as the schema, same types, same structure. Generated initially via `koji extract` with `openai/gpt-4o`, then manually reviewed and corrected.
-
-Example: `invoices/documents/sroie_001.md` has ground truth at `invoices/expected/sroie_001.expected.json`.
+Each category has `documents/`, `schemas/`, `expected/`, and `manifests/` subdirectories.
 
 ## Running benchmarks
 
-Once you have Koji installed and a cluster running:
-
 ```bash
-# Full corpus, all categories
-koji bench --corpus ./corpus --model openai/gpt-4o-mini
+# Full corpus
+koji bench --corpus . --model openai/gpt-4o-mini
 
 # One category
-koji bench --corpus ./corpus/invoices --model openai/gpt-4o-mini
+koji bench --corpus . --category sec_filings
 
-# Compare models
-koji bench --corpus ./corpus --model openai/gpt-4o
-koji bench --corpus ./corpus --model openai/gpt-4o-mini
-koji bench --corpus ./corpus --model ollama/llama3.2
+# JSON output for CI
+koji bench --corpus . --json --output results.json
 ```
 
-The `koji bench` command doesn't exist yet — it's on the Koji roadmap. Until then, you can use `koji test --schema` on individual categories (it runs against the `fixtures/` convention).
+## Document sources
+
+| Category | Sources |
+|----------|---------|
+| SEC filings | EDGAR full-text search API (public, no auth) |
+| Invoices | SROIE dataset (ICDAR 2019, CC BY 4.0) + synthetic |
+| Insurance certificates | .gov/.edu (NYC, LA, Cal State, Georgia Tech, 15+ more) + synthetic |
+| Insurance policies | State DOIs (OK, FL, DC, MD, NY, NV), municipal board packets (Ketchum, Rocky Mount, Cameron County TX), insurer specimens |
+| Insurance claims | FEMA NFIP proof-of-loss, WC FROI from 11 states, Cameron County TX loss runs + synthetic |
+
+## Ground truth
+
+Each document has a `.expected.json`. Only fields with known ground truth are asserted — missing fields are omitted so the bench doesn't penalize correct extractions we didn't annotate.
+
+For authoritative-index sources (EDGAR, SROIE), expected comes from the index. For everything else, expected is seeded via `koji extract` and manually reviewed.
 
 ## Contributing
 
-We welcome new documents, schemas, and expected outputs. To contribute:
-
-1. Source a document from a public, redistributable source (public domain, CC-licensed, or explicit permission)
-2. Add it to the appropriate category under `documents/`
-3. Add or use an existing schema in `schemas/`
-4. Generate expected output with `koji extract` and manually verify it
-5. Add a manifest entry documenting the source and license
-6. Open a PR
-
-See `CONTRIBUTING.md` for detailed guidelines.
+See `CONTRIBUTING.md`. Key rules: public domain or CC-licensed only, expected JSONs require manual review, regressions > 5% must be called out in PR body.
 
 ## License
 
-- **Code** (scripts, schemas, CI): Apache 2.0
-- **Documents**: various — each document's license is recorded in its manifest entry. Many are public domain (US government filings, SEC filings, IRS forms). Others are CC-licensed research datasets. No proprietary documents.
-
-If you want to use a document for your own project, check its manifest first.
-
-## Sources we use
-
-| Category | Primary sources |
-|----------|----------------|
-| Invoices | SROIE, CORD, FUNSD research datasets |
-| SEC filings | EDGAR (public API) |
-| IRS forms | irs.gov (public domain) |
-| Contracts | EDGAR exhibits (10-K attachments) |
-| Insurance policies | State DOI filings (NAIC SERFF) |
-| Academic papers | arXiv bulk download |
-
-## Current coverage
-
-This corpus is actively being built. Current document counts:
-
-| Category | Documents | Status |
-|----------|-----------|--------|
-| invoices | 0 | Scaffolded, not yet populated |
-| sec_filings | 0 | Scaffolded, not yet populated |
-| irs_forms | 0 | Scaffolded, not yet populated |
-| contracts | 0 | Scaffolded, not yet populated |
-
-Accuracy dashboard coming soon at `accuracy.getkoji.dev`.
+- **Code** (scripts, schemas): Apache 2.0
+- **Documents**: per-document (check manifests). Most are public domain (US Government) or CC BY 4.0. Synthetic documents are CC0.

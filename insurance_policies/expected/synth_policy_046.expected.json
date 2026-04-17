@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Compass Rose Specialty",
+  "named_insured": "Sierra Technical Engineering PC",
+  "policy_number": "EO 2577362",
+  "policy_type": "Professional Liability",
+  "effective_date": "2026-04-27",
+  "expiration_date": "2027-04-27",
+  "total_premium": 32550,
+  "each_occurrence_limit": 1000000,
+  "general_aggregate_limit": 5000000
+}

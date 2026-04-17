@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Tidewater Surety & Casualty",
+  "named_insured": "Silverline Electrical Contractors",
+  "policy_number": "GEN-6389384",
+  "policy_type": "Other",
+  "effective_date": "2025-02-25",
+  "expiration_date": "2026-02-25",
+  "total_premium": 21200,
+  "each_occurrence_limit": 500000,
+  "general_aggregate_limit": 2000000
+}
