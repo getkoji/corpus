@@ -27,9 +27,25 @@ fields:
     type: string
     description: |
       Type of claim form. Extract from the form title or header.
+    mappings:
+      "Employer's First Report":
+        - "First Report of Injury"
+        - "Employer's First Report of Injury"
+        - "First Report of Injury or Illness"
+        - "Employer's Report of Injury"
+      "Proof of Loss":
+        - "Sworn Statement in Proof of Loss"
+        - "Proof of Loss Statement"
+      "Loss Run":
+        - "Loss Run Report"
+        - "Claims History"
+        - "Loss History Report"
+      "Demand Letter":
+        - "Subrogation Demand"
+        - "Demand for Payment"
+        - "Subrogation Demand Letter"
     options:
       - Proof of Loss
-      - First Report of Injury
       - Employer's First Report
       - Loss Run
       - Demand Letter
@@ -105,6 +121,10 @@ fields:
         - "Description of Accident"
         - "Describe how injury"
         - "Description of Loss"
+      exclude_contains:
+        - "Nature of Injury"
+        - "Cause of Injury"
+        - "Type of Injury"
 
   body_part:
     type: string
