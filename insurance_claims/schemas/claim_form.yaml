@@ -161,7 +161,8 @@ fields:
       abbreviation (e.g., NY, CA, TX).
     derived_from:
       field: description_of_loss
-      transform: state_from_address
+      method: us_state_lookup
+      prefer: last
     hints:
       look_in: [header, employer, incident]
       patterns: ["state\\s*(?:of)?[:\\s]", "jurisdiction"]
