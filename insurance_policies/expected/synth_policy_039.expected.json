@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Mountain West Casualty Co.",
+  "named_insured": "Northern Star Telecom Services",
+  "policy_number": "XS5773479",
+  "policy_type": "Umbrella/Excess",
+  "effective_date": "2024-03-19",
+  "expiration_date": "2025-03-19",
+  "total_premium": 23200,
+  "each_occurrence_limit": 10000000,
+  "general_aggregate_limit": 10000000
+}

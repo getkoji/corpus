@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Pinnacle Specialty Insurance",
+  "named_insured": "Redline Fire Protection Corp.",
+  "policy_number": "BPP4304646-02",
+  "policy_type": "Businessowners",
+  "effective_date": "2025-07-07",
+  "expiration_date": "2026-07-07",
+  "total_premium": 24600,
+  "each_occurrence_limit": 300000,
+  "general_aggregate_limit": 600000
+}

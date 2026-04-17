@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Liberty Bell Underwriters",
+  "named_insured": "Suncoast Roofing & Waterproofing",
+  "policy_number": "BPP6970637",
+  "policy_type": "Businessowners",
+  "effective_date": "2026-02-12",
+  "expiration_date": "2027-02-12",
+  "total_premium": 24250,
+  "each_occurrence_limit": 300000,
+  "general_aggregate_limit": 1000000
+}

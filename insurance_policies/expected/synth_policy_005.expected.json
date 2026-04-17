@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Tidewater Surety & Casualty",
+  "named_insured": "Silverline Electrical Contractors",
+  "policy_number": "GLP-7566491",
+  "policy_type": "Commercial General Liability",
+  "effective_date": "2024-09-02",
+  "expiration_date": "2025-09-02",
+  "total_premium": 34050,
+  "each_occurrence_limit": 1000000,
+  "general_aggregate_limit": 4000000
+}

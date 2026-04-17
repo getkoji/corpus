@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Atlantic Coast Mutual",
+  "named_insured": "Apex Industrial Welding LLC",
+  "policy_number": "WCA 6625816",
+  "policy_type": "Workers Compensation",
+  "effective_date": "2025-03-06",
+  "expiration_date": "2026-03-06",
+  "total_premium": 191850,
+  "each_occurrence_limit": 500000,
+  "general_aggregate_limit": null
+}

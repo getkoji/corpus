@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Tidewater Surety & Casualty",
+  "named_insured": "Horizon Legal Group PLLC",
+  "policy_number": "PL 8602337",
+  "policy_type": "Professional Liability",
+  "effective_date": "2026-04-23",
+  "expiration_date": "2027-04-23",
+  "total_premium": 38950,
+  "each_occurrence_limit": 5000000,
+  "general_aggregate_limit": 10000000
+}

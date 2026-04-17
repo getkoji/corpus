@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Harvest Plains Insurance Co.",
+  "named_insured": "Prairie Home Builders LLC",
+  "policy_number": "UMB 4259870-04",
+  "policy_type": "Umbrella/Excess",
+  "effective_date": "2026-06-17",
+  "expiration_date": "2027-06-17",
+  "total_premium": 29400,
+  "each_occurrence_limit": 10000000,
+  "general_aggregate_limit": 10000000
+}

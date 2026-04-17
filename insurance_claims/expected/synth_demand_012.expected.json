@@ -1,0 +1,11 @@
+{
+  "form_type": "Demand Letter",
+  "claimant_name": "Matthew T. Ivanov",
+  "employer_name": null,
+  "date_of_loss": "2026-01-25",
+  "description_of_loss": "Water damage to insured's property caused by leak from Coastal Trucking Inc.'s property in Los Angeles, CA.",
+  "amount_claimed": 28000,
+  "policy_number": "CGL-142154",
+  "body_part": null,
+  "state": "CA"
+}

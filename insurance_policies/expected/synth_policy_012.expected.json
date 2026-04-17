@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Atlantic Coast Mutual",
+  "named_insured": "Harborview Consulting Engineers",
+  "policy_number": "BOP-3717029",
+  "policy_type": "Businessowners",
+  "effective_date": "2025-01-23",
+  "expiration_date": "2026-01-23",
+  "total_premium": 24850,
+  "each_occurrence_limit": 500000,
+  "general_aggregate_limit": 4000000
+}

@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Beacon Hill Mutual",
+  "named_insured": "Summit Landscaping & Excavation",
+  "policy_number": "CPR 4371369",
+  "policy_type": "Commercial Property",
+  "effective_date": "2025-08-11",
+  "expiration_date": "2026-08-11",
+  "total_premium": 47900,
+  "each_occurrence_limit": 10000000,
+  "general_aggregate_limit": 10000000
+}

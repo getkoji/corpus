@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Liberty Bell Underwriters",
+  "named_insured": "Lone Star Paving & Excavation",
+  "policy_number": "UMB-9928002",
+  "policy_type": "Umbrella/Excess",
+  "effective_date": "2025-04-26",
+  "expiration_date": "2026-04-26",
+  "total_premium": 22700,
+  "each_occurrence_limit": 10000000,
+  "general_aggregate_limit": 10000000
+}

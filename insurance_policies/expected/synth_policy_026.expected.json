@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Sentry Pointe Casualty Group",
+  "named_insured": "Christine A. Morales",
+  "policy_number": "HPP-1384284",
+  "policy_type": "Homeowners",
+  "effective_date": "2026-03-28",
+  "expiration_date": "2027-03-28",
+  "total_premium": 3950,
+  "each_occurrence_limit": 100000,
+  "general_aggregate_limit": null
+}

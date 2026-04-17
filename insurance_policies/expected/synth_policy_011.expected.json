@@ -1,0 +1,11 @@
+{
+  "insurer_name": "Harvest Plains Insurance Co.",
+  "named_insured": "Iron Horse Steel Erectors Inc.",
+  "policy_number": "BPP 6721383",
+  "policy_type": "Businessowners",
+  "effective_date": "2025-11-20",
+  "expiration_date": "2026-11-20",
+  "total_premium": 17300,
+  "each_occurrence_limit": 2000000,
+  "general_aggregate_limit": 4000000
+}
