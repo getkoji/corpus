@@ -12,5 +12,8 @@
   "added_by": "accuracy-27",
   "schema": "insurance_claims/schemas/claim_form.yaml",
   "doc_type": "loss_run",
-  "notes": "Synthetic loss run report \u2014 AUTO policy, 19 claims."
+  "notes": "Synthetic loss run report \u2014 AUTO policy, 19 claims.",
+  "tags": [
+    "loss-run-format-erie"
+  ]
 }
