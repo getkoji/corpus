@@ -31,6 +31,8 @@ fields:
       - Proof of Loss
       - First Report of Injury
       - Employer's First Report
+      - Loss Run
+      - Demand Letter
       - Other
     hints:
       look_in: [header]
@@ -41,7 +43,13 @@ fields:
     description: |
       Name of the person or entity filing the claim. On a proof of
       loss this is the insured/policyholder. On a workers comp FROI
-      this is the injured employee.
+      this is the injured employee. On a demand letter this is the
+      damaged/injured party on whose behalf the demand is made.
+
+      For LOSS RUN reports: return null. Loss runs contain MULTIPLE
+      claimant names in a claims table — there is no single
+      claimant. Do not extract a name from a claims-history table
+      row.
     hints:
       look_in: [claimant, header]
       patterns: ["(?:claimant|insured|injured\\s*(?:worker|employee))\\s*(?:name)?[:\\s]"]
@@ -69,9 +77,17 @@ fields:
   description_of_loss:
     type: string
     description: |
-      Narrative description of what happened. On a proof of loss
+      Narrative description of what happened. Extract the description
+      VERBATIM from the document — use the exact wording as written,
+      do not paraphrase, summarize, or rewrite. On a proof of loss
       this describes the property damage. On a FROI this describes
-      the injury circumstances.
+      the injury circumstances. On a demand letter this is the
+      incident narrative from the letter body.
+
+      For demand letters, extract the core incident description
+      (1-2 sentences describing what happened), not the full letter
+      body. Look for the paragraph that starts with a description
+      of the event/incident.
     hints:
       look_in: [incident]
       patterns: ["description\\s*of\\s*(?:loss|injury|accident)", "how\\s*(?:did|injury)\\s*occur", "cause\\s*of\\s*injury"]
