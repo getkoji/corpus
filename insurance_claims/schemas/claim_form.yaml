@@ -57,11 +57,18 @@ fields:
   employer_name:
     type: string
     description: |
-      Employer name (workers comp FROI only). The company where
-      the injury occurred. Null for non-WC forms.
+      The company or organization associated with the claim.
+
+      On a workers comp FROI: the employer where the injury occurred.
+      On a loss run report: the "Named Insured" or "Insured" shown
+      in the report header — this is the policyholder whose claims
+      history the report covers.
+      On a demand letter: null (not applicable).
+      On a proof of loss: the insured/policyholder.
     hints:
-      look_in: [employer]
-      patterns: ["employer\\s*(?:name)?[:\\s]"]
+      look_in: [employer, header]
+      prefer_position: top
+      patterns: ["employer\\s*(?:name)?[:\\s]", "named\\s*insured[:\\s]", "insured\\s*(?:name)?[:\\s]", "policyholder[:\\s]"]
 
   date_of_loss:
     type: date
@@ -78,19 +85,26 @@ fields:
     type: string
     description: |
       Narrative description of what happened. Extract the description
-      VERBATIM from the document — use the exact wording as written,
-      do not paraphrase, summarize, or rewrite. On a proof of loss
-      this describes the property damage. On a FROI this describes
-      the injury circumstances. On a demand letter this is the
-      incident narrative from the letter body.
+      VERBATIM — use the exact wording as written, do not paraphrase
+      or summarize.
 
-      For demand letters, extract the core incident description
-      (1-2 sentences describing what happened), not the full letter
-      body. Look for the paragraph that starts with a description
-      of the event/incident.
+      On a FROI form, extract from the "Description of Accident" or
+      "Describe how injury occurred" field. This is a FREE-TEXT
+      NARRATIVE like "Worker caught left wrist in conveyor belt
+      mechanism." Do NOT extract from "Nature of Injury" or "Cause
+      of Injury" fields — those are short classification CODES like
+      "Crush Injury" or "Caught in/between", not descriptions.
+
+      On a proof of loss, extract from the description of damage.
+      On a demand letter, extract the core incident description
+      (1-2 sentences) from the letter body.
     hints:
       look_in: [incident]
-      patterns: ["description\\s*of\\s*(?:loss|injury|accident)", "how\\s*(?:did|injury)\\s*occur", "cause\\s*of\\s*injury"]
+      patterns: ["description\\s*of\\s*(?:loss|injury|accident)", "describe\\s*how\\s*(?:injury|accident)\\s*occurred", "how\\s*(?:did|injury)\\s*occur"]
+      prefer_contains:
+        - "Description of Accident"
+        - "Describe how injury"
+        - "Description of Loss"
 
   body_part:
     type: string
