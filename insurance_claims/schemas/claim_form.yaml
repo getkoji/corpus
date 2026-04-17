@@ -1,11 +1,11 @@
 name: claim_form
 description: |
-  Insurance claim form extraction — covers both NFIP proof-of-loss
-  forms and workers compensation first-report-of-injury forms.
-  These are structured government forms with labeled fields, not
-  free-text documents — the extraction challenge is form-fill
-  parsing (reading values from labeled boxes and tables) rather
-  than narrative comprehension.
+  Insurance claim form extraction — covers NFIP proof-of-loss forms,
+  workers comp first-report-of-injury, loss run reports, and
+  subrogation demand letters. Mixed structured forms and free-text
+  narrative documents.
+
+blank_form_aware: true
 
   Many of these forms are BLANK templates (no data filled in).
   For blank forms, every field should be null — the schema validates
@@ -99,6 +99,7 @@ fields:
 
   description_of_loss:
     type: string
+    verbatim: true
     description: |
       Narrative description of what happened. Extract the description
       VERBATIM — use the exact wording as written, do not paraphrase
