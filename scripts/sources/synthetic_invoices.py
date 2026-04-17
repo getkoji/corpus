@@ -721,8 +721,9 @@ def main() -> int:
     for sub in ("documents", "expected", "manifests"):
         (INVOICES_DIR / sub).mkdir(parents=True, exist_ok=True)
 
-    count = 50
-    for idx in range(count):
+    count = int(sys.argv[1]) if len(sys.argv) > 1 else 50
+    start = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+    for idx in range(start, start + count):
         file_id = f"synth_{idx + 1:03d}"
 
         markdown, expected, manifest = generate_invoice(idx, rng)
