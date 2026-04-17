@@ -40,6 +40,9 @@ fields:
         - "Loss Run Report"
         - "Claims History"
         - "Loss History Report"
+        - "Loss Run / Claims History Report"
+        - "Claims History Report"
+        - "Loss Experience Report"
       "Demand Letter":
         - "Subrogation Demand"
         - "Demand for Payment"
