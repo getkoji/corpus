@@ -4,6 +4,12 @@ description: Commercial invoice and receipt extraction — merchant, totals, lin
 compare:
   fuzzy_threshold: 0.85
 
+locale:
+  infer_from: [merchant_name, vendor_address]
+  fallback:
+    date_format: MM/DD/YYYY
+    currency: USD
+
 categories:
   keywords:
     header: ["invoice", "receipt", "bill to", "ship to", "invoice number"]
