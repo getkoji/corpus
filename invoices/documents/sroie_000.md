@@ -1,32 +1,27 @@
-## tan woon yann
+## Merchant Information
+**Merchant Name:** BOOK TA .K (TAMAN DAYA) SDN BHD  
+**Address:** NO.5 55,57 & 59, JALAN SAGU 18, TAMAN DAYA, 81100 JOHOR BAHRU, JOHOR.  
 
-## BOOK TA -K (TAMAN DAYA) SDN BHD
+## Receipt Information
+**Document No:** TD01167/104  
+**Date:** 25/12/2018  
+**Time:** 8:13:39 PM  
+**Cashier:** MANIS  
+**Member:**  
 
-789417-W
+## Items
+| CODE/DESC                     | QTY | PRICE RM | Disc RM | AMOUNT RM |
+|-------------------------------|-----|----------|---------|-----------|
+| 95569390-0116                | 1 PC| 9.00     | 0.00    | 9.00      |
 
-NO.S: 55,57 &amp; 59, JALAN SAGU 18, TAMAN DAYA, 81100 JOHOR BAHRU, JOHOR.
+## Totals
+| Total RM                     | 9.00  |
+| Round:ing Adjustment RM      | 0.00  |
+| Round:d Total (RM)          | 9.00  |
+| Cash                         | 10.00 |
+| CHANGE                       | 1.00  |
 
-Document No: TD01167104 Date : 25/12/2018 8:13:39 PM Cashier : MANIS
+**Note:** GOODS SOLD ARE NOT RETURNABLE OR EXCHANGEABLE  
 
-Member :
-
-## CASH BILL
-
-| CODE/DESC             | PRICE                                      | Disc                                       | AMOUNI                                     |
-|-----------------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|
-| QTY                   | RM                                         |                                            | RM                                         |
-|                       | 9556939040118 KF MODELLING CLAY KIDDY FISH | 9556939040118 KF MODELLING CLAY KIDDY FISH | 9556939040118 KF MODELLING CLAY KIDDY FISH |
-| 1 PC                  | 9.000 0,00                                 |                                            | 9.00                                       |
-| Total :               | Total :                                    | Total :                                    | 9.00                                       |
-| Rour ding Adjustment: | Rour ding Adjustment:                      | Rour ding Adjustment:                      | 0.00                                       |
-| Round d Total (RM):   | Round d Total (RM):                        | Round d Total (RM):                        | 9.00                                       |
-
-Cash CHANGE
-
-GOODS SOLD ARE NOT RE TURNABI EXCHANGEABLE
-
-<!-- image -->
-
-PEED. SOMES SEE In 00 08 7 19, 6016 17661 1041 !
-
-THANK YOU PLEASE COME AGAIN !
+**Thank You**  
+**PLEASE COME AGAIN!**

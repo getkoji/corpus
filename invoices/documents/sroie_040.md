@@ -1,67 +1,30 @@
-## THREE STOOGES
+## THREE STOOGES  
+BISTRO & CAFE  
+109, SS21/IA,  
+DAMANSARA UTAMA  
+GST ID : 001661886464  
 
-BISTRO &amp; CAFE 109, SS21/1A,
+## TABLE : BAR 7  
+ORDER : 00012916  
+BIZDATE: 12/03/2018  
+CASHIER: CASHIER  
+BILL DT: 12/03/2018 10:25:49 PM RM  
 
-DAMANSARA UTAMA
+| QTY | ITEM                       | AMOUNT  |
+|-----|----------------------------|---------|
+| 1   | HH GUINESS 12 GLASSES      | 150.00  |
+| 1   | HH TIGER 12 GLASSES        | 145.00  |
 
-GST ID: 001661886464
+|     | SUB TOTAL                  | 295.00  |
+|     | SERVICE CHARGE 10%        | 29.50   |
+|     | GST 6%                    | 19.47   |
+|     | ROUNDING ADJ              | -0.02   |
 
-TABLE : BAR 7
+|     | NET TOTAL                 | 343.95  |
 
-ORDER : 00012916
+## Tax Summary  
+| SVC SERVICE CHARGE 10 | Amount  | Tax    |
+|------------------------|---------|--------|
+| 295.00                 | 29.50   |
 
-BIZDATE: 12/03/2018
-
-CASHIER: CASHIER
-
-BILL DT: 12/03/2018 10:25:49 PM
-
-QTY ITEM
-
-HH GUINESS 12 GLASSES
-
-HH TIGER 12 GLASSES
-
-2 SUB TOTAL
-
-SERVICE CHARGE 10%
-
-GST 6%
-
-ROUNDING ADJ
-
-NET TOTAL
-
-RM
-
-AMOUNT
-
-150.00
-
-145.00
-
-295.00
-
-29.50
-
-19.47
-
--0.02
-
-343.95
-
-Tax Summar SVC DERVICL CrAhar 10 SR GST 6%
-
-Amount 295.00 324.50
-
-Tax
-
-50
-
-P121
-
-me Agaln
-
-<!-- image -->
-
-<!-- image -->
+Thank You. Plz Come Again.

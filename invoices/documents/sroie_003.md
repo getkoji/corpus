@@ -1,107 +1,36 @@
-## tan woon yann
+## Merchant Information
+**YONGFATT ENTERPRISE**  
+No. 122, 124 Jalan Dedap 13  
+81100 Johor Bahru  
+TEL: 07-3523888  
 
-## YONGFATT ENTERPRISE
+## Receipt Information
+**Doc No:** CS00031663  
+**Date:** 25/12/2018  
+**Time:** 12:31:00  
+**Cashier:** USER  
+**Salesperson:**  
 
-(JM0517726) NO 122.124. JALAN DEDAP 13 81100 JOHOR BAHRU
+## Items
+| Item Code | Qty | S/Price | Amount | Tax |
+|-----------|-----|---------|--------|-----|
+| E8318     | 1   | 80.91   | 80.91  | SR  |
+| **Total Qty** | 1   |         | 80.91  |     |
 
-TEL 07-3523888
+## Totals
+| Description                       | Amount  |
+|-----------------------------------|---------|
+| Total Sales (Excluding GST)      | 80.91   |
+| Discount                           | 0.00    |
+| Total GST                         | 0.00    |
+| Rounding                           | -0.01   |
+| **Total Sales (Inclusive of GST)**| 80.90   |
+| **CASH**                          | 100.00  |
+| **Change**                        | 19.10   |
 
-GST ID: 000849813504
+## GST Summary
+| Tax Code | % | Amt (RM) | Tax (RM) |
+|----------|---|----------|----------|
+| SR       | 0 | 80.91    | 0.00     |
 
-## SIMPLIFIED TAX INVOICE
-
-<!-- image -->
-
-CASH
-
-Doc No
-
-Cashie!
-
-Salesperson
-
-GS00031663
-
-USER
-
-11um
-
-E8318
-
-ELEGANT SCH TR BAG 15
-
-Total Qry:
-
-Qty
-
-1
-
-1
-
-Total Sales (Excluding GST)
-
-Discount
-
-Total GST
-
-Rounding
-
-clusive of GST) : Total Sales
-
-CASH :
-
-Change :
-
-Date 25/12/2018
-
-Time 12.31.00
-
-Ref.
-
-S/Price
-
-8091
-
-Amount Tax
-
-80.91
-
-SR
-
-80 91
-
-80.91
-
-000
-
-0.00
-
--001
-
-80.90
-
-100.00
-
-19.10
-
-80.90
-
-GST SUMMARY
-
-Tax Code
-
-SR
-
-Amt (RM)
-
-80.91
-
-Tax (RM)
-
-000
-
-Total :
-
-80.91
-
-0.00
+**GOODS SOLD ARE NOT REFUNDABLE. ONLY EXCHANGE WITH RECEIPT.**

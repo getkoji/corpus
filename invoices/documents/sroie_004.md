@@ -1,29 +1,31 @@
-## tan woon yann
+## Merchant Information
+**Merchant Name:** tan woon yann  
+**Address:** MR D.T.Y. (M) SDN BHD  
+**Registration No:** 860671-D  
+**Location:** IOT 1251-A & 1351-B JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR (TESCO PUTRA NILAI1)  
 
-MR D.I.Y. (M) SON BHD (CO.REG: 860671-D) LOT 1851-A &amp; 1851-B. JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR (TESCO PUTRA NILAL) - INVOICE-
+## Invoice
+**Date:** 16-11-18 13:58  
+**Cashier:** OPERATOR TRAINEE CASHIER  
 
-KILAT AUTO ECO WASH &amp; SHINE ES1000 IL WA45-72A - 12 9555916500133 1 X 3.11 3.11 KILAT' ECO AUTO WASH &amp;WAX EW-1000-11 WA44-A - 12 9555916500126 1 X 4.62 4.62 WD40 277ml M0Q 2572 WA4U-A - 24 079567600084 1 X 11.23 11.23 KLEENSO AJAIB 99 SERAI WANYI 900G WD00 - 15 9555651400385 1 X 7.45 7.45 HANDKERCHIEF 71386#2PCS PI12PJ11-4 - 6/300 9090822 i X 4.50 4.50
+## Items
+| Item Description                     | Qty | Price   | Total   |
+|--------------------------------------|-----|---------|---------|
+| KILAT AUTO ECO WASH & SHINE ES1000 1L | 12  | RM 3.11 | RM 3.11 |
+| KILAT ECO AUTO WASH &MAX EW-1000-1L  | 12  | RM 4.62 | RM 4.62 |
+| W404 277H MOQ 2572                   | 24  | RM 11.23| RM 11.23|
+| KLEENSO AJAIB 99 SERAI WANYI 900G    | 15  | RM 7.45 | RM 7.45 |
+| HANDKERCHIEF 7138@6PCS               | 1   | RM 4.50 | RM 4.50 |
 
-Item(s) : 5
+## Totals
+| Description            | Amount   |
+|------------------------|----------|
+| Total                  | RM 30.91 |
+| Rounding Adjustment     | RM 0.01  |
+| Total Rounded          | RM 30.90 |
+| Cash                   | RM 30.90 |
+| Change                 | RM 20.10 |  
 
-Total
-
-ROUNDING ADJUSTMEN
-
-TOTAL ROUNDED
-
-CASH
-
-CHANGE
-
-<!-- image -->
-
-18-11-18 13:58 SH01 Z153 OPERATOR TRAINEE CASHIER
-
-## Oty(s) : 5
-
-RM 30.91 -RM 0.01 RM 30.90 RM 51.00 RM 20.10
-
-T2 R000002902
-
-EXCHANGE ARE ALLOWED WITHIN / DAYS WITH RECEIPT. STRICTLY NO CASH REFUND.
+## Note
+EXCHANGE ARE ALLOWED WITHIN 7 DAYS WITH RECEIPT.  
+STRICTLY NO CASH REFUND.

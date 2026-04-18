@@ -1,15 +1,35 @@
--
+## Merchant Information
+**Merchant Name:** AEON CO. (M) BHD (126928-H)  
+**Address:** 3RD FLR, AEON TANAH MALURI SC  
+**Location:** JLN JEJAKA, TANAH MALURI, CHERAS, 55100 KUALA LUMPUR  
+**GST ID:** 001270394568  
+**Shopping Hours:**  
+SUN-THU: 1000 HRS - 2200 HRS  
+FRI-SAT: 1000 HRS - 2300 HRS  
 
-<!-- image -->
+## Receipt Details
+**Receipt No:** 600007956511  
+**Item:** AMBROSIAL GREEK  
 
-AEON CO. (M) BHD (126926-H) 3RO FLR, 4EDN TAMAN MALURE SE JIM JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR GST ID: 002017394688 SHOPPING HOURS SUN-THO: 1000 hh6 - 2260 HAb FRI-SAT: 1000 HRS - 2300 HRS
+| Description          | Amount  |
+|----------------------|---------|
+| Sub-total            | 75.00   |
+| Total Sales Incl GST | 75.00   |
+| Total After Adj Incl GST | 75.00 |
+| CASH                 | 100.00  |
+| Item Count 1         | Change Amt | 25.00 |
 
-| dx 000007995511 AMBROSIAL GREEK                                                                                                                                                                           | 75.005R                                                       |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| Sub-total Total Sales Incl GST Total After Adj Inci Gal CASH J.tem Count 1 Change Amt Invoice No: 2018030610100080493 GST Summary Amount NN 0 53 70.75 Tota! 70.75 06/03/2018 20:01 0305582 PJ PIRYALATHA | 75.00 75.00 75.00 100.00 25.00 Tax 4.25 4.25 1010 008 0060498 |
+## GST Summary
+| Amount  | Tax   |
+|---------|-------|
+| 70.75   | 4.25  |
+| Total   | 70.75 | 4.25 |
 
-0305582 PJ PIRYALATHA
+**Date:** 06/03/2016 20:01  
+**Invoice No:** 20180306101000304949  
+**Reference:** 0035582 PJ PIYRALATHA  
 
-AEON PERMAS JAYA TEL 1-300-80-AEON (2366) THANK YOU FOR VOUR PATRONAGE PLEASE COME AGAIN
-
-<!-- image -->
+**Contact:** AEON PERNAS JAYA  
+**Tel:** 1-300-81-AEON (2366)  
+**Message:** THANK YOU FOR YOUR PATRONAGE  
+**Note:** PLEASE COME AGAIN

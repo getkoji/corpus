@@ -1,71 +1,36 @@
-<!-- image -->
+## Merchant Information
+**Merchant Name:** UNIHAKKA INTERNATIONAL SDN BHD  
+**Address:** 12, Jalan Tampoi 74,Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor  
+**Date:** 18 Mar 2018 18:25  
+**Invoice #:** OR18031602170384  
 
-## UNIHAKKA INTERNATIONAL SDN BHD 18 Mar 2018 18:25
+## Items
+| Item Code                     | Description                | Qty | Total  |
+|-------------------------------|----------------------------|-----|--------|
+| SR I001D000003-1              | 3 Vege                     | 1   | $4.40  |
+| SR I001D000064-Add Vegetable   |                            | 1   | $0.50  |
+| SR I0100000114-Add Chicken     |                            | 1   | $3.70  |
 
-## (B67388-L)
+## Totals
+| Total Amount | $6.60  |
+|--------------|--------|
+| GST @ 6%     | $0.49  |
+| Net Total    | $6.60  |
 
-12, Jalan Tampoi 7/4, Kawasan Parindustrian
+## Payment Information
+| Payment Mode | Amount |
+|--------------|--------|
+| CASH         | $6.60  |
+| Change       | $0.00  |
 
-Tampoi, 81200 Johor Bahru, Johor
+## GST Summary
+| Amount($) | Tax($) |
+|-----------|--------|
+| $6.60     | $0.49  |
 
-Invoice # : OR18031802170364
-
-## TAX INVOICE
-
-Itern
-
-oty
-
-ST 100100000031-3 Vege
-
-$4.40
-
-SR 100100000064-Add Vegetable
-
-$0,50
-
-1
-
-SR 100100000114-Add Chicken
-
-$3.70
-
-Total
-
-$4.40
-
-S0.50
-
-$3.70
-
-Total Amount: $8.60
-
-GST @8%: $0.49
-
-Nett Total: S8.60
-
-Amount
-
-$8.60
-
-$0.00
-
-Tax(3)
-
-D 40
-
-Payment Mode
-
-CASH
-
-Change
-
-GST Summary
-
-Amounts)
-
-SR = GST @6%
-
-811
-
-GST REG #000656195584 BAR WANG RICE@PERMAS JAYA (Price Inclusive OI GST) Thank You &amp; Come Again! Like and Follow Us on Facebook! Facebook.com/BarWangRice
+**GST REG #000056195854**  
+**BAR WANG RICE @ PERMAS JAYA**  
+*(Price Inclusive of GST)*  
+Thank You & Come Again!  
+Like and Follow Us on Facebook!  
+Facebook.com/BarWangRice

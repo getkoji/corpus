@@ -1,44 +1,44 @@
-## ASIA MART (SA0264195- T)
+## ASIA MART  
+(SA0264195-T)  
+NO.23 BATU 10, TAMAN SENTOSA,  
+JALAN KAPAR, 42200 KLANG, SELANGOR.  
+GST ID: 001609584640  
 
-## NO.23 BATU 10, TAMAN SENTOSA, JALAN KAPAR, 42200 KLANG, SELANGOR.
+## TAX INVOICE  
+Doc No: CS02070163  
+Cashier: EIRA  
+Salesperson: EIRA  
+Date: 22/12/2017  
+Time: 00:06:00  
 
-GST ID: 001609584640
+| Item                        | Qty | S/Price | S/Price | Amount | Tax |
+|-----------------------------|-----|---------|---------|--------|-----|
+| 9556646132002               | 17  | 0.85    | 0.90    | 15.25  | SR  |
+| 9556231110045               | 1   | 3.55    | 3.55    | 3.55   | ZRL |
+| 9556127101331               | 1   | 1.41    | 1.50    | 1.50   | SR  |
+| 8850199320722               | 1   | 1.42    | 1.51    | 1.51   | SR  |
+| 9850198320722               | 1   | 1.42    | 1.51    | 1.51   | SR  |
+| 8850199320722               | 1   | 1.42    | 1.51    | 1.51   | SR  |
+| 8888002188511               | 1   | 2.30    | 2.44    | 2.44   | SR  |
+| 8888002188511               | 1   | 2.30    | 2.44    | 2.44   | SR  |
+| PS814F02601                 | 1   | 1.01    | 1.60    | 1.60   | SR  |
+| 955667031213                | 1   | 2.74    | 2.90    | 2.90   | SR  |
 
-| Do: No                                 | TAX INVOICE CS02070163                 | TAX INVOICE CS02070163                 | TAX INVOICE CS02070163                 | Date: 22/12/2017                       | Date: 22/12/2017                       |                                        |                                        |
-|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
-| Cashier                                | EIRA                                   | EIRA                                   | EIRA                                   | Time: 00:06:00                         | Time: 00:06:00                         | Time: 00:06:00                         | Time: 00:06:00                         |
-| Salesperson : EIRA                     |                                        |                                        |                                        | Ref.:                                  | Ref.:                                  | Ref.:                                  | Ref.:                                  |
-| Item                                   |                                        |                                        |                                        | (GST) (GST) Amount Tax                 | (GST) (GST) Amount Tax                 | (GST) (GST) Amount Tax                 | (GST) (GST) Amount Tax                 |
-| 955664132002;                          | Qty 17                                 | S/Price 0.85                           | 0.90                                   | S/Price 15.25 SR                       | S/Price 15.25 SR                       | S/Price 15.25 SR                       | S/Price 15.25 SR                       |
-| DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                | DELICIA CHOCOLATE (50G)                |
-| 9556231110044 1                        |                                        | 3.55                                   | 3.55                                   |                                        |                                        |                                        |                                        |
-| GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] | GARDENIA ORIGINAL CLASSIC JUMBO [600G] |
-| 9556127101331 1                        |                                        | 1.41                                   | 1.50                                   | 1.50 SR                                | 1.50 SR                                | 1.50 SR                                | 1.50 SR                                |
-| HU NS LIME 50G                         | HU NS LIME 50G                         | HU NS LIME 50G                         | HU NS LIME 50G                         |                                        |                                        |                                        |                                        |
-| 885019932072:                          | 1                                      | 1.42                                   | 1.51                                   | 1.51 SR                                | 1.51 SR                                | 1.51 SR                                | 1.51 SR                                |
-| DOREMON CATCAT JOY 15G                 | DOREMON CATCAT JOY 15G                 | DOREMON CATCAT JOY 15G                 | DOREMON CATCAT JOY 15G                 |                                        |                                        |                                        |                                        |
-| 885019932072: 1                        |                                        | 1.42                                   | 1.51                                   | 1.51 SR                                | 1.51 SR                                | 1.51 SR                                | 1.51 SR                                |
-| DOREMON CATCAT JOY 15G                 | DOREMON CATCAT JOY 15G                 | DOREMON CATCAT JOY 15G                 | DOREMON CATCAT JOY 15G                 |                                        |                                        |                                        |                                        |
-| 8888002188511                          | 1                                      | 2.30                                   | 2.44                                   |                                        |                                        |                                        |                                        |
-| MINUTE MAID PULPY [ORENJ [350ML]       | MINUTE MAID PULPY [ORENJ [350ML]       | MINUTE MAID PULPY [ORENJ [350ML]       | MINUTE MAID PULPY [ORENJ [350ML]       |                                        |                                        |                                        |                                        |
-| 38980                                  |                                        | 2 30                                   | 2.44                                   |                                        |                                        |                                        |                                        |
-| MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  | MINUTE (ORENI (350ML]                  |
-| 81.E0                                  |                                        |                                        | 1.60                                   |                                        |                                        |                                        |                                        |
-| MON DRINK S0OML                        | MON DRINK S0OML                        | MON DRINK S0OML                        | MON DRINK S0OML                        |                                        |                                        |                                        |                                        |
-| 95505703121:                           |                                        | 2.74                                   | 2.90                                   | 2.90                                   | 2.90                                   | 2.90                                   | 2.90                                   |
-| 100 FIUS [15 SR                        | 100 FIUS [15 SR                        | 100 FIUS [15 SR                        | 100 FIUS [15 SR                        | 100 FIUS [15 SR                        | 100 FIUS [15 SR                        | 100 FIUS [15 SR                        | 100 FIUS [15 SR                        |
-| Total Civi 25                          | Total Civi 25                          | Total Civi 25                          | Total Civi 25                          | 32.69                                  | 32.69                                  | 32.69                                  | 32.69                                  |
-| Total Sales (Excluding GST) :          | Total Sales (Excluding GST) :          | Total Sales (Excluding GST) :          | Total Sales (Excluding GST) :          | 31.03                                  | 31.03                                  | 31.03                                  | 31.03                                  |
-|                                        |                                        |                                        |                                        | 0.00                                   | 0.00                                   | 0.00                                   | 0.00                                   |
-| Total GST :                            | Total GST :                            | Total GST :                            | Total GST :                            | 1.65                                   | 1.65                                   | 1.65                                   | 1.65                                   |
-| Rounding :                             | Rounding :                             | Rounding :                             | Rounding :                             | 0.02                                   | 0.02                                   | 0.02                                   | 0.02                                   |
-| Total Sales (Inclusive of GST) :       | Total Sales (Inclusive of GST) :       | Total Sales (Inclusive of GST) :       | Total Sales (Inclusive of GST) :       |                                        |                                        |                                        |                                        |
-|                                        |                                        |                                        |                                        | 32.70                                  | 32.70                                  | 32.70                                  | 32.70                                  |
-| CASH : Change :                        | CASH : Change :                        | CASH : Change :                        | CASH : Change :                        | 40.00                                  | 40.00                                  | 40.00                                  | 40.00                                  |
-| GST SUMMARY                            | GST SUMMARY                            | GST SUMMARY                            | GST SUMMARY                            | 7.30                                   | 7.30                                   | 7.30                                   | 7.30                                   |
-| Tax Code SR                            | %                                      | Amt (RM)                               | Amt (RM)                               |                                        |                                        |                                        |                                        |
-| ZRL                                    | 0                                      | 27.48                                  | 27.48                                  | Tax. (RM) 1.65                         | Tax. (RM) 1.65                         | Tax. (RM) 1.65                         | Tax. (RM) 1.65                         |
-|                                        | Total:                                 | 3.55 31.03                             | 3.55 31.03                             | 0.00                                   | 0.00                                   | 0.00                                   | 0.00                                   |
-|                                        |                                        |                                        |                                        | 1.65                                   | 1.65                                   | 1.65                                   | 1.65                                   |
+Total Qty: 25  
+Total Sales (Excluding GST): 31.03  
+Discount: 0.00  
+Total GST: 1.65  
+Rounding: 0.02  
+Total Sales (Including GST): 32.70  
 
-GOODS SOLD ARE NOT RETURNABLE, THANK YOU
+CASH: 40.00  
+Change: 7.30  
+
+## GST SUMMARY  
+| Tax Code | % | Amt (RM) | Tax (RM) |
+|----------|---|----------|----------|
+| SR       | 6 | 27.48    | 1.65     |
+| ZRL      | 0 | 3.55     | 0.00     |
+| Total    |   | 31.03    | 1.65     |
+
+GOODS SOLD ARE NOT RETURNABLE, THANK YOU.

@@ -1,85 +1,51 @@
-<!-- image -->
+## Merchant Information
+**PASAR MINI JIN SENG**  
+379, JALAN PERMAS SATU,  
+BANDAR BARU PERMAS JAYA,  
+81750 PLENTONG, JOHOR.  
+TEL. 07-3879484  
+(CO. NO. JM1169368-D)  
+(GST NO. 000105511616)  
 
-PASAR MINE JIN SENG 379, JALAN PERMAS SATU, BANDAR BARU PERMAS JAYA 81750 PLENTONG, JOHOR. TEL: 07-3874904 (CO. NO. JMO195368-D) (GST NO, , 000150511616)
+## Receipt Information
+**TAXINV:002-1550040**  
+**Date:** 18/03/16  
+**Cashier:** CASHIER2  
 
-18/03/18
+## Items
+| Item Description         | Price (RM) |
+|--------------------------|------------|
+| 1 VEGETABLES             | 2.20 ZRL   |
+| 1 LTK OMEGA PLUS 10S     | 5.70 ZRL   |
+| 1 VEGETABLES             | 1.00 ZRL   |
+| 1 VEGETABLES             | 2.00 ZRL   |
+| 1 VEGETABLES             | 8.00 ZRL   |
+| 1 SEAFOOD                | 8.50 ZRL   |
+| 1 FISH BALL / CAKE       | 1.20 SR    |
 
-TAXINV:C02-1550040
+**Item Count:** 7  
+**Subtotal:** 28.60  
 
-Cashier : CASHIER2
+## Total
+| TL:RM | 28.60 |
+|-------|-------|
+| 6% GST | 0.07  |
 
-VEGETABLES
+## Payment Details
+| Payment Method | Amount (RM) |
+|----------------|--------------|
+| CASH           | 100.00       |
+| CASH CHANGE    | 71.40        |
 
-LTK OMEGA PLUS 105
+**Date:** 18/03/18 09:03 #002-1550040  
+**Cashier:** CASHIER2  
 
-VEGETABLES
+## GST Summary
+| Description | Amount (RM) | Tax (RM) |
+|-------------|--------------|----------|
+| SR (6%)     | 1.20         | 0.07     |
+| ZRL (6%)    | 27.40        | 0.00     |
 
-VEGETABLES
-
--,-
-
-VEGETABLES
-
-SEAF000
-
-FISH BALI. / CARE
-
-Iten Count SUBTOTAL:
-
-TL:RM 6% GST
-
-2.20 ZRL
-
-5.70 2Ri
-
-1.00 ZRL
-
-2.00 ZRL
-
-8.00 ZRL
-
-8.50 ZRi.
-
-1.20 SR
-
-7
-
-28,60
-
-28.60
-
-0.07
-
-- Payment: Details
-
-CASH
-
-CASH CHANGE
-
-18/03/18 09:03 #002-1550040# CASHIER?
-
-GST Sunnary
-
-AmountiEM)
-
-SR
-
-ZRL
-
-(963)
-
-(80%)
-
-27.40
-
-100.00
-
-71.40
-
-Tax(RN)
-
-0,07
-
-0,00
-
-Thank you Plesse come again GOCIOS SOLD ARE NOT REFIUNDAEILE
+Thank you  
+Please come again  
+GOODS SOLD ARE NOT REFUNDABLE

@@ -1,23 +1,36 @@
-<!-- image -->
+## Merchant Information
+**Merchant Name:** UNIHAKKA INTERNATIONAL SDN BHD  
+**Address:** 12, Jalan Tampoi 174, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor  
+**Date:** 05 Mar 2018 18:24  
+**Invoice #:** ORI6903502160349  
 
-## UNIHAKKA INTERNATIONAL SDN BHD 05 Mar 2018 18:24
+## Items
+| Item Code           | Description      | Qty | Total  |
+|---------------------|------------------|-----|--------|
+| SR 100100000060-4   | Veggie           | 1   | $5.50  |
+| SR 100100000006-6   | Pork             | 1   | $2.70  |
 
-## 12, Jalan Tampoi 7/4. Kawasan Perindustrian Tampoi,81200 Johor Bahru, Johor
+## Totals
+| Description         | Amount  |
+|---------------------|---------|
+| Total Amount        | $8.20   |
+| GST @6%             | $0.46   |
+| Net Total           | $8.20   |
 
-Invoice #: QR18030502160349
+## Payment Information
+| Payment Mode | Amount  |
+|--------------|---------|
+| CASH         | $6.20   |
+| Change       | $0.00   |
 
-| Item                      | Qty                       |                                    |
-|---------------------------|---------------------------|------------------------------------|
-| SR 100100000060-4 Vege    | SR 100100000060-4 Vege    | Total                              |
-| $5.50                     | 1                         | $5.50                              |
-| SR 100100000006- Pork     | SR 100100000006- Pork     |                                    |
-| $2.70                     |                           | $2.70                              |
-|                           |                           | Total Amount: $8.20 GST @6%: S0.46 |
-|                           |                           | Nett Total: $8.20                  |
-| Payment Mode              | Payment Mode              | Amount                             |
-| CASH                      | CASH                      | $8.20                              |
-| Change                    | Change                    | $0.00                              |
-| GST Summary --. Amount(S) | GST Summary --. Amount(S) | Tax(s)                             |
-| SF = GST @3k              | SF = GST @3k              | 774 0.46                           |
+## GST Summary
+| Description | Amount  | Tax($) |
+|-------------|---------|--------|
+| SR - GST @6%| 7.74    | 0.46   |
 
-GST REG #000656195684 BAR WANG RICE@PERMAS JAYA (Price Inclusive OI GST) Thank You &amp; Come Again! Like and Follow Us on Facebook! Facebook.com/BarWangRice
+**GST REG #4008565195584**  
+**BAR WANG RICE @ PERMAS JAYA**  
+*(Price Inclusive of GST)*  
+Thank You & Come Again!  
+Like and Follow Us on Facebook!  
+Facebook.com/BarWangRice

@@ -1,83 +1,35 @@
-## BREVERY TAP Dwner by Castle Blue S/B (1035683-T)
+## MERCHANT INFORMATION
+**Merchant Name:** BREWERY TAP  
+**Owner:** Castle Blue S/B (103563-T)  
+**GST No:** 002108047360  
+**Address:** Avtiyo Plaza, Lot B-F-11, Block B, No. Jalan PJU 7/1, D'sara Avenue, Bandar Sri D'sara, 52000 KL  
+**TEL:** +603-62627219  
 
-GST No: 002108047360
+## GUEST CHECK
+**Table No:** D06  
+**Order No:** 11449  
+**Date:** 30/03/2018 @ 8:13 PM  
+**Cashier:** ORDER LOGIN  
+**Waiter:** Harry, Paing  
+**FRN ON:** 30/03/2018 11:18 PM  
 
-Avtivo Plaza,Lot B-F-11, Block B Noi. Jalan PJU 9/1, D'sara Avevue Bandar Sri D'sara, 52000 KL TEL: +603-62629219
+| QTY | ITEM                     | RM     |
+|-----|--------------------------|--------|
+| 1   | Tiger 2 Bucket - HH      | 95.00  |
+| 2   | Tiger Bucket - HH        | 50.00  |
+| 1   | Chicken wings            | 22.00  |
+| 1   | French Fries             | 12.00  |
+| 1   | Tiger Bucket - HH        | 50.00  |
 
-## # GUEST CHECK *
+| **Subtotal**              | 179.00 |
+| **GST 6%**               | 10.74  |
+| **Rounding Adj**         | 0.01   |
+| **Net Total**            | 189.75 |
 
-## Table No: D06
+## TAX SUMMARY
+| **Tax Summary**          | **Amount** | **Tax** |
+|--------------------------|------------|---------|
+| SR: GST 6%               | 179.00     | 10.74   |
 
-Order No : 11649
-
-Date
-
-: 30/03/2018 # 8:13 PM
-
-Cashier
-
-: ORDER LOGIN
-
-Waiter
-
-: Harry, Paing
-
-PRN ON
-
-: 30/03/2018 11:18 PM
-
-## BTY ITEM
-
-## *** Dine In #44
-
-1 Tiger 2 Bucket - HH
-
-2 Tiger Bucket- Hh
-
-1 Chicken wings
-
-1 French Fries
-
-1 Tiger Bucket- HH
-
-95.00 SR
-
-22.00 SR
-
-12.00 SR
-
-50.00 SR
-
-4 SubTotal
-
-GST 06%:
-
-Rounding Adj
-
-Net Total
-
-179.00
-
-10.74
-
-0.01
-
-187.75
-
-- *** 30/03/2018 11:11 PM *** --
-
-Tax Summary SR: GST 086%
-
-Amount
-
-179.00
-
-Tax
-
-10.74
-
-THANK YOU, PLEASE COME AGAIN Goods Sold Are Non Refundable
-
-<!-- image -->
-
-RM
+**THANK YOU, PLEASE COME AGAIN**  
+**Goods Sold Are Non Refundable**

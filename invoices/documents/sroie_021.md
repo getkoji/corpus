@@ -1,62 +1,38 @@
-<!-- image -->
+## TEO HENG STATIONERY & BOOKS  
+(001451637-M)  
+NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI  
+SELANGOR DARUL EHSAN  
+TEL : 03-3271 9872  FAX : 03-3271 9487  
+GST No. : 000689913856  
 
-## TED HENG STATIONERY OKS
+## SIMPLIFIED TAX INVOICE  
 
-(001451637-M)
+CASH  
+Receipt No. : CS1801/26874  Date : 18/01/2018  
 
-NO. 53, JALAN BESAR, 45600 BATANG BERJUNTA
+| ITEM                     | QTY | U/P  | DISC% | AMOUNT (RM) |
+|--------------------------|-----|------|-------|-------------|
+| 9557068000035            | 1   | 3.50 | 5.69  | 3.30 *      |
+| - JIANYU STELL RULER 30CM THICK |     |      |       |             |
+| 1                        | 1   | 1.30 | 0.00  | 1.30        |
 
-SELANGOR DA RUL EHSAN
+Total Qty : 2  
+Total : 4.60  
 
-TEL: 03-3271 9872
+SUB-TOTAL (EX) : 4.60  
+TOTAL TAX : 0.28  
+ROUNDING : 0.02  
+TOTAL : 4.90  
+CASH : 4.90  
+CHANGE : 0.00  
 
-GST No.: 000689913856
+## GST SUMMARY  
 
-FAX : 03-3271 9487
+| TAX CODE | %    | AMOUNT (RM) | TAX (RM) |
+|----------|------|--------------|----------|
+| SR       | 6.00 | 4.60         | 0.28     |
 
-## SIMPLIFIED TAX INVOICE
+Note: (*) Indicated The Item Sold Has Been Related To GST (Goods & Services Tax).  
 
-## CASH
-
-|                                 | Receipt No.: CS1801/26874 Date: 18/01/2018   | Receipt No.: CS1801/26874 Date: 18/01/2018   | Receipt No.: CS1801/26874 Date: 18/01/2018   |                                 |
-|---------------------------------|----------------------------------------------|----------------------------------------------|----------------------------------------------|---------------------------------|
-| ITEM                            |                                              |                                              | OTT UP DISC%                                 | AMOUNT (RN)                     |
-| 9557068000035                   | 1                                            | 3.50                                         | 5.69                                         | 3.30*                           |
-| - JIANYU STELL RULER 30CM THICK | - JIANYU STELL RULER 30CM THICK              | - JIANYU STELL RULER 30CM THICK              | - JIANYU STELL RULER 30CM THICK              | - JIANYU STELL RULER 30CM THICK |
-| 1                               | 1                                            | 1.30                                         | 0.00                                         | 1.30 *                          |
-| - LAMINATE FILM                 | - LAMINATE FILM                              | - LAMINATE FILM                              | - LAMINATE FILM                              | - LAMINATE FILM                 |
-| Total Qty.:                     | 2                                            |                                              |                                              | 4.60                            |
-| SUB-TOTAL (EX)                  | SUB-TOTAL (EX)                               |                                              | * -                                          | 4.60                            |
-| TOTAL TAX                       | TOTAL TAX                                    |                                              |                                              | 0.28                            |
-| ROUNDING                        | ROUNDING                                     |                                              |                                              | 0.02                            |
-| TOTAL                           | TOTAL                                        |                                              |                                              | 4.90                            |
-| CASH                            | CASH                                         |                                              |                                              | 4.90                            |
-| CHANGE                          | CHANGE                                       |                                              |                                              | 0.00                            |
-
-TAX CODE
-
-## GST SUMMARY
-
-AMOUNT
-
-(RM)
-
-TAX
-
-(RM)
-
-SR
-
-6.00
-
-4.60
-
-0.28
-
-## TOTAL:
-
-4.60
-
-0.28
-
-Note: (*) Indicated The Item Sold Has Been Related To GST (Goods &amp; Services Tax).
+GOODS SOLD ARE NOT RETURNABLE,  
+THANK YOU.

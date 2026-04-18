@@ -1,92 +1,38 @@
-<!-- image -->
+## MERCHANT INFORMATION
+**Merchant Name:** PERNIAGAAN ZHENG HUI  
+**Address:** NO.59 JALAN PERMAS 9/5, BANDAR BARU PERMAS JAYA, 81750 JOHOR BAHRU  
+**Tel:** 07-386 7524  
+**Fax:** 07-386 3793  
+**GST NO:** 00000568924  
 
-## PERNIAGAAN ZHENG HUI
+## RECEIPT DETAILS
+**Receipt #:** CS00085298  
+**Salesperson:**  
+**Date:** 15/03/2018  
+**Time:** 17:34:00  
 
-JM0325955-V
+## ITEM DETAILS
+| Item | Qty | RSP (RM) | Amount (RM) |
+|------|-----|----------|-------------|
+| 3934 | 1   | 7.66     | 7.56        |
+| SR: CAR PARKING COUPON |   |          |             |
+| **TOT QTY:** | 1 |          | 7.86        |
 
-81750 JOHOR BAHRU
-
-## NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA
-
-TEL: 07-386 7524
-
-FAX : 07-386 3793
-
-GST NO : 000800589824
-
-## SIMPLIFIED TAX INVOICE
-
-CASH
-
-Receipl #: CS00086298
-
-Salesperson:
-
-Cashier: USER
-
-Niom
-
-3934
-
-Cty
-
-1
-
-SR: CAR PARKING COUPON
-
-- TOT GTY: 7
-
-(Excluded GST) Sub Total (RM) :
-
-Discount (RM):
-
-Total GST (RM)
-
-Rounding (RM) :
-
-Total (RM) :
-
-CASH :
-
-Change (RM) :
-
-Date: 15/03/2018
-
-Tima: 17:34:00
-
-(RM)
-
-(RM;
-
-ROP
-
-Amount
-
-7.66
-
-7.5€
-
-7.6€
-
-7.55
-
-0.00
-
-0.45
-
-0.00
-
-8.00
-
-8.00
-
-0.00
+## SUMMARY
+| Description | Amount (RM) |
+|-------------|-------------|
+| (Excluded GST) Sub Total | 7.56 |
+| Discount (RM) | 0.00 |
+| Total GST (RM) | 0.45 |
+| Rounding (RM) | 0.00 |
+| **Total (RM)** | 8.00 |
+| **CASH** | 8.00 |
+| **Change (RM)** | 0.00 |
 
 ## GST SUMMARY
+| Tax Code | % | Amount | GST |
+|----------|---|--------|-----|
+| SR       | 6 | 7.65   | 0.45 |
+| **Total:** |   | 7.56   | 0.46 |
 
-| Tax Code   |         |   Amount |   GST |
-|------------|---------|----------|-------|
-| SR         |         |     7.55 |  0.45 |
-|            | Total : |     7.5  |  0.46 |
-
-GOODS SOLD ARE NOT RETURNABLE, THANK YOU
+**GOODS SOLD ARE NOT RETURNABLE, THANK YOU.**
