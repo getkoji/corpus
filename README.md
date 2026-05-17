@@ -6,14 +6,15 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 
 | Category | Documents | Real | Synthetic | Accuracy | Notes |
 |----------|-----------|------|-----------|----------|-------|
-| **sec_filings** | 101 | 101 | 0 | **~100%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. 50-doc held-out validation set (99.4% cold). |
-| **invoices** | 107 | 52 | 55 | **90.4%** | 52 SROIE scanned receipts (real OCR) + 55 synthetic with full schema coverage. |
-| **insurance_certificates** | 61 | 21 | 40 | **94.8%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points (carrier letter-codes, per-policy AIs, complex limits, layout variations). |
-| **insurance_policies** | 97 | 30 | 67 | **95.3%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets, Cameron County TX. Synthetic: all 9 policy types. |
-| **insurance_claims** | 142 | 17 | 125 | **75.0%** | FEMA proof-of-loss, WC FROI from 11 states, Cameron County loss runs. Synthetic: filled-in claims, loss runs, demand letters. Active tuning. |
-| **adversarial** | 11 | 0 | 11 | **~93%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
+| **sec_filings** | 102 | 102 | 0 | **99.2%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
+| **invoices** | 155 | 0 | 155 | **95.2%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
+| **receipts** | 52 | 52 | 0 | **81.0%** | SROIE scanned receipts (real OCR). Accuracy limited by OCR quality. |
+| **insurance_certificates** | 61 | 21 | 40 | **89.2%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
+| **insurance_policies** | 97 | 30 | 67 | **95.2%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. Synthetic: all 9 policy types. |
+| **insurance_claims** | 142 | 17 | 125 | **92.4%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. Synthetic: filled-in claims, loss runs, demand letters. |
+| **adversarial** | 11 | 0 | 11 | **91.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
 | **multi_format** | 3 | 3 | 0 | **100%** | xlsx, docx, pptx parsed through docling. |
-| **TOTAL** | **522** | **224** | **298** | | **4 domains, 7 categories** |
+| **TOTAL** | **623** | **225** | **398** | **93.5%** | **5 domains, 8 categories** |
 
 Accuracy dashboard coming at `accuracy.getkoji.dev`.
 
@@ -30,8 +31,9 @@ Document extraction tools make accuracy claims that are impossible to verify. Th
 
 ```
 corpus/
-├── sec_filings/           # 101 real EDGAR filings
-├── invoices/              # 52 SROIE + 55 synthetic
+├── sec_filings/           # 102 real EDGAR filings
+├── invoices/              # 155 synthetic invoices
+├── receipts/              # 52 real SROIE scanned receipts
 ├── insurance_certificates/ # 21 real + 40 synthetic COIs
 ├── insurance_policies/    # 30 real + 67 synthetic
 ├── insurance_claims/      # 17 real + 125 synthetic
