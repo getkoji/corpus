@@ -19,7 +19,7 @@ categories:
     header: ["proof of loss", "first report of injury", "claim form", "employer's report"]
     claimant: ["claimant", "injured worker", "employee", "insured"]
     employer: ["employer", "policyholder", "insured employer"]
-    incident: ["date of loss", "date of injury", "description of loss", "cause of injury", "nature of injury"]
+    incident: ["date of loss", "date of injury", "description of loss", "description of accident", "cause of injury", "nature of injury", "describe how injury occurred"]
     financial: ["amount claimed", "total amount", "building damage", "contents damage"]
 
 fields:
@@ -113,10 +113,11 @@ fields:
 
       On a FROI form, extract from the "Description of Accident" or
       "Describe how injury occurred" field. This is a FREE-TEXT
-      NARRATIVE like "Worker caught left wrist in conveyor belt
-      mechanism." Do NOT extract from "Nature of Injury" or "Cause
-      of Injury" fields — those are short classification CODES like
-      "Crush Injury" or "Caught in/between", not descriptions.
+      NARRATIVE (one or more sentences describing what happened).
+      Do NOT extract from "Nature of Injury" or "Cause of Injury"
+      fields — those are short classification CODES, not descriptions.
+      Do NOT use any example text from these instructions — only
+      extract text that appears verbatim in the document.
 
       On a proof of loss, extract from the description of damage.
       On a demand letter, extract the core incident description
