@@ -69,7 +69,9 @@ fields:
       return only the last bold fragment.
 
       For 6-K filings the registrant name appears as a standalone
-      line after "Commission File Number:" and before the address block.
+      ALL-CAPS line after "Commission File Number:" and before the
+      address. It is NOT the address or building name — it is the
+      company name (e.g. "HAFNIA LIMITED", "BHP GROUP LIMITED").
       There is no "(Exact name of registrant...)" label on 6-K filings.
     hints:
       look_in: [header]
