@@ -7,14 +7,15 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 | Category | Documents | Real | Synthetic | Accuracy | Notes |
 |----------|-----------|------|-----------|----------|-------|
 | **sec_filings** | 102 | 102 | 0 | **99.2%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
-| **invoices** | 155 | 0 | 155 | **95.2%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
-| **receipts** | 52 | 52 | 0 | **81.0%** | SROIE scanned receipts (real OCR). Accuracy limited by OCR quality. |
-| **insurance_certificates** | 61 | 21 | 40 | **89.2%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
-| **insurance_policies** | 97 | 30 | 67 | **95.2%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. Synthetic: all 9 policy types. |
-| **insurance_claims** | 142 | 17 | 125 | **92.4%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. Synthetic: filled-in claims, loss runs, demand letters. |
-| **adversarial** | 11 | 0 | 11 | **91.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
-| **multi_format** | 3 | 3 | 0 | **100%** | xlsx, docx, pptx parsed through docling. |
-| **TOTAL** | **623** | **225** | **398** | **93.5%** | **5 domains, 8 categories** |
+| **insurance_policies** | 97 | 17 | 80 | **99.1%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. Synthetic: all 9 policy types. |
+| **irs_forms** | 20 | 20 | 0 | **100.0%** | IRS forms with structured fields. |
+| **multi_format** | 3 | 3 | 0 | **100.0%** | xlsx, docx, pptx parsed through docling. |
+| **adversarial** | 11 | 0 | 11 | **96.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
+| **insurance_claims** | 152 | 17 | 135 | **95.5%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. Synthetic: filled-in claims, loss runs, demand letters. |
+| **invoices** | 155 | 0 | 155 | **95.3%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
+| **insurance_certificates** | 61 | 21 | 40 | **94.4%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
+| **receipts** | 52 | 52 | 0 | **81.6%** | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality, not extraction. |
+| **TOTAL** | **653** | **232** | **421** | **96.1%** | **6 domains, 9 categories** |
 
 Accuracy dashboard coming at `accuracy.getkoji.dev`.
 
