@@ -1,11 +1,11 @@
-# APPALACHIAN FIDELITY MUTUAL
-
 ## DECLARATIONS PAGE
 
-**Policy Number:** GL-1747850
+**Insurance Company:** Continental Shield Insurance Co.
 
-**Named Insured:** Silverline Electrical Contractors
-**Mailing Address:** 1800 N. Highland Avenue, Los Angeles, CA 90028
+**Policy Number:** GLP-1747850
+
+**Named Insured:** Cornerstone Civil Engineering PC
+**Mailing Address:** 90 State Street, Suite 700, Albany, NY 12207
 
 **Policy Type:** Commercial General Liability
 

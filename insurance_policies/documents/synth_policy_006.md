@@ -1,49 +1,38 @@
-# Sterling National Insurance Co.
+## EVERGREEN MUTUAL INSURANCE COMPANY
 
-## Declarations Page
+## POLICY DECLARATIONS
 
-**Policy Number:** GL 7118591
+| Field | Value |
+|---|---|
+| Policy Number | GLP-2863096 |
+| Policy Type | Commercial General Liability |
+| Named Insured | Granite Peak General Contractors |
+| Mailing Address | 7700 Mineral Drive, Suite 200, Coeur d'Alene, ID 83815 |
+| Policy Period | 12/17/2026 to 12/17/2027 |
+| Effective Date | 12/17/2026 |
+| Expiration Date | 12/17/2027 |
 
-**Named Insured:** Meridian Mechanical Services Inc.
-**Mailing Address:** 4400 Commerce Drive, Indianapolis, IN 46268
+### LIMITS OF INSURANCE
 
-**Policy Type:** Commercial General Liability
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $500,000 |
+| General Aggregate Limit | $10,000,000 |
+| Products-Completed Operations Aggregate | $10,000,000 |
+| Personal & Advertising Injury | $500,000 |
+| Damage to Premises Rented to You | $300,000 |
+| Medical Expense (Any One Person) | $5,000 |
 
-**Policy Period:** 01/06/2026 to 01/06/2027
-**Effective Date:** 01/06/2026
-**Expiration Date:** 01/06/2027
+### PREMIUM SUMMARY
 
----
+Total Annual Premium: $27,850
 
-### Limits of Insurance
+### SCHEDULE OF FORMS AND ENDORSEMENTS
 
-**Each Occurrence Limit:** $500,000
-**General Aggregate Limit:** $2,000,000
-**Products-Completed Operations Aggregate:** $2,000,000
-**Personal & Advertising Injury:** $500,000
-**Damage to Premises Rented to You:** $100,000
-**Medical Expense (Any One Person):** $10,000
-
----
-
-### Premium
-
-- Premises/Operations: $11,400
-- Products/Completed Operations: $8,350
-- Personal & Advertising Injury: $10,300
-- Medical Payments: $12,100
-- Damage to Premises Rented to You: $1,800
-
-**Total Premium: $43,950**
-
----
-
-### Forms and Endorsements
-
-- CG 00 01 04 13 — Commercial General Liability Coverage Form
-- CG 20 10 04 13 — Additional Insured - Owners, Lessees or Contractors
-- IL 00 21 09 08 — Nuclear Energy Liability Exclusion Endorsement
-- CG 24 04 05 09 — Waiver of Transfer of Rights of Recovery Against Others to Us
-- CG 20 37 04 13 — Additional Insured - Owners, Lessees or Contractors - Completed Operations
-- CG 25 03 05 09 — Designated Construction Project(s) General Aggregate Limit
+| Form Number | Title |
+|---|---|
+| IL 00 21 09 08 | Nuclear Energy Liability Exclusion Endorsement |
+| CG 21 47 12 07 | Employment-Related Practices Exclusion |
+| CG 25 03 05 09 | Designated Construction Project(s) General Aggregate Limit |
+| CG 21 39 10 93 | Contractual Liability Limitation |
 

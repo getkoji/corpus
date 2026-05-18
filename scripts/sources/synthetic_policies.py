@@ -441,12 +441,31 @@ def _render_table_layout(
     rng: random.Random,
 ) -> str:
     lines = []
-    lines.append(f"# {insurer}")
-    lines.append("")
-    lines.append("## POLICY DECLARATIONS")
-    lines.append("")
-    lines.append("| Field | Value |")
-    lines.append("|---|---|")
+
+    # Vary insurer presentation to match real policy formats
+    insurer_style = rng.choice(["labeled_table", "heading_plus_label", "underwritten"])
+    if insurer_style == "labeled_table":
+        # Insurer as a row in the declarations table
+        lines.append("## POLICY DECLARATIONS")
+        lines.append("")
+        lines.append("| Field | Value |")
+        lines.append("|---|---|")
+        lines.append(f"| Insurance Company | {insurer} |")
+    elif insurer_style == "heading_plus_label":
+        lines.append(f"## {insurer.upper()}")
+        lines.append("")
+        lines.append("## POLICY DECLARATIONS")
+        lines.append("")
+        lines.append("| Field | Value |")
+        lines.append("|---|---|")
+    else:
+        lines.append("## POLICY DECLARATIONS")
+        lines.append("")
+        lines.append(f"Underwritten by: {insurer}")
+        lines.append("")
+        lines.append("| Field | Value |")
+        lines.append("|---|---|")
+
     lines.append(f"| Policy Number | {policy_number} |")
     lines.append(f"| Policy Type | {policy_type} |")
     lines.append(f"| Named Insured | {insured_name} |")
@@ -529,17 +548,25 @@ def _render_kv_layout(
 ) -> str:
     lines = []
 
-    # Header style variations
-    style = rng.choice(["caps", "mixed"])
-    if style == "caps":
-        lines.append(f"# {insurer.upper()}")
+    # Header style variations — match real policy formats
+    style = rng.choice(["insurer_field", "issued_by", "heading_with_field"])
+    if style == "insurer_field":
+        lines.append("## DECLARATIONS PAGE")
+        lines.append("")
+        lines.append(f"**Insurance Company:** {insurer}")
+        lines.append("")
+    elif style == "issued_by":
+        lines.append("## Declarations Page")
+        lines.append("")
+        lines.append(f"Issued by: {insurer}")
+        lines.append("")
+    else:
+        lines.append(f"## {insurer.upper()}")
         lines.append("")
         lines.append("## DECLARATIONS PAGE")
-    else:
-        lines.append(f"# {insurer}")
         lines.append("")
-        lines.append("## Declarations Page")
-    lines.append("")
+        lines.append(f"**Insurer:** {insurer}")
+        lines.append("")
 
     lines.append(f"**Policy Number:** {policy_number}")
     lines.append("")
@@ -636,9 +663,16 @@ def _render_narrative_layout(
 ) -> str:
     lines = []
 
-    lines.append(f"# {insurer}")
-    lines.append("")
-    lines.append(f"## {policy_type} Policy — Declarations")
+    # Vary heading style
+    narr_style = rng.choice(["company_heading", "policy_heading"])
+    if narr_style == "company_heading":
+        lines.append(f"## {insurer.upper()}")
+        lines.append("")
+        lines.append(f"## {policy_type} Policy — Declarations")
+    else:
+        lines.append(f"## {policy_type} Policy — Declarations")
+        lines.append("")
+        lines.append(f"**Insurance Company:** {insurer}")
     lines.append("")
 
     # Opening paragraph

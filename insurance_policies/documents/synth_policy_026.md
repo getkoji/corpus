@@ -1,16 +1,15 @@
-# Sentry Pointe Casualty Group
-
 ## POLICY DECLARATIONS
 
 | Field | Value |
 |---|---|
-| Policy Number | HPP-1384284 |
+| Insurance Company | Harvest Plains Insurance Co. |
+| Policy Number | HPP-1412985 |
 | Policy Type | Homeowners |
-| Named Insured | Christine A. Morales |
-| Mailing Address | 2415 Peachtree Road NE, Atlanta, GA 30305 |
-| Policy Period | 03/28/2026 to 03/28/2027 |
-| Effective Date | 03/28/2026 |
-| Expiration Date | 03/28/2027 |
+| Named Insured | Angela D. Foster |
+| Mailing Address | 3801 Lake Shore Drive, Apt 1204, Chicago, IL 60613 |
+| Policy Period | March 6, 2025 to March 6, 2026 |
+| Effective Date | March 6, 2025 |
+| Expiration Date | March 6, 2026 |
 
 ### LIMITS OF INSURANCE
 
@@ -20,12 +19,21 @@
 
 ### PREMIUM SUMMARY
 
-Total Annual Premium: $3,950
+| Coverage | Premium |
+|---|---|
+| Dwelling (Coverage A) | $550 |
+| Other Structures (Coverage B) | $500 |
+| Personal Property (Coverage C) | $600 |
+| Loss of Use (Coverage D) | $500 |
+| Personal Liability (Coverage E) | $100 |
+| Medical Payments (Coverage F) | $450 |
+| **Total Premium** | **$2,700** |
 
 ### SCHEDULE OF FORMS AND ENDORSEMENTS
 
 | Form Number | Title |
 |---|---|
+| HO 04 61 05 11 | Scheduled Personal Property Endorsement |
+| HO 04 90 05 11 | Personal Property Replacement Cost Loss Settlement |
 | HO 00 03 05 11 | Special Form |
-| HO 04 10 05 11 | Additional Interests - Residence Premises |
 

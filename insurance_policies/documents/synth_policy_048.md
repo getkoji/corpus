@@ -1,25 +1,15 @@
-# Midwest Indemnity Holdings
+## APPALACHIAN FIDELITY MUTUAL
 
-## POLICY DECLARATIONS
+## Inland Marine Policy — Declarations
 
-| Field | Value |
-|---|---|
-| Policy Number | SPL-1919429-03 |
-| Policy Type | Inland Marine |
-| Named Insured | Silverline Electrical Contractors |
-| Mailing Address | 1800 N. Highland Avenue, Los Angeles, CA 90028 |
-| Policy Period | November 14, 2025 to November 14, 2026 |
-| Effective Date | November 14, 2025 |
-| Expiration Date | November 14, 2026 |
+In consideration of the premium stated herein, Appalachian Fidelity Mutual (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-### LIMITS OF INSURANCE
+**Named Insured:** Cornerstone Civil Engineering PC
+**Address:** 90 State Street, Suite 700, Albany, NY 12207
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $1,000,000 |
-| General Aggregate Limit | $2,000,000 |
+This policy, numbered **GEN-2033940**, is effective from **May 11, 2025** to **May 11, 2026** (12:01 A.M. standard time at the address of the Named Insured).
 
-### PREMIUM SUMMARY
+**Limits of Insurance:** The Each Occurrence Limit is $1,000,000; the General Aggregate Limit is $4,000,000.
 
-Total Annual Premium: $1,200
+The total advance premium for this policy is **$16,200**, payable at inception.
 

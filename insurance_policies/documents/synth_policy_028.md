@@ -1,31 +1,39 @@
-# Golden Gate Assurance Corp.
+## DECLARATIONS PAGE
 
-## POLICY DECLARATIONS
+**Insurance Company:** Pacific Crest Casualty
 
-| Field | Value |
-|---|---|
-| Policy Number | HO4600623 |
-| Policy Type | Homeowners |
-| Named Insured | Thomas & Emily Richardson |
-| Mailing Address | 67 Briarcliff Road, Montclair, NJ 07042 |
-| Policy Period | Nov 25, 2026 to Nov 25, 2027 |
-| Effective Date | Nov 25, 2026 |
-| Expiration Date | Nov 25, 2027 |
+**Policy Number:** HO1350598
 
-### LIMITS OF INSURANCE
+**Named Insured:** Robert & Linda Chen
+**Mailing Address:** 305 Willowbrook Court, Raleigh, NC 27607
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $500,000 |
+**Policy Type:** Homeowners
 
-### PREMIUM SUMMARY
+**Policy Period:** Jul 23, 2026 to Jul 23, 2027
+**Effective Date:** Jul 23, 2026
+**Expiration Date:** Jul 23, 2027
 
-Total Annual Premium: $3,750
+---
 
-### SCHEDULE OF FORMS AND ENDORSEMENTS
+### Limits of Insurance
 
-| Form Number | Title |
-|---|---|
-| HO 05 24 05 11 | Broadened Residence Premises Definition |
-| HO 04 90 05 11 | Personal Property Replacement Cost Loss Settlement |
+**Each Occurrence Limit:** $300,000
+**Dwelling Coverage (A):** $750,000
+**Other Structures (B):** $50,000
+**Personal Property (C):** $175,000
+**Loss of Use (D):** $40,000
+
+---
+
+**Total Annual Premium:** $3,200
+
+---
+
+### Forms and Endorsements
+
+- HO 04 61 05 11 — Scheduled Personal Property Endorsement
+- HO 00 03 05 11 — Special Form
+- HO 04 10 05 11 — Additional Interests - Residence Premises
+- HO 05 24 05 11 — Broadened Residence Premises Definition
+- HO 04 90 05 11 — Personal Property Replacement Cost Loss Settlement
 

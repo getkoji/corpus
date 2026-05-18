@@ -1,33 +1,39 @@
-# Atlantic Coast Mutual
+## STERLING NATIONAL INSURANCE CO.
 
-## Workers Compensation Policy — Declarations
+## POLICY DECLARATIONS
 
-In consideration of the premium stated herein, Atlantic Coast Mutual (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
+| Field | Value |
+|---|---|
+| Policy Number | WC3810652 |
+| Policy Type | Workers Compensation |
+| Named Insured | Westridge Concrete Foundations |
+| Mailing Address | 3300 S. Figueroa Street, Los Angeles, CA 90007 |
+| Policy Period | April 6, 2024 to April 6, 2025 |
+| Effective Date | April 6, 2024 |
+| Expiration Date | April 6, 2025 |
 
-**Named Insured:** Apex Industrial Welding LLC
-**Address:** 8900 Steel Road, Gary, IN 46402
+### LIMITS OF INSURANCE
 
-This policy, numbered **WCA 6625816**, is effective from **Mar 6, 2025** to **Mar 6, 2026** (12:01 A.M. standard time at the address of the Named Insured).
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $1,000,000 |
+| Workers Compensation | Statutory |
+| E.L. Each Accident | $1,000,000 |
+| E.L. Disease - Policy Limit | $1,000,000 |
+| E.L. Disease - Each Employee | $1,000,000 |
 
-**Limits of Insurance:** The Each Occurrence Limit is $500,000.
+### PREMIUM SUMMARY
 
-Part One — Workers Compensation Insurance: Statutory. Part Two — Employers Liability Insurance: Each Accident $500,000; Disease — Policy Limit $500,000; Disease — Each Employee $500,000.
+Total Annual Premium: $344,000
 
-The total advance premium for this policy is **$191,850**, payable at inception.
- This premium is allocated as follows:
+### SCHEDULE OF FORMS AND ENDORSEMENTS
 
-  - Workers Compensation Premium: $50,950
-  - Employers Liability: $63,250
-  - USL&H Coverage: $77,650
-
----
-
-**Schedule of Forms and Endorsements**
-
-The following forms and endorsements are attached to and form a part of this policy at the time of issue:
-
-  WC 42 03 04 B  State Special Endorsement
-  WC 00 03 13  Waiver of Our Right to Recover from Others Endorsement
-  WC 42 06 01  Voluntary Compensation Endorsement
-  WC 00 00 00 C  Workers Compensation and Employers Liability Insurance Policy
+| Form Number | Title |
+|---|---|
+| WC 42 06 01 | Voluntary Compensation Endorsement |
+| WC 00 04 06 14 | Experience Rating Modification Factor Endorsement |
+| WC 00 00 00 C | Workers Compensation and Employers Liability Insurance Policy |
+| WC 42 03 04 B | State Special Endorsement |
+| WC 00 03 13 | Waiver of Our Right to Recover from Others Endorsement |
+| WC 04 03 06 | Waiver of Our Right to Recover from Others |
 

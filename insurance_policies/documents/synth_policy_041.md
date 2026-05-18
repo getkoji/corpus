@@ -1,34 +1,25 @@
-# Evergreen Mutual Insurance Company
+## POLICY DECLARATIONS
 
-## Declarations Page
+Underwritten by: Mountain West Casualty Co.
 
-**Policy Number:** UMB 9040631
+| Field | Value |
+|---|---|
+| Policy Number | CU1800515 |
+| Policy Type | Umbrella/Excess |
+| Named Insured | Westridge Concrete Foundations |
+| Mailing Address | 3300 S. Figueroa Street, Los Angeles, CA 90007 |
+| Policy Period | Nov 25, 2025 to Nov 25, 2026 |
+| Effective Date | Nov 25, 2025 |
+| Expiration Date | Nov 25, 2026 |
 
-**Named Insured:** Pinecrest Medical Group PA
-**Mailing Address:** 2200 Mercy Drive, Suite 101, Orlando, FL 32808
+### LIMITS OF INSURANCE
 
-**Policy Type:** Umbrella/Excess
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $10,000,000 |
+| General Aggregate Limit | $10,000,000 |
 
-**Policy Period:** October 25, 2025 to October 25, 2026
-**Effective Date:** October 25, 2025
-**Expiration Date:** October 25, 2026
+### PREMIUM SUMMARY
 
----
-
-### Limits of Insurance
-
-**Each Occurrence Limit:** $10,000,000
-**General Aggregate Limit:** $10,000,000
-
----
-
-**Total Annual Premium:** $3,450
-
----
-
-### Forms and Endorsements
-
-- UMB 010 01 15 — Exclusion - Professional Liability
-- UMB 003 01 15 — Schedule of Underlying Insurance
-- UMB 005 01 15 — Self-Insured Retention Endorsement
+Total Annual Premium: $6,100
 

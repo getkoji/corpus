@@ -1,11 +1,11 @@
 {
-  "insurer_name": "Keystone Indemnity Group",
-  "named_insured": "Christine A. Morales",
-  "policy_number": "HO8825672",
+  "insurer_name": "Atlantic Coast Mutual",
+  "named_insured": "Michael S. Petrov",
+  "policy_number": "HO3074626",
   "policy_type": "Homeowners",
-  "effective_date": "2025-12-23",
-  "expiration_date": "2026-12-23",
-  "total_premium": 7500,
+  "effective_date": "2025-10-26",
+  "expiration_date": "2026-10-26",
+  "total_premium": 2100,
   "each_occurrence_limit": 100000,
   "general_aggregate_limit": null
 }

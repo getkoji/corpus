@@ -1,33 +1,22 @@
-# Atlantic Coast Mutual
+## LIBERTY BELL UNDERWRITERS
 
-## Declarations Page
+## Commercial Auto Policy — Declarations
 
-**Policy Number:** CAP 4722733
+In consideration of the premium stated herein, Liberty Bell Underwriters (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-**Named Insured:** Westridge Concrete Foundations
-**Mailing Address:** 3300 S. Figueroa Street, Los Angeles, CA 90007
+**Named Insured:** Silverline Electrical Contractors
+**Address:** 1800 N. Highland Avenue, Los Angeles, CA 90028
 
-**Policy Type:** Commercial Auto
+This policy, numbered **CA1519182**, is effective from **Sep 24, 2026** to **Sep 24, 2027** (12:01 A.M. standard time at the address of the Named Insured).
 
-**Policy Period:** October 23, 2024 through October 23, 2025
-**Effective Date:** October 23, 2024
-**Expiration Date:** October 23, 2025
+**Limits of Insurance:** The Each Occurrence Limit is $1,000,000.
 
----
+The total advance premium for this policy is **$35,200**, payable at inception.
+ This premium is allocated as follows:
 
-### Limits of Insurance
-
-**Each Occurrence Limit:** $500,000
-
----
-
-### Premium
-
-- Liability Coverage: $15,500
-- Physical Damage - Comprehensive: $15,000
-- Physical Damage - Collision: $5,350
-- Medical Payments: $6,950
-- Uninsured Motorist: $15,200
-
-**Total Premium: $58,000**
+  - Liability Coverage: $7,550
+  - Physical Damage - Comprehensive: $6,050
+  - Physical Damage - Collision: $10,100
+  - Medical Payments: $4,750
+  - Uninsured Motorist: $6,750
 

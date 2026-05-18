@@ -1,34 +1,26 @@
-# Continental Shield Insurance Co.
+## Commercial Auto Policy — Declarations
 
-## POLICY DECLARATIONS
+**Insurance Company:** Harvest Plains Insurance Co.
 
-| Field | Value |
-|---|---|
-| Policy Number | BAP-8811079 |
-| Policy Type | Commercial Auto |
-| Named Insured | Redline Fire Protection Corp. |
-| Mailing Address | 1650 Borel Place, Suite 200, San Mateo, CA 94402 |
-| Policy Period | 02/13/2024 to 02/13/2025 |
-| Effective Date | 02/13/2024 |
-| Expiration Date | 02/13/2025 |
+In consideration of the premium stated herein, Harvest Plains Insurance Co. (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-### LIMITS OF INSURANCE
+**Named Insured:** Lone Star Paving & Excavation
+**Address:** 5500 Burnet Road, Austin, TX 78756
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $2,000,000 |
+This policy, numbered **CAP 6487883-05**, is effective from **11/01/2025** to **11/01/2026** (12:01 A.M. standard time at the address of the Named Insured).
 
-### PREMIUM SUMMARY
+**Limits of Insurance:** The Each Occurrence Limit is $500,000.
 
-Total Annual Premium: $23,600
+The total advance premium for this policy is **$95,400**, payable at inception.
 
-### SCHEDULE OF FORMS AND ENDORSEMENTS
+---
 
-| Form Number | Title |
-|---|---|
-| CA 20 48 02 99 | Designated Insured for Covered Autos Liability Coverage |
-| CA 00 09 10 13 | Business Auto Physical Damage Coverage Form |
-| CA 04 44 10 13 | Additional Insured - Lessor |
-| CA 99 54 03 15 | Truckers Coverage Form |
-| IL 00 03 09 08 | Calculation of Premium |
+**Schedule of Forms and Endorsements**
+
+The following forms and endorsements are attached to and form a part of this policy at the time of issue:
+
+  CA 99 54 03 15  Truckers Coverage Form
+  CA 04 44 10 13  Additional Insured - Lessor
+  CA 00 01 10 13  Business Auto Coverage Form
+  IL 00 03 09 08  Calculation of Premium
 

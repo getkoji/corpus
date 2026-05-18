@@ -1,42 +1,39 @@
-# Riverdale Insurance Exchange
+## Declarations Page
 
-## POLICY DECLARATIONS
+Issued by: Harvest Plains Insurance Co.
 
-| Field | Value |
-|---|---|
-| Policy Number | HPP6116944 |
-| Policy Type | Homeowners |
-| Named Insured | James R. Patterson |
-| Mailing Address | 142 Oakwood Lane, Naperville, IL 60540 |
-| Policy Period | August 2, 2024 to August 2, 2025 |
-| Effective Date | August 2, 2024 |
-| Expiration Date | August 2, 2025 |
+**Policy Number:** HOM 4560096
 
-### LIMITS OF INSURANCE
+**Named Insured:** Robert & Linda Chen
+**Mailing Address:** 305 Willowbrook Court, Raleigh, NC 27607
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $300,000 |
+**Policy Type:** Homeowners
 
-### PREMIUM SUMMARY
+**Policy Period:** December 23, 2025 through December 23, 2026
+**Effective Date:** December 23, 2025
+**Expiration Date:** December 23, 2026
 
-| Coverage | Premium |
-|---|---|
-| Dwelling (Coverage A) | $750 |
-| Other Structures (Coverage B) | $150 |
-| Personal Property (Coverage C) | $900 |
-| Loss of Use (Coverage D) | $800 |
-| Personal Liability (Coverage E) | $300 |
-| Medical Payments (Coverage F) | $900 |
-| **Total Premium** | **$3,800** |
+---
 
-### SCHEDULE OF FORMS AND ENDORSEMENTS
+### Limits of Insurance
 
-| Form Number | Title |
-|---|---|
-| HO 05 24 05 11 | Broadened Residence Premises Definition |
-| HO 00 03 05 11 | Special Form |
-| HO 04 61 05 11 | Scheduled Personal Property Endorsement |
-| HO 04 90 05 11 | Personal Property Replacement Cost Loss Settlement |
-| HO 04 10 05 11 | Additional Interests - Residence Premises |
+**Each Occurrence Limit:** $100,000
+**Dwelling Coverage (A):** $500,000
+**Other Structures (B):** $35,000
+**Personal Property (C):** $175,000
+**Loss of Use (D):** $70,000
+
+---
+
+**Total Annual Premium:** $7,500
+
+---
+
+### Forms and Endorsements
+
+- HO 04 10 05 11 — Additional Interests - Residence Premises
+- HO 05 24 05 11 — Broadened Residence Premises Definition
+- HO 04 61 05 11 — Scheduled Personal Property Endorsement
+- HO 04 90 05 11 — Personal Property Replacement Cost Loss Settlement
+- HO 00 03 05 11 — Special Form
 

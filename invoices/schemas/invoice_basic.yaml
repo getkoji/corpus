@@ -35,6 +35,23 @@ fields:
     type: date
     required: true
     description: Invoice or purchase date
+    extraction_hint: |
+      CRITICAL: Date format depends on the merchant's country.
+
+      DD/MM/YYYY countries (day first): Netherlands, Germany, France,
+      UK, Australia, New Zealand, Singapore, India, and all of Europe,
+      Asia, Africa, and Oceania. If the merchant address mentions any
+      of these countries, interpret "12/04/2025" as April 12, not
+      December 4.
+
+      MM/DD/YYYY countries (month first): United States ONLY.
+      Canada uses both but defaults to DD/MM.
+
+      Look at the merchant address to determine country. Examples:
+      - "Rotterdam, Netherlands" → DD/MM → "12/04/2025" = 2025-04-12
+      - "Queenstown, New Zealand" → DD/MM → "03/11/2026" = 2026-11-03
+      - "Sydney NSW, Australia" → DD/MM → "01/05/2024" = 2024-05-01
+      - "New York, NY" → MM/DD → "12/04/2025" = 2025-12-04
     hints:
       look_in: [header]
       patterns: ["(?:invoice|purchase|transaction|receipt)\\s*date", "date\\s*:"]
@@ -108,6 +125,11 @@ fields:
       a table, e.g. "3x  Widget  $45.00". Parse "3" as quantity,
       "Widget" as name, and "$45.00" as amount (unit_price = amount
       / quantity = $15.00).
+
+      For European invoices (EUR, CHF, etc.), numbers use comma as
+      the decimal separator: "444,22" means 444.22, and "3.376,08"
+      means 3376.08. For US/CA/UK invoices, period is the decimal
+      separator. Always output numbers with period as decimal.
     items:
       type: object
       properties:

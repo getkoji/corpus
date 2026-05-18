@@ -1,24 +1,33 @@
-# Tidewater Surety & Casualty
+## Declarations Page
 
-## Inland Marine Policy — Declarations
+Issued by: Liberty Bell Underwriters
 
-In consideration of the premium stated herein, Tidewater Surety & Casualty (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
+**Policy Number:** SPL6672110
 
-**Named Insured:** Silverline Electrical Contractors
-**Address:** 1800 N. Highland Avenue, Los Angeles, CA 90028
+**Named Insured:** Northern Star Telecom Services
+**Mailing Address:** 2700 University Avenue, Minneapolis, MN 55414
 
-This policy, numbered **GEN-6389384**, is effective from **02/25/2025** to **02/25/2026** (12:01 A.M. standard time at the address of the Named Insured).
+**Policy Type:** Inland Marine
 
-**Limits of Insurance:** The Each Occurrence Limit is $500,000; the General Aggregate Limit is $2,000,000.
-
-The total advance premium for this policy is **$21,200**, payable at inception.
+**Policy Period:** 08/23/2024 - 08/23/2025
+**Effective Date:** 08/23/2024
+**Expiration Date:** 08/23/2025
 
 ---
 
-**Schedule of Forms and Endorsements**
+### Limits of Insurance
 
-The following forms and endorsements are attached to and form a part of this policy at the time of issue:
+**Each Occurrence Limit:** $1,000,000
+**General Aggregate Limit:** $4,000,000
 
-  IL 00 21 09 08  Nuclear Energy Liability Exclusion Endorsement
-  IL 09 52 01 15  Terrorism Risk Insurance Program Endorsement
+---
+
+**Total Annual Premium:** $7,100
+
+---
+
+### Forms and Endorsements
+
+- IL 00 21 09 08 — Nuclear Energy Liability Exclusion Endorsement
+- IL 00 17 11 98 — Common Policy Conditions
 

@@ -1,26 +1,37 @@
-# Atlantic Coast Mutual
+## RIVERDALE INSURANCE EXCHANGE
 
-## Declarations Page
+## DECLARATIONS PAGE
 
-**Policy Number:** BOP-3717029
+**Insurer:** Riverdale Insurance Exchange
 
-**Named Insured:** Harborview Consulting Engineers
-**Mailing Address:** 155 Federal Street, 3rd Floor, Boston, MA 02110
+**Policy Number:** BOW-9531057
+
+**Named Insured:** Valley Forge Painting Contractors
+**Mailing Address:** 450 Lancaster Avenue, Wayne, PA 19087
 
 **Policy Type:** Businessowners
 
-**Policy Period:** January 23, 2025 to January 23, 2026
-**Effective Date:** January 23, 2025
-**Expiration Date:** January 23, 2026
+**Policy Period:** 04-11-2024 to 04-11-2025
+**Effective Date:** 04-11-2024
+**Expiration Date:** 04-11-2025
 
 ---
 
 ### Limits of Insurance
 
-**Each Occurrence Limit:** $500,000
-**General Aggregate Limit:** $4,000,000
+**Each Occurrence Limit:** $1,000,000
+**General Aggregate Limit:** $2,000,000
 
 ---
 
-**Total Annual Premium:** $24,850
+**Total Annual Premium:** $6,800
+
+---
+
+### Forms and Endorsements
+
+- BP 00 03 01 10 — Businessowners Coverage Form
+- BP 04 53 01 06 — Exclusion of Certified Acts of Terrorism
+- BP 04 02 01 10 — Protective Safeguards
+- BP 12 01 01 10 — Business Liability Coverage Form
 

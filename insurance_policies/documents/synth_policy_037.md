@@ -1,33 +1,28 @@
-# BEACON HILL MUTUAL
+## PACIFIC CREST CASUALTY
 
 ## DECLARATIONS PAGE
 
-**Policy Number:** CPR 4371369
+**Insurer:** Pacific Crest Casualty
 
-**Named Insured:** Summit Landscaping & Excavation
-**Mailing Address:** 4500 W. Colfax Avenue, Denver, CO 80204
+**Policy Number:** FPP8927306
+
+**Named Insured:** Suncoast Roofing & Waterproofing
+**Mailing Address:** 2901 Gandy Boulevard, St. Petersburg, FL 33702
 
 **Policy Type:** Commercial Property
 
-**Policy Period:** August 11, 2025 - August 11, 2026
-**Effective Date:** August 11, 2025
-**Expiration Date:** August 11, 2026
+**Policy Period:** Sep 21, 2026 through Sep 21, 2027
+**Effective Date:** Sep 21, 2026
+**Expiration Date:** Sep 21, 2027
 
 ---
 
 ### Limits of Insurance
 
-**Each Occurrence Limit:** $10,000,000
-**General Aggregate Limit:** $10,000,000
+**Each Occurrence Limit:** $5,000,000
+**General Aggregate Limit:** $5,000,000
 
 ---
 
-**Total Annual Premium:** $47,900
-
----
-
-### Forms and Endorsements
-
-- IL 00 17 11 98 — Common Policy Conditions
-- CP 00 30 10 12 — Business Income (and Extra Expense) Coverage Form
+**Total Annual Premium:** $80,700
 

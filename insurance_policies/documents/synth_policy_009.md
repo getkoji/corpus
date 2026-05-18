@@ -1,25 +1,32 @@
-# Midwest Indemnity Holdings
-
 ## POLICY DECLARATIONS
+
+Underwritten by: Mountain West Casualty Co.
 
 | Field | Value |
 |---|---|
-| Policy Number | BOP-7897316 |
+| Policy Number | BPP-9842984-02 |
 | Policy Type | Businessowners |
-| Named Insured | Apex Industrial Welding LLC |
-| Mailing Address | 8900 Steel Road, Gary, IN 46402 |
-| Policy Period | November 18, 2025 to November 18, 2026 |
-| Effective Date | November 18, 2025 |
-| Expiration Date | November 18, 2026 |
+| Named Insured | Granite Peak General Contractors |
+| Mailing Address | 7700 Mineral Drive, Suite 200, Coeur d'Alene, ID 83815 |
+| Policy Period | 04/23/2024 to 04/23/2025 |
+| Effective Date | 04/23/2024 |
+| Expiration Date | 04/23/2025 |
 
 ### LIMITS OF INSURANCE
 
 | Coverage | Limit |
 |---|---|
 | Each Occurrence Limit | $2,000,000 |
-| General Aggregate Limit | $2,000,000 |
+| General Aggregate Limit | $4,000,000 |
 
 ### PREMIUM SUMMARY
 
-Total Annual Premium: $24,850
+| Coverage | Premium |
+|---|---|
+| Building Coverage | $4,300 |
+| Business Personal Property | $5,550 |
+| Business Income & Extra Expense | $2,500 |
+| Liability Coverage | $4,250 |
+| Medical Payments | $3,800 |
+| **Total Premium** | **$20,400** |
 
