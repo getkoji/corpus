@@ -1,39 +1,33 @@
-# Ironbridge Excess Carriers Ltd.
-
 ## POLICY DECLARATIONS
+
+Underwritten by: Riverdale Insurance Exchange
 
 | Field | Value |
 |---|---|
-| Policy Number | WCP-8051315 |
+| Policy Number | WCP9558343 |
 | Policy Type | Workers Compensation |
-| Named Insured | Meridian Mechanical Services Inc. |
-| Mailing Address | 4400 Commerce Drive, Indianapolis, IN 46268 |
-| Policy Period | 02/08/2025 to 02/08/2026 |
-| Effective Date | 02/08/2025 |
-| Expiration Date | 02/08/2026 |
+| Named Insured | Redline Fire Protection Corp. |
+| Mailing Address | 1650 Borel Place, Suite 200, San Mateo, CA 94402 |
+| Policy Period | Dec 1, 2025 to Dec 1, 2026 |
+| Effective Date | Dec 1, 2025 |
+| Expiration Date | Dec 1, 2026 |
 
 ### LIMITS OF INSURANCE
 
 | Coverage | Limit |
 |---|---|
-| Each Occurrence Limit | $1,000,000 |
+| Each Occurrence Limit | $500,000 |
 | Workers Compensation | Statutory |
-| E.L. Each Accident | $1,000,000 |
-| E.L. Disease - Policy Limit | $1,000,000 |
-| E.L. Disease - Each Employee | $1,000,000 |
+| E.L. Each Accident | $500,000 |
+| E.L. Disease - Policy Limit | $500,000 |
+| E.L. Disease - Each Employee | $500,000 |
 
 ### PREMIUM SUMMARY
 
-Total Annual Premium: $497,450
-
-### SCHEDULE OF FORMS AND ENDORSEMENTS
-
-| Form Number | Title |
+| Coverage | Premium |
 |---|---|
-| WC 04 03 06 | Waiver of Our Right to Recover from Others |
-| WC 42 06 01 | Voluntary Compensation Endorsement |
-| WC 00 00 00 C | Workers Compensation and Employers Liability Insurance Policy |
-| WC 00 03 13 | Waiver of Our Right to Recover from Others Endorsement |
-| WC 42 03 04 B | State Special Endorsement |
-| WC 00 04 06 14 | Experience Rating Modification Factor Endorsement |
+| Workers Compensation Premium | $7,650 |
+| Employers Liability | $38,700 |
+| USL&H Coverage | $22,500 |
+| **Total Premium** | **$68,850** |
 

@@ -1,36 +1,33 @@
-# TIDEWATER SURETY & CASUALTY
+## POLICY DECLARATIONS
 
-## DECLARATIONS PAGE
+| Field | Value |
+|---|---|
+| Insurance Company | Keystone Indemnity Group |
+| Policy Number | PLI5038179-01 |
+| Policy Type | Professional Liability |
+| Named Insured | Cascade Wealth Management LLC |
+| Mailing Address | 900 SW Fifth Avenue, Suite 2000, Portland, OR 97204 |
+| Policy Period | September 22, 2025 to September 22, 2026 |
+| Effective Date | September 22, 2025 |
+| Expiration Date | September 22, 2026 |
 
-**Policy Number:** PL 8602337
+### LIMITS OF INSURANCE
 
-**Named Insured:** Horizon Legal Group PLLC
-**Mailing Address:** 800 Nicollet Mall, Suite 2700, Minneapolis, MN 55402
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $1,000,000 |
+| General Aggregate Limit | $2,000,000 |
 
-**Policy Type:** Professional Liability
+### PREMIUM SUMMARY
 
-**Policy Period:** Apr 23, 2026 through Apr 23, 2027
-**Effective Date:** Apr 23, 2026
-**Expiration Date:** Apr 23, 2027
+Total Annual Premium: $32,350
 
----
+### SCHEDULE OF FORMS AND ENDORSEMENTS
 
-### Limits of Insurance
-
-**Each Occurrence Limit:** $5,000,000
-**General Aggregate Limit:** $10,000,000
-
----
-
-**Total Annual Premium:** $38,950
-
----
-
-### Forms and Endorsements
-
-- PL 00 01 01 18 — Professional Liability Coverage Form
-- PL 05 01 01 18 — Deductible Liability Insurance
-- PL 04 01 01 18 — Extended Reporting Period Endorsement
-- PL 06 01 01 18 — Exclusion - Bodily Injury and Property Damage
-- PL 00 02 01 18 — Supplemental Payments Endorsement
+| Form Number | Title |
+|---|---|
+| PL 05 01 01 18 | Deductible Liability Insurance |
+| PL 06 01 01 18 | Exclusion - Bodily Injury and Property Damage |
+| PL 00 01 01 18 | Professional Liability Coverage Form |
+| PL 00 02 01 18 | Supplemental Payments Endorsement |
 

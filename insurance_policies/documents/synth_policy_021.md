@@ -1,22 +1,39 @@
-# Keystone Indemnity Group
+## POLICY DECLARATIONS
 
-## Commercial Auto Policy — Declarations
+Underwritten by: Golden Gate Assurance Corp.
 
-In consideration of the premium stated herein, Keystone Indemnity Group (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
+| Field | Value |
+|---|---|
+| Policy Number | CA3049629 |
+| Policy Type | Commercial Auto |
+| Named Insured | Northern Star Telecom Services |
+| Mailing Address | 2700 University Avenue, Minneapolis, MN 55414 |
+| Policy Period | May 28, 2026 to May 28, 2027 |
+| Effective Date | May 28, 2026 |
+| Expiration Date | May 28, 2027 |
 
-**Named Insured:** Summit Landscaping & Excavation
-**Address:** 4500 W. Colfax Avenue, Denver, CO 80204
+### LIMITS OF INSURANCE
 
-This policy, numbered **CA2093459**, is effective from **Jan 18, 2024** to **Jan 18, 2025** (12:01 A.M. standard time at the address of the Named Insured).
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $500,000 |
 
-**Limits of Insurance:** The Each Occurrence Limit is $1,000,000.
+### PREMIUM SUMMARY
 
-The total advance premium for this policy is **$35,200**, payable at inception.
- This premium is allocated as follows:
+| Coverage | Premium |
+|---|---|
+| Liability Coverage | $6,150 |
+| Physical Damage - Comprehensive | $12,500 |
+| Physical Damage - Collision | $3,950 |
+| Medical Payments | $12,500 |
+| Uninsured Motorist | $9,350 |
+| **Total Premium** | **$44,450** |
 
-  - Liability Coverage: $7,550
-  - Physical Damage - Comprehensive: $6,050
-  - Physical Damage - Collision: $10,100
-  - Medical Payments: $4,750
-  - Uninsured Motorist: $6,750
+### SCHEDULE OF FORMS AND ENDORSEMENTS
+
+| Form Number | Title |
+|---|---|
+| CA 20 48 02 99 | Designated Insured for Covered Autos Liability Coverage |
+| CA 00 01 10 13 | Business Auto Coverage Form |
+| CA 00 09 10 13 | Business Auto Physical Damage Coverage Form |
 

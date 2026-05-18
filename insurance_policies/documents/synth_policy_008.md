@@ -1,34 +1,38 @@
-# Continental Shield Insurance Co.
+## POLICY DECLARATIONS
 
-## Declarations Page
+| Field | Value |
+|---|---|
+| Insurance Company | Evergreen Mutual Insurance Company |
+| Policy Number | BOP-4808343 |
+| Policy Type | Businessowners |
+| Named Insured | Westridge Concrete Foundations |
+| Mailing Address | 3300 S. Figueroa Street, Los Angeles, CA 90007 |
+| Policy Period | 06/03/2025 to 06/03/2026 |
+| Effective Date | 06/03/2025 |
+| Expiration Date | 06/03/2026 |
 
-**Policy Number:** BOW1633022
+### LIMITS OF INSURANCE
 
-**Named Insured:** Harborview Consulting Engineers
-**Mailing Address:** 155 Federal Street, 3rd Floor, Boston, MA 02110
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $2,000,000 |
+| General Aggregate Limit | $2,000,000 |
 
-**Policy Type:** Businessowners
+### PREMIUM SUMMARY
 
-**Policy Period:** February 3, 2026 to February 3, 2027
-**Effective Date:** February 3, 2026
-**Expiration Date:** February 3, 2027
+| Coverage | Premium |
+|---|---|
+| Building Coverage | $1,750 |
+| Business Personal Property | $750 |
+| Business Income & Extra Expense | $1,300 |
+| Liability Coverage | $300 |
+| Medical Payments | $500 |
+| **Total Premium** | **$4,600** |
 
----
+### SCHEDULE OF FORMS AND ENDORSEMENTS
 
-### Limits of Insurance
-
-**Each Occurrence Limit:** $2,000,000
-**General Aggregate Limit:** $2,000,000
-
----
-
-### Premium
-
-- Building Coverage: $1,750
-- Business Personal Property: $400
-- Business Income & Extra Expense: $650
-- Liability Coverage: $450
-- Medical Payments: $1,000
-
-**Total Premium: $4,250**
+| Form Number | Title |
+|---|---|
+| BP 04 53 01 06 | Exclusion of Certified Acts of Terrorism |
+| BP 00 03 01 10 | Businessowners Coverage Form |
 

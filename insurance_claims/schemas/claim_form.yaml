@@ -163,6 +163,12 @@ fields:
     description: |
       US state where the loss or injury occurred, as a two-letter
       abbreviation (e.g., NY, CA, TX).
+    extraction_hint: |
+      For demand letters with multiple addresses, extract the state
+      where the LOSS or DAMAGE occurred — the insured's property
+      location — NOT the at-fault party's or defendant's business
+      address. Look for phrases like "our insured's property at"
+      or "damage to property located at" to identify the loss site.
     derived_from:
       field: description_of_loss
       method: us_state_lookup

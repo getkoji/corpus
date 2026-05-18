@@ -1,33 +1,31 @@
-# Tidewater Surety & Casualty
+## IRONBRIDGE EXCESS CARRIERS LTD.
 
-## POLICY DECLARATIONS
+## DECLARATIONS PAGE
 
-| Field | Value |
-|---|---|
-| Policy Number | WCP3915909 |
-| Policy Type | Workers Compensation |
-| Named Insured | Valley Forge Painting Contractors |
-| Mailing Address | 450 Lancaster Avenue, Wayne, PA 19087 |
-| Policy Period | Jul 9, 2025 to Jul 9, 2026 |
-| Effective Date | Jul 9, 2025 |
-| Expiration Date | Jul 9, 2026 |
+**Insurer:** Ironbridge Excess Carriers Ltd.
 
-### LIMITS OF INSURANCE
+**Policy Number:** WC1419264
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $500,000 |
-| Workers Compensation | Statutory |
-| E.L. Each Accident | $500,000 |
-| E.L. Disease - Policy Limit | $500,000 |
-| E.L. Disease - Each Employee | $500,000 |
+**Named Insured:** Westridge Concrete Foundations
+**Mailing Address:** 3300 S. Figueroa Street, Los Angeles, CA 90007
 
-### PREMIUM SUMMARY
+**Policy Type:** Workers Compensation
 
-| Coverage | Premium |
-|---|---|
-| Workers Compensation Premium | $100,850 |
-| Employers Liability | $122,500 |
-| USL&H Coverage | $55,950 |
-| **Total Premium** | **$279,300** |
+**Policy Period:** April 25, 2026 through April 25, 2027
+**Effective Date:** April 25, 2026
+**Expiration Date:** April 25, 2027
+
+---
+
+### Limits of Insurance
+
+**Each Occurrence Limit:** $500,000
+**Workers Compensation:** Statutory
+**E.L. Each Accident:** $500,000
+**E.L. Disease - Policy Limit:** $500,000
+**E.L. Disease - Each Employee:** $500,000
+
+---
+
+**Total Annual Premium:** $419,550
 

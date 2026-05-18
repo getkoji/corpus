@@ -1,45 +1,24 @@
-# ATLANTIC COAST MUTUAL
+## POLICY DECLARATIONS
 
-## DECLARATIONS PAGE
+| Field | Value |
+|---|---|
+| Insurance Company | Liberty Bell Underwriters |
+| Policy Number | CPR-9855765 |
+| Policy Type | Commercial Property |
+| Named Insured | Coastal Crane & Rigging LLC |
+| Mailing Address | 5100 Port Road, Savannah, GA 31415 |
+| Policy Period | 04-09-2025 to 04-09-2026 |
+| Effective Date | 04-09-2025 |
+| Expiration Date | 04-09-2026 |
 
-**Policy Number:** FPP2326809
+### LIMITS OF INSURANCE
 
-**Named Insured:** Harborview Consulting Engineers
-**Mailing Address:** 155 Federal Street, 3rd Floor, Boston, MA 02110
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $5,000,000 |
+| General Aggregate Limit | $10,000,000 |
 
-**Policy Type:** Commercial Property
+### PREMIUM SUMMARY
 
-**Policy Period:** October 26, 2025 - October 26, 2026
-**Effective Date:** October 26, 2025
-**Expiration Date:** October 26, 2026
-
----
-
-### Limits of Insurance
-
-**Each Occurrence Limit:** $500,000
-**General Aggregate Limit:** $2,000,000
-
----
-
-### Premium
-
-- Building Coverage: $19,200
-- Business Personal Property: $4,000
-- Business Income: $12,300
-- Extra Expense: $5,950
-- Inland Marine: $13,400
-
-**Total Premium: $54,850**
-
----
-
-### Forms and Endorsements
-
-- CP 00 90 07 88 — Commercial Property Conditions
-- CP 01 40 07 06 — Exclusion of Loss Due to Virus or Bacteria
-- IL 00 17 11 98 — Common Policy Conditions
-- CP 10 30 10 12 — Causes of Loss - Special Form
-- CP 00 10 10 12 — Building and Personal Property Coverage Form
-- CP 00 30 10 12 — Business Income (and Extra Expense) Coverage Form
+Total Annual Premium: $147,200
 

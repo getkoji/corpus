@@ -1,26 +1,38 @@
-# Beacon Hill Mutual
+## Declarations Page
 
-## Workers Compensation Policy — Declarations
+Issued by: Pinnacle Specialty Insurance
 
-In consideration of the premium stated herein, Beacon Hill Mutual (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
+**Policy Number:** WC7407736
 
-**Named Insured:** Apex Industrial Welding LLC
-**Address:** 8900 Steel Road, Gary, IN 46402
+**Named Insured:** Cascade Plumbing & HVAC Inc.
+**Mailing Address:** 15200 NE 8th Street, Suite 300, Bellevue, WA 98007
 
-This policy, numbered **WCP5133961-02**, is effective from **10-05-2024** to **10-05-2025** (12:01 A.M. standard time at the address of the Named Insured).
+**Policy Type:** Workers Compensation
 
-**Limits of Insurance:** The Each Occurrence Limit is $1,000,000.
-
-Part One — Workers Compensation Insurance: Statutory. Part Two — Employers Liability Insurance: Each Accident $1,000,000; Disease — Policy Limit $1,000,000; Disease — Each Employee $1,000,000.
-
-The total advance premium for this policy is **$205,400**, payable at inception.
+**Policy Period:** Jul 28, 2025 to Jul 28, 2026
+**Effective Date:** Jul 28, 2025
+**Expiration Date:** Jul 28, 2026
 
 ---
 
-**Schedule of Forms and Endorsements**
+### Limits of Insurance
 
-The following forms and endorsements are attached to and form a part of this policy at the time of issue:
+**Each Occurrence Limit:** $1,000,000
+**Workers Compensation:** Statutory
+**E.L. Each Accident:** $1,000,000
+**E.L. Disease - Policy Limit:** $1,000,000
+**E.L. Disease - Each Employee:** $1,000,000
 
-  WC 42 06 01  Voluntary Compensation Endorsement
-  WC 00 04 06 14  Experience Rating Modification Factor Endorsement
+---
+
+**Total Annual Premium:** $299,750
+
+---
+
+### Forms and Endorsements
+
+- WC 42 06 01 — Voluntary Compensation Endorsement
+- WC 00 04 06 14 — Experience Rating Modification Factor Endorsement
+- WC 42 03 04 B — State Special Endorsement
+- WC 04 03 06 — Waiver of Our Right to Recover from Others
 

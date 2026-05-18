@@ -1,11 +1,11 @@
 {
-  "insurer_name": "Tidewater Surety & Casualty",
-  "named_insured": "Horizon Legal Group PLLC",
-  "policy_number": "PL 8602337",
+  "insurer_name": "Keystone Indemnity Group",
+  "named_insured": "Cascade Wealth Management LLC",
+  "policy_number": "PLI5038179-01",
   "policy_type": "Professional Liability",
-  "effective_date": "2026-04-23",
-  "expiration_date": "2027-04-23",
-  "total_premium": 38950,
-  "each_occurrence_limit": 5000000,
-  "general_aggregate_limit": 10000000
+  "effective_date": "2025-09-22",
+  "expiration_date": "2026-09-22",
+  "total_premium": 32350,
+  "each_occurrence_limit": 1000000,
+  "general_aggregate_limit": 2000000
 }

@@ -1,6 +1,6 @@
-# Ironbridge Excess Carriers Ltd.
-
 ## Commercial General Liability Policy — Declarations
+
+**Insurance Company:** Ironbridge Excess Carriers Ltd.
 
 In consideration of the premium stated herein, Ironbridge Excess Carriers Ltd. (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 

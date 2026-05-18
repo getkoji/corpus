@@ -1,16 +1,16 @@
-# Continental Shield Insurance Co.
+## COMPASS ROSE SPECIALTY
 
 ## POLICY DECLARATIONS
 
 | Field | Value |
 |---|---|
-| Policy Number | WC 6982169 |
+| Policy Number | WCA3915909 |
 | Policy Type | Workers Compensation |
-| Named Insured | Suncoast Roofing & Waterproofing |
-| Mailing Address | 2901 Gandy Boulevard, St. Petersburg, FL 33702 |
-| Policy Period | September 22, 2026 to September 22, 2027 |
-| Effective Date | September 22, 2026 |
-| Expiration Date | September 22, 2027 |
+| Named Insured | Cornerstone Civil Engineering PC |
+| Mailing Address | 90 State Street, Suite 700, Albany, NY 12207 |
+| Policy Period | Jul 9, 2025 to Jul 9, 2026 |
+| Effective Date | Jul 9, 2025 |
+| Expiration Date | Jul 9, 2026 |
 
 ### LIMITS OF INSURANCE
 
@@ -26,8 +26,8 @@
 
 | Coverage | Premium |
 |---|---|
-| Workers Compensation Premium | $144,900 |
-| Employers Liability | $139,500 |
-| USL&H Coverage | $84,650 |
-| **Total Premium** | **$369,050** |
+| Workers Compensation Premium | $100,850 |
+| Employers Liability | $122,500 |
+| USL&H Coverage | $55,950 |
+| **Total Premium** | **$279,300** |
 
