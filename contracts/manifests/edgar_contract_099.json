@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_099.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/873860/000101905609000816/ex10_7.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 61,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001019056-09-000816",
+  "cik": "0000873860",
+  "filer_name": "OCWEN FINANCIAL CORP  (ONIT)  (CIK 0000873860)",
+  "notes": "Material contract (Exhibit 10) from OCWEN FINANCIAL CORP  (ONIT)  (CIK 0000873860)'s 8-K filing (accession 0001019056-09-000816). Expected JSON needs manual annotation."
+}

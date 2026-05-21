@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_078.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1819848/000119312521247978/d158510dex1012.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 44,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001193125-21-247978",
+  "cik": "0001819848",
+  "filer_name": "Joby Aviation, Inc.  (JOBY, JOBY-WT)  (CIK 0001819848)",
+  "notes": "Material contract (Exhibit 10) from Joby Aviation, Inc.  (JOBY, JOBY-WT)  (CIK 0001819848)'s 8-K filing (accession 0001193125-21-247978). Expected JSON needs manual annotation."
+}

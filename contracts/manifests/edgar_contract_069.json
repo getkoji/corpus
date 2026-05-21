@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_069.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1659166/000119312516609931/d152246dex1010.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 41,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001193125-16-609931",
+  "cik": "0001659166",
+  "filer_name": "Fortive Corp  (FTV)  (CIK 0001659166)",
+  "notes": "Material contract (Exhibit 10) from Fortive Corp  (FTV)  (CIK 0001659166)'s 8-K filing (accession 0001193125-16-609931). Expected JSON needs manual annotation."
+}

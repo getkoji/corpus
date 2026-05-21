@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_052.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/858339/000119312509130784/dex102.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001193125-09-130784",
+  "cik": "0000858339",
+  "filer_name": "HARRAHS ENTERTAINMENT INC  (CIK 0000858339)",
+  "notes": "Material contract (Exhibit 10) from HARRAHS ENTERTAINMENT INC  (CIK 0000858339)'s 8-K filing (accession 0001193125-09-130784). Expected JSON needs manual annotation."
+}
