@@ -1,0 +1,172 @@
+name: deed
+description: |
+  Key fields from recorded real estate deeds — warranty deeds, quitclaim
+  deeds, grant deeds, and trust deeds. Extracts party names (grantor,
+  grantee), property identification, recording information, and
+  consideration amount.
+
+  Sourced from county recorder offices (public records). Deeds are
+  recorded documents and freely accessible.
+
+compare:
+  fuzzy_threshold: 0.85
+
+categories:
+  keywords:
+    heading:
+      - "deed"
+      - "warranty deed"
+      - "quitclaim"
+      - "grant deed"
+      - "deed of trust"
+      - "recording requested by"
+      - "when recorded"
+    parties:
+      - "grantor"
+      - "grantee"
+      - "seller"
+      - "buyer"
+      - "transferor"
+      - "transferee"
+      - "trustor"
+      - "trustee"
+      - "beneficiary"
+    property:
+      - "property"
+      - "legal description"
+      - "parcel"
+      - "lot"
+      - "block"
+      - "subdivision"
+      - "situated"
+      - "located"
+      - "assessor"
+    recording:
+      - "recorded"
+      - "recording"
+      - "instrument"
+      - "book"
+      - "page"
+      - "county recorder"
+
+fields:
+  grantor:
+    type: string
+    required: true
+    description: |
+      The person or entity transferring (selling) the property.
+      Appears in the deed body: "[Grantor name], hereby grants..."
+      or in a labeled field "Grantor:". May be an individual name
+      or a corporate entity (LLC, trust, etc.).
+    hints:
+      look_in: [parties, heading]
+      prefer_position: top
+      patterns:
+        - "grantor"
+        - "seller"
+        - "transferor"
+        - "hereby grant"
+        - "does hereby"
+
+  grantee:
+    type: string
+    required: true
+    description: |
+      The person or entity receiving (buying) the property.
+      Appears in the deed body: "...grants to [Grantee name]..."
+      or in a labeled field "Grantee:".
+    hints:
+      look_in: [parties, heading]
+      prefer_position: top
+      patterns:
+        - "grantee"
+        - "buyer"
+        - "transferee"
+        - "grants to"
+        - "conveys to"
+
+  property_address:
+    type: string
+    description: |
+      Street address of the property. May appear as a labeled field
+      or in the property description section. Not all deeds include
+      a street address — some only have legal descriptions (lot, block,
+      subdivision). Return null if only a legal description is present.
+    hints:
+      look_in: [property]
+      patterns:
+        - "property address"
+        - "located at"
+        - "situated at"
+        - "commonly known as"
+        - "street"
+
+  parcel_number:
+    type: string
+    description: |
+      Tax parcel number, assessor's parcel number (APN), or tax ID.
+      Format varies by county: "123-45-678", "R1234567", etc.
+    hints:
+      look_in: [property]
+      patterns:
+        - "parcel"
+        - "APN"
+        - "tax\\s*id"
+        - "assessor"
+        - "tax\\s*map"
+
+  recording_date:
+    type: date
+    description: |
+      Date the deed was recorded with the county recorder's office.
+      This is the official recording date, not the execution date.
+      Usually stamped or printed by the recorder's office.
+    hints:
+      look_in: [recording]
+      patterns:
+        - "recorded"
+        - "recording date"
+        - "filed"
+        - "instrument"
+      signals: [has_dates]
+
+  consideration:
+    type: number
+    description: |
+      Purchase price or consideration amount. May appear as
+      "for the sum of $X" or "consideration: $X" or in transfer
+      tax stamps. Some deeds list "$10 and other good and valuable
+      consideration" which is nominal — return the stated amount.
+    hints:
+      patterns:
+        - "consideration"
+        - "purchase price"
+        - "sum of"
+        - "for and in consideration"
+      signals: [has_dollar_amounts]
+
+  deed_type:
+    type: enum
+    description: |
+      Type of deed. Determined from the document title or first
+      paragraph. Common types: warranty deed (full guarantees),
+      quitclaim deed (no guarantees), grant deed (limited guarantees),
+      trust deed (security instrument).
+    options:
+      - Warranty Deed
+      - Quitclaim Deed
+      - Grant Deed
+      - Trust Deed
+      - Special Warranty Deed
+      - Bargain and Sale Deed
+      - Other
+    hints:
+      look_in: [heading]
+      prefer_position: top
+      patterns:
+        - "warranty deed"
+        - "quitclaim"
+        - "grant deed"
+        - "deed of trust"
+        - "special warranty"
+        - "bargain and sale"
