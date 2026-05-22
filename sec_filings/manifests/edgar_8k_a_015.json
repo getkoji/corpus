@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_8k_a_015.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/105770/000010577026000077/wst-20260507.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 6,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0000105770-26-000077",
+  "cik": "0000105770",
+  "notes": "8-K/A filing for WEST PHARMACEUTICAL SERVICES INC (accession 0000105770-26-000077). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}

@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_089.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1860484/000121390022008041/ea155796ex10-3_relativityacq.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 22,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001213900-22-008041",
+  "cik": "0001860484",
+  "filer_name": "Relativity Acquisition Corp  (CIK 0001860484)",
+  "notes": "Material contract (Exhibit 10) from Relativity Acquisition Corp  (CIK 0001860484)'s 8-K filing (accession 0001213900-22-008041). Expected JSON needs manual annotation."
+}

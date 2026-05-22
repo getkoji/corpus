@@ -1,22 +1,35 @@
-# Riverdale Insurance Exchange
+## POLICY DECLARATIONS
 
-## Commercial General Liability Policy — Declarations
+| Field | Value |
+|---|---|
+| Insurance Company | Sentry Pointe Casualty Group |
+| Policy Number | GL 8338358 |
+| Policy Type | Commercial General Liability |
+| Named Insured | Iron Horse Steel Erectors Inc. |
+| Mailing Address | 8200 Lehigh Avenue, Morton Grove, IL 60053 |
+| Policy Period | Aug 15, 2024 to Aug 15, 2025 |
+| Effective Date | Aug 15, 2024 |
+| Expiration Date | Aug 15, 2025 |
 
-In consideration of the premium stated herein, Riverdale Insurance Exchange (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
+### LIMITS OF INSURANCE
 
-**Named Insured:** Evergreen Site Development Corp.
-**Address:** 1400 NW Compton Drive, Portland, OR 97209
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $2,000,000 |
+| General Aggregate Limit | $10,000,000 |
+| Products-Completed Operations Aggregate | $10,000,000 |
+| Personal & Advertising Injury | $2,000,000 |
+| Damage to Premises Rented to You | $50,000 |
+| Medical Expense (Any One Person) | $5,000 |
 
-This policy, numbered **GL 7076099-06**, is effective from **October 17, 2026** to **October 17, 2027** (12:01 A.M. standard time at the address of the Named Insured).
+### PREMIUM SUMMARY
 
-**Limits of Insurance:** The Each Occurrence Limit is $5,000,000; the General Aggregate Limit is $10,000,000.
-
-The total advance premium for this policy is **$11,650**, payable at inception.
- This premium is allocated as follows:
-
-  - Premises/Operations: $2,400
-  - Products/Completed Operations: $3,200
-  - Personal & Advertising Injury: $2,700
-  - Medical Payments: $2,450
-  - Damage to Premises Rented to You: $900
+| Coverage | Premium |
+|---|---|
+| Premises/Operations | $14,600 |
+| Products/Completed Operations | $6,650 |
+| Personal & Advertising Injury | $12,650 |
+| Medical Payments | $9,000 |
+| Damage to Premises Rented to You | $15,000 |
+| **Total Premium** | **$57,900** |
 

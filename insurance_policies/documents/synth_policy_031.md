@@ -1,39 +1,36 @@
-# Keystone Indemnity Group
+## DECLARATIONS PAGE
 
-## Declarations Page
+**Insurance Company:** Atlantic Coast Mutual
 
-**Policy Number:** HO8825672
+**Policy Number:** HO3074626
 
-**Named Insured:** Christine A. Morales
-**Mailing Address:** 2415 Peachtree Road NE, Atlanta, GA 30305
+**Named Insured:** Michael S. Petrov
+**Mailing Address:** 910 Elm Street, Boulder, CO 80302
 
 **Policy Type:** Homeowners
 
-**Policy Period:** December 23, 2025 through December 23, 2026
-**Effective Date:** December 23, 2025
-**Expiration Date:** December 23, 2026
+**Policy Period:** October 26, 2025 through October 26, 2026
+**Effective Date:** October 26, 2025
+**Expiration Date:** October 26, 2026
 
 ---
 
 ### Limits of Insurance
 
 **Each Occurrence Limit:** $100,000
-**Dwelling Coverage (A):** $500,000
-**Other Structures (B):** $35,000
-**Personal Property (C):** $175,000
+**Dwelling Coverage (A):** $200,000
+**Other Structures (B):** $20,000
+**Personal Property (C):** $100,000
 **Loss of Use (D):** $70,000
 
 ---
 
-**Total Annual Premium:** $7,500
+**Total Annual Premium:** $2,100
 
 ---
 
 ### Forms and Endorsements
 
-- HO 04 10 05 11 — Additional Interests - Residence Premises
 - HO 05 24 05 11 — Broadened Residence Premises Definition
 - HO 04 61 05 11 — Scheduled Personal Property Endorsement
-- HO 04 90 05 11 — Personal Property Replacement Cost Loss Settlement
-- HO 00 03 05 11 — Special Form
 

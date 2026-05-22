@@ -1,40 +1,15 @@
-# Compass Rose Specialty
+## Homeowners Policy — Declarations
 
-## POLICY DECLARATIONS
+**Insurance Company:** Northern Lights Insurance Corp.
 
-| Field | Value |
-|---|---|
-| Policy Number | HOM-1412985 |
-| Policy Type | Homeowners |
-| Named Insured | Christine A. Morales |
-| Mailing Address | 2415 Peachtree Road NE, Atlanta, GA 30305 |
-| Policy Period | March 6, 2025 to March 6, 2026 |
-| Effective Date | March 6, 2025 |
-| Expiration Date | March 6, 2026 |
+In consideration of the premium stated herein, Northern Lights Insurance Corp. (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-### LIMITS OF INSURANCE
+**Named Insured:** Robert & Linda Chen
+**Address:** 305 Willowbrook Court, Raleigh, NC 27607
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $100,000 |
+This policy, numbered **HO1003094-04**, is effective from **09/08/2026** to **09/08/2027** (12:01 A.M. standard time at the address of the Named Insured).
 
-### PREMIUM SUMMARY
+**Limits of Insurance:** The Each Occurrence Limit is $500,000.
 
-| Coverage | Premium |
-|---|---|
-| Dwelling (Coverage A) | $550 |
-| Other Structures (Coverage B) | $500 |
-| Personal Property (Coverage C) | $600 |
-| Loss of Use (Coverage D) | $500 |
-| Personal Liability (Coverage E) | $100 |
-| Medical Payments (Coverage F) | $450 |
-| **Total Premium** | **$2,700** |
-
-### SCHEDULE OF FORMS AND ENDORSEMENTS
-
-| Form Number | Title |
-|---|---|
-| HO 04 61 05 11 | Scheduled Personal Property Endorsement |
-| HO 04 90 05 11 | Personal Property Replacement Cost Loss Settlement |
-| HO 00 03 05 11 | Special Form |
+The total advance premium for this policy is **$7,950**, payable at inception.
 

@@ -1,11 +1,11 @@
 {
-  "insurer_name": "Beacon Hill Mutual",
-  "named_insured": "Apex Industrial Welding LLC",
-  "policy_number": "WCP5133961-02",
+  "insurer_name": "Pinnacle Specialty Insurance",
+  "named_insured": "Cascade Plumbing & HVAC Inc.",
+  "policy_number": "WC7407736",
   "policy_type": "Workers Compensation",
-  "effective_date": "2024-10-05",
-  "expiration_date": "2025-10-05",
-  "total_premium": 205400,
+  "effective_date": "2025-07-28",
+  "expiration_date": "2026-07-28",
+  "total_premium": 299750,
   "each_occurrence_limit": 1000000,
   "general_aggregate_limit": null
 }

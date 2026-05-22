@@ -1,30 +1,29 @@
-# Tidewater Surety & Casualty
+## POLICY DECLARATIONS
 
-## Declarations Page
+Underwritten by: Pinnacle Specialty Insurance
 
-**Policy Number:** GLP-7566491
+| Field | Value |
+|---|---|
+| Policy Number | GL-8260286 |
+| Policy Type | Commercial General Liability |
+| Named Insured | Cascade Plumbing & HVAC Inc. |
+| Mailing Address | 15200 NE 8th Street, Suite 300, Bellevue, WA 98007 |
+| Policy Period | December 27, 2025 to December 27, 2026 |
+| Effective Date | December 27, 2025 |
+| Expiration Date | December 27, 2026 |
 
-**Named Insured:** Silverline Electrical Contractors
-**Mailing Address:** 1800 N. Highland Avenue, Los Angeles, CA 90028
+### LIMITS OF INSURANCE
 
-**Policy Type:** Commercial General Liability
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $5,000,000 |
+| General Aggregate Limit | $10,000,000 |
+| Products-Completed Operations Aggregate | $10,000,000 |
+| Personal & Advertising Injury | $5,000,000 |
+| Damage to Premises Rented to You | $100,000 |
+| Medical Expense (Any One Person) | $10,000 |
 
-**Policy Period:** 09/02/2024 through 09/02/2025
-**Effective Date:** 09/02/2024
-**Expiration Date:** 09/02/2025
+### PREMIUM SUMMARY
 
----
-
-### Limits of Insurance
-
-**Each Occurrence Limit:** $1,000,000
-**General Aggregate Limit:** $4,000,000
-**Products-Completed Operations Aggregate:** $4,000,000
-**Personal & Advertising Injury:** $1,000,000
-**Damage to Premises Rented to You:** $100,000
-**Medical Expense (Any One Person):** $10,000
-
----
-
-**Total Annual Premium:** $34,050
+Total Annual Premium: $7,450
 

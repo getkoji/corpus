@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_020.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1564406/000119312520216472/d926247dex103.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 56,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001193125-20-216472",
+  "cik": "0001564406",
+  "filer_name": "Oak Street Health, Inc.  (CIK 0001564406)",
+  "notes": "Material contract (Exhibit 10) from Oak Street Health, Inc.  (CIK 0001564406)'s 8-K filing (accession 0001193125-20-216472). Expected JSON needs manual annotation."
+}

@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_083.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1368265/000110465910057767/a10-20988_3ex10d68.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 2,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001104659-10-057767",
+  "cik": "0001368265",
+  "filer_name": "Clean Energy Fuels Corp.  (CLNE)  (CIK 0001368265)",
+  "notes": "Material contract (Exhibit 10) from Clean Energy Fuels Corp.  (CLNE)  (CIK 0001368265)'s 8-K filing (accession 0001104659-10-057767). Expected JSON needs manual annotation."
+}

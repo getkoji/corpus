@@ -58,13 +58,21 @@ fields:
     required: true
     description: Name of the company or individual filing the document
     extraction_hint: |
-      Return the FULL registrant name as shown on the cover page,
+      Return the FULL registrant name as shown on the cover page.
+
+      For 10-K, 10-Q, and S-1 filings the name typically appears
       immediately above "(Exact name of registrant as specified in its
       charter)". The name is sometimes split across multiple consecutive
       bold lines in the parsed markdown (e.g. "**America**" on one line
       and "**Great Health**" on the next) — in that case combine the
       lines into the single full name ("America Great Health"). Do not
       return only the last bold fragment.
+
+      For 6-K filings the registrant name appears as a standalone
+      ALL-CAPS line after "Commission File Number:" and before the
+      address. It is NOT the address or building name — it is the
+      company name (e.g. "HAFNIA LIMITED", "BHP GROUP LIMITED").
+      There is no "(Exact name of registrant...)" label on 6-K filings.
     hints:
       look_in: [header]
       patterns: ["filer[:\\s]", "(?:company|issuer)\\s*name", "registrant"]
@@ -200,6 +208,7 @@ fields:
 
   period_fiscal_year_end:
     type: date
+    depends_on: [form_type]
     description: Fiscal year-end date for 10-K / 10-K/A filings.
     extraction_hint: |
       For 10-K and 10-K/A filings only. Extract the fiscal year-end date
@@ -222,6 +231,7 @@ fields:
 
   period_quarter_end:
     type: date
+    depends_on: [form_type]
     description: Quarter-end date for 10-Q / 10-Q/A filings.
     extraction_hint: |
       For 10-Q and 10-Q/A filings only. Extract the quarter-end date
@@ -244,6 +254,7 @@ fields:
 
   period_date_of_report:
     type: date
+    depends_on: [form_type]
     description: Date of Report for 8-K / 8-K/A / 6-K filings.
     extraction_hint: |
       For **8-K** and **8-K/A** filings: extract the date labeled "Date
@@ -279,6 +290,7 @@ fields:
 
   period_meeting_date:
     type: date
+    depends_on: [form_type]
     description: Annual meeting date for DEF 14A proxy statements.
     extraction_hint: |
       For DEF 14A filings only. Extract the date of the annual meeting
@@ -288,6 +300,12 @@ fields:
       as a standalone line (e.g. "Wednesday, May 20, 2026") immediately
       after the notice heading, or inside a sentence like "the Annual
       Meeting... on Wednesday, May 20, 2026 at 10:00 a.m."
+
+      The meeting date may also appear in the document context section
+      (the cover page / invitation letter at the very start of the
+      proxy), particularly in phrases like "will be held on [date]" or
+      "Annual Meeting of Stockholders... on [date]". Check BOTH the
+      routed sections AND the document context for the meeting date.
 
       Do NOT use:
         - The fiscal year end of the accompanying annual report
@@ -299,7 +317,7 @@ fields:
           2027 or 2028 annual meeting — only THIS proxy's meeting date)
       Only the date of the meeting itself is the answer.
 
-      Return null for any non-DEF 14A form type.
+      If no annual meeting notice or date appears in the text, return null.
     hints:
       # No look_in filter — the meeting-date chunk on a proxy statement
       # is typically titled "NOTICE OF ANNUAL MEETING" or similar and

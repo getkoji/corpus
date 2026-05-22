@@ -12,5 +12,5 @@
   "added_by": "accuracy-27",
   "schema": "insurance_policies/schemas/policy_declarations.yaml",
   "doc_type": "policy_declarations",
-  "notes": "Synthetic policy declarations page. Type: Commercial Property. Layout: _render_kv_layout."
+  "notes": "Synthetic policy declarations page. Type: Commercial Property. Layout: _render_table_layout."
 }

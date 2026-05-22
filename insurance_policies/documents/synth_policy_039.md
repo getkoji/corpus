@@ -1,32 +1,30 @@
-# Mountain West Casualty Co.
+## DECLARATIONS PAGE
 
-## POLICY DECLARATIONS
+**Insurance Company:** Midwest Indemnity Holdings
 
-| Field | Value |
-|---|---|
-| Policy Number | XS5773479 |
-| Policy Type | Umbrella/Excess |
-| Named Insured | Northern Star Telecom Services |
-| Mailing Address | 2700 University Avenue, Minneapolis, MN 55414 |
-| Policy Period | 03/19/2024 to 03/19/2025 |
-| Effective Date | 03/19/2024 |
-| Expiration Date | 03/19/2025 |
+**Policy Number:** CU-2628255
 
-### LIMITS OF INSURANCE
+**Named Insured:** Lone Star Paving & Excavation
+**Mailing Address:** 5500 Burnet Road, Austin, TX 78756
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $10,000,000 |
-| General Aggregate Limit | $10,000,000 |
+**Policy Type:** Umbrella/Excess
 
-### PREMIUM SUMMARY
+**Policy Period:** Jan 21, 2026 through Jan 21, 2027
+**Effective Date:** Jan 21, 2026
+**Expiration Date:** Jan 21, 2027
 
-Total Annual Premium: $23,200
+---
 
-### SCHEDULE OF FORMS AND ENDORSEMENTS
+### Limits of Insurance
 
-| Form Number | Title |
-|---|---|
-| UMB 012 01 15 | Exclusion - Pollution Liability |
-| UMB 005 01 15 | Self-Insured Retention Endorsement |
+**Each Occurrence Limit:** $5,000,000
+**General Aggregate Limit:** $10,000,000
+
+---
+
+### Premium
+
+- Umbrella Liability Premium: $33,400
+
+**Total Premium: $33,400**
 

@@ -1,34 +1,33 @@
-# Harvest Plains Insurance Co.
+## DECLARATIONS PAGE
 
-## POLICY DECLARATIONS
+**Insurance Company:** Sterling National Insurance Co.
 
-| Field | Value |
-|---|---|
-| Policy Number | CPP4046353-01 |
-| Policy Type | Commercial Property |
-| Named Insured | Brookfield Property Management Group |
-| Mailing Address | 350 Madison Avenue, 8th Floor, New York, NY 10017 |
-| Policy Period | January 28, 2024 to January 28, 2025 |
-| Effective Date | January 28, 2024 |
-| Expiration Date | January 28, 2025 |
+**Policy Number:** CPP 5338697
 
-### LIMITS OF INSURANCE
+**Named Insured:** Cornerstone Civil Engineering PC
+**Mailing Address:** 90 State Street, Suite 700, Albany, NY 12207
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $10,000,000 |
-| General Aggregate Limit | $10,000,000 |
+**Policy Type:** Commercial Property
 
-### PREMIUM SUMMARY
+**Policy Period:** 06-11-2026 - 06-11-2027
+**Effective Date:** 06-11-2026
+**Expiration Date:** 06-11-2027
 
-Total Annual Premium: $16,250
+---
 
-### SCHEDULE OF FORMS AND ENDORSEMENTS
+### Limits of Insurance
 
-| Form Number | Title |
-|---|---|
-| CP 00 30 10 12 | Business Income (and Extra Expense) Coverage Form |
-| IL 00 17 11 98 | Common Policy Conditions |
-| CP 00 90 07 88 | Commercial Property Conditions |
-| CP 01 40 07 06 | Exclusion of Loss Due to Virus or Bacteria |
+**Each Occurrence Limit:** $10,000,000
+**General Aggregate Limit:** $10,000,000
+
+---
+
+**Total Annual Premium:** $142,700
+
+---
+
+### Forms and Endorsements
+
+- IL 00 17 11 98 — Common Policy Conditions
+- CP 00 30 10 12 — Business Income (and Extra Expense) Coverage Form
 

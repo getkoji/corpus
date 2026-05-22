@@ -1,31 +1,29 @@
-# COMPASS ROSE SPECIALTY
+## POLICY DECLARATIONS
 
-## DECLARATIONS PAGE
+Underwritten by: Beacon Hill Mutual
 
-**Policy Number:** EO 2577362
+| Field | Value |
+|---|---|
+| Policy Number | PLI1134058 |
+| Policy Type | Professional Liability |
+| Named Insured | Sierra Technical Engineering PC |
+| Mailing Address | 1500 Solano Avenue, Albany, CA 94706 |
+| Policy Period | 02/07/2024 to 02/07/2025 |
+| Effective Date | 02/07/2024 |
+| Expiration Date | 02/07/2025 |
 
-**Named Insured:** Sierra Technical Engineering PC
-**Mailing Address:** 1500 Solano Avenue, Albany, CA 94706
+### LIMITS OF INSURANCE
 
-**Policy Type:** Professional Liability
+| Coverage | Limit |
+|---|---|
+| Each Occurrence Limit | $1,000,000 |
+| General Aggregate Limit | $5,000,000 |
 
-**Policy Period:** 04-27-2026 - 04-27-2027
-**Effective Date:** 04-27-2026
-**Expiration Date:** 04-27-2027
+### PREMIUM SUMMARY
 
----
-
-### Limits of Insurance
-
-**Each Occurrence Limit:** $1,000,000
-**General Aggregate Limit:** $5,000,000
-
----
-
-### Premium
-
-- Professional Liability Premium: $11,600
-- Supplemental Payments: $20,950
-
-**Total Premium: $32,550**
+| Coverage | Premium |
+|---|---|
+| Professional Liability Premium | $30,000 |
+| Supplemental Payments | $34,100 |
+| **Total Premium** | **$64,100** |
 

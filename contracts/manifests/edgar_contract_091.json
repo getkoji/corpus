@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_091.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1143155/000119312516664797/d164502dex101.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 19,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001193125-16-664797",
+  "cik": "0001143155",
+  "filer_name": "HAMPTON ROADS BANKSHARES INC  (CIK 0001143155)",
+  "notes": "Material contract (Exhibit 10) from HAMPTON ROADS BANKSHARES INC  (CIK 0001143155)'s 8-K filing (accession 0001193125-16-664797). Expected JSON needs manual annotation."
+}

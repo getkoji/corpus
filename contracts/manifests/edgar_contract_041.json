@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_041.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1845942/000157570521000649/ex10_5.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 21,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001575705-21-000649",
+  "cik": "0001845942",
+  "filer_name": "Bannix Acquisition Corp.  (BNIX, BNIXR, BNIXW)  (CIK 0001845942)",
+  "notes": "Material contract (Exhibit 10) from Bannix Acquisition Corp.  (BNIX, BNIXR, BNIXW)  (CIK 0001845942)'s 8-K filing (accession 0001575705-21-000649). Expected JSON needs manual annotation."
+}

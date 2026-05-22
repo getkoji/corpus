@@ -1,4 +1,4 @@
-# Tidewater Surety & Casualty
+## TIDEWATER SURETY & CASUALTY
 
 ## Commercial General Liability Policy — Declarations
 

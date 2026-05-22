@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_085.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1221554/000114420411047651/v232311_ex10-32.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 1,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001144204-11-047651",
+  "cik": "0001221554",
+  "filer_name": "3Power Energy Group Inc.  (CIK 0001221554)",
+  "notes": "Material contract (Exhibit 10) from 3Power Energy Group Inc.  (CIK 0001221554)'s 8-K filing (accession 0001144204-11-047651). Expected JSON needs manual annotation."
+}

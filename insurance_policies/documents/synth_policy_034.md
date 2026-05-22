@@ -1,25 +1,34 @@
-# Mountain West Casualty Co.
+## KEYSTONE INDEMNITY GROUP
 
-## POLICY DECLARATIONS
+## Commercial Property Policy — Declarations
 
-| Field | Value |
-|---|---|
-| Policy Number | FPP7005163 |
-| Policy Type | Commercial Property |
-| Named Insured | Cascade Plumbing & HVAC Inc. |
-| Mailing Address | 15200 NE 8th Street, Suite 300, Bellevue, WA 98007 |
-| Policy Period | Jan 24, 2025 to Jan 24, 2026 |
-| Effective Date | Jan 24, 2025 |
-| Expiration Date | Jan 24, 2026 |
+In consideration of the premium stated herein, Keystone Indemnity Group (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-### LIMITS OF INSURANCE
+**Named Insured:** Cornerstone Civil Engineering PC
+**Address:** 90 State Street, Suite 700, Albany, NY 12207
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $2,000,000 |
-| General Aggregate Limit | $2,000,000 |
+This policy, numbered **CPR4788692**, is effective from **05/25/2025** to **05/25/2026** (12:01 A.M. standard time at the address of the Named Insured).
 
-### PREMIUM SUMMARY
+**Limits of Insurance:** The Each Occurrence Limit is $1,000,000; the General Aggregate Limit is $5,000,000.
 
-Total Annual Premium: $125,200
+The total advance premium for this policy is **$71,350**, payable at inception.
+ This premium is allocated as follows:
+
+  - Building Coverage: $23,500
+  - Business Personal Property: $15,750
+  - Business Income: $20,700
+  - Extra Expense: $3,550
+  - Inland Marine: $7,850
+
+---
+
+**Schedule of Forms and Endorsements**
+
+The following forms and endorsements are attached to and form a part of this policy at the time of issue:
+
+  CP 01 40 07 06  Exclusion of Loss Due to Virus or Bacteria
+  CP 10 30 10 12  Causes of Loss - Special Form
+  CP 00 90 07 88  Commercial Property Conditions
+  CP 00 10 10 12  Building and Personal Property Coverage Form
+  CP 00 30 10 12  Business Income (and Extra Expense) Coverage Form
 

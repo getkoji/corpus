@@ -1,11 +1,11 @@
 {
-  "insurer_name": "Golden Gate Assurance Corp.",
-  "named_insured": "Eastlake Architecture + Design PC",
-  "policy_number": "PL 8307418-04",
+  "insurer_name": "Tidewater Surety & Casualty",
+  "named_insured": "Piedmont Healthcare Consulting Group",
+  "policy_number": "PL-3172430",
   "policy_type": "Professional Liability",
-  "effective_date": "2026-08-07",
-  "expiration_date": "2027-08-07",
-  "total_premium": 78500,
+  "effective_date": "2025-09-21",
+  "expiration_date": "2026-09-21",
+  "total_premium": 69400,
   "each_occurrence_limit": 1000000,
-  "general_aggregate_limit": 2000000
+  "general_aggregate_limit": 5000000
 }

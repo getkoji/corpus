@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_032.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1162896/000114420412037450/v317306_ex10-16.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 76,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001144204-12-037450",
+  "cik": "0001162896",
+  "filer_name": "Wizard World, Inc.  (PROP)  (CIK 0001162896)",
+  "notes": "Material contract (Exhibit 10) from Wizard World, Inc.  (PROP)  (CIK 0001162896)'s 8-K filing (accession 0001144204-12-037450). Expected JSON needs manual annotation."
+}

@@ -1,0 +1,18 @@
+{
+  "filename": "edgar_contract_012.md",
+  "source_name": "SEC EDGAR (8-K Exhibit 10)",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1129068/000119312516457665/d126719dex102.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 70,
+  "added_date": "2026-05-21",
+  "added_by": "edgar-contracts-sourcer",
+  "schema": "contracts/schemas/contract.yaml",
+  "accession_number": "0001193125-16-457665",
+  "cik": "0001129068",
+  "filer_name": "NISSAN AUTO RECEIVABLES CORP II  (CIK 0001129068)",
+  "notes": "Material contract (Exhibit 10) from NISSAN AUTO RECEIVABLES CORP II  (CIK 0001129068)'s 8-K filing (accession 0001193125-16-457665). Expected JSON needs manual annotation."
+}

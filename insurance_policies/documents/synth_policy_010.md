@@ -1,32 +1,15 @@
-# Liberty Bell Underwriters
+## COMPASS ROSE SPECIALTY
 
-## POLICY DECLARATIONS
+## Businessowners Policy — Declarations
 
-| Field | Value |
-|---|---|
-| Policy Number | BPP6970637 |
-| Policy Type | Businessowners |
-| Named Insured | Suncoast Roofing & Waterproofing |
-| Mailing Address | 2901 Gandy Boulevard, St. Petersburg, FL 33702 |
-| Policy Period | Feb 12, 2026 to Feb 12, 2027 |
-| Effective Date | Feb 12, 2026 |
-| Expiration Date | Feb 12, 2027 |
+In consideration of the premium stated herein, Compass Rose Specialty (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-### LIMITS OF INSURANCE
+**Named Insured:** Atlas Framing & Construction LLC
+**Address:** 221 Industrial Park Drive, Lakeland, FL 33805
 
-| Coverage | Limit |
-|---|---|
-| Each Occurrence Limit | $300,000 |
-| General Aggregate Limit | $1,000,000 |
+This policy, numbered **BOP-4541364**, is effective from **10-27-2024** to **10-27-2025** (12:01 A.M. standard time at the address of the Named Insured).
 
-### PREMIUM SUMMARY
+**Limits of Insurance:** The Each Occurrence Limit is $300,000; the General Aggregate Limit is $2,000,000.
 
-| Coverage | Premium |
-|---|---|
-| Building Coverage | $5,450 |
-| Business Personal Property | $6,400 |
-| Business Income & Extra Expense | $2,450 |
-| Liability Coverage | $6,100 |
-| Medical Payments | $3,850 |
-| **Total Premium** | **$24,250** |
+The total advance premium for this policy is **$15,600**, payable at inception.
 

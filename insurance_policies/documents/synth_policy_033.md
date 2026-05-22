@@ -1,36 +1,22 @@
-# Harvest Plains Insurance Co.
+## RIVERDALE INSURANCE EXCHANGE
 
-## Declarations Page
+## Commercial Property Policy — Declarations
 
-**Policy Number:** FPP-7092178
+In consideration of the premium stated herein, Riverdale Insurance Exchange (hereinafter referred to as the "Company") agrees to provide the insurance described in this policy to the Named Insured identified below, subject to the terms, conditions, and limitations of this policy.
 
-**Named Insured:** Pinecrest Medical Group PA
-**Mailing Address:** 2200 Mercy Drive, Suite 101, Orlando, FL 32808
+**Named Insured:** Trident Marine Services Inc.
+**Address:** 700 Harbor Boulevard, Weehawken, NJ 07086
 
-**Policy Type:** Commercial Property
+This policy, numbered **CPP1124279-01**, is effective from **09-13-2026** to **09-13-2027** (12:01 A.M. standard time at the address of the Named Insured).
 
-**Policy Period:** May 7, 2025 - May 7, 2026
-**Effective Date:** May 7, 2025
-**Expiration Date:** May 7, 2026
+**Limits of Insurance:** The Each Occurrence Limit is $1,000,000; the General Aggregate Limit is $1,000,000.
 
----
+The total advance premium for this policy is **$96,850**, payable at inception.
+ This premium is allocated as follows:
 
-### Limits of Insurance
-
-**Each Occurrence Limit:** $1,000,000
-**General Aggregate Limit:** $1,000,000
-
----
-
-**Total Annual Premium:** $106,900
-
----
-
-### Forms and Endorsements
-
-- IL 00 17 11 98 — Common Policy Conditions
-- CP 00 10 10 12 — Building and Personal Property Coverage Form
-- CP 10 30 10 12 — Causes of Loss - Special Form
-- CP 01 40 07 06 — Exclusion of Loss Due to Virus or Bacteria
-- CP 00 90 07 88 — Commercial Property Conditions
+  - Building Coverage: $24,650
+  - Business Personal Property: $23,350
+  - Business Income: $16,450
+  - Extra Expense: $10,700
+  - Inland Marine: $21,700
 
