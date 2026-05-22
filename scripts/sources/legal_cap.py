@@ -47,7 +47,8 @@ def main() -> int:
 
     # Load dataset in streaming mode to avoid downloading everything
     print("[legal] Loading Caselaw Access Project from Hugging Face (streaming)...")
-    ds = load_dataset("free-law/Caselaw_Access_Project", split="train", streaming=True)
+    # Use the common-pile mirror which is ungated (no auth needed)
+    ds = load_dataset("common-pile/caselaw_access_project", split="train", streaming=True)
 
     processed = 0
     skipped = 0
@@ -60,11 +61,12 @@ def main() -> int:
         if processed >= args.limit:
             break
 
-        # Extract text — try different fields
+        # Extract text — try different fields (varies by dataset version)
         text = ""
-        for field in ["text", "opinion", "plain_text", "html"]:
-            if field in record and record[field] and len(str(record[field])) > args.min_length:
-                text = str(record[field])
+        for field in ["text", "opinion", "plain_text", "html", "content"]:
+            val = record.get(field)
+            if val and isinstance(val, str) and len(val) > args.min_length:
+                text = val
                 break
 
         if not text or len(text) < args.min_length:
