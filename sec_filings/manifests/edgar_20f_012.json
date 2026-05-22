@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_20f_012.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1725882/000121390026060125/ea0290209-20f_inxltd.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 330,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001213900-26-060125",
+  "cik": "0001725882",
+  "notes": "20-F filing for INX Ltd (accession 0001213900-26-060125). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}

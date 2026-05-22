@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_10q_027.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1527702/000166357726000154/iqst_10q1033126.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 81,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001663577-26-000154",
+  "cik": "0001527702",
+  "notes": "10-Q filing for iQSTEL Inc (accession 0001663577-26-000154). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}

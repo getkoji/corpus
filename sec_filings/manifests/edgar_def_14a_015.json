@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_def_14a_015.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1708341/000121390026059680/ea0290065-02.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 24,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001213900-26-059680",
+  "cik": "0001708341",
+  "notes": "DEF 14A filing for All In FutureTech Alliance, Inc. (accession 0001213900-26-059680). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}

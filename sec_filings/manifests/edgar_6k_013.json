@@ -1,0 +1,17 @@
+{
+  "filename": "edgar_6k_013.md",
+  "source_name": "SEC EDGAR",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2039972/000165495426005206/a1722f.htm",
+  "license": "Public Domain (US Government Work)",
+  "license_url": "https://www.sec.gov/privacy",
+  "attribution": "US Securities and Exchange Commission",
+  "original_format": "HTML",
+  "r2_url": null,
+  "pages": 2,
+  "added_date": "2026-04-12",
+  "added_by": "corpus-bootstrap",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "accession_number": "0001654954-26-005206",
+  "cik": "0002039972",
+  "notes": "6-K filing for Guardian Metal Resources PLC (accession 0001654954-26-005206). Document text produced by piping the EDGAR primary HTML through koji parse (docling); expected JSON is sourced from the EDGAR submission index (authoritative for filer, form type, dates)."
+}
