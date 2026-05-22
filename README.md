@@ -6,16 +6,18 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 
 | Category | Documents | Real | Synthetic | Accuracy | Notes |
 |----------|-----------|------|-----------|----------|-------|
-| **sec_filings** | 102 | 102 | 0 | **99.2%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
-| **insurance_policies** | 97 | 17 | 80 | **99.1%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. Synthetic: all 9 policy types. |
-| **irs_forms** | 20 | 20 | 0 | **100.0%** | IRS forms with structured fields. |
+| **irs_forms** | 20 | 0 | 20 | **100.0%** | IRS 1099-NEC forms with structured fields. |
 | **multi_format** | 3 | 3 | 0 | **100.0%** | xlsx, docx, pptx parsed through docling. |
+| **insurance_policies** | 97 | 17 | 80 | **99.2%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. |
 | **adversarial** | 11 | 0 | 11 | **96.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
-| **insurance_claims** | 152 | 17 | 135 | **95.5%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. Synthetic: filled-in claims, loss runs, demand letters. |
-| **invoices** | 155 | 0 | 155 | **95.3%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
-| **insurance_certificates** | 61 | 21 | 40 | **94.4%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
-| **receipts** | 52 | 52 | 0 | **81.6%** | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality, not extraction. |
-| **TOTAL** | **653** | **232** | **421** | **96.1%** | **6 domains, 9 categories** |
+| **legal_filings** | 61 | 61 | 0 | **96.5%** | Court opinions from CourtListener (Caselaw Access Project). CC0 license. |
+| **insurance_claims** | 152 | 22 | 130 | **95.7%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. |
+| **invoices** | 155 | 5 | 150 | **95.2%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
+| **contracts** | 100 | 100 | 0 | **92.8%** | Material contracts from SEC EDGAR 8-K Exhibit 10 filings. Public domain. |
+| **insurance_certificates** | 61 | 21 | 40 | **91.5%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
+| **sec_filings** | 288 | 288 | 0 | **89.5%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
+| **receipts** | 52 | 52 | 0 | **81.0%** | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality. |
+| **TOTAL** | **1,000** | **569** | **431** | **94.2%** | **7 domains, 11 categories** |
 
 Accuracy dashboard coming at `accuracy.getkoji.dev`.
 
@@ -24,7 +26,7 @@ Accuracy dashboard coming at `accuracy.getkoji.dev`.
 Document extraction tools make accuracy claims that are impossible to verify. This corpus makes them verifiable:
 
 - **Benchmarking** — `koji bench --corpus . --model openai/gpt-4o-mini` gives an honest per-category accuracy score
-- **Held-out validation** — SEC filings has a 50-doc cold set the schemas were never tuned against (99.4%)
+- **Multi-domain coverage** — 7 domains (insurance, finance, legal, tax, retail, adversarial, multi-format) with 11 categories
 - **Pain-point testing** — insurance COIs have targeted synthetic docs for each known extraction failure mode
 - **Regression testing** — every engine change is benched against the full corpus before merging
 
@@ -32,15 +34,18 @@ Document extraction tools make accuracy claims that are impossible to verify. Th
 
 ```
 corpus/
-├── sec_filings/           # 102 real EDGAR filings
-├── invoices/              # 155 synthetic invoices
+├── sec_filings/           # 288 real EDGAR filings (10-K, 10-Q, 8-K, DEF 14A, S-1, 20-F, 6-K)
+├── insurance_claims/      # 152 (22 real + 130 synthetic)
+├── invoices/              # 155 (5 real + 150 synthetic)
+├── contracts/             # 100 real EDGAR 8-K material contracts
+├── insurance_policies/    # 97 (17 real + 80 synthetic)
+├── legal_filings/         # 61 real court opinions (CourtListener)
+├── insurance_certificates/ # 61 (21 real + 40 synthetic)
 ├── receipts/              # 52 real SROIE scanned receipts
-├── insurance_certificates/ # 21 real + 40 synthetic COIs
-├── insurance_policies/    # 30 real + 67 synthetic
-├── insurance_claims/      # 17 real + 125 synthetic
+├── irs_forms/             # 20 synthetic IRS 1099-NEC
 ├── adversarial/           # 11 synthetic edge cases
 ├── multi_format/          # 3 real (xlsx/docx/pptx)
-└── scripts/sources/       # Sourcing + generation scripts
+└── scripts/sources/       # Sourcing scripts (EDGAR, CourtListener, SROIE)
 ```
 
 Each category has `documents/`, `schemas/`, `expected/`, and `manifests/` subdirectories.
