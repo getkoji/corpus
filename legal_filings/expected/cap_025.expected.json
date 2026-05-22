@@ -1,10 +1,9 @@
 {
   "case_number": "25-60587",
-  "court": "Ca5",
+  "court": "United States Court of Appeals for the Fifth Circuit",
+  "defendant": "The City of Aberdeen; John Does 1-20",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "McMillian",
-  "defendant": "City of Aberdeen",
+  "filing_type": "Other",
   "judge": null,
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "Barry McMillian"
 }

@@ -1,5 +1,5 @@
 {
-  "contract_type": "Other",
+  "contract_type": "Credit Agreement",
   "effective_date": "2022-10-07",
   "governing_law": "Georgia",
   "parties": [
@@ -7,6 +7,5 @@
     "RICHARD SMITH",
     "ANNETTE SMITH"
   ],
-  "termination_date": "2042-11-01",
-  "_annotation_status": "auto_extracted"
+  "termination_date": "2042-11-01"
 }

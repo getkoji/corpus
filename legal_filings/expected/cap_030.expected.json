@@ -1,10 +1,9 @@
 {
   "case_number": "5-26-0181",
-  "court": "Illappct",
-  "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "People",
-  "defendant": "Higgs",
+  "court": "APPELLATE COURT OF ILLINOIS FIFTH DISTRICT",
+  "defendant": "DUSTIN W. HIGGS",
+  "filing_date": null,
+  "filing_type": "Other",
   "judge": "Bryan M. Kibler",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "THE PEOPLE OF THE STATE OF ILLINOIS"
 }

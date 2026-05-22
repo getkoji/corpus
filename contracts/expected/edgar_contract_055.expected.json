@@ -1,11 +1,7 @@
 {
-  "contract_type": "Other",
-  "effective_date": "2026-02-10",
+  "contract_type": null,
+  "effective_date": null,
   "governing_law": null,
-  "parties": [
-    "Spartacus Acquisition Corp. II",
-    "Spartacus Sponsor II LLC"
-  ],
-  "termination_date": null,
-  "_annotation_status": "auto_extracted"
+  "parties": null,
+  "termination_date": null
 }

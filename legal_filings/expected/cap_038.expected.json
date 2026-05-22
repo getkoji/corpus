@@ -1,10 +1,9 @@
 {
   "case_number": "F090177",
-  "court": "Calctapp",
+  "court": "Court of Appeal of the State of California, Fifth Appellate District",
+  "defendant": "ALLEN BROOKS, JR.",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
-  "plaintiff": "People",
-  "defendant": "Brooks CA5",
   "judge": "William Terrence",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "THE PEOPLE"
 }

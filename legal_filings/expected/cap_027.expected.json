@@ -1,10 +1,9 @@
 {
   "case_number": "24-11109",
-  "court": "Ca5",
+  "court": "United States Court of Appeals for the Fifth Circuit",
+  "defendant": "Jimmie Scott Williams",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "United States",
-  "defendant": "Williams",
+  "filing_type": "Other",
   "judge": null,
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "United States of America"
 }

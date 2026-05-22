@@ -1,10 +1,9 @@
 {
   "case_number": "B345756",
-  "court": "Calctapp",
+  "court": "Court of Appeal of the State of California, Second Appellate District, Division Five",
+  "defendant": "SARA PICKETT",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "Wilhoit",
-  "defendant": "Pickett CA2/5",
+  "filing_type": "Other",
   "judge": "Laura Streimer",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "ALLISON ELIZABETH WILHOIT"
 }

@@ -1,10 +1,9 @@
 {
   "case_number": "COA18-888",
   "court": "Court of Appeals of North Carolina",
-  "filing_date": "2019-05-21",
+  "defendant": "JAMES HOWARD HERMANN",
+  "filing_date": null,
   "filing_type": "Opinion",
-  "plaintiff": "Parkes",
-  "defendant": "Hermann",
-  "judge": "Jesse B. Caldwell III",
-  "_annotation_status": "auto_extracted"
+  "judge": "DILLON",
+  "plaintiff": "ANITA KATHLEEN PARKES"
 }

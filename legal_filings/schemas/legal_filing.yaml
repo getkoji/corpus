@@ -89,6 +89,7 @@ fields:
       header — e.g., "COMPLAINT FOR DAMAGES", "MOTION TO DISMISS",
       "MEMORANDUM OF LAW IN SUPPORT".
     options:
+      - Opinion
       - Complaint
       - Motion
       - Brief

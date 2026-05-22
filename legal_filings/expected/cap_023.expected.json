@@ -1,10 +1,9 @@
 {
-  "case_number": "114582",
-  "court": "Ohioctapp",
-  "filing_date": "2026-05-18",
+  "case_number": "No. 114582",
+  "court": "COURT OF APPEALS OF OHIO, EIGHTH APPELLATE DISTRICT, COUNTY OF CUYAHOGA",
+  "defendant": "DUJUAN DAY, SR.",
+  "filing_date": null,
   "filing_type": "Opinion",
-  "plaintiff": "State",
-  "defendant": "Day",
   "judge": "EMANUELLA D. GROVES",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "STATE OF OHIO"
 }

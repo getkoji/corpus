@@ -1,10 +1,9 @@
 {
   "case_number": "B335973",
-  "court": "Calctapp",
+  "court": "California Court of Appeal, Second Appellate District, Division One",
+  "defendant": "ARMANDO GARCIA RUIZ",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "People",
-  "defendant": "Ruiz CA2/1",
+  "filing_type": "Other",
   "judge": "Shelly Torrealba",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "THE PEOPLE"
 }

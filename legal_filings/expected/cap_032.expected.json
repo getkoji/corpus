@@ -1,10 +1,9 @@
 {
   "case_number": "B340684",
-  "court": "Calctapp",
+  "court": "Court of Appeal of the State of California, Second Appellate District, Division Seven",
+  "defendant": "John Hancock Life Insurance Company",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
-  "plaintiff": "Garcia",
-  "defendant": "John Hancock Life Ins. Co. CA2/7",
   "judge": "Bruce G. Iwasaki",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "Myra Garcia"
 }

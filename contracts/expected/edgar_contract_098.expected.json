@@ -3,19 +3,14 @@
   "effective_date": "2011-06-27",
   "governing_law": null,
   "parties": [
-    "Sovereign Energy LLC",
     "Recovery Energy, Inc.",
-    "Colony Partners, a California general partnership",
-    "Jonathan & Nancy Glaser Family Trust DTD 12/16/1998",
-    "T.R. Winston & Company, LLC",
-    "Wallington Investment Holdings, Ltd.",
-    "Steven B. Dunn and Laura Dunn Revocable Trust DTD 10/28/10",
-    "Christopher C. Bynum, a married man",
-    "Kathleen M. Bynum, an unmarried woman",
-    "Jennifer Tighe, a married woman",
+    "Sovereign Energy LLC",
+    "Christopher C. Bynum",
+    "Kathleen M. Bynum",
+    "Jennifer Tighe",
     "Beverly G. Green etvir.",
     "Clifford M. Johnson, etux",
-    "Gary Johnson, a single man",
+    "Gary Johnson",
     "Cyril Unrein, etux",
     "Sharon L. McCurry, a widow",
     "Georgia McCurry, a widow",
@@ -46,6 +41,5 @@
     "Rodney J. Vrtatko, a married man",
     "Edward Mike Davis, L.L.C."
   ],
-  "termination_date": null,
-  "_annotation_status": "auto_extracted"
+  "termination_date": null
 }

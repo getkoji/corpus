@@ -1,17 +1,7 @@
 {
-  "contract_type": "Credit Agreement",
-  "effective_date": "2011-06-24",
-  "governing_law": "the laws of the State of New York",
-  "parties": [
-    "SENIOR HOUSING PROPERTIES TRUST",
-    "THE FINANCIAL INSTITUTIONS PARTY HERETO AND THEIR ASSIGNEES UNDER SECTION 12.6.",
-    "WELLS FARGO BANK, NATIONAL ASSOCIATION",
-    "WELLS FARGO SECURITIES, LLC",
-    "RBC CAPITAL MARKETS",
-    "ROYAL BANK OF CANADA",
-    "BANK OF AMERICA, N.A.",
-    "REGIONS BANK"
-  ],
-  "termination_date": "2014-06-24",
-  "_annotation_status": "auto_extracted"
+  "contract_type": null,
+  "effective_date": null,
+  "governing_law": "THE LAWS OF THE STATE OF NEW YORK APPLICABLE TO CONTRACTS EXECUTED, AND TO BE FULLY PERFORMED, IN SUCH STATE.",
+  "parties": null,
+  "termination_date": "2014-06-24"
 }

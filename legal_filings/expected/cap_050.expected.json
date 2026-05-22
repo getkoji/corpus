@@ -1,10 +1,9 @@
 {
   "case_number": "B340032",
-  "court": "Calctapp",
+  "court": "California Court of Appeal, Second Appellate District, Division Eight",
+  "defendant": "JAMES EARMER JOHNSON",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "People",
-  "defendant": "Johnson CA2/8",
+  "filing_type": "Other",
   "judge": "Charles A. Chung",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "THE PEOPLE"
 }

@@ -1,10 +1,9 @@
 {
   "case_number": "C-230298",
   "court": "Ohio Court of Appeals",
-  "filing_date": "2024-03-22",
+  "defendant": "FARMERS PROPERTY CASUALTY INSURANCE COMPANY, f.k.a. METROPOLITAN PROPERTY AND CASUALTY INSURANCE COMPANY",
+  "filing_date": null,
   "filing_type": "Opinion",
-  "plaintiff": "Edy",
-  "defendant": "Farmers Property Casualty Ins. Co.",
-  "judge": "BOCK",
-  "_annotation_status": "auto_extracted"
+  "judge": "BOCK, Presiding Judge",
+  "plaintiff": "MELISSA EDDY and ALEXIS EDDY"
 }

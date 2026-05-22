@@ -1,10 +1,9 @@
 {
   "case_number": "D085932",
-  "court": "Calctapp",
+  "court": "COURT OF APPEAL, FOURTH APPELLATE DISTRICT, DIVISION ONE, STATE OF CALIFORNIA",
+  "defendant": "BRADLEY VIRES et al.",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "King",
-  "defendant": "Vires CA4/1",
+  "filing_type": "Other",
   "judge": "Gregory W. Pollack",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "QUANDA KING"
 }

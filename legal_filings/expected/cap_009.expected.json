@@ -1,10 +1,9 @@
 {
   "case_number": "No. 73-1385",
   "court": "United States Court of Appeals, Fifth Circuit",
-  "filing_date": "1973-02-22",
-  "filing_type": "Opinion",
-  "plaintiff": "Jerry WHITE",
   "defendant": "L. B. SULLIVAN, Commissioner of Alabama Prison System, et al.",
+  "filing_date": "1973-02-22",
+  "filing_type": "Other",
   "judge": "THORNBERRY, GOLDBERG and RONEY",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "Jerry WHITE"
 }

@@ -1,10 +1,9 @@
 {
   "case_number": "25-1824",
-  "court": "Ca9",
-  "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "Singh",
-  "defendant": "Blanche",
+  "court": "United States Court of Appeals for the Ninth Circuit",
+  "defendant": "TODD BLANCHE, Acting Attorney General",
+  "filing_date": null,
+  "filing_type": "Other",
   "judge": "SCHROEDER, CHRISTEN, and FORREST",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "SUKHJINDER SINGH"
 }

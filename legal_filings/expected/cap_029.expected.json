@@ -1,10 +1,9 @@
 {
   "case_number": "Civil Action No. 2025-4454",
-  "court": "Dcd",
-  "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "Mahmoud",
-  "defendant": "United States Department of Homeland Security",
+  "court": "United States District Court for the District of Columbia",
+  "defendant": "United States Department of Homeland Security, et al.",
+  "filing_date": null,
+  "filing_type": "Memorandum",
   "judge": "Loren L. Alikhan",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "Mowafaq Mahmoud, et al."
 }

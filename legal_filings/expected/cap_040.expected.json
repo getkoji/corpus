@@ -1,10 +1,9 @@
 {
   "case_number": "A174468",
-  "court": "Calctapp",
+  "court": "Court of Appeal of the State of California, First Appellate District, Division Four",
+  "defendant": "Xaviera Kayli Ferguson",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "People",
-  "defendant": "Ferguson CA1/4",
+  "filing_type": "Other",
   "judge": null,
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "The People"
 }

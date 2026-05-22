@@ -1,7 +1,7 @@
 {
   "contract_type": "Credit Agreement",
   "effective_date": "2012-04-17",
-  "governing_law": "State of Florida",
+  "governing_law": "Florida",
   "parties": [
     "BRANCH BANKING AND TRUST COMPANY",
     "The Goldfield Corporation",
@@ -9,6 +9,5 @@
     "Pineapple House of Brevard, Inc.",
     "Bayswater Development Corporation"
   ],
-  "termination_date": "2013-01-16",
-  "_annotation_status": "auto_extracted"
+  "termination_date": "2013-01-16"
 }

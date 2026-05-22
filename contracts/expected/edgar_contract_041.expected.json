@@ -1,11 +1,10 @@
 {
   "contract_type": "Other",
   "effective_date": "2021-09-10",
-  "governing_law": "State of Delaware",
+  "governing_law": "Delaware",
   "parties": [
     "Bannix Acquisition Corp.",
-    "Indemnitee"
+    null
   ],
-  "termination_date": null,
-  "_annotation_status": "auto_extracted"
+  "termination_date": null
 }

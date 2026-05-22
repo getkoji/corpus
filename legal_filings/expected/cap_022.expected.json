@@ -1,10 +1,9 @@
 {
   "case_number": "2026-A-0013",
-  "court": "Ohioctapp",
-  "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "Koleno",
-  "defendant": "Koleno",
+  "court": "Court of Appeals of Ohio, Eleventh Appellate District, Ashtabula County",
+  "defendant": "WILLIAM T. KOLENO, II",
+  "filing_date": null,
+  "filing_type": "Other",
   "judge": "EUGENE A. LUCCI",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "CHRISTINA KELLY KOLENO"
 }

@@ -1,10 +1,9 @@
 {
   "case_number": "No. 71-1716",
   "court": "United States Court of Appeals, Ninth Circuit",
-  "filing_date": "1973-02-09",
-  "filing_type": "Opinion",
-  "plaintiff": "John OTERO and Grace Otero",
   "defendant": "INTERNATIONAL UNION OF ELECTRICAL, RADIO AND MACHINE WORKERS (IUE)",
+  "filing_date": "1973-02-09",
+  "filing_type": "Other",
   "judge": "BARNES, KILKENNY and GOODWIN",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "John OTERO and Grace Otero"
 }

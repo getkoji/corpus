@@ -1,10 +1,9 @@
 {
   "case_number": "H052612",
   "court": "Court of Appeal of the State of California, Sixth Appellate District",
+  "defendant": "DEPARTMENT OF MOTOR VEHICLES",
   "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "Beale",
-  "defendant": "Dept. of Motor Vehicles",
+  "filing_type": "Other",
   "judge": "The Honorable Mary E. Arand",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "DAVID KEITH BEALE"
 }

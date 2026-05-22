@@ -1,10 +1,9 @@
 {
   "case_number": "Civil Action No.: 26-1533 (RC)",
   "court": "UNITED STATES DISTRICT COURT FOR THE DISTRICT OF COLUMBIA",
-  "filing_date": "2026-05-21",
-  "filing_type": "Opinion",
-  "plaintiff": "Southeastern Fisheries Association, Inc.",
-  "defendant": "Lutnick",
+  "defendant": "HOWARD LUTNICK, et al.",
+  "filing_date": "2026-05-05",
+  "filing_type": "Other",
   "judge": "RUDOLPH CONTRERAS",
-  "_annotation_status": "auto_extracted"
+  "plaintiff": "SOUTHEASTERN FISHERIES ASSOCIATION, INC., et al."
 }
