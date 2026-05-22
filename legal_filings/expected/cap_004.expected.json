@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
-  "filing_date": null,
+  "case_number": "No. 72-2601",
+  "court": "United States Court of Appeals, Ninth Circuit",
+  "filing_date": "1973-02-20",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "UNITED STATES of America",
+  "defendant": "Gordon Fred JOHNSON",
+  "judge": "Honorable Edward J. Schwartz",
+  "_annotation_status": "auto_extracted"
 }

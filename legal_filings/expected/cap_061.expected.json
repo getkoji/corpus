@@ -3,8 +3,8 @@
   "court": "Ohioctapp",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "M.P.",
+  "defendant": "Cuyahoga County Division of Children and Family Services",
+  "judge": "Eileen A. Gallagher",
+  "_annotation_status": "auto_extracted"
 }

@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
+  "case_number": "A173938",
+  "court": "California Court of Appeal, First Appellate District, Division Four",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
+  "plaintiff": "CONTRA COSTA COUNTY CHILDREN AND FAMILY SERVICES BUREAU",
+  "defendant": "K.L.",
   "judge": null,
-  "_annotation_status": "auto_partial"
+  "_annotation_status": "auto_extracted"
 }

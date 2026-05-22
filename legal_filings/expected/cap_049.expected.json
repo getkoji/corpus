@@ -5,6 +5,6 @@
   "filing_type": "Opinion",
   "plaintiff": "Mather",
   "defendant": "Pricewaterhousecoopers CA2/4",
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "judge": "Steve Cochran",
+  "_annotation_status": "auto_extracted"
 }

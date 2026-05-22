@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
+  "case_number": "No. 114642",
+  "court": "COURT OF APPEALS OF OHIO, EIGHTH APPELLATE DISTRICT, COUNTY OF CUYAHOGA",
   "filing_date": "2026-05-20",
   "filing_type": "Opinion",
   "plaintiff": "State",
   "defendant": "Foster",
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "judge": "EILEEN A. GALLAGHER, P.J.",
+  "_annotation_status": "auto_extracted"
 }

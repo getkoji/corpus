@@ -1,8 +1,12 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
+  "contract_type": "Employment Agreement",
+  "effective_date": "2003-11-01",
+  "governing_law": "English Law",
+  "parties": [
+    "Field Group plc",
+    "Neil Rylance",
+    "Chesapeake Corporation"
+  ],
   "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "_annotation_status": "auto_extracted"
 }

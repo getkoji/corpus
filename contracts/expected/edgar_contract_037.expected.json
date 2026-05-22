@@ -1,8 +1,11 @@
 {
-  "contract_type": null,
-  "parties": [],
+  "contract_type": "Lease",
   "effective_date": null,
+  "governing_law": "North Carolina",
+  "parties": [
+    "BB&T LEASING CORPORATION",
+    "SOUTHEAST POWER CORPORATION"
+  ],
   "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "_annotation_status": "auto_extracted"
 }

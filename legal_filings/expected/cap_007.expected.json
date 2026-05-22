@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
-  "filing_date": null,
+  "case_number": "No. 26618",
+  "court": "United States Court of Appeals, Ninth Circuit",
+  "filing_date": "1973-02-05",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "Martha A. WILLGING, Individually and as executrix of the estate of John Z. Willging",
+  "defendant": "UNITED STATES of America",
+  "judge": "Warren J. Ferguson",
+  "_annotation_status": "auto_extracted"
 }

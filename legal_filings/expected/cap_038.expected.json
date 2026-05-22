@@ -5,6 +5,6 @@
   "filing_type": "Opinion",
   "plaintiff": "People",
   "defendant": "Brooks CA5",
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "judge": "William Terrence",
+  "_annotation_status": "auto_extracted"
 }

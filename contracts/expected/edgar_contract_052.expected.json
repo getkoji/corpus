@@ -1,8 +1,12 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
+  "contract_type": "Credit Agreement",
+  "effective_date": "2009-06-10",
+  "governing_law": "New York",
+  "parties": [
+    "U.S. Bank National Association",
+    "Harrah\u2019s Operating Company, Inc.",
+    "Bank of America, N.A."
+  ],
   "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "_annotation_status": "auto_extracted"
 }

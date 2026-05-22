@@ -1,8 +1,10 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
-  "termination_date": null,
+  "contract_type": "Credit Agreement",
+  "effective_date": "2011-05-19",
   "governing_law": null,
-  "_annotation_status": "needs_review"
+  "parties": [
+    "ALPHA NATURAL RESOURCES, INC."
+  ],
+  "termination_date": "2016-06-30",
+  "_annotation_status": "auto_extracted"
 }

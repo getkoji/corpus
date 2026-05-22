@@ -3,8 +3,8 @@
   "court": "New York Supreme Court, Kings County",
   "filing_date": "2024-02-14",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "plaintiff merchant cash advance company",
+  "defendant": "defendant seller of future receivables",
+  "judge": "Aaron D. Maslow",
+  "_annotation_status": "auto_extracted"
 }

@@ -3,8 +3,8 @@
   "court": "Vermont Superior Court",
   "filing_date": "2018-07-11",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "PLH LLC",
+  "defendant": "Town of Bennington",
+  "judge": "Thomas G. Walsh",
+  "_annotation_status": "auto_extracted"
 }

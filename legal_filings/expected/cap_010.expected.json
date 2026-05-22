@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
+  "case_number": "No. 72-2990",
+  "court": "United States Court of Appeals, Fifth Circuit",
   "filing_date": null,
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "Peter J. BRENNAN, Secretary of Labor, United States Department of Labor",
+  "defendant": "SIX FLAGS OVER GEORGIA, LTD., and Great Southwest Atlanta Corp.",
+  "judge": "Hon. Bailey Aldrich",
+  "_annotation_status": "auto_extracted"
 }

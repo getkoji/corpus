@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
+  "case_number": "E085359",
+  "court": "COURT OF APPEAL OF THE STATE OF CALIFORNIA, FOURTH APPELLATE DISTRICT, DIVISION TWO",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
   "plaintiff": "People",
   "defendant": "Tyus",
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "judge": "Zahara Arredondo",
+  "_annotation_status": "auto_extracted"
 }

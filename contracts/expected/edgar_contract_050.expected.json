@@ -1,8 +1,13 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
-  "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "contract_type": "Employment Agreement",
+  "effective_date": "2013-08-14",
+  "governing_law": "This Agreement shall be governed by the laws of the United States of America and the State of Michigan with venue and jurisdiction limited to the Circuit Court for Kent County, Michigan.",
+  "parties": [
+    "MERCANTILE BANK CORPORATION",
+    "MERCANTILE BANK OF MICHIGAN",
+    "FIRSTBANK CORPORATION",
+    "Douglas J. Ouellette"
+  ],
+  "termination_date": "2014-08-14",
+  "_annotation_status": "auto_extracted"
 }

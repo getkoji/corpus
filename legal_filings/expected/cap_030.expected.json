@@ -5,6 +5,6 @@
   "filing_type": "Opinion",
   "plaintiff": "People",
   "defendant": "Higgs",
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "judge": "Bryan M. Kibler",
+  "_annotation_status": "auto_extracted"
 }

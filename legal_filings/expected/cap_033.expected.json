@@ -3,8 +3,8 @@
   "court": "Calctapp",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "Los Angeles County Department of Children and Family Services",
+  "defendant": "E.G.",
+  "judge": "Marguerite D. Downing",
+  "_annotation_status": "auto_extracted"
 }

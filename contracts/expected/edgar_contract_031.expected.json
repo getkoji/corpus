@@ -1,8 +1,11 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
+  "contract_type": "Other",
+  "effective_date": "2016-08-10",
+  "governing_law": "Delaware",
+  "parties": [
+    "NISSAN AUTO RECEIVABLES 2016-C OWNER TRUST",
+    "NMAC"
+  ],
   "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "_annotation_status": "auto_extracted"
 }

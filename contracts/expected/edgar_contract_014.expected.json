@@ -1,8 +1,8 @@
 {
-  "contract_type": null,
-  "parties": [],
+  "contract_type": "Other",
   "effective_date": null,
-  "termination_date": null,
   "governing_law": null,
-  "_annotation_status": "needs_review"
+  "parties": null,
+  "termination_date": null,
+  "_annotation_status": "auto_extracted"
 }

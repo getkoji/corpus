@@ -1,8 +1,10 @@
 {
-  "contract_type": null,
-  "parties": [],
+  "contract_type": "Other",
   "effective_date": null,
+  "governing_law": "State of Delaware",
+  "parties": [
+    "Genworth Financial, Inc."
+  ],
   "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "_annotation_status": "auto_extracted"
 }

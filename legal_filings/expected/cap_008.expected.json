@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
-  "filing_date": null,
+  "case_number": "No. 26658",
+  "court": "United States Court of Appeals, Ninth Circuit",
+  "filing_date": "1973-02-02",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "GREEN MILL INN, INC.",
+  "defendant": "The NATIONAL CASH REGISTER COMPANY",
+  "judge": "TRASK, CHOY, and GOODWIN",
+  "_annotation_status": "auto_extracted"
 }

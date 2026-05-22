@@ -3,8 +3,8 @@
   "court": "Calctapp",
   "filing_date": "2026-05-21",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "Public Guardian of Los Angeles County",
+  "defendant": "J.S.",
+  "judge": "Rene C. Gilbertson",
+  "_annotation_status": "auto_extracted"
 }

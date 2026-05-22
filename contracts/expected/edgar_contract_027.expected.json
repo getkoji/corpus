@@ -1,8 +1,11 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
-  "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "contract_type": "Other",
+  "effective_date": "2006-02-25",
+  "governing_law": "the laws of the State of Texas",
+  "parties": [
+    "Summit Environmental Corp., Inc.",
+    "Asah Terra Nigeria Joint Venture #1, Inc."
+  ],
+  "termination_date": "2008-02-14",
+  "_annotation_status": "auto_extracted"
 }

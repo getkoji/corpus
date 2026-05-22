@@ -3,8 +3,8 @@
   "court": "Vermont Superior Court",
   "filing_date": "2018-02-08",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "RL Vallee, Inc.",
+  "defendant": "Vermont Agency of Transportation",
+  "judge": "Thomas G. Walsh",
+  "_annotation_status": "auto_extracted"
 }

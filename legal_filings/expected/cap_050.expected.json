@@ -5,6 +5,6 @@
   "filing_type": "Opinion",
   "plaintiff": "People",
   "defendant": "Johnson CA2/8",
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "judge": "Charles A. Chung",
+  "_annotation_status": "auto_extracted"
 }

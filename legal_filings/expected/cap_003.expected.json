@@ -1,10 +1,10 @@
 {
-  "case_number": null,
-  "court": null,
-  "filing_date": null,
+  "case_number": "No. 72-1687",
+  "court": "United States Court of Appeals, Ninth Circuit",
+  "filing_date": "1973-02-14",
   "filing_type": "Opinion",
-  "plaintiff": null,
-  "defendant": null,
-  "judge": null,
-  "_annotation_status": "auto_partial"
+  "plaintiff": "UNITED STATES of America",
+  "defendant": "Richard Donald GILLIS",
+  "judge": "MERRILL, KOELSCH, and KILKENNY",
+  "_annotation_status": "auto_extracted"
 }

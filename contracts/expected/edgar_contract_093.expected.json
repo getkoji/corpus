@@ -1,8 +1,11 @@
 {
-  "contract_type": null,
-  "parties": [],
-  "effective_date": null,
-  "termination_date": null,
-  "governing_law": null,
-  "_annotation_status": "needs_review"
+  "contract_type": "Credit Agreement",
+  "effective_date": "2005-11-18",
+  "governing_law": "Florida",
+  "parties": [
+    "PINEAPPLE HOUSE OF BREVARD, INC.",
+    "BRANCH BANKING AND TRUST COMPANY"
+  ],
+  "termination_date": "2007-10-01",
+  "_annotation_status": "auto_extracted"
 }
