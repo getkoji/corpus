@@ -1,0 +1,14 @@
+{
+  "id": "mts-046-cardiovascular-pulmo-cardiac-consultation-5",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Cardiovascular / Pulmonary",
+  "sample_name": "Cardiac Consultation - 5",
+  "word_count": 1428,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-046-cardiovascular-pulmo-cardiac-consultation-5.md",
+  "expected": "expected/mts-046-cardiovascular-pulmo-cardiac-consultation-5.expected.json"
+}

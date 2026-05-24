@@ -1,0 +1,14 @@
+{
+  "id": "mts-064-gastroenterology-exploratory-laparotomy-colon-resection",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Gastroenterology",
+  "sample_name": "Exploratory Laparotomy & Colon Resection",
+  "word_count": 978,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-064-gastroenterology-exploratory-laparotomy-colon-resection.md",
+  "expected": "expected/mts-064-gastroenterology-exploratory-laparotomy-colon-resection.expected.json"
+}

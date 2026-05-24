@@ -1,0 +1,14 @@
+{
+  "id": "mts-095-ent-otolaryngology-thoracoscopythoracotomy",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "ENT - Otolaryngology",
+  "sample_name": "Thoracoscopy/Thoracotomy",
+  "word_count": 1374,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-095-ent-otolaryngology-thoracoscopythoracotomy.md",
+  "expected": "expected/mts-095-ent-otolaryngology-thoracoscopythoracotomy.expected.json"
+}

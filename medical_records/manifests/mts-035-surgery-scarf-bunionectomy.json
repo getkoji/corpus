@@ -1,0 +1,14 @@
+{
+  "id": "mts-035-surgery-scarf-bunionectomy",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Surgery",
+  "sample_name": "Scarf Bunionectomy",
+  "word_count": 1509,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-035-surgery-scarf-bunionectomy.md",
+  "expected": "expected/mts-035-surgery-scarf-bunionectomy.expected.json"
+}

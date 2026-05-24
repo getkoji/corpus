@@ -1,0 +1,14 @@
+{
+  "id": "mts-072-general-medicine-blood-in-urine-er-visit",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "General Medicine",
+  "sample_name": "Blood in Urine - ER Visit",
+  "word_count": 1354,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-072-general-medicine-blood-in-urine-er-visit.md",
+  "expected": "expected/mts-072-general-medicine-blood-in-urine-er-visit.expected.json"
+}

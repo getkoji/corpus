@@ -1,0 +1,14 @@
+{
+  "id": "mts-042-orthopedic-knee-arthroplasty-revision",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Orthopedic",
+  "sample_name": "Knee Arthroplasty - Revision",
+  "word_count": 1609,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-042-orthopedic-knee-arthroplasty-revision.md",
+  "expected": "expected/mts-042-orthopedic-knee-arthroplasty-revision.expected.json"
+}

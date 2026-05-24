@@ -1,0 +1,14 @@
+{
+  "id": "mts-058-neurology-neuropsychological-evaluation",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Neurology",
+  "sample_name": "Neuropsychological Evaluation",
+  "word_count": 1310,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-058-neurology-neuropsychological-evaluation.md",
+  "expected": "expected/mts-058-neurology-neuropsychological-evaluation.expected.json"
+}

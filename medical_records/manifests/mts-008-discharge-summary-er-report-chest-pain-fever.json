@@ -1,0 +1,14 @@
+{
+  "id": "mts-008-discharge-summary-er-report-chest-pain-fever",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Discharge Summary",
+  "sample_name": "ER Report - Chest Pain & Fever",
+  "word_count": 734,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-008-discharge-summary-er-report-chest-pain-fever.md",
+  "expected": "expected/mts-008-discharge-summary-er-report-chest-pain-fever.expected.json"
+}

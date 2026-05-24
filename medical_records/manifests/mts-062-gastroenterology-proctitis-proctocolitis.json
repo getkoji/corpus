@@ -1,0 +1,14 @@
+{
+  "id": "mts-062-gastroenterology-proctitis-proctocolitis",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Gastroenterology",
+  "sample_name": "Proctitis & Proctocolitis",
+  "word_count": 1035,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-062-gastroenterology-proctitis-proctocolitis.md",
+  "expected": "expected/mts-062-gastroenterology-proctitis-proctocolitis.expected.json"
+}

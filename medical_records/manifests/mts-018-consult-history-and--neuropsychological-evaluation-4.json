@@ -1,0 +1,14 @@
+{
+  "id": "mts-018-consult-history-and--neuropsychological-evaluation-4",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Consult - History and Phy.",
+  "sample_name": "Neuropsychological Evaluation - 4",
+  "word_count": 1949,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-018-consult-history-and--neuropsychological-evaluation-4.md",
+  "expected": "expected/mts-018-consult-history-and--neuropsychological-evaluation-4.expected.json"
+}

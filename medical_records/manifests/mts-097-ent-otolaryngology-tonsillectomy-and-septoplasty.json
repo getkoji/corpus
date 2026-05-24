@@ -1,0 +1,14 @@
+{
+  "id": "mts-097-ent-otolaryngology-tonsillectomy-and-septoplasty",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "ENT - Otolaryngology",
+  "sample_name": "Tonsillectomy and Septoplasty",
+  "word_count": 1044,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-097-ent-otolaryngology-tonsillectomy-and-septoplasty.md",
+  "expected": "expected/mts-097-ent-otolaryngology-tonsillectomy-and-septoplasty.expected.json"
+}

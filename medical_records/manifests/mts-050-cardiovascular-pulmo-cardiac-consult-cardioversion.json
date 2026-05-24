@@ -1,0 +1,14 @@
+{
+  "id": "mts-050-cardiovascular-pulmo-cardiac-consult-cardioversion",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Cardiovascular / Pulmonary",
+  "sample_name": "Cardiac Consult & Cardioversion",
+  "word_count": 1149,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-050-cardiovascular-pulmo-cardiac-consult-cardioversion.md",
+  "expected": "expected/mts-050-cardiovascular-pulmo-cardiac-consult-cardioversion.expected.json"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mts-083-neurology-comprehensive-neurological-evaluation",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Neurology",
+  "sample_name": "Comprehensive Neurological Evaluation",
+  "word_count": 1202,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-083-neurology-comprehensive-neurological-evaluation.md",
+  "expected": "expected/mts-083-neurology-comprehensive-neurological-evaluation.expected.json"
+}

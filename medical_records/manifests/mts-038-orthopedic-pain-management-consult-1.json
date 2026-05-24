@@ -1,0 +1,14 @@
+{
+  "id": "mts-038-orthopedic-pain-management-consult-1",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Orthopedic",
+  "sample_name": "Pain Management Consult - 1",
+  "word_count": 1698,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-038-orthopedic-pain-management-consult-1.md",
+  "expected": "expected/mts-038-orthopedic-pain-management-consult-1.expected.json"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mts-099-psychiatry-psycholog-psych-consult-depression-1",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Psychiatry / Psychology",
+  "sample_name": "Psych Consult - Depression - 1",
+  "word_count": 1874,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-099-psychiatry-psycholog-psych-consult-depression-1.md",
+  "expected": "expected/mts-099-psychiatry-psycholog-psych-consult-depression-1.expected.json"
+}

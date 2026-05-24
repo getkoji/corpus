@@ -1,0 +1,14 @@
+{
+  "id": "mts-002-discharge-summary-discharge-summary-1",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Discharge Summary",
+  "sample_name": "Discharge Summary - 1",
+  "word_count": 977,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-002-discharge-summary-discharge-summary-1.md",
+  "expected": "expected/mts-002-discharge-summary-discharge-summary-1.expected.json"
+}

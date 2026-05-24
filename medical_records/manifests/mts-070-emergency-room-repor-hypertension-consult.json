@@ -1,0 +1,14 @@
+{
+  "id": "mts-070-emergency-room-repor-hypertension-consult",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Emergency Room Reports",
+  "sample_name": "Hypertension - Consult",
+  "word_count": 1173,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-070-emergency-room-repor-hypertension-consult.md",
+  "expected": "expected/mts-070-emergency-room-repor-hypertension-consult.expected.json"
+}

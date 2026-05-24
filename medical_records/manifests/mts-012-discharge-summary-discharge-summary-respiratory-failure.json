@@ -1,0 +1,14 @@
+{
+  "id": "mts-012-discharge-summary-discharge-summary-respiratory-failure",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Discharge Summary",
+  "sample_name": "Discharge Summary - Respiratory Failure",
+  "word_count": 661,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-012-discharge-summary-discharge-summary-respiratory-failure.md",
+  "expected": "expected/mts-012-discharge-summary-discharge-summary-respiratory-failure.expected.json"
+}

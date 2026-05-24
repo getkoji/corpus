@@ -1,0 +1,14 @@
+{
+  "id": "mts-074-general-medicine-motor-vehicle-accident",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "General Medicine",
+  "sample_name": "Motor Vehicle Accident",
+  "word_count": 1208,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-074-general-medicine-motor-vehicle-accident.md",
+  "expected": "expected/mts-074-general-medicine-motor-vehicle-accident.expected.json"
+}

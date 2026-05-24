@@ -1,0 +1,14 @@
+{
+  "id": "mts-009-discharge-summary-discharge-summary-peripheral-vascular-di",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Discharge Summary",
+  "sample_name": "Discharge Summary - Peripheral vascular disease",
+  "word_count": 708,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-009-discharge-summary-discharge-summary-peripheral-vascular-di.md",
+  "expected": "expected/mts-009-discharge-summary-discharge-summary-peripheral-vascular-di.expected.json"
+}

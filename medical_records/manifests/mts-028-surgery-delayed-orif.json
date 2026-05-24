@@ -1,0 +1,14 @@
+{
+  "id": "mts-028-surgery-delayed-orif",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Surgery",
+  "sample_name": "Delayed ORIF",
+  "word_count": 1677,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-028-surgery-delayed-orif.md",
+  "expected": "expected/mts-028-surgery-delayed-orif.expected.json"
+}

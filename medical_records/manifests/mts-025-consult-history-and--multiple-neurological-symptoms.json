@@ -1,0 +1,14 @@
+{
+  "id": "mts-025-consult-history-and--multiple-neurological-symptoms",
+  "source_name": "MTSamples (Medical Transcription Samples)",
+  "source_url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+  "original_source": "https://www.mtsamples.com/",
+  "license": "CC0 (Public Domain)",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "specialty": "Consult - History and Phy.",
+  "sample_name": "Multiple Neurological Symptoms",
+  "word_count": 1634,
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "document": "documents/mts-025-consult-history-and--multiple-neurological-symptoms.md",
+  "expected": "expected/mts-025-consult-history-and--multiple-neurological-symptoms.expected.json"
+}
