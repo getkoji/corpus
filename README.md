@@ -10,6 +10,7 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 | **multi_format** | 3 | 3 | 0 | **100.0%** | xlsx, docx, pptx parsed through docling. |
 | **insurance_policies** | 97 | 17 | 80 | **99.2%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. |
 | **sec_filings** | 288 | 288 | 0 | **98.3%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
+| **medical_records** | 100 | 100 | 0 | **97.7%** | MTSamples transcriptions (CC0). 15 medical specialties. |
 | **adversarial** | 11 | 0 | 11 | **96.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
 | **legal_filings** | 61 | 61 | 0 | **96.3%** | Court opinions from CourtListener (Caselaw Access Project). CC0 license. |
 | **insurance_claims** | 152 | 22 | 130 | **95.7%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. |
@@ -17,7 +18,7 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 | **contracts** | 100 | 100 | 0 | **90.8%** | Material contracts from SEC EDGAR 8-K Exhibit 10 filings. Public domain. |
 | **insurance_certificates** | 61 | 21 | 40 | **90.2%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
 | **receipts** | 52 | 52 | 0 | **81.0%** | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality. |
-| **TOTAL** | **1,000** | **569** | **431** | **96.0%** | **7 domains, 11 categories** |
+| **TOTAL** | **1,100** | **669** | **431** | **96.1%** | **8 domains, 12 categories** |
 
 Accuracy dashboard coming at `accuracy.getkoji.dev`.
 
@@ -38,6 +39,7 @@ corpus/
 ├── insurance_claims/      # 152 (22 real + 130 synthetic)
 ├── invoices/              # 155 (5 real + 150 synthetic)
 ├── contracts/             # 100 real EDGAR 8-K material contracts
+├── medical_records/       # 100 real MTSamples transcriptions (CC0, 15 specialties)
 ├── insurance_policies/    # 97 (17 real + 80 synthetic)
 ├── legal_filings/         # 61 real court opinions (CourtListener)
 ├── insurance_certificates/ # 61 (21 real + 40 synthetic)
