@@ -21,6 +21,20 @@ supports over time.
 | `anomaly_ocr_typos` | Realistic OCR character confusions (1/l, 0/O, typos). Tests fuzzy recognition of filer + form type. | filer, form_type |
 | `anomaly_stapled` | Two fictional SEC cover pages (10-K + 10-Q) concatenated. | Multi-section union (see below) |
 | `anomaly_multi_union` | Three SEC cover pages (8-K + 10-Q + DEF 14A) concatenated. | Multi-section union (see below) |
+| `anomaly_non_english` | Full French-language 10-K cover page applied to the English SEC schema. | None — pure null |
+| `anomaly_wall_of_text` | Single ~5000-word unbroken paragraph (no headings, no cover-page structure). | None — pure null |
+| `anomaly_tables_only` | Document consisting entirely of financial data tables, no prose or SEC structure. | None — pure null |
+| `anomaly_contradictory_dates` | 10-K where cover-page fiscal year end (Dec 31, 2025) contradicts the Explanatory Note (Sep 30, 2025). | Cover-page values win: filer, form_type, period_fiscal_year_end, filing_date |
+| `anomaly_formatting_artifacts` | 10-K cover page with heavy rendering noise: escaped asterisks, strikethrough stale values, HTML-style bracket artifacts. | Non-struck-through values: filer, form_type, period_fiscal_year_end, filing_date |
+| `anomaly_near_duplicate` | Stripped-down reformatting of the ACME MANUFACTURING CORP. 10-K cover (same content, leaner layout, added SIGNATURES block). | filer, form_type, period_fiscal_year_end, filing_date |
+| `anomaly_deep_nesting` | Document with 10+ levels of markdown heading nesting; private-company content explicitly states it is not SEC-registered. | None — pure null |
+| `anomaly_minimal` | Single-line document: "See attached." Minimum non-empty input. | None — pure null |
+| `anomaly_numeric_noise` | Document containing only numeric/technical noise (pi digits, hex values, GPS coords, hash digests, version strings). | None — pure null |
+| `anomaly_unexpected_format` | All SEC fields present but in EDGAR SGML flat-file KEY: VALUE format (dates as YYYYMMDD, no prose). | filer, form_type, filing_date, period_fiscal_year_end |
+| `anomaly_wrong_domain` | Patient medical record (hospital discharge summary) with SEC filing_metadata schema applied. | None — pure null |
+| `anomaly_prompt_injection` | 8-K with adversarial in-document instructions to override schema and return fabricated field values. | Real cover-page values: filer, form_type, period_date_of_report |
+| `anomaly_checkbox_artifacts` | 10-K cover page with dense checkbox/radio button artifacts (☒ ☐) from scanned-form OCR. | filer, form_type, period_fiscal_year_end, filing_date |
+| `anomaly_mixed_language` | 20-F cover page with bilingual English/Spanish parallel text on every label and section title. | filer, form_type, filing_date, period_fiscal_year_end |
 
 ## Expected-JSON convention
 
@@ -76,7 +90,9 @@ adversarial cases are designed to demonstrate the value of classify
 
 ## Known findings (2026-04-13, gpt-4o-mini, post oss-25 migration)
 
-**Bench:** 56/60 fields = **93.3%** across 11 adversarial docs.
+**Note:** Findings below reflect the original 11-document corpus. The corpus has since been expanded to 25 documents (14 new cases added 2026-05-27); re-run bench to get updated scores.
+
+**Bench (original 11 docs):** 56/60 fields = **93.3%** across 11 adversarial docs.
 
 **Clean (4 of 7 pure-null cases, 28/28 null assertions pass):** the
 extractor correctly returns all null on `anomaly_blank`,
