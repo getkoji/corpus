@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-10-17",
-  "producer_name": "Redwood Insurance Partners",
-  "producer_phone": "(415) 555-0177",
-  "insured_name": "Westridge Concrete Foundations",
   "certificate_holder_name": "Harbor Point Real Estate Holdings",
+  "insured_name": "Westridge Concrete Foundations",
   "policies": [
     {
       "policy_number": "CGL6085523",
@@ -119,5 +117,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Redwood Insurance Partners",
+  "producer_phone": "(415) 555-0177"
 }

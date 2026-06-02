@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-09-27",
-  "producer_name": "Magnolia Brokerage Services",
-  "producer_phone": "(504) 555-0144",
-  "insured_name": "Meridian Mechanical Services Inc.",
   "certificate_holder_name": "Liberty Square Investments",
+  "insured_name": "Meridian Mechanical Services Inc.",
   "policies": [
     {
       "policy_number": "CGL4779215",
@@ -75,5 +73,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Magnolia Brokerage Services",
+  "producer_phone": "(504) 555-0144"
 }

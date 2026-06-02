@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-12-03",
-  "producer_name": "Pacific Brokerage Group",
-  "producer_phone": "(310) 555-0199",
-  "insured_name": "Meridian Mechanical Services Inc.",
   "certificate_holder_name": "Sunshine Development Partners LLC",
+  "insured_name": "Meridian Mechanical Services Inc.",
   "policies": [
     {
       "policy_number": "CGL7327684",
@@ -17,24 +15,20 @@
           "amount": 1000000
         },
         {
-          "name": "General Aggregate",
-          "amount": 4000000
+          "name": "Personal & Advertising Injury",
+          "amount": 1000000
+        },
+        {
+          "name": "Medical Expense (Any One Person)",
+          "amount": 5000
         },
         {
           "name": "Products / Completed Operations",
           "amount": 2000000
         },
         {
-          "name": "Personal & Advertising Injury",
-          "amount": 1000000
-        },
-        {
           "name": "Damage to Rented Premises",
           "amount": 100000
-        },
-        {
-          "name": "Medical Expense (Any One Person)",
-          "amount": 5000
         }
       ],
       "additional_insureds": []
@@ -85,17 +79,11 @@
         {
           "name": "Bodily Injury by Accident (Each Accident)",
           "amount": 1000000
-        },
-        {
-          "name": "Bodily Injury by Disease (Policy Limit)",
-          "amount": 1000000
-        },
-        {
-          "name": "Bodily Injury by Disease (Each Employee)",
-          "amount": 500000
         }
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Pacific Brokerage Group",
+  "producer_phone": "(310) 555-0199"
 }

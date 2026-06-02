@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-04-20",
-  "producer_name": "Granite State Agency Inc.",
-  "producer_phone": "(603) 555-0133",
-  "insured_name": "Atlas Framing & Construction LLC",
   "certificate_holder_name": "Golden Crest Hospitality Corp.",
+  "insured_name": "Atlas Framing & Construction LLC",
   "policies": [
     {
       "policy_number": "AUT2068847",
@@ -97,5 +95,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Granite State Agency Inc.",
+  "producer_phone": "(603) 555-0133"
 }

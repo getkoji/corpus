@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-08-26",
-  "producer_name": "Redwood Insurance Partners",
-  "producer_phone": "(415) 555-0177",
-  "insured_name": "Westridge Concrete Foundations",
   "certificate_holder_name": "Northwind Infrastructure Partners",
+  "insured_name": "Westridge Concrete Foundations",
   "policies": [
     {
       "policy_number": "WC6116944",
@@ -54,22 +52,6 @@
       ]
     },
     {
-      "policy_number": "AUT7771114",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Redwood Workers Compensation Fund",
-      "effective_date": "2025-01-26",
-      "expiration_date": "2026-01-26",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 2000000
-        }
-      ],
-      "additional_insureds": [
-        "Northwind Infrastructure Partners"
-      ]
-    },
-    {
       "policy_number": "CGL7060724",
       "coverage_type": "Commercial General Liability",
       "carrier_name": "Pinnacle Specialty Insurance",
@@ -104,6 +86,24 @@
       "additional_insureds": [
         "Northwind Infrastructure Partners"
       ]
+    },
+    {
+      "policy_number": "AUT7771114",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Redwood Workers Compensation Fund",
+      "effective_date": "2025-01-26",
+      "expiration_date": "2026-01-26",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": [
+        "Northwind Infrastructure Partners"
+      ]
     }
-  ]
+  ],
+  "producer_name": "Redwood Insurance Partners",
+  "producer_phone": "415-555-0177"
 }

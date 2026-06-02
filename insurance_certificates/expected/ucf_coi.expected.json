@@ -1,4 +1,5 @@
 {
+  "certificate_date": null,
   "certificate_holder_name": "University of Central Florida Board of Trustees",
   "insured_name": "University of Central Florida Board of Trustees",
   "policies": [
@@ -22,5 +23,7 @@
         "University of Central Florida Board of Trustees"
       ]
     }
-  ]
+  ],
+  "producer_name": null,
+  "producer_phone": null
 }

@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-10-24",
-  "producer_name": "Summit Risk Advisors LLC",
-  "producer_phone": "(215) 555-0188",
-  "insured_name": "Bayou City Demolition Services",
   "certificate_holder_name": "Golden Crest Hospitality Corp.",
+  "insured_name": "Bayou City Demolition Services",
   "policies": [
     {
       "policy_number": "UMB5400897",
@@ -23,20 +21,6 @@
         {
           "name": "Self-Insured Retention",
           "amount": 10000
-        }
-      ],
-      "additional_insureds": []
-    },
-    {
-      "policy_number": "AUT6832688",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Northern Lights Insurance Corp.",
-      "effective_date": "2025-08-04",
-      "expiration_date": "2026-08-04",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 2000000
         }
       ],
       "additional_insureds": []
@@ -74,6 +58,22 @@
         }
       ],
       "additional_insureds": []
+    },
+    {
+      "policy_number": "AUT6832688",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Northern Lights Insurance Corp.",
+      "effective_date": "2025-08-04",
+      "expiration_date": "2026-08-04",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Summit Risk Advisors LLC",
+  "producer_phone": "(215) 555-0188"
 }

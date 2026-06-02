@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-07-19",
-  "producer_name": "Redwood Insurance Partners",
-  "producer_phone": "(415) 555-0177",
-  "insured_name": "Suncoast Roofing & Waterproofing",
   "certificate_holder_name": "Crossroads Commercial Properties",
+  "insured_name": "Suncoast Roofing & Waterproofing",
   "policies": [
     {
       "policy_number": "CGL6147202",
@@ -13,14 +11,6 @@
       "expiration_date": "2026-08-21",
       "limits": [
         {
-          "name": "Each Occurrence",
-          "amount": 2000000
-        },
-        {
-          "name": "General Aggregate",
-          "amount": 2000000
-        },
-        {
           "name": "Products / Completed Operations",
           "amount": 2000000
         },
@@ -29,12 +19,20 @@
           "amount": 1000000
         },
         {
-          "name": "Damage to Rented Premises",
-          "amount": 500000
-        },
-        {
           "name": "Medical Expense (Any One Person)",
           "amount": 10000
+        },
+        {
+          "name": "Each Occurrence",
+          "amount": 2000000
+        },
+        {
+          "name": "General Aggregate",
+          "amount": 2000000
+        },
+        {
+          "name": "Damage to Rented Premises",
+          "amount": 500000
         }
       ],
       "additional_insureds": []
@@ -65,10 +63,6 @@
           "amount": 10000000
         },
         {
-          "name": "Aggregate",
-          "amount": 5000000
-        },
-        {
           "name": "Self-Insured Retention",
           "amount": 10000
         }
@@ -83,10 +77,6 @@
       "expiration_date": "2026-08-21",
       "limits": [
         {
-          "name": "Bodily Injury by Accident (Each Accident)",
-          "amount": 1000000
-        },
-        {
           "name": "Bodily Injury by Disease (Policy Limit)",
           "amount": 500000
         },
@@ -97,5 +87,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Redwood Insurance Partners",
+  "producer_phone": "415-555-0177"
 }

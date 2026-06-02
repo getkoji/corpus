@@ -23,16 +23,21 @@
           "amount": 1000000
         },
         {
-          "name": "Combined Single Limit (Each Accident)",
+          "name": "Products - Completed Operations Aggregate",
           "amount": 1000000
         },
         {
-          "name": "Bodily Injury by Accident",
+          "name": "Personal and Advertising Injury",
+          "amount": 1000000
+        },
+        {
+          "name": "Medical Expenses (Any one person)",
           "amount": 1000000
         }
       ],
       "additional_insureds": []
     }
   ],
-  "producer_name": "MARSH USA LLC."
+  "producer_name": "MARSH USA LLC.",
+  "producer_phone": null
 }

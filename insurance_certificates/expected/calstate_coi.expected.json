@@ -5,33 +5,33 @@
   "policies": [
     {
       "policy_number": "GPL7989402-00",
-      "coverage_type": "Commercial General Liability",
+      "coverage_type": "COMMERCIAL GENERAL LIABILITY",
       "carrier_name": "Steadfast Insurance Company",
       "effective_date": "2019-01-01",
       "expiration_date": "2020-01-01",
       "limits": [
         {
-          "name": "Each Occurrence Damage to Rented",
+          "name": "EACH OCCURRENCE DAMAGE TO RENTED",
           "amount": 1000000
         },
         {
-          "name": "Premises (Ea occurrence)",
+          "name": "PREMISES (Ea occurrence)",
           "amount": 300000
         },
         {
-          "name": "Med Exp (Any one person)",
+          "name": "MED EXP (Any one person)",
           "amount": 10000
         },
         {
-          "name": "Personal & Adv Injury",
+          "name": "PERSONAL & ADV INJURY",
           "amount": 1000000
         },
         {
-          "name": "General Aggregate",
+          "name": "GENERAL AGGREGATE",
           "amount": 2000000
         },
         {
-          "name": "Products - Comp/Op Agg",
+          "name": "PRODUCTS - COMP/OP AGG",
           "amount": 2000000
         },
         {
@@ -39,7 +39,7 @@
           "amount": 25000
         },
         {
-          "name": "Contractors Pollution",
+          "name": "Each Occurrence",
           "amount": 1000000
         },
         {
@@ -65,25 +65,25 @@
     },
     {
       "policy_number": "BAP8088033-00",
-      "coverage_type": "Automobile Liability",
+      "coverage_type": "AUTOMOBILE LIABILITY",
       "carrier_name": "Zurich American Insurance Company",
       "effective_date": "2019-01-01",
       "expiration_date": "2020-01-01",
       "limits": [
         {
-          "name": "(Ea accident) Combined Single Limit",
+          "name": "(Ea accident) COMBINED SINGLE LIMIT",
           "amount": 1000000
         },
         {
-          "name": "Bodily Injury (Per person)",
+          "name": "BODILY INJURY (Per person)",
           "amount": null
         },
         {
-          "name": "Bodily Injury (Per accident)",
+          "name": "BODILY INJURY (Per accident)",
           "amount": null
         },
         {
-          "name": "(Per accident) Property Damage",
+          "name": "(Per accident) PROPERTY DAMAGE",
           "amount": null
         },
         {
@@ -105,48 +105,59 @@
     },
     {
       "policy_number": "EX00A6019",
-      "coverage_type": "Umbrella Liability",
+      "coverage_type": "UMBRELLA LIABILITY",
       "carrier_name": "Steadfast Insurance Company",
       "effective_date": "2019-01-01",
       "expiration_date": "2020-01-01",
       "limits": [
         {
-          "name": "Each Occurrence",
+          "name": "EACH OCCURRENCE",
           "amount": 15000000
         },
         {
-          "name": "Aggregate",
+          "name": "AGGREGATE",
           "amount": 15000000
         },
         {
-          "name": "Deductible",
+          "name": "DED",
           "amount": null
         }
       ],
-      "additional_insureds": []
+      "additional_insureds": [
+        "CSU Office of the Chancellor",
+        "The State of California",
+        "the trustees of the California State University",
+        "the University",
+        "their officers",
+        "employees",
+        "representatives",
+        "volunteers",
+        "agents"
+      ]
     },
     {
       "policy_number": "WC8080332-00",
-      "coverage_type": "Workers Compensation and Employers' Liability",
+      "coverage_type": "WORKERS COMPENSATION AND EMPLOYERS' LIABILITY",
       "carrier_name": "Steadfast Insurance Company",
       "effective_date": "2019-01-01",
       "expiration_date": "2020-01-01",
       "limits": [
         {
-          "name": "E.L. Each Accident",
+          "name": "E.L. EACH ACCIDENT",
           "amount": 1000000
         },
         {
-          "name": "E.L. Disease - EA Employee",
+          "name": "E.L. DISEASE - EA EMPLOYEE",
           "amount": 1000000
         },
         {
-          "name": "E.L. Disease - Policy Limit",
+          "name": "E.L. DISEASE - POLICY LIMIT",
           "amount": 1000000
         }
       ],
       "additional_insureds": []
     }
   ],
-  "producer_name": "Willis Insurance Services of California, Inc."
+  "producer_name": "Willis Insurance Services of California, Inc.",
+  "producer_phone": null
 }

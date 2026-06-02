@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-12-08",
-  "producer_name": "Great Lakes Risk Advisors",
-  "producer_phone": "(313) 555-0188",
-  "insured_name": "Prairie Home Builders LLC",
   "certificate_holder_name": "Golden Crest Hospitality Corp.",
+  "insured_name": "Prairie Home Builders LLC",
   "policies": [
     {
       "policy_number": "CGL8810541",
@@ -37,22 +35,8 @@
           "amount": 10000
         }
       ],
-      "additional_insureds": []
-    },
-    {
-      "policy_number": "AUT4517831",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Sterling National Insurance Co.",
-      "effective_date": "2025-04-14",
-      "expiration_date": "2026-04-14",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 2000000
-        }
-      ],
       "additional_insureds": [
-        "Golden Crest Hospitality Corp."
+        "First National Lending Corp."
       ]
     },
     {
@@ -104,6 +88,24 @@
         "First National Lending Corp.",
         "Pacific Rim Investments Group"
       ]
+    },
+    {
+      "policy_number": "AUT4517831",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Sterling National Insurance Co.",
+      "effective_date": "2025-04-14",
+      "expiration_date": "2026-04-14",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": [
+        "Golden Crest Hospitality Corp."
+      ]
     }
-  ]
+  ],
+  "producer_name": "Great Lakes Risk Advisors",
+  "producer_phone": "(313) 555-0188"
 }
