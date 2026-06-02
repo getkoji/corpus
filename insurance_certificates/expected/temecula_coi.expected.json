@@ -1,6 +1,7 @@
 {
   "certificate_date": "2020-12-24",
   "certificate_holder_name": "Clifford Bradford Insurance Agency",
+  "insured_name": null,
   "policies": [
     {
       "policy_number": "AU72 91011",
@@ -43,5 +44,6 @@
       ]
     }
   ],
-  "producer_name": "Clifford Bradford Insurance Agency"
+  "producer_name": "Clifford Bradford Insurance Agency",
+  "producer_phone": null
 }

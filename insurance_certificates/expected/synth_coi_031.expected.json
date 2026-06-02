@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-12-11",
-  "producer_name": "Magnolia Brokerage Services",
-  "producer_phone": "(504) 555-0144",
-  "insured_name": "Iron Horse Steel Erectors Inc.",
   "certificate_holder_name": "Pinnacle Ventures LLC",
+  "insured_name": "Iron Horse Steel Erectors Inc.",
   "policies": [
     {
       "policy_number": "WC9042659",
@@ -49,5 +47,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Magnolia Brokerage Services",
+  "producer_phone": "(504) 555-0144"
 }

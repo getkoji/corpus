@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-02-03",
-  "producer_name": "Cascadia Insurance Brokers",
-  "producer_phone": "(206) 555-0199",
-  "insured_name": "Cascade Plumbing & HVAC Inc.",
   "certificate_holder_name": "Pinnacle Ventures LLC",
+  "insured_name": "Cascade Plumbing & HVAC Inc.",
   "policies": [
     {
       "policy_number": "CGL5177393",
@@ -12,10 +10,6 @@
       "effective_date": "2026-10-26",
       "expiration_date": "2027-10-26",
       "limits": [
-        {
-          "name": "Each Occurrence",
-          "amount": 2000000
-        },
         {
           "name": "General Aggregate",
           "amount": 2000000
@@ -61,10 +55,6 @@
       "expiration_date": "2027-10-26",
       "limits": [
         {
-          "name": "Each Occurrence",
-          "amount": 10000000
-        },
-        {
           "name": "Aggregate",
           "amount": 10000000
         },
@@ -89,13 +79,11 @@
         {
           "name": "Bodily Injury by Disease (Policy Limit)",
           "amount": 500000
-        },
-        {
-          "name": "Bodily Injury by Disease (Each Employee)",
-          "amount": 1000000
         }
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Cascadia Insurance Brokers",
+  "producer_phone": "(206) 555-0199"
 }

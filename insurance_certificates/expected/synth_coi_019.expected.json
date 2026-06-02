@@ -1,26 +1,8 @@
 {
   "certificate_date": "2025-08-28",
-  "producer_name": "Cascadia Insurance Brokers",
-  "producer_phone": "(206) 555-0199",
-  "insured_name": "Evergreen Site Development Corp.",
   "certificate_holder_name": "Lakewood Properties Inc.",
+  "insured_name": "Evergreen Site Development Corp.",
   "policies": [
-    {
-      "policy_number": "AUT6284049",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Appalachian Fidelity Mutual",
-      "effective_date": "2026-09-28",
-      "expiration_date": "2027-09-28",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 1000000
-        }
-      ],
-      "additional_insureds": [
-        "Lakewood Properties Inc."
-      ]
-    },
     {
       "policy_number": "WC6981354",
       "coverage_type": "Workers Compensation",
@@ -80,6 +62,24 @@
       "additional_insureds": [
         "Lakewood Properties Inc."
       ]
+    },
+    {
+      "policy_number": "AUT6284049",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Appalachian Fidelity Mutual",
+      "effective_date": "2026-09-28",
+      "expiration_date": "2027-09-28",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": [
+        "Lakewood Properties Inc."
+      ]
     }
-  ]
+  ],
+  "producer_name": "Cascadia Insurance Brokers",
+  "producer_phone": "(206) 555-0199"
 }

@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-11-14",
-  "producer_name": "Heartland Insurance Associates",
-  "producer_phone": "(515) 555-0166",
-  "insured_name": "Coastal Crane & Rigging LLC",
   "certificate_holder_name": "Harbor Point Real Estate Holdings",
+  "insured_name": "Coastal Crane & Rigging LLC",
   "policies": [
     {
       "policy_number": "CGL1088010",
@@ -93,5 +91,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Heartland Insurance Associates",
+  "producer_phone": "(515) 555-0166"
 }

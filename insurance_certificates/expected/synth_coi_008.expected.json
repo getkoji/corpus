@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-08-18",
-  "producer_name": "Granite State Agency Inc.",
-  "producer_phone": "(603) 555-0133",
-  "insured_name": "Cascade Plumbing & HVAC Inc.",
   "certificate_holder_name": "Lakewood Properties Inc.",
+  "insured_name": "Cascade Plumbing & HVAC Inc.",
   "policies": [
     {
       "policy_number": "UMB9783832",
@@ -97,5 +95,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Granite State Agency Inc.",
+  "producer_phone": "(603) 555-0133"
 }

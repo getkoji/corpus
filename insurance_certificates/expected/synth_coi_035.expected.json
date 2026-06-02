@@ -1,24 +1,8 @@
 {
   "certificate_date": "2025-05-06",
-  "producer_name": "Prairie Wind Insurance Group",
-  "producer_phone": "(316) 555-0155",
-  "insured_name": "Valley Forge Painting Contractors",
   "certificate_holder_name": "Riverstone Development Group",
+  "insured_name": "Valley Forge Painting Contractors",
   "policies": [
-    {
-      "policy_number": "AUT4503354",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Redwood Workers Compensation Fund",
-      "effective_date": "2025-01-24",
-      "expiration_date": "2026-01-24",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 2000000
-        }
-      ],
-      "additional_insureds": []
-    },
     {
       "policy_number": "CGL1272828",
       "coverage_type": "Commercial General Liability",
@@ -52,6 +36,22 @@
         }
       ],
       "additional_insureds": []
+    },
+    {
+      "policy_number": "AUT4503354",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Redwood Workers Compensation Fund",
+      "effective_date": "2025-01-24",
+      "expiration_date": "2026-01-24",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Prairie Wind Insurance Group",
+  "producer_phone": "(316) 555-0155"
 }

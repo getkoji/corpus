@@ -1,4 +1,8 @@
 {
+  "certificate_date": null,
   "certificate_holder_name": "Miami-Dade County Department of Regulatory and Economic Resources",
-  "policies": []
+  "insured_name": null,
+  "policies": [],
+  "producer_name": null,
+  "producer_phone": null
 }

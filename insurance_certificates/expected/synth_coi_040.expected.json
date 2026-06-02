@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-02-11",
-  "producer_name": "Cascadia Insurance Brokers",
-  "producer_phone": "(206) 555-0199",
-  "insured_name": "Continental Scaffolding Inc.",
   "certificate_holder_name": "Riverstone Development Group",
+  "insured_name": "Continental Scaffolding Inc.",
   "policies": [
     {
       "policy_number": "CGL8351464",
@@ -137,5 +135,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Cascadia Insurance Brokers",
+  "producer_phone": "(206) 555-0199"
 }

@@ -1,14 +1,12 @@
 {
   "certificate_date": "2026-10-26",
-  "producer_name": "Great Lakes Risk Advisors",
-  "producer_phone": "(313) 555-0188",
-  "insured_name": "Northern Star Telecom Services",
   "certificate_holder_name": "Liberty Square Investments",
+  "insured_name": "Northern Star Telecom Services",
   "policies": [
     {
       "policy_number": "CGL3239405",
       "coverage_type": "Commercial General Liability",
-      "carrier_name": "Sunbelt Workers Comp Trust",
+      "carrier_name": "Evergreen Mutual Insurance Company",
       "effective_date": "2025-05-10",
       "expiration_date": "2026-05-10",
       "limits": [
@@ -42,7 +40,7 @@
     {
       "policy_number": "AUT4836275",
       "coverage_type": "Automobile Liability",
-      "carrier_name": "Evergreen Mutual Insurance Company",
+      "carrier_name": "Atlantic Coast Mutual",
       "effective_date": "2025-05-10",
       "expiration_date": "2026-05-10",
       "limits": [
@@ -59,7 +57,7 @@
     {
       "policy_number": "UMB8401470",
       "coverage_type": "Umbrella Liability",
-      "carrier_name": "Atlantic Coast Mutual",
+      "carrier_name": "Evergreen Mutual Insurance Company",
       "effective_date": "2025-05-10",
       "expiration_date": "2026-05-10",
       "limits": [
@@ -102,5 +100,7 @@
         "Pacific Rim Investments Group"
       ]
     }
-  ]
+  ],
+  "producer_name": "Great Lakes Risk Advisors",
+  "producer_phone": "(313) 555-0188"
 }

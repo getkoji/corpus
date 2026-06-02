@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-01-28",
-  "producer_name": "Summit Risk Advisors LLC",
-  "producer_phone": "(215) 555-0188",
-  "insured_name": "Cornerstone Civil Engineering PC",
   "certificate_holder_name": "Liberty Square Investments",
+  "insured_name": "Cornerstone Civil Engineering PC",
   "policies": [
     {
       "policy_number": "WC2655793",
@@ -62,20 +60,6 @@
       "additional_insureds": []
     },
     {
-      "policy_number": "AUT3790796",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Pinnacle Specialty Insurance",
-      "effective_date": "2025-12-23",
-      "expiration_date": "2026-12-23",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 2000000
-        }
-      ],
-      "additional_insureds": []
-    },
-    {
       "policy_number": "UMB7975014",
       "coverage_type": "Umbrella Liability",
       "carrier_name": "Redwood Workers Compensation Fund",
@@ -96,6 +80,22 @@
         }
       ],
       "additional_insureds": []
+    },
+    {
+      "policy_number": "AUT3790796",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Pinnacle Specialty Insurance",
+      "effective_date": "2025-12-23",
+      "expiration_date": "2026-12-23",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Summit Risk Advisors LLC",
+  "producer_phone": "(215) 555-0188"
 }
