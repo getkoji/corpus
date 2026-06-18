@@ -1,6 +1,7 @@
 {
   "certificate_date": "2017-12-19",
   "certificate_holder_name": "City Of Seattle DEEL",
+  "insured_name": null,
   "policies": [
     {
       "policy_number": "xxxxxxx",
@@ -29,50 +30,8 @@
       "additional_insureds": [
         "City of Seattle DEEL"
       ]
-    },
-    {
-      "policy_number": "xxxxxxx",
-      "coverage_type": "COMMERCIAL GENERAL LIABILITY",
-      "carrier_name": "Insurer B",
-      "effective_date": "2017-11-30",
-      "expiration_date": "2018-11-30",
-      "limits": [
-        {
-          "name": "PREMISES (Ea occurrence)",
-          "amount": 100000
-        },
-        {
-          "name": "GENERAL AGGREGATE",
-          "amount": 3000000
-        }
-      ],
-      "additional_insureds": [
-        "City of Seattle DEEL"
-      ]
-    },
-    {
-      "policy_number": "xxxxxxx",
-      "coverage_type": "WORKERS COMPENSATION AND EMPLOYERS' LIABILITY",
-      "carrier_name": "Insurer C",
-      "effective_date": "2017-11-30",
-      "expiration_date": "2018-11-30",
-      "limits": [
-        {
-          "name": "E.L. EACH ACCIDENT",
-          "amount": null
-        },
-        {
-          "name": "E.L. DISEASE - EA EMPLOYEE",
-          "amount": null
-        },
-        {
-          "name": "E.L. DISEASE - POLICY LIMIT",
-          "amount": null
-        }
-      ],
-      "additional_insureds": [
-        "City of Seattle DEEL"
-      ]
     }
-  ]
+  ],
+  "producer_name": null,
+  "producer_phone": null
 }

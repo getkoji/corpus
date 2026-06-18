@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-09-26",
-  "producer_name": "Prairie Wind Insurance Group",
-  "producer_phone": "(316) 555-0155",
-  "insured_name": "Coastal Crane & Rigging LLC",
   "certificate_holder_name": "Harbor Point Real Estate Holdings",
+  "insured_name": "Coastal Crane & Rigging LLC",
   "policies": [
     {
       "policy_number": "CGL7965459",
@@ -57,5 +55,7 @@
         "Harbor Point Real Estate Holdings"
       ]
     }
-  ]
+  ],
+  "producer_name": "Prairie Wind Insurance Group",
+  "producer_phone": "(316) 555-0155"
 }

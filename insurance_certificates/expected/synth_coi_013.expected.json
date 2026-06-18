@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-01-04",
-  "producer_name": "Summit Risk Advisors LLC",
-  "producer_phone": "(215) 555-0188",
-  "insured_name": "Cornerstone Civil Engineering PC",
   "certificate_holder_name": "Lakewood Properties Inc.",
+  "insured_name": "Cornerstone Civil Engineering PC",
   "policies": [
     {
       "policy_number": "CGL3245740",
@@ -105,5 +103,7 @@
         "Olympus General Contractors"
       ]
     }
-  ]
+  ],
+  "producer_name": "Summit Risk Advisors LLC",
+  "producer_phone": "(215) 555-0188"
 }

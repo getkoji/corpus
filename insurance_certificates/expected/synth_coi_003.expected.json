@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-05-03",
-  "producer_name": "Blue Ridge Underwriters",
-  "producer_phone": "(704) 555-0122",
-  "insured_name": "Silverline Electrical Contractors",
   "certificate_holder_name": "Crossroads Commercial Properties",
+  "insured_name": "Silverline Electrical Contractors",
   "policies": [
     {
       "policy_number": "UMB2557009",
@@ -97,5 +95,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Blue Ridge Underwriters",
+  "producer_phone": "(704) 555-0122"
 }

@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-09-21",
-  "producer_name": "Pacific Brokerage Group",
-  "producer_phone": "(310) 555-0199",
-  "insured_name": "Redline Fire Protection Corp.",
   "certificate_holder_name": "Lakewood Properties Inc.",
+  "insured_name": "Redline Fire Protection Corp.",
   "policies": [
     {
       "policy_number": "AUT8524057",
@@ -41,5 +39,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Pacific Brokerage Group",
+  "producer_phone": "(310) 555-0199"
 }

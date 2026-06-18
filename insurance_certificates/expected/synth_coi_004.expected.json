@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-08-12",
-  "producer_name": "Granite State Agency Inc.",
-  "producer_phone": "(603) 555-0133",
-  "insured_name": "Brookfield Property Management Group",
   "certificate_holder_name": "Pinnacle Ventures LLC",
+  "insured_name": "Brookfield Property Management Group",
   "policies": [
     {
       "policy_number": "CGL9582571",
@@ -53,5 +51,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Granite State Agency Inc.",
+  "producer_phone": "(603) 555-0133"
 }

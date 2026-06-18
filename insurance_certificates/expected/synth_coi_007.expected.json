@@ -1,24 +1,8 @@
 {
   "certificate_date": "2025-04-23",
-  "producer_name": "Pacific Brokerage Group",
-  "producer_phone": "(310) 555-0199",
-  "insured_name": "Suncoast Roofing & Waterproofing",
   "certificate_holder_name": "Northwind Infrastructure Partners",
+  "insured_name": "Suncoast Roofing & Waterproofing",
   "policies": [
-    {
-      "policy_number": "AUT8583133",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Keystone Indemnity Group",
-      "effective_date": "2026-09-03",
-      "expiration_date": "2027-09-03",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 1000000
-        }
-      ],
-      "additional_insureds": []
-    },
     {
       "policy_number": "CGL2720015",
       "coverage_type": "Commercial General Liability",
@@ -96,6 +80,22 @@
         }
       ],
       "additional_insureds": []
+    },
+    {
+      "policy_number": "AUT8583133",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Keystone Indemnity Group",
+      "effective_date": "2026-09-03",
+      "expiration_date": "2027-09-03",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Pacific Brokerage Group",
+  "producer_phone": "(310) 555-0199"
 }

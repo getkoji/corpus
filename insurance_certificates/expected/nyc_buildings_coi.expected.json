@@ -1,3 +1,8 @@
 {
-  "policies": []
+  "certificate_date": null,
+  "certificate_holder_name": null,
+  "insured_name": null,
+  "policies": [],
+  "producer_name": null,
+  "producer_phone": null
 }

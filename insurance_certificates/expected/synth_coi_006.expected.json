@@ -1,24 +1,8 @@
 {
   "certificate_date": "2025-04-26",
-  "producer_name": "Bayshore Risk Management",
-  "producer_phone": "(617) 555-0211",
-  "insured_name": "Granite Peak General Contractors",
   "certificate_holder_name": "Golden Crest Hospitality Corp.",
+  "insured_name": "Granite Peak General Contractors",
   "policies": [
-    {
-      "policy_number": "AUT9017737",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Redwood Workers Compensation Fund",
-      "effective_date": "2025-05-03",
-      "expiration_date": "2026-05-03",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 1000000
-        }
-      ],
-      "additional_insureds": []
-    },
     {
       "policy_number": "WC7185436",
       "coverage_type": "Workers Compensation",
@@ -74,6 +58,22 @@
         }
       ],
       "additional_insureds": []
+    },
+    {
+      "policy_number": "AUT9017737",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Redwood Workers Compensation Fund",
+      "effective_date": "2025-05-03",
+      "expiration_date": "2026-05-03",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 1000000
+        }
+      ],
+      "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Bayshore Risk Management",
+  "producer_phone": "(617) 555-0211"
 }

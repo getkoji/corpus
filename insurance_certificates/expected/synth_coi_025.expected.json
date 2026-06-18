@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-10-11",
-  "producer_name": "Heartland Insurance Associates",
-  "producer_phone": "(515) 555-0166",
-  "insured_name": "Clearwater Environmental Solutions",
   "certificate_holder_name": "Riverstone Development Group",
+  "insured_name": "Clearwater Environmental Solutions",
   "policies": [
     {
       "policy_number": "CGL6652177",
@@ -13,16 +11,12 @@
       "expiration_date": "2027-06-09",
       "limits": [
         {
-          "name": "Each Occurrence",
-          "amount": 2000000
+          "name": "Medical Expense (Any One Person)",
+          "amount": 10000
         },
         {
           "name": "General Aggregate",
           "amount": 2000000
-        },
-        {
-          "name": "Products / Completed Operations",
-          "amount": 4000000
         },
         {
           "name": "Personal & Advertising Injury",
@@ -33,8 +27,12 @@
           "amount": 300000
         },
         {
-          "name": "Medical Expense (Any One Person)",
-          "amount": 10000
+          "name": "Each Occurrence",
+          "amount": 2000000
+        },
+        {
+          "name": "Products / Completed Operations",
+          "amount": 4000000
         }
       ],
       "additional_insureds": []
@@ -61,16 +59,16 @@
       "expiration_date": "2027-06-09",
       "limits": [
         {
+          "name": "Self-Insured Retention",
+          "amount": 25000
+        },
+        {
           "name": "Each Occurrence",
           "amount": 25000000
         },
         {
           "name": "Aggregate",
           "amount": 5000000
-        },
-        {
-          "name": "Self-Insured Retention",
-          "amount": 25000
         }
       ],
       "additional_insureds": []
@@ -87,15 +85,17 @@
           "amount": 1000000
         },
         {
-          "name": "Bodily Injury by Disease (Policy Limit)",
-          "amount": 500000
-        },
-        {
           "name": "Bodily Injury by Disease (Each Employee)",
           "amount": 1000000
+        },
+        {
+          "name": "Bodily Injury by Disease (Policy Limit)",
+          "amount": 500000
         }
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Heartland Insurance Associates",
+  "producer_phone": "(515) 555-0166"
 }

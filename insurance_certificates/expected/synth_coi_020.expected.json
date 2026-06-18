@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-05-23",
-  "producer_name": "Granite State Agency Inc.",
-  "producer_phone": "(603) 555-0133",
-  "insured_name": "Continental Scaffolding Inc.",
   "certificate_holder_name": "Pinnacle Ventures LLC",
+  "insured_name": "Continental Scaffolding Inc.",
   "policies": [
     {
       "policy_number": "AUT4318380",
@@ -45,5 +43,7 @@
         "Pinnacle Ventures LLC"
       ]
     }
-  ]
+  ],
+  "producer_name": "Granite State Agency Inc.",
+  "producer_phone": "(603) 555-0133"
 }

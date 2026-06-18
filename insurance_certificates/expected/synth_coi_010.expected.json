@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-08-05",
-  "producer_name": "Great Lakes Risk Advisors",
-  "producer_phone": "(313) 555-0188",
-  "insured_name": "Summit Landscaping & Excavation",
   "certificate_holder_name": "Sunshine Development Partners LLC",
+  "insured_name": "Summit Landscaping & Excavation",
   "policies": [
     {
       "policy_number": "CGL6349306",
@@ -38,7 +36,8 @@
         }
       ],
       "additional_insureds": [
-        "Titan Construction Management LLC"
+        "Titan Construction Management LLC",
+        "Bluewater Infrastructure LLC"
       ]
     },
     {
@@ -104,5 +103,7 @@
         "Bluewater Infrastructure LLC"
       ]
     }
-  ]
+  ],
+  "producer_name": "Great Lakes Risk Advisors",
+  "producer_phone": "(313) 555-0188"
 }

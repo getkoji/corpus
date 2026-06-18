@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-10-15",
-  "producer_name": "Redwood Insurance Partners",
-  "producer_phone": "(415) 555-0177",
-  "insured_name": "Redline Fire Protection Corp.",
   "certificate_holder_name": "Pinnacle Ventures LLC",
+  "insured_name": "Redline Fire Protection Corp.",
   "policies": [
     {
       "policy_number": "CGL1899957",
@@ -44,23 +42,9 @@
       ]
     },
     {
-      "policy_number": "AUT6288652",
-      "coverage_type": "Automobile Liability",
-      "carrier_name": "Tidewater Surety & Casualty",
-      "effective_date": "2025-07-17",
-      "expiration_date": "2026-07-17",
-      "limits": [
-        {
-          "name": "Combined Single Limit (Each Accident)",
-          "amount": 2000000
-        }
-      ],
-      "additional_insureds": []
-    },
-    {
       "policy_number": "UMB6391926",
       "coverage_type": "Umbrella Liability",
-      "carrier_name": "Pacific Crest Casualty",
+      "carrier_name": "Ironbridge Excess Carriers Ltd.",
       "effective_date": "2025-07-17",
       "expiration_date": "2026-07-17",
       "limits": [
@@ -74,7 +58,7 @@
         },
         {
           "name": "Self-Insured Retention",
-          "amount": 25000
+          "amount": 250000
         }
       ],
       "additional_insureds": [
@@ -105,6 +89,22 @@
       "additional_insureds": [
         "Heritage Capital Partners"
       ]
+    },
+    {
+      "policy_number": "AUT6288652",
+      "coverage_type": "Automobile Liability",
+      "carrier_name": "Tidewater Surety & Casualty",
+      "effective_date": "2025-07-17",
+      "expiration_date": "2026-07-17",
+      "limits": [
+        {
+          "name": "Combined Single Limit (Each Accident)",
+          "amount": 2000000
+        }
+      ],
+      "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Redwood Insurance Partners",
+  "producer_phone": "415-555-0177"
 }

@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-02-20",
-  "producer_name": "Blue Ridge Underwriters",
-  "producer_phone": "(704) 555-0122",
-  "insured_name": "Granite Peak General Contractors",
   "certificate_holder_name": "Riverstone Development Group",
+  "insured_name": "Granite Peak General Contractors",
   "policies": [
     {
       "policy_number": "CGL8927506",
@@ -13,16 +11,12 @@
       "expiration_date": "2027-05-16",
       "limits": [
         {
-          "name": "Each Occurrence",
-          "amount": 2000000
-        },
-        {
-          "name": "General Aggregate",
-          "amount": 2000000
-        },
-        {
           "name": "Products / Completed Operations",
           "amount": 4000000
+        },
+        {
+          "name": "Each Occurrence",
+          "amount": 2000000
         },
         {
           "name": "Personal & Advertising Injury",
@@ -35,6 +29,10 @@
         {
           "name": "Medical Expense (Any One Person)",
           "amount": 15000
+        },
+        {
+          "name": "General Aggregate",
+          "amount": 2000000
         }
       ],
       "additional_insureds": []
@@ -65,12 +63,12 @@
           "amount": 25000000
         },
         {
-          "name": "Aggregate",
-          "amount": 5000000
-        },
-        {
           "name": "Self-Insured Retention",
           "amount": 25000
+        },
+        {
+          "name": "Aggregate",
+          "amount": 5000000
         }
       ],
       "additional_insureds": []
@@ -97,5 +95,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Blue Ridge Underwriters",
+  "producer_phone": "(704) 555-0122"
 }

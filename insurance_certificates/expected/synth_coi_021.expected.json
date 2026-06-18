@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-09-01",
-  "producer_name": "Magnolia Brokerage Services",
-  "producer_phone": "(504) 555-0144",
-  "insured_name": "Atlas Framing & Construction LLC",
   "certificate_holder_name": "Golden Crest Hospitality Corp.",
+  "insured_name": "Atlas Framing & Construction LLC",
   "policies": [
     {
       "policy_number": "CGL2872638",
@@ -89,5 +87,7 @@
         "Golden Crest Hospitality Corp."
       ]
     }
-  ]
+  ],
+  "producer_name": "Magnolia Brokerage Services",
+  "producer_phone": "(504) 555-0144"
 }

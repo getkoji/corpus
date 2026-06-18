@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-03-21",
-  "producer_name": "Blue Ridge Underwriters",
-  "producer_phone": "(704) 555-0122",
-  "insured_name": "Valley Forge Painting Contractors",
   "certificate_holder_name": "Sunshine Development Partners LLC",
+  "insured_name": "Valley Forge Painting Contractors",
   "policies": [
     {
       "policy_number": "CGL8705768",
@@ -83,7 +81,7 @@
     {
       "policy_number": "WC7908773",
       "coverage_type": "Workers Compensation",
-      "carrier_name": "Midwest Indemnity Holdings",
+      "carrier_name": "Sunbelt Workers Comp Trust",
       "effective_date": "2025-12-14",
       "expiration_date": "2026-12-14",
       "limits": [
@@ -102,5 +100,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Blue Ridge Underwriters",
+  "producer_phone": "(704) 555-0122"
 }

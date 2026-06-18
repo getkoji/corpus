@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-03-20",
-  "producer_name": "Magnolia Brokerage Services",
-  "producer_phone": "(504) 555-0144",
-  "insured_name": "Brookfield Property Management Group",
   "certificate_holder_name": "Golden Crest Hospitality Corp.",
+  "insured_name": "Brookfield Property Management Group",
   "policies": [
     {
       "policy_number": "CGL5512566",
@@ -31,10 +29,6 @@
         {
           "name": "Damage to Rented Premises",
           "amount": 100000
-        },
-        {
-          "name": "Medical Expense (Any One Person)",
-          "amount": 10000
         }
       ],
       "additional_insureds": []
@@ -65,10 +59,6 @@
           "amount": 25000000
         },
         {
-          "name": "Aggregate",
-          "amount": 25000000
-        },
-        {
           "name": "Self-Insured Retention",
           "amount": 25000
         }
@@ -83,19 +73,13 @@
       "expiration_date": "2026-11-07",
       "limits": [
         {
-          "name": "Bodily Injury by Accident (Each Accident)",
-          "amount": 1000000
-        },
-        {
-          "name": "Bodily Injury by Disease (Policy Limit)",
-          "amount": 500000
-        },
-        {
           "name": "Bodily Injury by Disease (Each Employee)",
           "amount": 500000
         }
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Magnolia Brokerage Services",
+  "producer_phone": "(504) 555-0144"
 }

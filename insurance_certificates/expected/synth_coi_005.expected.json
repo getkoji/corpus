@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-12-09",
-  "producer_name": "Harborline Insurance Services, Inc.",
-  "producer_phone": "(813) 555-0142",
-  "insured_name": "Clearwater Environmental Solutions",
   "certificate_holder_name": "Pinnacle Ventures LLC",
+  "insured_name": "Clearwater Environmental Solutions",
   "policies": [
     {
       "policy_number": "WC1542663",
@@ -97,5 +95,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Harborline Insurance Services, Inc.",
+  "producer_phone": "(813) 555-0142"
 }

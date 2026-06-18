@@ -1,4 +1,5 @@
 {
+  "certificate_date": "2022-08-01",
   "certificate_holder_name": "The City of Saint Paul",
   "insured_name": "Organization",
   "policies": [
@@ -10,57 +11,39 @@
       "expiration_date": "2023-07-31",
       "limits": [
         {
-          "name": "Each Occurrence",
+          "name": "EACH OCCURANCE",
           "amount": 1500000
         },
         {
-          "name": "Personal & Adv Injury",
+          "name": "PERSONAL & ADV INJURY",
           "amount": 1500000
         },
         {
-          "name": "General Aggregate",
+          "name": "GENERAL AGGREGATE",
           "amount": 2000000
         },
         {
-          "name": "Comp/Op Agg",
+          "name": "COMP/OP AGG",
           "amount": 2000000
+        },
+        {
+          "name": "E.L. EACH ACCIDENT",
+          "amount": 500000
+        },
+        {
+          "name": "E.L. DISEASE - EA EMPLOYEE",
+          "amount": 500000
+        },
+        {
+          "name": "E.L. DISEASE - POLICY LIMIT",
+          "amount": 500000
         }
       ],
       "additional_insureds": [
-        "City of Saint Paul"
+        "The City of Saint Paul"
       ]
-    },
-    {
-      "policy_number": "A",
-      "coverage_type": "AUTOMOBILE LIABILITY",
-      "carrier_name": "Insurance Co. ABC",
-      "effective_date": null,
-      "expiration_date": null,
-      "limits": [],
-      "additional_insureds": []
-    },
-    {
-      "policy_number": "A",
-      "coverage_type": "WORKERS COMPENSATION AND EMPLOYERS' LIABILITY",
-      "carrier_name": "Insurance Co. ABC",
-      "effective_date": null,
-      "expiration_date": null,
-      "limits": [
-        {
-          "name": "E.L. Each Accident",
-          "amount": 500000
-        },
-        {
-          "name": "E.L. Disease - EA Employee",
-          "amount": 500000
-        },
-        {
-          "name": "E.L. Disease - Policy Limit",
-          "amount": 500000
-        }
-      ],
-      "additional_insureds": []
     }
   ],
-  "producer_name": "Insurance Provider"
+  "producer_name": "Insurance Provider",
+  "producer_phone": null
 }

@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-06-06",
-  "producer_name": "Summit Risk Advisors LLC",
-  "producer_phone": "(215) 555-0188",
-  "insured_name": "Summit Landscaping & Excavation",
   "certificate_holder_name": "Crossroads Commercial Properties",
+  "insured_name": "Summit Landscaping & Excavation",
   "policies": [
     {
       "policy_number": "AUT9168971",
@@ -41,5 +39,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Summit Risk Advisors LLC",
+  "producer_phone": "(215) 555-0188"
 }

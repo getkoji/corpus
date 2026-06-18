@@ -1,9 +1,7 @@
 {
   "certificate_date": "2026-05-02",
-  "producer_name": "Bayshore Risk Management",
-  "producer_phone": "(617) 555-0211",
-  "insured_name": "Prairie Home Builders LLC",
   "certificate_holder_name": "Northwind Infrastructure Partners",
+  "insured_name": "Prairie Home Builders LLC",
   "policies": [
     {
       "policy_number": "CGL9121005",
@@ -13,8 +11,8 @@
       "expiration_date": "2026-01-01",
       "limits": [
         {
-          "name": "Each Occurrence",
-          "amount": 1000000
+          "name": "Medical Expense (Any One Person)",
+          "amount": 10000
         },
         {
           "name": "General Aggregate",
@@ -33,8 +31,8 @@
           "amount": 100000
         },
         {
-          "name": "Medical Expense (Any One Person)",
-          "amount": 10000
+          "name": "Each Occurrence",
+          "amount": 1000000
         }
       ],
       "additional_insureds": []
@@ -61,16 +59,16 @@
       "expiration_date": "2026-01-01",
       "limits": [
         {
-          "name": "Each Occurrence",
-          "amount": 25000000
-        },
-        {
           "name": "Aggregate",
           "amount": 25000000
         },
         {
           "name": "Self-Insured Retention",
           "amount": 25000
+        },
+        {
+          "name": "Each Occurrence",
+          "amount": 25000000
         }
       ],
       "additional_insureds": []
@@ -89,13 +87,11 @@
         {
           "name": "Bodily Injury by Disease (Policy Limit)",
           "amount": 1000000
-        },
-        {
-          "name": "Bodily Injury by Disease (Each Employee)",
-          "amount": 500000
         }
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Bayshore Risk Management",
+  "producer_phone": "(617) 555-0211"
 }

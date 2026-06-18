@@ -1,9 +1,7 @@
 {
   "certificate_date": "2025-08-13",
-  "producer_name": "Heartland Insurance Associates",
-  "producer_phone": "(515) 555-0166",
-  "insured_name": "Bayou City Demolition Services",
   "certificate_holder_name": "Harbor Point Real Estate Holdings",
+  "insured_name": "Bayou City Demolition Services",
   "policies": [
     {
       "policy_number": "CGL4904015",
@@ -105,5 +103,7 @@
       ],
       "additional_insureds": []
     }
-  ]
+  ],
+  "producer_name": "Heartland Insurance Associates",
+  "producer_phone": "(515) 555-0166"
 }
