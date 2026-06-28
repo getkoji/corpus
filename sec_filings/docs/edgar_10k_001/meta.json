@@ -1,0 +1,53 @@
+{
+  "doc_id": "edgar_10k_001",
+  "category": "sec_filings",
+  "doc_type": null,
+  "synthetic": false,
+  "anomaly": false,
+  "quality": "digital",
+  "quality_reviewed": true,
+  "quality_notes": "Real EDGAR 10-K; born-digital HTML/text filing.",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "source": {
+    "file": null,
+    "format": "html",
+    "sha256": null,
+    "retrieved": false,
+    "name": "SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1080448/000168316826002795/patriot_i10k-123125.htm",
+    "original_image": null,
+    "pages": 1,
+    "license": "Public Domain (US Government Work)",
+    "license_url": "https://www.sec.gov/privacy",
+    "attribution": "US Securities and Exchange Commission"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-12",
+      "sha256": "6aca7cd69cbc3bf1295e97259ddc73a1569d101cdfe6e7fc74900634518542a9",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-12",
+    "added_by": "corpus-bootstrap",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "sec_filings/documents/edgar_10k_001.md",
+      "expected": "sec_filings/expected/edgar_10k_001.expected.json",
+      "manifest": "sec_filings/manifests/edgar_10k_001.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}

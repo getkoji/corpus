@@ -1,0 +1,53 @@
+{
+  "doc_id": "synthetic_1099nec_001",
+  "category": "irs_forms",
+  "doc_type": null,
+  "synthetic": true,
+  "anomaly": false,
+  "quality": "digital",
+  "quality_reviewed": true,
+  "quality_notes": "Programmatically generated 1099-NEC; clean structured text.",
+  "schema": "irs_forms/schemas/form_1099_nec.yaml",
+  "source": {
+    "file": null,
+    "format": "txt",
+    "sha256": null,
+    "retrieved": false,
+    "name": "Synthetic generator",
+    "url": null,
+    "original_image": null,
+    "pages": 1,
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "attribution": "Koji corpus contributors"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-12",
+      "sha256": "7291f96db74aae7b84fead988d1af5ed64b1928edacce039c4f6cb9d9fb75a21",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-12",
+    "added_by": "corpus-bootstrap",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "irs_forms/documents/synthetic_1099nec_001.md",
+      "expected": "irs_forms/expected/synthetic_1099nec_001.expected.json",
+      "manifest": "irs_forms/manifests/synthetic_1099nec_001.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}

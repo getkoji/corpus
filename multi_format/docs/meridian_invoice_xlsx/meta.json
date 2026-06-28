@@ -1,0 +1,53 @@
+{
+  "doc_id": "meridian_invoice_xlsx",
+  "category": "multi_format",
+  "doc_type": null,
+  "synthetic": false,
+  "anomaly": false,
+  "quality": "digital",
+  "quality_reviewed": true,
+  "quality_notes": "Native digital .xlsx; source bytes present in repo.",
+  "schema": "invoices/schemas/invoice_basic.yaml",
+  "source": {
+    "file": "source.xlsx",
+    "format": "xlsx",
+    "sha256": "fe9ce873ff560feaf319ac9d96061338a2bbb1ebdfbb9e6c635b5b317e3eb5ef",
+    "retrieved": true,
+    "name": "Koji multi-format corpus (accuracy-10)",
+    "url": null,
+    "original_image": null,
+    "pages": 1,
+    "license": "CC0 \u2014 synthetic test fixture",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "Koji accuracy lane"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.sha256",
+    "source_sha256": "fe9ce873ff560feaf319ac9d96061338a2bbb1ebdfbb9e6c635b5b317e3eb5ef"
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-14",
+      "sha256": "3d2a0307156be0d6b8bf9a66e90aa722fae7ed899aca44275b6c4a588d46015b",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-14",
+    "added_by": "accuracy-10",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "multi_format/documents/meridian_invoice_xlsx.md",
+      "expected": "multi_format/expected/meridian_invoice_xlsx.expected.json",
+      "manifest": "multi_format/manifests/meridian_invoice_xlsx.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}

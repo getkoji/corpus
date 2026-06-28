@@ -1,0 +1,15 @@
+{
+  "file": "docling-markdown.md",
+  "provider": "docling",
+  "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+  "api_version": null,
+  "representation": "markdown",
+  "parse_config": {},
+  "produced": "2026-04-16",
+  "produced_by": "accuracy-23",
+  "sha256": "e5b457a0355072543af5e9f29962d9d5dfe0ceb2ea4fb1aee8c8765f6b3f0d67",
+  "frozen_for": [
+    "academic-md-snapshot-v1"
+  ],
+  "migrated_from": "insurance_certificates/documents/arizona_coi.md"
+}

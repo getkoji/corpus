@@ -1,0 +1,15 @@
+{
+  "file": "docling-markdown.md",
+  "provider": "docling",
+  "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+  "api_version": null,
+  "representation": "markdown",
+  "parse_config": {},
+  "produced": "2026-04-12",
+  "produced_by": "corpus-bootstrap",
+  "sha256": "9102b7c8728b7f40d7305b9b17cd6d7d8a0454838629752beeb3f08847fee8a6",
+  "frozen_for": [
+    "academic-md-snapshot-v1"
+  ],
+  "migrated_from": "receipts/documents/sroie_000.md"
+}

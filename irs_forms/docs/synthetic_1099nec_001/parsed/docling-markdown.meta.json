@@ -1,0 +1,15 @@
+{
+  "file": "docling-markdown.md",
+  "provider": "docling",
+  "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+  "api_version": null,
+  "representation": "markdown",
+  "parse_config": {},
+  "produced": "2026-04-12",
+  "produced_by": "corpus-bootstrap",
+  "sha256": "7291f96db74aae7b84fead988d1af5ed64b1928edacce039c4f6cb9d9fb75a21",
+  "frozen_for": [
+    "academic-md-snapshot-v1"
+  ],
+  "migrated_from": "irs_forms/documents/synthetic_1099nec_001.md"
+}

@@ -1,0 +1,15 @@
+{
+  "file": "docling-markdown.md",
+  "provider": "docling",
+  "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+  "api_version": null,
+  "representation": "markdown",
+  "parse_config": {},
+  "produced": "2026-04-13",
+  "produced_by": "accuracy-9",
+  "sha256": "76a9818632a8f16f633c95e5719cad6fc91999f5c556df89ee7fa3804864f537",
+  "frozen_for": [
+    "academic-md-snapshot-v1"
+  ],
+  "migrated_from": "adversarial/documents/anomaly_ocr_typos.md"
+}

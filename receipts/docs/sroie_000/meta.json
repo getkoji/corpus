@@ -1,0 +1,53 @@
+{
+  "doc_id": "sroie_000",
+  "category": "receipts",
+  "doc_type": null,
+  "synthetic": false,
+  "anomaly": false,
+  "quality": "scan",
+  "quality_reviewed": true,
+  "quality_notes": "Real scanned receipt (SROIE JPEG). Source image gated behind dataset registration -> source.retrieved=false.",
+  "schema": "receipts/schemas/invoice_basic.yaml",
+  "source": {
+    "file": null,
+    "format": "jpg",
+    "sha256": null,
+    "retrieved": false,
+    "name": "SROIE Dataset (ICDAR 2019)",
+    "url": "https://rrc.cvc.uab.es/?ch=13",
+    "original_image": "000.jpg",
+    "pages": 1,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "ICDAR 2019 Robust Reading Challenge on SROIE"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-12",
+      "sha256": "9102b7c8728b7f40d7305b9b17cd6d7d8a0454838629752beeb3f08847fee8a6",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-12",
+    "added_by": "corpus-bootstrap",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "receipts/documents/sroie_000.md",
+      "expected": "receipts/expected/sroie_000.expected.json",
+      "manifest": "receipts/manifests/sroie_000.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}

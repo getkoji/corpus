@@ -1,0 +1,53 @@
+{
+  "doc_id": "anomaly_ocr_typos",
+  "category": "adversarial",
+  "doc_type": null,
+  "synthetic": true,
+  "anomaly": true,
+  "quality": "fax",
+  "quality_reviewed": true,
+  "quality_notes": "Synthetic OCR-typo noise; stands in for fax/low-DPI degradation.",
+  "schema": "sec_filings/schemas/filing_metadata.yaml",
+  "source": {
+    "file": null,
+    "format": "txt",
+    "sha256": null,
+    "retrieved": false,
+    "name": "Koji adversarial corpus (accuracy-9)",
+    "url": null,
+    "original_image": null,
+    "pages": 1,
+    "license": "CC0 \u2014 synthetic test fixture",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "Koji accuracy lane"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-13",
+      "sha256": "76a9818632a8f16f633c95e5719cad6fc91999f5c556df89ee7fa3804864f537",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-13",
+    "added_by": "accuracy-9",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "adversarial/documents/anomaly_ocr_typos.md",
+      "expected": "adversarial/expected/anomaly_ocr_typos.expected.json",
+      "manifest": "adversarial/manifests/anomaly_ocr_typos.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}
