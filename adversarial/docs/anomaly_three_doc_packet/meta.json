@@ -1,0 +1,53 @@
+{
+  "doc_id": "anomaly_three_doc_packet",
+  "category": "adversarial",
+  "doc_type": null,
+  "synthetic": true,
+  "anomaly": true,
+  "quality": "mixed",
+  "quality_reviewed": true,
+  "quality_notes": "Synthetic stapled multi-doc packet; mixed content/quality.",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "source": {
+    "file": null,
+    "format": "txt",
+    "sha256": null,
+    "retrieved": false,
+    "name": "Koji adversarial corpus (accuracy-9)",
+    "url": null,
+    "original_image": null,
+    "pages": 3,
+    "license": "CC0 \u2014 synthetic test fixture",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": "Koji accuracy lane"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-13",
+      "sha256": "8188a3c6e18c08fbdc6b2318de85eb1bfe368e46e3f4f5236be40a3339d6f7b4",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-13",
+    "added_by": "accuracy-9",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "adversarial/documents/anomaly_three_doc_packet.md",
+      "expected": "adversarial/expected/anomaly_three_doc_packet.expected.json",
+      "manifest": "adversarial/manifests/anomaly_three_doc_packet.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}

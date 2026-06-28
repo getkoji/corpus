@@ -2,6 +2,15 @@
 
 A public, versioned corpus of real-world and synthetic documents with ground-truth extraction outputs. Used to validate [Koji](https://github.com/getkoji/koji) extraction accuracy, benchmark model performance, and catch regressions in CI.
 
+> **New layout in progress (PB-0):** the corpus is migrating to a **doc-bundle**
+> layout (`<category>/docs/<doc-id>/{source, truth.json, parsed/, meta.json}`)
+> that makes the source document first-class and treats each parse as a cached
+> `source × provider × representation` artifact — the foundation for the
+> parse-provider evaluation harness. See
+> [`docs/bundle-layout.md`](docs/bundle-layout.md). A representative sample is
+> migrated; the legacy per-category `documents/`/`expected/`/`manifests/`
+> layout below is unchanged and still authoritative until cutover.
+
 ## Current coverage
 
 | Category | Documents | Real | Synthetic | Accuracy | Notes |

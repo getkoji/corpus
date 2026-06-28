@@ -1,0 +1,15 @@
+{
+  "file": "docling-markdown.md",
+  "provider": "docling",
+  "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+  "api_version": null,
+  "representation": "markdown",
+  "parse_config": {},
+  "produced": "2026-04-12",
+  "produced_by": "corpus-bootstrap",
+  "sha256": "6aca7cd69cbc3bf1295e97259ddc73a1569d101cdfe6e7fc74900634518542a9",
+  "frozen_for": [
+    "academic-md-snapshot-v1"
+  ],
+  "migrated_from": "sec_filings/documents/edgar_10k_001.md"
+}

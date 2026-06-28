@@ -1,0 +1,15 @@
+{
+  "file": "docling-markdown.md",
+  "provider": "docling",
+  "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+  "api_version": null,
+  "representation": "markdown",
+  "parse_config": {},
+  "produced": "2026-04-14",
+  "produced_by": "accuracy-10",
+  "sha256": "3d2a0307156be0d6b8bf9a66e90aa722fae7ed899aca44275b6c4a588d46015b",
+  "frozen_for": [
+    "academic-md-snapshot-v1"
+  ],
+  "migrated_from": "multi_format/documents/meridian_invoice_xlsx.md"
+}

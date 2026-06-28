@@ -1,0 +1,53 @@
+{
+  "doc_id": "arizona_coi",
+  "category": "insurance_certificates",
+  "doc_type": "coi",
+  "synthetic": false,
+  "anomaly": false,
+  "quality": "digital",
+  "quality_reviewed": true,
+  "quality_notes": "Born-digital gov sample PDF. Source URL dead at migration time (returned HTML) -> source.retrieved=false; refetch needed.",
+  "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
+  "source": {
+    "file": null,
+    "format": "pdf",
+    "sha256": null,
+    "retrieved": false,
+    "name": "Arizona Risk Management \u2014 COI sample form",
+    "url": "https://staterisk.az.gov/sites/default/files/2022-04/COI%20Sample%20Form%20with%20HoverOver%20Instructions_1_0.pdf",
+    "original_image": null,
+    "pages": 3,
+    "license": "Public record \u2014 state government website",
+    "license_url": null,
+    "attribution": "Arizona Risk Management \u2014 COI sample form"
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": "2026-04-16",
+      "sha256": "e5b457a0355072543af5e9f29962d9d5dfe0ceb2ea4fb1aee8c8765f6b3f0d67",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": "2026-04-16",
+    "added_by": "accuracy-23",
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "insurance_certificates/documents/arizona_coi.md",
+      "expected": "insurance_certificates/expected/arizona_coi.expected.json",
+      "manifest": "insurance_certificates/manifests/arizona_coi.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}

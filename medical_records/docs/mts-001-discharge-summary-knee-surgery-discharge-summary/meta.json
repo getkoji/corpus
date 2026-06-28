@@ -1,0 +1,53 @@
+{
+  "doc_id": "mts-001-discharge-summary-knee-surgery-discharge-summary",
+  "category": "medical_records",
+  "doc_type": null,
+  "synthetic": false,
+  "anomaly": false,
+  "quality": "digital",
+  "quality_reviewed": true,
+  "quality_notes": "MTSamples transcription; clean digital text.",
+  "schema": "medical_records/schemas/discharge_summary.yaml",
+  "source": {
+    "file": null,
+    "format": "txt",
+    "sha256": null,
+    "retrieved": false,
+    "name": "MTSamples (Medical Transcription Samples)",
+    "url": "https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions",
+    "original_image": null,
+    "pages": null,
+    "license": "CC0 (Public Domain)",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attribution": null
+  },
+  "truth": {
+    "file": "truth.json",
+    "anchored_to": "source.name",
+    "source_sha256": null
+  },
+  "representations": [
+    {
+      "file": "parsed/docling-markdown.md",
+      "provider": "docling",
+      "provider_version": "unknown (pre-PB-0; legacy docling parse)",
+      "representation": "markdown",
+      "produced": null,
+      "sha256": "83e5e6750d3610b1e9669b7fb84a166efcf36ffdb63f9de54231a832a7ab1103",
+      "frozen_for": [
+        "academic-md-snapshot-v1"
+      ]
+    }
+  ],
+  "provenance": {
+    "added_date": null,
+    "added_by": null,
+    "migrated_by": "accuracy-31",
+    "migrated_from": {
+      "document": "medical_records/documents/mts-001-discharge-summary-knee-surgery-discharge-summary.md",
+      "expected": "medical_records/expected/mts-001-discharge-summary-knee-surgery-discharge-summary.expected.json",
+      "manifest": "medical_records/manifests/mts-001-discharge-summary-knee-surgery-discharge-summary.json"
+    }
+  },
+  "schema_version": "doc-bundle/v1"
+}
