@@ -10,6 +10,11 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 > [`docs/bundle-layout.md`](docs/bundle-layout.md). A representative sample is
 > migrated; the legacy per-category `documents/`/`expected/`/`manifests/`
 > layout below is unchanged and still authoritative until cutover.
+>
+> **Parse-eval harness (PB-3) is live:** `scripts/parse_eval_harness.py` scores
+> parse providers end-to-end (field values vs ground truth, extract held
+> constant) per `provider × doc-type`. Adding a provider is a one-liner — see
+> [`docs/parse-eval-harness.md`](docs/parse-eval-harness.md).
 
 ## Current coverage
 

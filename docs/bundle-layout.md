@@ -214,4 +214,6 @@ Eight docs, one per axis we care about, all `quality_reviewed: true`:
 - **Schemas stay shared** at `<category>/schemas/` (referenced by path from
   `meta.json`), not copied per bundle. Confirm that's the desired seam.
 - **Scorer cutover**: `scripts/score.py` still reads the legacy layout. PB-3
-  should read bundles; we keep both until PB-3 lands.
+  (the parse-eval harness, `scripts/parse_eval_harness.py`) reads bundles —
+  see [`parse-eval-harness.md`](./parse-eval-harness.md). The two coexist until
+  the corpus fully migrates to bundles.
