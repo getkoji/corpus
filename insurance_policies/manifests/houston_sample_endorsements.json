@@ -1,10 +1,10 @@
 {
   "filename": "houston_sample_endorsements.md",
-  "source_name": "City of Houston \u2014 sample insurance endorsements",
+  "source_name": "City of Houston — sample insurance endorsements",
   "source_url": "https://www.houstontx.gov/bizwithhou/forms/Sample_Insurance_Endorsements.pdf",
-  "license": "Public record \u2014 city government website",
+  "license": "No explicit license — see license_basis",
   "license_url": null,
-  "attribution": "City of Houston \u2014 sample insurance endorsements",
+  "attribution": "City of Houston — sample insurance endorsements",
   "original_format": "PDF (parsed via docling)",
   "r2_url": null,
   "pages": 6,
@@ -12,5 +12,6 @@
   "added_by": "accuracy-23",
   "schema": "insurance_policies/schemas/policy_declarations.yaml",
   "doc_type": "endorsement",
-  "notes": "Real endorsement document sourced from City of Houston \u2014 sample insurance endorsements. Expected JSON needs manual ground-truth review."
+  "notes": "Real endorsement document sourced from City of Houston — sample insurance endorsements. Expected JSON needs manual ground-truth review.",
+  "license_basis": "Sample/specimen document published on city government website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
 }

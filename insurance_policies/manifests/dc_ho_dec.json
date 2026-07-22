@@ -1,10 +1,10 @@
 {
   "filename": "dc_ho_dec.md",
-  "source_name": "DC DISB \u2014 homeowners declarations page sample",
+  "source_name": "DC DISB — homeowners declarations page sample",
   "source_url": "https://disb.dc.gov/sites/default/files/dc/sites/disb/publication/attachments/Declaration%20Page%20Sample%20Homeowners%2012.pdf",
-  "license": "Public record \u2014 DC government website",
+  "license": "No explicit license — see license_basis",
   "license_url": null,
-  "attribution": "DC DISB \u2014 homeowners declarations page sample",
+  "attribution": "DC DISB — homeowners declarations page sample",
   "original_format": "PDF (parsed via docling)",
   "r2_url": null,
   "pages": 1,
@@ -12,5 +12,6 @@
   "added_by": "accuracy-23",
   "schema": "insurance_policies/schemas/policy_declarations.yaml",
   "doc_type": "policy",
-  "notes": "Real policy document sourced from DC DISB \u2014 homeowners declarations page sample. Expected JSON needs manual ground-truth review."
+  "notes": "Real policy document sourced from DC DISB — homeowners declarations page sample. Expected JSON needs manual ground-truth review.",
+  "license_basis": "Sample/specimen document published on DC government website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
 }

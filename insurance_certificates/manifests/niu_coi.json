@@ -1,10 +1,10 @@
 {
   "filename": "niu_coi.md",
-  "source_name": "Northern Illinois University \u2014 general insurance COI",
+  "source_name": "Northern Illinois University — general insurance COI",
   "source_url": "https://www.niu.edu/risk-management/_files/niu-general-insurance-certificate.pdf",
-  "license": "Published sample \u2014 university website",
+  "license": "No explicit license — see license_basis",
   "license_url": null,
-  "attribution": "Northern Illinois University \u2014 general insurance COI",
+  "attribution": "Northern Illinois University — general insurance COI",
   "original_format": "PDF (parsed via docling)",
   "r2_url": null,
   "pages": 4,
@@ -12,5 +12,6 @@
   "added_by": "accuracy-23",
   "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
   "doc_type": "coi",
-  "notes": "Real coi document sourced from Northern Illinois University \u2014 general insurance COI. Expected JSON needs manual ground-truth review."
+  "notes": "Real coi document sourced from Northern Illinois University — general insurance COI. Expected JSON needs manual ground-truth review.",
+  "license_basis": "Sample/specimen document published on university website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
 }

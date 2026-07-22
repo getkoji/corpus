@@ -20,9 +20,9 @@ its manifest (`<category>/manifests/<doc>.json` → `license`, `license_url`,
 | **Schemas** (`*/schemas/*.yaml`) | Apache-2.0 |
 | **Code** (`scripts/`) | Apache-2.0 |
 
-> Synthetic documents and annotations were previously labelled Apache-2.0 in their
-> manifests. Apache-2.0 is a *software* licence and is ambiguous when applied to data;
-> CC0 is the intended grant. Manifest relabelling is pending — see Open issues.
+> Synthetic documents were previously labelled Apache-2.0 in their manifests. Apache-2.0
+> is a *software* licence and is ambiguous applied to data; CC0 is the intended grant.
+> 438 manifests were relabelled on 2026-07-22. Code in `scripts/` stays Apache-2.0.
 
 ## Third-party sources
 
@@ -32,10 +32,10 @@ its manifest (`<category>/manifests/<doc>.json` → `license`, `license_url`,
 | **CourtListener / Caselaw Access Project** | `legal_filings` | 61 | US judicial opinions are uncopyrightable (government edicts doctrine); CAP text released CC0. | ✅ Clear |
 | **FEMA / US DOL forms** | `insurance_claims` | 3 | US Government works — public domain (17 U.S.C. §105). | ✅ Clear |
 | **US state WC forms** (AL, ID, MN, MS, SC, TX, UT, VA) | `insurance_claims` | 9 | State government forms. **No explicit licence asserted**; state works are *not* automatically public domain. Low risk, unverified per state. | ⚠️ Assumption |
-| **SROIE (ICDAR 2019)** | `receipts` | 52 | CC BY 4.0 per the Robust Reading Competition. **Attribution required.** | ⚠️ Attribution missing |
-| **MTSamples** | `medical_records` | 100 | Site terms permit print/share/link **for educational purposes with credit**. **Not CC0.** | 🔴 Under review |
-| **ACORD forms** (real certificates) | `insurance_certificates` | ~18 | ACORD Forms are **licensed, not sold**; use requires a written agreement with ACORD Corporation. | 🔴 Under review |
-| **ISO/Verisk forms & insurer specimens** | `insurance_policies` | ~5 | © Insurance Services Office / the issuing insurer. | 🔴 Under review |
+| **SROIE (ICDAR 2019)** | `receipts` | 52 | CC BY 4.0 per the Robust Reading Competition. Attribution now recorded. | ✅ Labelled correctly |
+| **MTSamples** | `medical_records` | 100 | **Not CC0.** Site terms permit print/share/link **for educational purposes with credit**. | 🔴 Redistribution under review |
+| **ACORD forms** (real certificates) | `insurance_certificates` | 18 | ACORD Forms are **licensed, not sold**; use requires a written agreement with ACORD Corporation. | 🔴 Redistribution under review |
+| **ISO/Verisk forms & insurer specimens** | `insurance_policies` | 17 | © Insurance Services Office / the issuing insurer. | 🔴 Redistribution under review |
 
 ### On EDGAR (the largest block)
 
@@ -61,22 +61,33 @@ Reproducing the full ISO form **text** is a different matter and is covered by t
 
 ## Open issues
 
-Findings from the 2026-07-22 audit that are **not yet remediated**. Do not treat this
-corpus as licence-clean until they are closed.
+**Labelling is now honest across all 1,114 manifests** — no manifest claims a licence it
+cannot support. What remains open is a **redistribution** question, not a labelling one.
 
-1. **MTSamples (100 docs)** — the manifests claim CC0. That label originates from a
-   third-party Kaggle upload, not from MTSamples, and there is no chain of title.
-   Planned: ship a downloader + our annotations instead of the documents.
-2. **ACORD certificates (~18 docs)** — manifests say "Public record — state government
-   website", which describes where a document was found, not a licence. Planned: remove
-   and substitute existing synthetic COIs.
-3. **ISO / insurer specimen policies (~5 docs)** — same defect. Planned: remove.
-4. **SROIE attribution (52 docs)** — CC BY 4.0 requires attribution the manifests do not
-   carry. Planned: add attribution; verify terms against the official RRC source.
-5. **Synthetic + annotations still labelled Apache-2.0 in manifests (431 docs)** —
-   should be CC0.
+**135 documents are reproduced without an affirmative licence grant:**
 
-## Reporting a licensing problem
+| Block | Docs | Why it is unresolved |
+|---|---:|---|
+| MTSamples | 100 | Terms permit educational sharing with credit; that is not obviously a grant for a redistributed benchmark corpus. |
+| ACORD certificates | 18 | ACORD forms require a written agreement with ACORD Corporation. |
+| ISO / insurer specimens | 17 | © Insurance Services Office (Verisk) or the issuing insurer. |
 
-Open an issue, or contact the maintainers. If you hold rights in material here and want
-it removed, say so and it will be removed promptly — no argument.
+These are reproduced for non-commercial research, with honest labels, attribution to the
+source, and no claim of a permissive licence. **That is a mitigation, not a licence.**
+Whether they should be removed, converted to fetch-on-demand, or retained is a legal
+question that has not been answered — see `playbook/docs/corpus-license-audit.md`.
+
+**Why fetch-on-demand is not a drop-in fix** (tested 2026-07-22): of 35 real insurance
+source URLs, 30 resolve, 3 return 403 to automated clients, and 2 are dead. The Internet
+Archive reports snapshots for all 5 but does not actually serve them. And for MTSamples,
+the only working mirrors are the same unlicensed third-party copies that produced the
+original defect — fetching from them relocates the problem rather than fixing it.
+
+**Also still open:** SROIE terms should be re-verified against the official Robust Reading
+Competition source rather than a mirror; and 9 US state workers-comp forms carry an
+unverified public-domain assumption.
+
+## Takedown
+
+If you hold rights in any material here and want it removed, open an issue or contact the
+maintainers. It will be removed promptly and without argument.
