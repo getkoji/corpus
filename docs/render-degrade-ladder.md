@@ -67,17 +67,90 @@ steps.
   escapes, and similar defects come from how real PDFs were *produced*. A cleanly generated
   PDF will not exhibit them.
 
-## Status
+## Pilot result (2026-07-22) — prediction confirmed
 
-**The harness is built and verified. The experiment has not been run.** Running it means
-pushing each level through parse + extract and scoring against the shared ground truth —
-that needs the parse service and model credentials, and it is the next step.
+12 documents × 3 categories × 4 levels. Parse via the real parse service, extract via the
+production engine (`intelligentExtract`, arm `openai:gpt-4o-mini`, held constant across
+levels), scored with **fieldbench 0.1.0** — the canonical scorer, not `koji bench`.
 
-Expected shape of the result, stated in advance so it is falsifiable:
+| Level | Accuracy | Δ vs L0 | Step |
+|---|---:|---:|---:|
+| L0 markdown (control) | 89.7% | — | — |
+| L1 native PDF | 86.8% | −2.9pp | −2.9pp |
+| **L2 rasterized (OCR)** | **72.1%** | **−17.6pp** | **−14.7pp** ← dominant |
+| L3 scan-simulated | 64.7% | −25.0pp | −7.4pp |
 
-- `L0 → L1` — small drop. Layout is introduced, but the text layer is intact.
-- `L1 → L2` — the large drop, if parse quality dominates. OCR replaces a perfect text layer.
-- `L2 → L3` — a further drop tracking artefact severity.
+Paired exact McNemar over the same 76 fields:
 
-If `L1 → L2` is *not* the dominant step, the "parse quality is the hidden ceiling"
-hypothesis is wrong, and that is worth knowing too.
+| Step | lost | gained | p |
+|---|---:|---:|---:|
+| L0 → L1 | 3 | 1 | 0.625 (n.s.) |
+| **L1 → L2** | **13** | **3** | **0.021** |
+| L2 → L3 | 11 | 6 | 0.332 (n.s.) |
+| L0 → L3 | 18 | 1 | 0.0001 |
+
+**The prediction stated in advance holds.** `L1 → L2` — losing the text layer to OCR — is
+the dominant step and the only individual step that reaches significance. Introducing real
+page layout while keeping a text layer (`L0 → L1`) costs little and is not significant.
+
+Monotonic in all three categories independently:
+
+| Category | L0 | L1 | L2 | L3 |
+|---|---:|---:|---:|---:|
+| insurance_certificates | 91.7% | 83.3% | 75.0% | 70.8% |
+| invoices | 89.3% | 89.3% | 75.0% | 67.9% |
+| medical_records | 87.5% | 87.5% | 62.5% | 50.0% |
+
+### The mechanism: silent deletion, not garbling
+
+OCR does not corrupt text into obvious noise. It **deletes clauses and leaves fluent prose
+behind**. Same sentence, L1 vs L2:
+
+> **L1:** `HISTORY OF PRESENT ILLNESS: The patient is a 61-year-old white female status post right total knee replacement secondary to degenerative joint disease performed by Dr. A...`
+>
+> **L2:** `HISTORY OF PRESENT ILLNESS: secondary to degenerative joint disease performed by Dr. A...`
+
+Text volume retained vs L1: forms lose 3–14%, dense two-page prose loses 36–64%.
+
+The four-way null semantics show what this does to extraction:
+
+| Bucket | L0 | L1 | L2 | L3 |
+|---|---:|---:|---:|---:|
+| match | 57 | 55 | 45 | 40 |
+| **wrong_value** | 10 | 12 | **21** | 21 |
+| miss | 3 | 3 | 4 | 9 |
+| hallucination | 1 | 1 | 1 | 1 |
+| correct_absence | 5 | 5 | 5 | 5 |
+
+**Degradation converts matches into *wrong values*, not into misses or hallucinations.**
+The hallucination count is constant at 1 across every level. The model does not abstain
+when the source is degraded — it confidently returns a wrong answer, and the wrong answer
+*is* present in the corrupted text, so source-grounding cannot flag it. A faithfulness gate
+that checks whether a value appears in the cited source will not catch any of this.
+
+### Caveats
+
+- **n = 12 documents / 68 fields, single run, single model.** Directionally clear and
+  significant on the key step, but the magnitude needs the full 613-document run with
+  repeats before it is quotable.
+- `L2 → L3` is **not** individually significant at this n. Scan artefacts beyond
+  rasterisation are not yet distinguishable from noise.
+- Per-category cells are 4 documents each — far too small to compare categories against
+  each other.
+- 8 of 76 fields (`medications_at_discharge`, `procedures`) are excluded: the engine returns
+  `[{medication: "X"}]` where the schema says `type: array` and ground truth is `["X"]`.
+  That mismatch is **identical at all four levels**, so it contributes exactly zero to the
+  deltas, but it depresses absolute medical_records accuracy from 87.5% to 62.5% and is a
+  real engine bug worth filing separately.
+
+## Reproducing
+
+```bash
+python3 scripts/ladder_build_corpora.py        # render, parse, build shadow corpora
+# then run exp-m1 per level (see experiments/extraction-experiments/README.md)
+~/dev/fieldbench/.venv/bin/python scripts/ladder_score.py
+```
+
+Each level is a shadow corpus (`documents/` = that level's parsed markdown;
+`expected/`, `schemas/`, `manifests/` identical across levels), so extract is genuinely
+held constant and no bespoke extraction code exists.
