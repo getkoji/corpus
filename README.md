@@ -32,7 +32,23 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 
 ## Current coverage
 
-| Category | Documents | Real | Synthetic | Accuracy | Notes |
+> ### ⚠️ The Accuracy column is unverified and known to be overstated
+>
+> These numbers are **hand-maintained** and have **no reproducible source** — the newest
+> committed benchmark artifact (`.benchmarks/latest.json`) is a 3-document run, and nothing
+> regenerates this column. A spot-recompute on 2026-07-22 scored **medical_records at 65.8%**
+> against the **97.7%** claimed here (N=20, `openai/gpt-4o-mini`, canonical fieldbench scorer);
+> even excluding two fields hit by a known engine shape bug (oss-471) it reached only **90.0%**,
+> still 7.7pp short. The other categories have not been re-measured and should be treated as
+> **indicative, not accurate**.
+>
+> Two independent causes are established: the ~91% clean-text composition (see the warning
+> above) inflates numbers relative to real document extraction, and the scalar-array shape
+> bug (oss-471) depresses any category with list-of-string fields. Recomputing this column
+> from a real run and CI-gating it — as `docs/composition.md` already is — is tracked and
+> pending.
+
+| Category | Documents | Real | Synthetic | Accuracy (unverified) | Notes |
 |----------|-----------|------|-----------|----------|-------|
 | **irs_forms** | 20 | 0 | 20 | **100.0%** | IRS 1099-NEC forms with structured fields. |
 | **multi_format** | 3 | 3 | 0 | **100.0%** | xlsx, docx, pptx parsed through docling. |
