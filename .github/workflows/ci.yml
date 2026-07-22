@@ -65,3 +65,9 @@ jobs:
             exit 1
           fi
           echo "All documents have manifests."
+
+      - name: Composition report is current
+        run: |
+          # docs/composition.md scopes every accuracy claim in this repo. If the corpus
+          # changes and the report is not regenerated, the disclosure silently goes stale.
+          python3 scripts/composition_report.py -o docs/composition.md --check
