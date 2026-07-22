@@ -1,10 +1,10 @@
 {
   "filename": "edmond_ok_coi.md",
-  "source_name": "City of Edmond OK \u2014 COI example",
+  "source_name": "City of Edmond OK — COI example",
   "source_url": "https://www.edmondok.gov/DocumentCenter/View/2783/Certificates-of-Insurance-example-",
-  "license": "Public record \u2014 city government website",
+  "license": "No explicit license — see license_basis",
   "license_url": null,
-  "attribution": "City of Edmond OK \u2014 COI example",
+  "attribution": "City of Edmond OK — COI example",
   "original_format": "PDF (parsed via docling)",
   "r2_url": null,
   "pages": 1,
@@ -12,5 +12,6 @@
   "added_by": "accuracy-23",
   "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
   "doc_type": "coi",
-  "notes": "Real coi document sourced from City of Edmond OK \u2014 COI example. Expected JSON needs manual ground-truth review."
+  "notes": "Real coi document sourced from City of Edmond OK — COI example. Expected JSON needs manual ground-truth review.",
+  "license_basis": "Sample/specimen document published on city government website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
 }

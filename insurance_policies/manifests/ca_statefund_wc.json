@@ -1,10 +1,10 @@
 {
   "filename": "ca_statefund_wc.md",
-  "source_name": "CA State Fund \u2014 Workers Comp policy sample",
+  "source_name": "CA State Fund — Workers Comp policy sample",
   "source_url": "https://www.statefundca.com/siteassets/publications/workers-compensation-policy-sample.pdf",
-  "license": "Public record \u2014 state fund website",
+  "license": "No explicit license — see license_basis",
   "license_url": null,
-  "attribution": "CA State Fund \u2014 Workers Comp policy sample",
+  "attribution": "CA State Fund — Workers Comp policy sample",
   "original_format": "PDF (parsed via docling)",
   "r2_url": null,
   "pages": 8,
@@ -12,5 +12,6 @@
   "added_by": "accuracy-23",
   "schema": "insurance_policies/schemas/policy_declarations.yaml",
   "doc_type": "policy",
-  "notes": "Real policy document sourced from CA State Fund \u2014 Workers Comp policy sample. Expected JSON needs manual ground-truth review."
+  "notes": "Real policy document sourced from CA State Fund — Workers Comp policy sample. Expected JSON needs manual ground-truth review.",
+  "license_basis": "Sample/specimen document published on state fund website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
 }

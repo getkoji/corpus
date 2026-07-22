@@ -1,10 +1,10 @@
 {
   "filename": "ky_psc_liberty_gl_auto.md",
-  "source_name": "Kentucky PSC \u2014 Liberty Mutual Auto + GL policy",
+  "source_name": "Kentucky PSC — Liberty Mutual Auto + GL policy",
   "source_url": "https://psc.ky.gov/pscecf/2022-00035/bob.miller@straightlineky.com/04212022022117/1b_Auto_and_GL_Policy_May2020-May2021.pdf",
-  "license": "Public record \u2014 state regulatory filing",
+  "license": "No explicit license — see license_basis",
   "license_url": null,
-  "attribution": "Kentucky PSC \u2014 Liberty Mutual Auto + GL policy",
+  "attribution": "Kentucky PSC — Liberty Mutual Auto + GL policy",
   "original_format": "PDF (parsed via docling)",
   "r2_url": null,
   "pages": 7,
@@ -12,5 +12,6 @@
   "added_by": "accuracy-23",
   "schema": "insurance_policies/schemas/policy_declarations.yaml",
   "doc_type": "policy",
-  "notes": "Real policy document sourced from Kentucky PSC \u2014 Liberty Mutual Auto + GL policy. Expected JSON needs manual ground-truth review."
+  "notes": "Real policy document sourced from Kentucky PSC — Liberty Mutual Auto + GL policy. Expected JSON needs manual ground-truth review.",
+  "license_basis": "Sample/specimen document published on state regulatory filing. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
 }
