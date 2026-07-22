@@ -17,3 +17,6 @@ output/
 
 # Logs
 *.log
+
+# Generated render/degrade ladder output (see docs/render-degrade-ladder.md)
+build/
