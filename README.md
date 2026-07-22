@@ -24,12 +24,12 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 | **multi_format** | 3 | 3 | 0 | **100.0%** | xlsx, docx, pptx parsed through docling. |
 | **insurance_policies** | 97 | 17 | 80 | **99.2%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. |
 | **sec_filings** | 288 | 288 | 0 | **98.3%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
-| **medical_records** | 100 | 100 | 0 | **97.7%** | MTSamples transcriptions (CC0). 15 medical specialties. |
+| **medical_records** | 100 | 100 | 0 | **97.7%** | MTSamples transcriptions. 15 medical specialties. ⚠️ licensing under review |
 | **adversarial** | 11 | 0 | 11 | **96.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
 | **legal_filings** | 61 | 61 | 0 | **96.3%** | Court opinions from CourtListener (Caselaw Access Project). CC0 license. |
 | **insurance_claims** | 152 | 22 | 130 | **95.7%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. |
 | **invoices** | 155 | 5 | 150 | **94.9%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
-| **contracts** | 100 | 100 | 0 | **90.8%** | Material contracts from SEC EDGAR 8-K Exhibit 10 filings. Public domain. |
+| **contracts** | 100 | 100 | 0 | **90.8%** | Material contracts from SEC EDGAR 8-K Exhibit 10 filings. Copyright retained by filer. |
 | **insurance_certificates** | 61 | 21 | 40 | **90.2%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
 | **receipts** | 52 | 52 | 0 | **81.0%** | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality. |
 | **TOTAL** | **1,100** | **669** | **431** | **96.1%** | **8 domains, 12 categories** |
@@ -53,7 +53,7 @@ corpus/
 ├── insurance_claims/      # 152 (22 real + 130 synthetic)
 ├── invoices/              # 155 (5 real + 150 synthetic)
 ├── contracts/             # 100 real EDGAR 8-K material contracts
-├── medical_records/       # 100 real MTSamples transcriptions (CC0, 15 specialties)
+├── medical_records/       # 100 real MTSamples transcriptions (15 specialties)
 ├── insurance_policies/    # 97 (17 real + 80 synthetic)
 ├── legal_filings/         # 61 real court opinions (CourtListener)
 ├── insurance_certificates/ # 61 (21 real + 40 synthetic)
@@ -83,8 +83,9 @@ koji bench --corpus . --json --output results.json
 
 | Category | Sources |
 |----------|---------|
-| SEC filings | EDGAR full-text search API (public, no auth) |
-| Invoices | SROIE dataset (ICDAR 2019, CC BY 4.0) + synthetic |
+| SEC filings | EDGAR full-text search API (public, no auth). Authored by the filing registrant — not a US Government work; see `DATA_LICENSE.md` |
+| Receipts | SROIE dataset (ICDAR 2019, CC BY 4.0 — attribution required) |
+| Invoices | Synthetic (`scripts/sources/synthetic_invoices.py`) + hand-crafted bootstrap samples |
 | Insurance certificates | .gov/.edu (NYC, LA, Cal State, Georgia Tech, 15+ more) + synthetic |
 | Insurance policies | State DOIs (OK, FL, DC, MD, NY, NV), municipal board packets (Ketchum, Rocky Mount, Cameron County TX), insurer specimens |
 | Insurance claims | FEMA NFIP proof-of-loss, WC FROI from 11 states, Cameron County TX loss runs + synthetic |
@@ -99,7 +100,17 @@ For authoritative-index sources (EDGAR, SROIE), expected comes from the index. F
 
 See `CONTRIBUTING.md`. Key rules: public domain or CC-licensed only, expected JSONs require manual review, regressions > 5% must be called out in PR body.
 
+**Where a document was found is not a licence.** Publication on a `.gov`, `.edu`, or
+vendor website does not grant redistribution rights. Record the actual terms in the
+manifest (`license`, `license_url`, `attribution`, `license_basis`) — and if there are
+no explicit terms, say so rather than inferring a permissive one.
+
 ## License
 
-- **Code** (scripts, schemas): Apache 2.0
-- **Documents**: per-document (check manifests). Most are public domain (US Government) or CC BY 4.0. Synthetic documents are CC0.
+- **Code** (`scripts/`, schemas): Apache 2.0 — see `LICENSE`
+- **Ground-truth annotations** and **synthetic documents**: CC0
+- **Third-party documents**: per-source, mixed terms — see **[`DATA_LICENSE.md`](DATA_LICENSE.md)**
+
+> ⚠️ **A licensing audit (2026-07-22) found unresolved issues** affecting MTSamples,
+> ACORD, and ISO/insurer-specimen documents. `DATA_LICENSE.md` lists them. Do not treat
+> this corpus as licence-clean until they are closed.
