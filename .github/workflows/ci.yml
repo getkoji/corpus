@@ -71,3 +71,10 @@ jobs:
           # docs/composition.md scopes every accuracy claim in this repo. If the corpus
           # changes and the report is not regenerated, the disclosure silently goes stale.
           python3 scripts/composition_report.py -o docs/composition.md --check
+
+      - name: Accuracy table matches its results artifact
+        run: |
+          # The README accuracy table is generated from .benchmarks/accuracy-latest.json.
+          # This gate keeps them in sync (stdlib only — no run, no model). Regenerate with
+          # `python3 scripts/accuracy_table.py write` after a new scored run.
+          python3 scripts/accuracy_table.py check

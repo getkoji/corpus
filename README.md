@@ -32,37 +32,55 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 
 ## Current coverage
 
-> ### ⚠️ The Accuracy column is unverified and known to be overstated
->
-> These numbers are **hand-maintained** and have **no reproducible source** — the newest
-> committed benchmark artifact (`.benchmarks/latest.json`) is a 3-document run, and nothing
-> regenerates this column. A spot-recompute on 2026-07-22 scored **medical_records at 65.8%**
-> against the **97.7%** claimed here (N=20, `openai/gpt-4o-mini`, canonical fieldbench scorer);
-> even excluding two fields hit by a known engine shape bug (oss-471) it reached only **90.0%**,
-> still 7.7pp short. The other categories have not been re-measured and should be treated as
-> **indicative, not accurate**.
->
-> Two independent causes are established: the ~91% clean-text composition (see the warning
-> above) inflates numbers relative to real document extraction, and the scalar-array shape
-> bug (oss-471) depresses any category with list-of-string fields. Recomputing this column
-> from a real run and CI-gating it — as `docs/composition.md` already is — is tracked and
-> pending.
+Document counts and provenance per category. **Accuracy is reported separately below**,
+generated from a real run — it is not hand-maintained in this table.
 
-| Category | Documents | Real | Synthetic | Accuracy (unverified) | Notes |
-|----------|-----------|------|-----------|----------|-------|
-| **irs_forms** | 20 | 0 | 20 | **100.0%** | IRS 1099-NEC forms with structured fields. |
-| **multi_format** | 3 | 3 | 0 | **100.0%** | xlsx, docx, pptx parsed through docling. |
-| **insurance_policies** | 97 | 17 | 80 | **99.2%** | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. |
-| **sec_filings** | 288 | 288 | 0 | **98.3%** | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
-| **medical_records** | 100 | 100 | 0 | **97.7%** | MTSamples transcriptions. 15 medical specialties. ⚠️ licensing under review |
-| **adversarial** | 11 | 0 | 11 | **96.7%** | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
-| **legal_filings** | 61 | 61 | 0 | **96.3%** | Court opinions from CourtListener (Caselaw Access Project). CC0 license. |
-| **insurance_claims** | 152 | 22 | 130 | **95.7%** | FEMA proof-of-loss, WC FROI from 11 states, loss runs. |
-| **invoices** | 155 | 5 | 150 | **94.9%** | Synthetic invoices with full schema coverage (line items, tax, currency). |
-| **contracts** | 100 | 100 | 0 | **90.8%** | Material contracts from SEC EDGAR 8-K Exhibit 10 filings. Copyright retained by filer. |
-| **insurance_certificates** | 61 | 21 | 40 | **90.2%** | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
-| **receipts** | 52 | 52 | 0 | **81.0%** | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality. |
-| **TOTAL** | **1,100** | **669** | **431** | **96.1%** | **8 domains, 12 categories** |
+| Category | Documents | Real | Synthetic | Notes |
+|----------|-----------|------|-----------|-------|
+| **irs_forms** | 20 | 0 | 20 | IRS tax forms: 10 Form 1099-NEC + 10 Form W-2 (two schemas). |
+| **multi_format** | 3 | 3 | 0 | xlsx, docx, pptx parsed through docling. |
+| **insurance_policies** | 97 | 17 | 80 | Policy dec pages, endorsements, binders. Real: state DOIs, municipal board packets. |
+| **sec_filings** | 288 | 288 | 0 | EDGAR 10-K/10-Q/8-K/DEF 14A/S-1/20-F/6-K + amendments. |
+| **medical_records** | 100 | 100 | 0 | MTSamples transcriptions. 15 medical specialties. ⚠️ licensing under review |
+| **adversarial** | 11 | 0 | 11 | Blank docs, OCR noise, wrong-schema, stapled packets, multi-doc unions. |
+| **legal_filings** | 61 | 61 | 0 | Court opinions from CourtListener (Caselaw Access Project). CC0 license. |
+| **insurance_claims** | 152 | 22 | 130 | FEMA proof-of-loss, WC FROI from 11 states, loss runs. |
+| **invoices** | 155 | 5 | 150 | Synthetic invoices with full schema coverage (line items, tax, currency). |
+| **contracts** | 100 | 100 | 0 | Material contracts from SEC EDGAR 8-K Exhibit 10 filings. Copyright retained by filer. |
+| **insurance_certificates** | 61 | 21 | 40 | Real COIs from .gov/.edu + 40 synthetic targeting 6 pain points. |
+| **receipts** | 52 | 52 | 0 | SROIE scanned receipts (real OCR). Accuracy limited by source scan quality. |
+| **TOTAL** | **1,100** | **669** | **431** | **8 domains, 12 categories** |
+
+> Note: real/synthetic splits above are hand-maintained and differ slightly from the
+> manifest-derived counts in [`docs/composition.md`](docs/composition.md) (648/466);
+> reconcile before any release freeze.
+
+## Accuracy
+
+Generated from a real extraction run and scored with the canonical
+[fieldbench](https://github.com/fieldbench/fieldbench) scorer. Do not edit this table by
+hand — run `scripts/accuracy_score.py` then `scripts/accuracy_table.py write`
+([methodology](docs/accuracy-methodology.md)). CI fails if it drifts from
+`.benchmarks/accuracy-latest.json`.
+
+<!-- ACCURACY-TABLE:START -->
+> **Measured, not hand-typed.** Regenerated by `scripts/accuracy_table.py` from `.benchmarks/accuracy-latest.json` (model `gpt-4o-mini`, scorer `fieldbench 0.1.0`, 2026-07-23, koji `df31155`). CI fails if this table drifts from that file. Per-category **N is a capped sample** — numbers are scoped to the documents actually scored, shown in the N column.
+
+| Category | N scored | Accuracy | Real | Synthetic |
+|---|---:|---:|---:|---:|
+| **irs_forms** | 20 | **100.0%** | — | 100.0% |
+| **sec_filings** | 40 | **100.0%** | 100.0% | — |
+| **insurance_policies** | 40 | **99.6%** | 97.7% | 100.0% |
+| **insurance_claims** | 40 | **94.4%** | — | 94.4% |
+| **legal_filings** | 40 | **91.4%** | 91.4% | — |
+| **invoices** | 40 | **88.6%** | — | 88.6% |
+| **insurance_certificates** | 40 | **85.4%** | 86.7% | 84.7% |
+| **medical_records** | 40 | **85.4%** | 85.4% | — |
+| **contracts** | 40 | **80.5%** | 80.5% | — |
+| **receipts** | 40 | **79.8%** | 79.8% | — |
+| **TOTAL** | **380** | **91.3%** | | |
+
+<!-- ACCURACY-TABLE:END -->
 
 Accuracy dashboard coming at `accuracy.getkoji.dev`.
 
@@ -88,7 +106,7 @@ corpus/
 ├── legal_filings/         # 61 real court opinions (CourtListener)
 ├── insurance_certificates/ # 61 (21 real + 40 synthetic)
 ├── receipts/              # 52 real SROIE scanned receipts
-├── irs_forms/             # 20 synthetic IRS 1099-NEC
+├── irs_forms/             # 20 synthetic IRS tax forms (10x 1099-NEC, 10x W-2)
 ├── adversarial/           # 11 synthetic edge cases
 ├── multi_format/          # 3 real (xlsx/docx/pptx)
 └── scripts/sources/       # Sourcing scripts (EDGAR, CourtListener, SROIE)
