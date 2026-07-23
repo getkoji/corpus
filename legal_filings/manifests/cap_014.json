@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "case_name": "Parkes v. Hermann",
   "citation": "828 S.E.2d 575",
-  "court": "Court of Appeals of North Carolina"
+  "court": "Court of Appeals of North Carolina",
+  "source": "real"
 }

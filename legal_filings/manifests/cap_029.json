@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330500",
   "case_name": "Mahmoud v. United States Department of Homeland Security",
-  "court": "Dcd"
+  "court": "Dcd",
+  "source": "real"
 }

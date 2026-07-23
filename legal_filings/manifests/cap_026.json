@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330504",
   "case_name": "United States v. Obaze",
-  "court": "Ca5"
+  "court": "Ca5",
+  "source": "real"
 }

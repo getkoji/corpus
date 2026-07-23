@@ -13,5 +13,6 @@
   "added_by": "corpus-bootstrap",
   "schema": "receipts/schemas/invoice_basic.yaml",
   "notes": "Singaporean receipt from SROIE Task 3. Ground truth from dataset annotations (company, date, total). Subtotal, tax, and line items left null — SROIE doesn't annotate them.",
-  "license_basis": "CC BY 4.0 requires attribution. Dataset described in arXiv:2103.10213. Obtained via a third-party mirror; terms should be re-verified against the official Robust Reading Competition source. See DATA_LICENSE.md."
+  "license_basis": "CC BY 4.0 requires attribution. Dataset described in arXiv:2103.10213. Obtained via a third-party mirror; terms should be re-verified against the official Robust Reading Competition source. See DATA_LICENSE.md.",
+  "source": "real"
 }

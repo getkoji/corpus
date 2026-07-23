@@ -12,5 +12,6 @@
   "added_by": "corpus-bootstrap",
   "schema": "sec_filings/schemas/filing_metadata.yaml",
   "notes": "Alphabet definitive proxy statement header. Tests extraction with checkbox-style form elements and less common form type (DEF 14A).",
-  "license_basis": "Not a US Government work: 17 U.S.C. §105 does not apply because the document was authored by the filing registrant, not by the SEC. Redistributed for research use as a public disclosure record. See DATA_LICENSE.md."
+  "license_basis": "Not a US Government work: 17 U.S.C. §105 does not apply because the document was authored by the filing registrant, not by the SEC. Redistributed for research use as a public disclosure record. See DATA_LICENSE.md.",
+  "source": "real"
 }

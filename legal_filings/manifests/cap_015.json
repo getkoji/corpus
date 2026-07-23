@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "case_name": "Contract Pharmacal Corp. v. Air Indus. Group",
   "citation": "2024 NY Slip Op 00995",
-  "court": "Appellate Division of the Supreme Court of the State of New York"
+  "court": "Appellate Division of the Supreme Court of the State of New York",
+  "source": "real"
 }

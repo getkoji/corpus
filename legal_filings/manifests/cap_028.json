@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330502",
   "case_name": "People v. Tyus",
-  "court": ""
+  "court": "",
+  "source": "real"
 }

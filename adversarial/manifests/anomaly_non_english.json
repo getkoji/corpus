@@ -12,5 +12,6 @@
   "added_by": "accuracy-9",
   "schema": "sec_filings/schemas/filing_metadata.yaml",
   "anomaly": true,
-  "notes": "A synthetic French-language 10-K cover page (Société Nordique des Technologies Avancées) applied to the English SEC filing_metadata schema. Tests cross-language extraction: French form-type and period labels should not confuse the extractor, but filer_name and form_type may still be recoverable from context clues (FORMULAIRE 10-K). Pure-null expected — the French label text differs enough from schema hints that we want a conservative, null-safe baseline."
+  "notes": "A synthetic French-language 10-K cover page (Société Nordique des Technologies Avancées) applied to the English SEC filing_metadata schema. Tests cross-language extraction: French form-type and period labels should not confuse the extractor, but filer_name and form_type may still be recoverable from context clues (FORMULAIRE 10-K). Pure-null expected — the French label text differs enough from schema hints that we want a conservative, null-safe baseline.",
+  "source": "synthetic"
 }

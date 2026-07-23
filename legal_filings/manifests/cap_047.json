@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330497",
   "case_name": "Conservatorship of J.S. CA2/1",
-  "court": "Calctapp"
+  "court": "Calctapp",
+  "source": "real"
 }

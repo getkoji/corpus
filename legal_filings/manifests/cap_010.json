@@ -15,5 +15,6 @@
   "citation": "",
   "court": "",
   "decision_date": "",
-  "notes": "Court opinion: Unknown. Source: Caselaw Access Project (Harvard). Expected JSON auto-filled from metadata where possible; judge field needs manual annotation."
+  "notes": "Court opinion: Unknown. Source: Caselaw Access Project (Harvard). Expected JSON auto-filled from metadata where possible; judge field needs manual annotation.",
+  "source": "real"
 }
