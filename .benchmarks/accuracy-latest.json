@@ -1,0 +1,105 @@
+{
+  "scorer": "fieldbench 0.1.0",
+  "model": "gpt-4o-mini",
+  "koji_sha": "df311554767a876ce7c8f70163ba0e977902cd89",
+  "date": "2026-07-23",
+  "note": "Per-category N is capped (see documents field); numbers are scoped to that sample. Regenerate the README table with accuracy_table.py.",
+  "total": {
+    "documents": 380,
+    "fields": 2366,
+    "passed": 2160,
+    "accuracy": 91.3
+  },
+  "categories": {
+    "contracts": {
+      "documents": 40,
+      "fields": 200,
+      "passed": 161,
+      "accuracy": 80.5,
+      "real_accuracy": 80.5,
+      "synthetic_accuracy": null,
+      "missing_predictions": 0
+    },
+    "insurance_certificates": {
+      "documents": 40,
+      "fields": 240,
+      "passed": 205,
+      "accuracy": 85.4,
+      "real_accuracy": 86.7,
+      "synthetic_accuracy": 84.7,
+      "missing_predictions": 0
+    },
+    "insurance_claims": {
+      "documents": 40,
+      "fields": 302,
+      "passed": 285,
+      "accuracy": 94.4,
+      "real_accuracy": null,
+      "synthetic_accuracy": 94.4,
+      "missing_predictions": 0
+    },
+    "insurance_policies": {
+      "documents": 40,
+      "fields": 250,
+      "passed": 249,
+      "accuracy": 99.6,
+      "real_accuracy": 97.7,
+      "synthetic_accuracy": 100.0,
+      "missing_predictions": 0
+    },
+    "invoices": {
+      "documents": 40,
+      "fields": 280,
+      "passed": 248,
+      "accuracy": 88.6,
+      "real_accuracy": null,
+      "synthetic_accuracy": 88.6,
+      "missing_predictions": 0
+    },
+    "irs_forms": {
+      "documents": 20,
+      "fields": 180,
+      "passed": 180,
+      "accuracy": 100.0,
+      "real_accuracy": null,
+      "synthetic_accuracy": 100.0,
+      "missing_predictions": 0
+    },
+    "legal_filings": {
+      "documents": 40,
+      "fields": 280,
+      "passed": 256,
+      "accuracy": 91.4,
+      "real_accuracy": 91.4,
+      "synthetic_accuracy": null,
+      "missing_predictions": 0
+    },
+    "medical_records": {
+      "documents": 40,
+      "fields": 240,
+      "passed": 205,
+      "accuracy": 85.4,
+      "real_accuracy": 85.4,
+      "synthetic_accuracy": null,
+      "missing_predictions": 0
+    },
+    "receipts": {
+      "documents": 40,
+      "fields": 114,
+      "passed": 91,
+      "accuracy": 79.8,
+      "real_accuracy": 79.8,
+      "synthetic_accuracy": null,
+      "missing_predictions": 0
+    },
+    "sec_filings": {
+      "documents": 40,
+      "fields": 280,
+      "passed": 280,
+      "accuracy": 100.0,
+      "real_accuracy": 100.0,
+      "synthetic_accuracy": null,
+      "missing_predictions": 0
+    }
+  }
+}
