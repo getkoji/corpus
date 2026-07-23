@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "case_name": "Bennington Town Plan Entergy Element - Entry Regarding Motion to Dismiss",
   "citation": "",
-  "court": "Vermont Superior Court"
+  "court": "Vermont Superior Court",
+  "source": "real"
 }

@@ -15,5 +15,6 @@
   "cik": "0001376339",
   "filer_name": "MIMEDX GROUP, INC.  (MDXG)  (CIK 0001376339)",
   "notes": "Material contract (Exhibit 10) from MIMEDX GROUP, INC.  (MDXG)  (CIK 0001376339)'s 8-K filing (accession 0001193125-19-160160). Expected JSON needs manual annotation.",
-  "license_basis": "Not a US Government work: 17 U.S.C. §105 does not apply because the document was authored by the filing registrant, not by the SEC. Redistributed for research use as a public disclosure record. See DATA_LICENSE.md."
+  "license_basis": "Not a US Government work: 17 U.S.C. §105 does not apply because the document was authored by the filing registrant, not by the SEC. Redistributed for research use as a public disclosure record. See DATA_LICENSE.md.",
+  "source": "real"
 }

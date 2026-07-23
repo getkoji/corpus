@@ -12,5 +12,6 @@
   "added_by": "accuracy-9",
   "schema": "sec_filings/schemas/filing_metadata.yaml",
   "anomaly": true,
-  "notes": "A document containing a single line of text: 'See attached.' This is the minimal non-empty input — one sentence, no structure, no metadata. Complements anomaly_blank (0 bytes) by testing the boundary between empty and nearly-empty. Tests that a trivially short document produces all-null extraction without crashing. All fields expected null."
+  "notes": "A document containing a single line of text: 'See attached.' This is the minimal non-empty input — one sentence, no structure, no metadata. Complements anomaly_blank (0 bytes) by testing the boundary between empty and nearly-empty. Tests that a trivially short document produces all-null extraction without crashing. All fields expected null.",
+  "source": "synthetic"
 }

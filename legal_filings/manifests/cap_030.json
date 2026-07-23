@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330499",
   "case_name": "People v. Higgs",
-  "court": "Illappct"
+  "court": "Illappct",
+  "source": "real"
 }

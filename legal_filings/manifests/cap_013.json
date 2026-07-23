@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "case_name": "Edy v. Farmers Property Casualty Ins. Co.",
   "citation": "2024 Ohio 1047",
-  "court": "Ohio Court of Appeals"
+  "court": "Ohio Court of Appeals",
+  "source": "real"
 }

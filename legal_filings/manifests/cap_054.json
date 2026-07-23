@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330467",
   "case_name": "Wilhoit v. Pickett CA2/5",
-  "court": "Calctapp"
+  "court": "Calctapp",
+  "source": "real"
 }

@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330458",
   "case_name": "State v. Foster",
-  "court": ""
+  "court": "",
+  "source": "real"
 }

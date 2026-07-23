@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "case_name": "Taper v. Ohio Dept. of Rehab. & Corr.",
   "citation": "2023 Ohio 3259",
-  "court": "Ohio Court of Claims"
+  "court": "Ohio Court of Claims",
+  "source": "real"
 }

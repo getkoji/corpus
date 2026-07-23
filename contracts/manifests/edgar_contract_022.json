@@ -15,5 +15,6 @@
   "cik": "0000883980",
   "filer_name": "FIRST DATA CORP  (CIK 0000883980)",
   "notes": "Material contract (Exhibit 10) from FIRST DATA CORP  (CIK 0000883980)'s 8-K filing (accession 0001193125-10-082505). Expected JSON needs manual annotation.",
-  "license_basis": "Not a US Government work: 17 U.S.C. §105 does not apply because the document was authored by the filing registrant, not by the SEC. Redistributed for research use as a public disclosure record. See DATA_LICENSE.md."
+  "license_basis": "Not a US Government work: 17 U.S.C. §105 does not apply because the document was authored by the filing registrant, not by the SEC. Redistributed for research use as a public disclosure record. See DATA_LICENSE.md.",
+  "source": "real"
 }

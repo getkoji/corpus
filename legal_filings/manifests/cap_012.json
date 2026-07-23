@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "case_name": "Zurich American Insurance Company of Illinois v. Palmetto Contract Services, Inc.",
   "citation": "",
-  "court": "Court of Appeals of South Carolina"
+  "court": "Court of Appeals of South Carolina",
+  "source": "real"
 }

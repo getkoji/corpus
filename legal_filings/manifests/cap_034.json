@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330493",
   "case_name": "In re R.P. CA1/4",
-  "court": ""
+  "court": "",
+  "source": "real"
 }

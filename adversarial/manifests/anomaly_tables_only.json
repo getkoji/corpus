@@ -12,5 +12,6 @@
   "added_by": "accuracy-9",
   "schema": "sec_filings/schemas/filing_metadata.yaml",
   "anomaly": true,
-  "notes": "A document consisting entirely of financial data tables (income statement, quarterly results, segment breakdown, balance sheet, cash flow, ratios) with no prose, no SEC cover-page boilerplate, no filer identification, and no form-type label. Tests that the extractor does not fabricate SEC metadata from raw financial table data. All fields expected null — the numeric data looks financial but provides no filer name, form type, or filing dates."
+  "notes": "A document consisting entirely of financial data tables (income statement, quarterly results, segment breakdown, balance sheet, cash flow, ratios) with no prose, no SEC cover-page boilerplate, no filer identification, and no form-type label. Tests that the extractor does not fabricate SEC metadata from raw financial table data. All fields expected null — the numeric data looks financial but provides no filer name, form type, or filing dates.",
+  "source": "synthetic"
 }

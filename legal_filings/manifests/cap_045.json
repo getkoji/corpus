@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330507",
   "case_name": "Megatel v. Mansfield",
-  "court": "Ca5"
+  "court": "Ca5",
+  "source": "real"
 }

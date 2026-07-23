@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330478",
   "case_name": "People v. Hughes CA4/3",
-  "court": ""
+  "court": "",
+  "source": "real"
 }

@@ -13,5 +13,6 @@
   "schema": "insurance_certificates/schemas/certificate_of_liability.yaml",
   "doc_type": "coi",
   "notes": "Real coi document sourced from Cornell University — sample COI. Expected JSON needs manual ground-truth review.",
-  "license_basis": "Sample/specimen document published on university website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md."
+  "license_basis": "Sample/specimen document published on university website. Publication on a public website is NOT a licence grant. Form layout and text may be copyrighted by ACORD, Insurance Services Office (ISO/Verisk), or the issuing insurer. Reproduced for non-commercial research; redistribution under review — see DATA_LICENSE.md.",
+  "source": "real"
 }

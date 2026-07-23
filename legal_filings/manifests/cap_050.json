@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330477",
   "case_name": "People v. Johnson CA2/8",
-  "court": "Calctapp"
+  "court": "Calctapp",
+  "source": "real"
 }

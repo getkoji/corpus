@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330495",
   "case_name": "Garcia v. John Hancock Life Ins. Co. CA2/7",
-  "court": "Calctapp"
+  "court": "Calctapp",
+  "source": "real"
 }

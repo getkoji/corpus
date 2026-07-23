@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330481",
   "case_name": "People v. Guy CA4/1",
-  "court": "Calctapp"
+  "court": "Calctapp",
+  "source": "real"
 }

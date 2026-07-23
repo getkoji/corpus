@@ -11,5 +11,6 @@
   "schema": "legal_filings/schemas/legal_filing.yaml",
   "opinion_id": "11330461",
   "case_name": "Arocho-Rodriguez v. Roldan-Concepcion",
-  "court": "Ca1"
+  "court": "Ca1",
+  "source": "real"
 }
