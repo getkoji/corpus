@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""Parse-provider evaluation harness (PB-3) — the shared acceptance gate.
+"""Parse-provider evaluation harness (PB-3) — DEPRECATED / non-functional.
+
+*** This harness does not run (accuracy-39, 2026-07-23). ***
+Its HttpExtractBackend POSTs to a koji-extract HTTP sidecar (:9412) that no
+longer exists — extraction moved to the TypeScript engine and no stable
+bare-extract HTTP endpoint replaced it (same breakage as `koji bench`/`koji
+extract`, oss-479). Only `docling` was ever registered; PB-4..8 stayed
+placeholders. Use the accuracy-40 pattern instead: scripts/run-accuracy.ts
+(real engine) + scripts/accuracy_score.py (fieldbench). See
+docs/parse-eval-harness.md and docs/accuracy-methodology.md. Kept for reference;
+gated behind --i-know-this-is-deprecated for anyone reviving it.
 
 This is the corpus-matrix runner described in
 ``playbook/docs/parse-strategy.md`` → "Evaluation harness — the corpus as a
@@ -716,7 +726,28 @@ def format_report(report: dict) -> str:
 # ════════════════════════════════════════════════════════════════════════
 
 
+# NOTE: this sidecar no longer exists — see the deprecation notice at the top of
+# the module and docs/parse-eval-harness.md.
 DEFAULT_EXTRACT_URL = "http://127.0.0.1:9412"
+
+DEPRECATED_MESSAGE = (
+    "\n"
+    "parse_eval_harness.py is DEPRECATED and does not run (accuracy-39).\n"
+    "\n"
+    "  Its extract backend POSTs to a koji-extract HTTP sidecar (:9412) that no\n"
+    "  longer exists; extraction moved to the TypeScript engine and no bare\n"
+    "  extract HTTP endpoint replaced it (same breakage as koji bench/extract,\n"
+    "  oss-479). Only 'docling' was ever wired; PB-4..8 stayed placeholders.\n"
+    "\n"
+    "  Use the accuracy-40 pattern instead — hold the engine constant, vary the\n"
+    "  parse output, score with fieldbench:\n"
+    "    scripts/run-accuracy.ts    (drives the real intelligentExtract engine)\n"
+    "    scripts/accuracy_score.py  (fieldbench scoring)\n"
+    "    docs/accuracy-methodology.md, docs/parse-eval-harness.md\n"
+    "\n"
+    "  To force-run this harness anyway (it will fail at the extract call), pass\n"
+    "  --i-know-this-is-deprecated.\n"
+)
 
 
 def resolve_extract_url(cli_value: str | None) -> str:
@@ -765,7 +796,16 @@ def main(argv: list[str] | None = None) -> int:
         help="print machine-readable JSON instead of a table",
     )
     ap.add_argument("-o", "--output", help="write JSON report to this file")
+    ap.add_argument(
+        "--i-know-this-is-deprecated",
+        action="store_true",
+        help=argparse.SUPPRESS,  # escape hatch for anyone reviving the harness
+    )
     args = ap.parse_args(argv)
+
+    if not args.i_know_this_is_deprecated:
+        sys.stderr.write(DEPRECATED_MESSAGE)
+        return 2
 
     provider_names = [p.strip() for p in args.providers.split(",") if p.strip()]
     providers = build_providers(provider_names)

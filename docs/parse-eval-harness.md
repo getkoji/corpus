@@ -1,5 +1,38 @@
 # Parse-provider evaluation harness (PB-3)
 
+> ## ⚠️ DEPRECATED — non-functional (2026-07-23, accuracy-39)
+>
+> **This harness does not run.** Its `HttpExtractBackend` POSTs to a `koji-extract`
+> HTTP sidecar (`http://127.0.0.1:9412/extract`) that **no longer exists** — extraction
+> moved from a Python service to the TypeScript engine (`api/src/extract/*.ts`) and no
+> stable bare-extract HTTP endpoint replaced it (the API exposes `/api/extract/run`, not a
+> `{markdown, schema_def}` → `{extracted}` endpoint; the same breakage killed `koji bench`
+> and `koji extract` — see oss-479). Only one provider (`docling`) was ever registered;
+> the PB-4..8 providers (mistral/azure-di/google-docai/textract) remain commented-out
+> placeholders, so the multi-provider comparison this gated never went live.
+>
+> **Use this instead.** The `accuracy-40` pipeline is the working realization of the same
+> idea — hold the extract engine constant, vary the parse output, score with the canonical
+> [fieldbench](https://github.com/fieldbench/fieldbench) scorer:
+>
+> - [`scripts/run-accuracy.ts`](../scripts/run-accuracy.ts) drives the **real** production
+>   `intelligentExtract` engine (no dead HTTP hop).
+> - [`scripts/accuracy_score.py`](../scripts/accuracy_score.py) scores with fieldbench.
+> - [`docs/accuracy-methodology.md`](accuracy-methodology.md) documents the full flow.
+> - The render/degrade ladder ([`docs/render-degrade-ladder.md`](render-degrade-ladder.md))
+>   already used exactly this shape to compare parse *conditions* — the same axis as
+>   comparing parse *providers*: build one shadow corpus per condition (parsed text varies;
+>   `expected/`+`schemas/`+`manifests/` identical), extract, score.
+>
+> To compare parse providers with this pattern: cache each provider's parse output as a
+> per-provider shadow corpus, run `run-accuracy.ts` against each, and diff the fieldbench
+> scores. Reviving the old Python harness would mean giving it a live extract backend
+> (option (a) in oss-479 — a bare `/api/extract`) *and* re-wiring the PB-4..8 providers.
+>
+> Everything below describes the original (non-working) design, kept for reference.
+
+---
+
 > Status: **introduced 2026-06-28 (accuracy-32 / PB-3).** The shared acceptance
 > gate for every parse provider (PB-4..8). Script:
 > [`scripts/parse_eval_harness.py`](../scripts/parse_eval_harness.py). Tests:
