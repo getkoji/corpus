@@ -5,25 +5,25 @@ This corpus is used as a **document extraction** benchmark. Most of its document
 
 ## Headline
 
-- **99 of 1114 documents (8.9%) came from a rendered page** (image or PDF).
-- 102 (9.2%) went through a parse engine at all, counting office formats.
+- **64 of 1114 documents (5.7%) came from a rendered page** (image or PDF).
+- 67 (6.0%) went through a parse engine at all, counting office formats.
 - 399 (35.8%) are machine-readable HTML converted to markdown.
-- **613 (55.0%) never had a page at all** — plain text or authored markdown.
-- Of the 648 documents labelled *real*, only **99 (15.3%) came from a rendered page**. The rest are clean HTML or plain text.
+- **648 (58.2%) never had a page at all** — plain text or authored markdown.
+- Of the 613 documents labelled *real*, only **64 (10.4%) came from a rendered page**. The rest are clean HTML or plain text.
 
-> **Scope every accuracy claim accordingly.** For roughly 91.1% of this corpus, the benchmark measures *extraction from clean text*, not document extraction. Parse-stage failures — OCR error, layout collapse, table structure loss, glyph mis-decoding — are largely absent by construction.
+> **Scope every accuracy claim accordingly.** For roughly 94.3% of this corpus, the benchmark measures *extraction from clean text*, not document extraction. Parse-stage failures — OCR error, layout collapse, table structure loss, glyph mis-decoding — are largely absent by construction.
 
 ## By input tier
 
 | Tier | Input | Real | Synthetic | Total | % of corpus |
 |---|---|---:|---:|---:|---:|
 | A1 | Image → OCR | 52 | 0 | 52 | 4.7% |
-| A2 | PDF → parse | 47 | 0 | 47 | 4.2% |
+| A2 | PDF → parse | 12 | 0 | 12 | 1.1% |
 | A3 | Office → parse | 0 | 3 | 3 | 0.3% |
 | B | HTML → markdown | 399 | 0 | 399 | 35.8% |
 | C | Plain text | 150 | 0 | 150 | 13.5% |
-| D | Authored markdown | 0 | 463 | 463 | 41.6% |
-| | **Total** | **648** | **466** | **1114** | **100.0%** |
+| D | Authored markdown | 0 | 498 | 498 | 44.7% |
+| | **Total** | **613** | **501** | **1114** | **100.0%** |
 
 - **A1 — Image → OCR.** Scanned raster image decoded by an OCR engine.
 - **A2 — PDF → parse.** PDF decoded by a layout-aware parse engine.
@@ -41,8 +41,8 @@ This corpus is used as a **document extraction** benchmark. Most of its document
 | `insurance_claims` | 152 | 12 | 0 | 140 |
 | `contracts` | 100 | 0 | 100 | 0 |
 | `medical_records` | 100 | 0 | 0 | 100 |
-| `insurance_policies` | 97 | 17 | 0 | 80 |
-| `insurance_certificates` | 61 | 18 | 0 | 43 |
+| `insurance_policies` | 97 | 0 | 0 | 97 |
+| `insurance_certificates` | 61 | 0 | 0 | 61 |
 | `legal_filings` | 61 | 0 | 11 | 50 |
 | `receipts` | 52 | 52 | 0 | 0 |
 | `adversarial` | 25 | 0 | 0 | 25 |
@@ -51,7 +51,7 @@ This corpus is used as a **document extraction** benchmark. Most of its document
 
 ## Why this matters for the real-vs-synthetic gap
 
-The corpus's headline finding compares *real* against *synthetic* documents. But only 15.3% of the real documents came from a rendered page — the rest are clean EDGAR HTML or plain-text transcriptions. The real set is therefore *also* mostly clean input.
+The corpus's headline finding compares *real* against *synthetic* documents. But only 10.4% of the real documents came from a rendered page — the rest are clean EDGAR HTML or plain-text transcriptions. The real set is therefore *also* mostly clean input.
 
 This means the measured real-vs-synthetic gap **understates** the true clean-vs-messy delta. A real-document set drawn from scans and layout-heavy PDFs would be expected to widen it, not narrow it. Report the gap as a lower bound.
 

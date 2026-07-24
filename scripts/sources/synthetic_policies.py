@@ -30,6 +30,7 @@ Usage:
 
 from __future__ import annotations
 
+import argparse
 import json
 import random
 import sys
@@ -868,7 +869,18 @@ def _generate_policy(
 # Main
 # ---------------------------------------------------------------------------
 
+def _write_policy(file_id: str, md: str, expected: dict, manifest: dict) -> None:
+    (POLICIES_DIR / "documents" / f"{file_id}.md").write_text(md + "\n")
+    (POLICIES_DIR / "expected" / f"{file_id}.expected.json").write_text(json.dumps(expected, indent=2) + "\n")
+    (POLICIES_DIR / "manifests" / f"{file_id}.json").write_text(json.dumps(manifest, indent=2) + "\n")
+
+
 def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--extra", type=int, default=0,
+                    help="generate N additional policies after the base 50 (distinct seed), cycling policy types")
+    args = ap.parse_args()
+
     rng = random.Random(SEED)
 
     for sub in ("documents", "expected", "manifests"):
@@ -881,24 +893,24 @@ def main() -> int:
     for policy_type, count in TYPE_SCHEDULE:
         for _ in range(count):
             file_id = f"synth_policy_{global_idx + 1:03d}"
-
             md, expected, manifest = _generate_policy(global_idx, policy_type, rng)
-
-            doc_path = POLICIES_DIR / "documents" / f"{file_id}.md"
-            exp_path = POLICIES_DIR / "expected" / f"{file_id}.expected.json"
-            man_path = POLICIES_DIR / "manifests" / f"{file_id}.json"
-
-            doc_path.write_text(md + "\n")
-            exp_path.write_text(json.dumps(expected, indent=2) + "\n")
-            man_path.write_text(json.dumps(manifest, indent=2) + "\n")
-
-            print(
-                f"[synth-policy] ({global_idx + 1}/{total}) {file_id}  [{policy_type}]",
-                file=sys.stderr,
-            )
+            _write_policy(file_id, md, expected, manifest)
+            print(f"[synth-policy] ({global_idx + 1}/{total}) {file_id}  [{policy_type}]", file=sys.stderr)
             global_idx += 1
 
-    print(f"\n[synth-policy] Done. Generated {total} synthetic policy declarations pages.", file=sys.stderr)
+    if args.extra:
+        # Additional docs: ids continue after the base 50, distinct seed; cycle policy types.
+        ergng = random.Random(SEED + 1)
+        types = [t for t, _ in TYPE_SCHEDULE]
+        for i in range(args.extra):
+            gi = 50 + i
+            file_id = f"synth_policy_{gi + 1:03d}"
+            ptype = types[i % len(types)]
+            md, expected, manifest = _generate_policy(gi, ptype, ergng)
+            _write_policy(file_id, md, expected, manifest)
+            print(f"[synth-policy] (extra {i + 1}/{args.extra}) {file_id}  [{ptype}]", file=sys.stderr)
+
+    print(f"\n[synth-policy] Done. Generated {total + args.extra} synthetic policy declarations pages.", file=sys.stderr)
     return 0
 
 
