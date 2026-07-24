@@ -22,6 +22,7 @@ Usage:
 
 from __future__ import annotations
 
+import argparse
 import json
 import random
 import sys
@@ -907,7 +908,18 @@ CATEGORIES = [
 ]
 
 
+def _write_coi(file_id: str, md: str, expected: dict, manifest: dict) -> None:
+    (CERTS_DIR / "documents" / f"{file_id}.md").write_text(md + "\n")
+    (CERTS_DIR / "expected" / f"{file_id}.expected.json").write_text(json.dumps(expected, indent=2) + "\n")
+    (CERTS_DIR / "manifests" / f"{file_id}.json").write_text(json.dumps(manifest, indent=2) + "\n")
+
+
 def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--extra", type=int, default=0,
+                    help="generate N additional COIs after the base 40 (distinct seed), cycling the category generators")
+    args = ap.parse_args()
+
     rng = random.Random(SEED)
 
     for sub in ("documents", "expected", "manifests"):
@@ -920,25 +932,25 @@ def main() -> int:
     for gen_fn, count in CATEGORIES:
         for _ in range(count):
             file_id = f"synth_coi_{global_idx + 1:03d}"
-
             md, expected, manifest = gen_fn(global_idx, rng)
-
-            doc_path = CERTS_DIR / "documents" / f"{file_id}.md"
-            exp_path = CERTS_DIR / "expected" / f"{file_id}.expected.json"
-            man_path = CERTS_DIR / "manifests" / f"{file_id}.json"
-
-            doc_path.write_text(md + "\n")
-            exp_path.write_text(json.dumps(expected, indent=2) + "\n")
-            man_path.write_text(json.dumps(manifest, indent=2) + "\n")
-
+            _write_coi(file_id, md, expected, manifest)
             cat_name = manifest["notes"].split("pain point: ")[1].rstrip(".")
-            print(
-                f"[synth-coi] ({global_idx + 1}/{total}) {file_id}  [{cat_name}]",
-                file=sys.stderr,
-            )
+            print(f"[synth-coi] ({global_idx + 1}/{total}) {file_id}  [{cat_name}]", file=sys.stderr)
             global_idx += 1
 
-    print(f"\n[synth-coi] Done. Generated {total} synthetic COIs.", file=sys.stderr)
+    if args.extra:
+        # Additional docs: ids continue after the base 40, distinct seed so they
+        # are not identical to the base set; cycle the category generators.
+        ergng = random.Random(SEED + 1)
+        gens = [g for g, _ in CATEGORIES]
+        for i in range(args.extra):
+            gi = 40 + i
+            file_id = f"synth_coi_{gi + 1:03d}"
+            md, expected, manifest = gens[i % len(gens)](gi, ergng)
+            _write_coi(file_id, md, expected, manifest)
+            print(f"[synth-coi] (extra {i + 1}/{args.extra}) {file_id}", file=sys.stderr)
+
+    print(f"\n[synth-coi] Done. Generated {total + args.extra} synthetic COIs.", file=sys.stderr)
     return 0
 
 
