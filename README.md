@@ -33,21 +33,21 @@ A public, versioned corpus of real-world and synthetic documents with ground-tru
 ## Citing this corpus
 
 The snapshot evaluated in *What 1,114 Documents Reveal About Schema-Driven Extraction*
-(EMNLP 2026 Industry Track) is tag [`emnlp2026-arr248`](https://github.com/getkoji/corpus/releases/tag/emnlp2026-arr248)
-(commit `d79cdd0`), archived at [`10.5281/zenodo.22135776`](https://doi.org/10.5281/zenodo.22135776):
-1,114 documents, 12 categories, 7,197 annotated field values. Cite that record rather than
-`main`, which continues to change.
+(EMNLP 2026 Industry Track) is deposited at
+[`10.5281/zenodo.22135948`](https://doi.org/10.5281/zenodo.22135948): 1,114 documents,
+12 categories, 7,197 annotated field values. **Cite the Zenodo record, not this repository.**
+`main` continues to change, and the two differ in the insurance categories.
 
-**The tag and `main` differ in the insurance categories.** At the tag, insurance certificates
-and policies included 35 real ACORD and ISO form samples; [#64](https://github.com/getkoji/corpus/pull/64)
-replaced those with synthetic equivalents, because the form layouts are copyrighted and not
-redistributable. `main` therefore reports 613 real / 501 synthetic where the tag reports
-669 / 445, and the real-vs-synthetic comparison in the paper cannot be reproduced from `main`.
-The Zenodo record withholds the same 35 documents and distributes them by reference: their
-annotations and manifests ship, and each manifest records the publisher's own retrieval URL.
+[#64](https://github.com/getkoji/corpus/pull/64) replaced 35 real ACORD and ISO form samples
+with synthetic equivalents, because the form layouts are copyrighted and not redistributable.
+`main` therefore reports 613 real / 501 synthetic, and the paper's real-vs-synthetic comparison
+cannot be reproduced from `main`. The Zenodo record withholds those same 35 documents and
+distributes them by reference: their annotations and manifests ship, and each manifest records
+the publisher's own retrieval URL.
 
 The accuracy table below is a capped-sample CI check, not the paper's evaluation — the paper's
 figures are scored over the full corpus.
+
 
 ## Current coverage
 
