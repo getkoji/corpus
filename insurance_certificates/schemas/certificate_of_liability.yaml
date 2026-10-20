@@ -63,6 +63,7 @@ signals:
 fields:
   certificate_date:
     type: date
+    match: date
     required: true
     description: Date the certificate was issued
     hints:
@@ -100,6 +101,10 @@ fields:
 
   certificate_holder_name:
     type: string
+    # Deliberately NOT `match: contains`: the one failure it would recover
+    # (stpaul_coi) has OCR glyph garble appended to the extracted value
+    # ("The City of Saint Paul 1HLJKERUKRRG STAR Program"). Parse garbage is not
+    # boilerplate the schema does not want — it should keep failing.
     required: true
     description: |
       Name of the certificate holder — the party requesting proof

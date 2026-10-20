@@ -43,6 +43,7 @@ categories:
 fields:
   contract_type:
     type: enum
+    match: enum
     description: |
       Type of agreement. Determined from the document title or preamble.
       Example: "MASTER SUPPLY AGREEMENT", "SOFTWARE LICENSE AGREEMENT".
@@ -84,6 +85,7 @@ fields:
 
   effective_date:
     type: date
+    match: date
     description: |
       Date the contract takes effect. May appear as "effective as of
       [date]" in the preamble, or as "dated [date]" in the header.
@@ -100,6 +102,7 @@ fields:
 
   termination_date:
     type: date
+    match: date
     description: |
       Date the contract expires or terminates. May be stated as a
       specific date, or as a term ("for a period of three years from
@@ -116,6 +119,11 @@ fields:
 
   governing_law:
     type: string
+    # Documents state the jurisdiction inside a clause the schema does not want
+    # ("the laws of the State of Delaware"); ground truth records it both ways.
+    # Verified: on the gpt-4o baseline run every pair this accepts names the
+    # same jurisdiction on both sides (0/30 cross-jurisdiction).
+    match: contains
     description: |
       Jurisdiction whose law governs the contract. Typically stated as
       "This Agreement shall be governed by the laws of the State of

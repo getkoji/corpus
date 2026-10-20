@@ -55,6 +55,16 @@ categories:
 fields:
   filer_name:
     type: string
+    # Deliberately NOT `match: contains`, though it would recover 5 failures.
+    # 3 of the 5 are the dropped-name-fragment error the extraction_hint above
+    # exists to prevent — "FutureCorp" for "FutureCorp Space Acquisition 1"
+    # (edgar_s1_008), "Ultra Paceline Corporation" for "KPET Ultra Paceline
+    # Corporation" (edgar_8k_020), "Haemonetics" for "HAEMONETICS CORPORATION"
+    # (edgar_10k_021). A substring of a registrant name is a different
+    # registrant. The other 2 (edgar_10q_025, edgar_10q_042) are truncated
+    # ground truth: the cover pages read "USA Opportunity Income One, Inc." and
+    # "X3 Acquisition Corp. Ltd." and the extraction is right — that is a
+    # ground-truth fix, not a scoring policy.
     required: true
     description: Name of the company or individual filing the document
     extraction_hint: |
@@ -80,6 +90,12 @@ fields:
 
   form_type:
     type: enum
+    # Scored against the declared `options` below. NOT `match: contains`, though
+    # that would recover 4 failures: all four are dropped "/A" amendment
+    # suffixes (10-K/A scored as 10-K, S-1/A as S-1). The extraction_hint below
+    # exists because that suffix is significant — an amendment is a different
+    # filing from the original.
+    match: enum
     required: true
     description: SEC form type (e.g., 10-K, 10-Q, 8-K)
     extraction_hint: |
@@ -132,6 +148,7 @@ fields:
 
   filing_date:
     type: date
+    match: date
     required: true
     description: Date this document was filed with the SEC (signature page).
     extraction_hint: |
@@ -208,6 +225,7 @@ fields:
 
   period_fiscal_year_end:
     type: date
+    match: date
     depends_on: [form_type]
     skip_unless:
       form_type: ["10-K", "10-K/A"]
@@ -233,6 +251,7 @@ fields:
 
   period_quarter_end:
     type: date
+    match: date
     depends_on: [form_type]
     skip_unless:
       form_type: ["10-Q", "10-Q/A"]
@@ -258,6 +277,7 @@ fields:
 
   period_date_of_report:
     type: date
+    match: date
     depends_on: [form_type]
     skip_unless:
       form_type: ["8-K", "8-K/A", "6-K", "6-K/A"]
@@ -296,6 +316,7 @@ fields:
 
   period_meeting_date:
     type: date
+    match: date
     depends_on: [form_type]
     skip_unless:
       form_type: ["DEF 14A"]

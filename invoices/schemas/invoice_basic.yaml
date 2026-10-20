@@ -33,6 +33,7 @@ fields:
 
   date:
     type: date
+    match: date
     required: true
     description: Invoice or purchase date
     extraction_hint: |

@@ -25,6 +25,10 @@ categories:
 fields:
   form_type:
     type: string
+    # Score against the declared vocabulary so the `mappings` aliases below
+    # ("Sworn Statement in Proof of Loss" -> "Proof of Loss") count as equal,
+    # which a plain text comparison does not.
+    match: enum
     description: |
       Type of claim form. Extract from the form title or header.
     mappings:
@@ -78,6 +82,12 @@ fields:
 
   employer_name:
     type: string
+    # Deliberately NOT `match: contains`, though it would recover 4 failures.
+    # All 4 are the multi-insured loss-run fixtures, where the trailing index IS
+    # the distinguishing part of the name: structural_loss_run_gap2_001 reads
+    # "Insured: PageBreak Industries 1" and gap2_003 reads "PageBreak
+    # Industries 3". `contains` would let the bare "PageBreak Industries" pass
+    # for both — erasing the per-page distinction those fixtures exist to test.
     description: |
       The company or organization associated with the claim.
 
@@ -94,6 +104,7 @@ fields:
 
   date_of_loss:
     type: date
+    match: date
     description: |
       Date of the loss or injury. On a proof of loss this is the
       date the damage occurred. On a FROI this is the date of
@@ -105,6 +116,10 @@ fields:
 
   description_of_loss:
     type: string
+    # Deliberately NOT `match: contains`: the one failure it would recover
+    # (synth_demand_017) is an extraction that dropped the narrative's last
+    # sentence. On a free-text field, `contains` makes any single sentence of
+    # the ground truth a pass, which is no check at all.
     verbatim: true
     description: |
       Narrative description of what happened. Extract the description

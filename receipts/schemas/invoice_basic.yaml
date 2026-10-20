@@ -19,6 +19,10 @@ categories:
 fields:
   merchant_name:
     type: string
+    # Deliberately NOT `match: contains`: the one failure it would recover
+    # (sroie_027) drops "MR." from the merchant's registered name
+    # "MR. D.I.Y. (M) SDN BHD". This field sits at 17/52 on the baseline run —
+    # a loosener here masks far more than it recovers.
     required: true
     description: |
       Name of the business issuing the invoice or receipt. Typically appears
@@ -33,6 +37,7 @@ fields:
 
   date:
     type: date
+    match: date
     required: true
     description: Invoice or purchase date
     hints:
@@ -42,6 +47,13 @@ fields:
 
   total_amount:
     type: number
+    # SROIE receipts print a pre-rounding total and a "Rounding adj -0.01"
+    # line, so the payable total and the printed total legitimately differ by
+    # one cent. The default tolerance (0.01) is meant to forgive exactly this
+    # but misses it to floating point (|60.3 - 60.31| = 0.0100000000000051).
+    match:
+      mode: numeric
+      tolerance: 0.02
     required: true
     description: Grand total including tax and fees
     hints:

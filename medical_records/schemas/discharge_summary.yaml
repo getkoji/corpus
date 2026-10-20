@@ -49,6 +49,7 @@ categories:
 fields:
   admission_date:
     type: date
+    match: date
     required: true
     description: |
       Date of hospital admission. Typically appears at the top of the
@@ -66,6 +67,7 @@ fields:
 
   discharge_date:
     type: date
+    match: date
     required: true
     description: |
       Date of hospital discharge. Typically appears near the admission
@@ -81,6 +83,15 @@ fields:
 
   primary_diagnosis:
     type: string
+    # Deliberately NOT `match: contains`, though it would recover 4 of the 56
+    # failures. 3 of the 4 are the model returning the whole discharge-diagnosis
+    # list where this field asks for the principal one ("Dysthymia. Major
+    # depression, moderate severity, recurrent, with partial remission." for
+    # "Dysthymia") — accepting those removes the only check that the principal
+    # diagnosis was isolated at all. Ground-truth values here go down to 3
+    # characters ("SLE") and single words ("hypertension", "HEMATURIA"), where
+    # substring matching would accept a clinically different diagnosis.
+    # The other 44 failures are nulls, which no match policy touches.
     required: true
     description: |
       Principal diagnosis at discharge. The primary reason for the
