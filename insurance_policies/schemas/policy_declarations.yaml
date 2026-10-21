@@ -39,6 +39,11 @@ fields:
 
   named_insured:
     type: string
+    # Deliberately NOT `match: contains`: the one failure it would recover
+    # (ky_psc_liberty_gl_auto) has the mailing address folded into the
+    # ground-truth name ("SOUTH WOODFORD WATER DISTRICT 117 CROSSFIELD DR ...").
+    # That is a ground-truth fix. On an insured-name field `contains` would also
+    # accept any substring ("SOUTH" for "SOUTH WOODFORD WATER DISTRICT").
     required: true
     description: |
       The named insured on the policy — the person or organization
@@ -58,6 +63,7 @@ fields:
 
   policy_type:
     type: string
+    match: enum
     description: |
       Type of insurance policy. Extract the form type or coverage
       category as stated on the declarations or coverage form.
@@ -78,6 +84,7 @@ fields:
 
   effective_date:
     type: date
+    match: date
     description: Policy effective date (start of the policy period).
     hints:
       look_in: [declarations]
@@ -86,6 +93,7 @@ fields:
 
   expiration_date:
     type: date
+    match: date
     description: Policy expiration date (end of the policy period).
     hints:
       look_in: [declarations]

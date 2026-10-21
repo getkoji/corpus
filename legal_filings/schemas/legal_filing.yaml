@@ -37,6 +37,12 @@ categories:
 fields:
   case_number:
     type: string
+    # Deliberately NOT `match: contains`, though it would recover 3 failures.
+    # Those 3 are a ground-truth labelling inconsistency, not a wrapper: cap_023
+    # records the caption "No. 114582" with the label and cap_060 records the
+    # identical caption form as bare "115696". A docket number is an identity —
+    # `contains` would equally accept a truncated one ("26-1533" for
+    # "26-1533 (RC)", "14582" for "114582"), which must stay a failure.
     required: true
     description: |
       The case number or docket number assigned by the court.
@@ -71,6 +77,7 @@ fields:
 
   filing_date:
     type: date
+    match: date
     description: |
       Date the document was filed with the court. May appear at the
       top of the filing (clerk's stamp), in the signature block
@@ -84,6 +91,7 @@ fields:
 
   filing_type:
     type: enum
+    match: enum
     description: |
       Type of court filing. Determined from the document title or
       header — e.g., "COMPLAINT FOR DAMAGES", "MOTION TO DISMISS",
@@ -112,6 +120,12 @@ fields:
 
   plaintiff:
     type: string
+    # Captions wrap the lead party in boilerplate the field does not want
+    # ("..., et al.", a title, an "f.k.a." trading name). Same party, same
+    # identity. NOTE: this also accepts a proper substring of the party name,
+    # so it is declared only on the two caption-party fields, never on
+    # case_number (see the comment there).
+    match: contains
     required: true
     description: |
       Name of the plaintiff or petitioner. Appears in the case caption,
@@ -127,6 +141,7 @@ fields:
 
   defendant:
     type: string
+    match: contains
     required: true
     description: |
       Name of the defendant or respondent. Appears in the case caption,
@@ -141,6 +156,13 @@ fields:
 
   judge:
     type: string
+    # Deliberately NOT `match: contains`, though it would recover 4 honorific
+    # wrappers ("Hon. Bailey Aldrich" vs "Bailey Aldrich", "BOCK, Presiding
+    # Judge" vs "Bock"). 8 of the 61 judge ground-truth values in this category
+    # are multi-judge panel lists ("TRASK, GOODWIN and WALLACE",
+    # "SCHROEDER, CHRISTEN, and FORREST"), and `contains` would pass a single
+    # surname as the whole panel. cap_045 only escapes that today by accident
+    # (the model returned "Stephen A. Higginson", not "Higginson").
     description: |
       Name of the presiding judge or magistrate. May appear in the
       caption ("Before the Honorable Jane Smith"), in the filing

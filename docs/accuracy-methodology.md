@@ -75,3 +75,39 @@ from the artifact again (the exact failure mode this replaces).
   quantifies that gap separately.
 - **Not a leaderboard.** This is Koji's own accuracy over its own corpus, for regression
   visibility. Cross-system comparison belongs to the external-baselines work.
+
+## Declared equivalence policy (`match:`) — accuracy-48
+
+Whether two values count as the same is a judgement, and since koji 0.115.0 the corpus
+schemas state theirs explicitly with a per-field `match:` key instead of leaving it to
+whichever scorer runs (see koji's `docs/schema-guide.md`, "Scoring equivalence").
+`normalized` remains the default for every field, so a field with no `match:` scores
+exactly as it did before.
+
+What the corpus declares, and why:
+
+| Mode | Fields | Rationale |
+|------|--------|-----------|
+| `contains` | `contracts/governing_law`, `legal_filings/{plaintiff,defendant}` | The document states the value inside a wrapper the field does not want — a governing-law clause ("the laws of the State of Delaware") or a caption party ("HOWARD LUTNICK, et al.", "TODD BLANCHE, Acting Attorney General"). |
+| `date` | every `type: date` field with measured coverage | `normalized` falls back to a quantity comparison when one side does not parse as a date, so expected `2026` scores as a **match** against extracted `2026-05-01` (both read as 2026). `date` closes that. |
+| `numeric` + `tolerance: 0.02` | `receipts/total_amount` | SROIE receipts carry a "Rounding adj −0.01" line, so the printed and payable totals legitimately differ by a cent. The default 0.01 tolerance is meant to forgive that and misses it to floating point. |
+| `enum` | the five enum fields (`contract_type`, `filing_type`, `policy_type`, both `form_type`s) | Scores against the declared vocabulary, so `claim_form.yaml`'s `mappings` aliases ("Sworn Statement in Proof of Loss" → "Proof of Loss") count as equal. Measured zero-delta: all 678 enum ground-truth values in the corpus are already in-vocabulary. |
+
+`contains` is permissive on purpose — it accepts any substring. Where it would have
+recovered failures but masked real extraction errors it is **deliberately not declared**,
+and the reason sits in a comment on the field itself (`case_number`, `judge`,
+`filer_name`, `sec_filings/form_type`, `primary_diagnosis`, `employer_name`,
+`named_insured`, `certificate_holder_name`, `description_of_loss`,
+`receipts/merchant_name`). Read those before loosening a field.
+
+### Which scorers honour it
+
+`match:` is read by `@koji/score`, which backs `koji score` and `koji validate`. The
+README accuracy table is produced by the **fieldbench** scorer, whose `score_field` takes
+`mappings` and `enum_options` but has no `match` parameter — so declaring a policy here
+does **not** move the README numbers. Verify a declaration with the scorer that reads it:
+
+```bash
+koji score --expected <doc>.expected.json --actual <extracted>.json \
+           --schema <category>/schemas/<schema>.yaml --json
+```
